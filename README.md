@@ -41,6 +41,6 @@ Work through feature branches and pull requests. Do not rewrite existing user mo
 
 ## Source material and licensing
 
-The project roadmap was adapted from a 2026-11-22 deep research report (SHA-256: `e28339b70032173e8b50c14592ecc0209c6bba696fa44e47a80f600fc6d3abdf`). The complete research report was supplied as a separate user file and is not represented here as independently verified test evidence. Primary links and claims are recorded in [docs/RESEARCH_SOURCES.md](docs/RESEARCH_SOURCES.md).
+The project roadmap was adapted from a 2026-11-22 deep research report (SHA-256: `e28339b70032173e8b50c14592ecc0209c6bba696fa44e47a80f600fc6d3abdf`). The [complete research report](docs/research/deep-research-report-2026-11-22.md) is archived verbatim for Cursor; its external claims are not independently verified by local engine tests. Primary links and claims are recorded in [docs/RESEARCH_SOURCES.md](docs/RESEARCH_SOURCES.md).
 
 **No redistribution license is presumed for this repository's code/assets or third-party mods.** License review is pending; data sources have separate obligations. No user-provided PBO, P3D, PAA, WRP or other binaries are stored here.
