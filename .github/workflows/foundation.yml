@@ -19,6 +19,8 @@ jobs:
         run: python tools/validation/validate_config.py
       - name: Synthetic sector tests
         run: python -m unittest discover -s tools/validation -p "test_*.py" -v
+      - name: GIS-04 offline ownership tests
+        run: python -m unittest discover -s tools/gis/tile_pipeline -p "test_*.py" -v
       - name: Test manifest dry-run
         run: python tools/validation/build_sector_manifests.py --dry-run
       - name: Block accidentally tracked source binaries
