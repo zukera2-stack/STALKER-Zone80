@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "stage": "foundation-only",
+  "enabled": false,
+  "world_seed": 8041986,
+  "quality_tier": "Q1",
+  "builder_parallelism": 1,
+  "memory_policy": {
+    "soft_target_gib": 18,
+    "warn_private_bytes_gib": 20,
+    "stop_private_bytes_gib": 24
+  },
+  "tile_buffer_m": null,
+  "output_mode": "single-wrp-after-gates",
+  "downloads_enabled": false,
+  "full_world_generation_enabled": false,
+  "license_policy": "deny-unknown",
+  "notes": "Values are safe initial policy candidates, not benchmarked capacity."
+}

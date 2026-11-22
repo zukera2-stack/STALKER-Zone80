@@ -1,0 +1,5 @@
+schema_version: 1
+approved_dependencies: []
+explicit_landmark_overrides: []
+default_match_policy: deny_unreviewed
+# No real asset classnames or paths are verified at this stage.

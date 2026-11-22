@@ -1,0 +1,6 @@
+schema_version: 1
+datasets: []
+# Add datasets only after permissions, coverage, extraction date, SHA256,
+# URL, vertical/horizontal datum and provenance have been reviewed.
+# Example fields: id, source_url, downloaded_utc, sha256, source_date,
+# license, attribution, spatial_extent_wgs84, rights_review, local_path.

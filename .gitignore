@@ -1,0 +1,67 @@
+# Original addons and Arma build artefacts — never publish these by accident
+*.pbo
+*.bisign
+*.bikey
+*.p3d
+*.paa
+*.rvmat
+*.wrp
+*.ebo
+*.grma3m
+*.grma3a
+*.depbo
+*.rpt
+*.bak
+
+# Original / normalized / intermediate geographic data (keep provenance manifests separately)
+data/raw/**
+data/normalized/**
+data/historical/**
+data/cache/**
+data/intermediate/**
+!data/raw/.gitkeep
+*.osm
+*.osm.pbf
+*.pbf
+*.gpkg
+*.sqlite
+*.sqlite3
+*.mbtiles
+*.tif
+*.tiff
+*.vrt
+*.asc
+*.dtm
+*.las
+*.laz
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.7z
+
+# Local generated material
+assets/catalog/**
+!assets/catalog/README.md
+sectors/manifests/**
+!sectors/manifests/README.md
+output/**
+logs/**
+reports/**
+!reports/README.md
+
+# Local environment and GRM source clones
+tools/ArmaRealMap-src/
+tools/grm_patch/upstream/
+.env
+.env.*
+*.user
+.vs/
+.idea/
+__pycache__/
+.pytest_cache/
+*.pyc
+bin/
+obj/
+
+# Explicitly track small reviewed GeoJSON overrides under data/overrides

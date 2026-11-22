@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "PENDING_CRS_AND_EXTENT_APPROVAL",
+  "world_size_m": 81920,
+  "heightmap_cells_per_side": 4096,
+  "terrain_cell_size_m": 20,
+  "texture_layer_size_m": 80,
+  "sector_cells_per_side": 512,
+  "sector_size_m": 10240,
+  "sector_count_per_axis": 8,
+  "source_crs": "EPSG:4326",
+  "production_crs": null,
+  "study_area_bbox_wgs84": null,
+  "local_origin_easting_northing_m": null,
+  "vertical_datum": null,
+  "crs_approval_evidence": null,
+  "notes": "Do not invent the anchor, the full-world square or a production EPSG. Verify candidate CRS and control points first."
+}

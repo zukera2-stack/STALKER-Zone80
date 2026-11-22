@@ -1,0 +1,31 @@
+name: Foundation validation
+on:
+  push:
+    branches: [main, 'feat/**', 'audit/**', 'fix/**']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  stdlib-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate non-generating configuration
+        run: python tools/validation/validate_config.py
+      - name: Synthetic sector tests
+        run: python -m unittest discover -s tools/validation -p "test_*.py" -v
+      - name: Test manifest dry-run
+        run: python tools/validation/build_sector_manifests.py --dry-run
+      - name: Block accidentally tracked source binaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -Ei '\.(pbo|p3d|paa|wrp|ebo|tif|tiff|osm\.pbf|gpkg|sqlite)$'; then
+            echo "Tracked protected or generated asset detected" >&2
+            exit 1
+          fi
