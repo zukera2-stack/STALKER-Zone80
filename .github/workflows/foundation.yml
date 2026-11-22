@@ -21,6 +21,12 @@ jobs:
         run: python -m unittest discover -s tools/validation -p "test_*.py" -v
       - name: Test manifest dry-run
         run: python tools/validation/build_sector_manifests.py --dry-run
+      - name: GIS-04 offline ownership tests
+        run: python -m unittest discover -s tools/gis/tile_pipeline -p "test_*.py" -v
+      - name: GRM-01 offline export contract
+        run: python -m unittest discover -s tools/grm/grm01 -p "test_export.py" -v
+      - name: TB-01 offline import candidate tests
+        run: python -m unittest discover -s tools/grm/grm01 -p "test_tb_import.py" -v
       - name: Block accidentally tracked source binaries
         shell: bash
         run: |
