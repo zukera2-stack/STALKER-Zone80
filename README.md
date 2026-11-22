@@ -17,7 +17,7 @@
 
 **Crucial distinction:** confirmed physical geographic features, visual proxies reconstructed using licensed Arma assets, and fictional gameplay additions are separate layers. A geographic footprint is not evidence that the matched 3D model is historically authentic.
 
-## Start here
+## Agent entrypoint\n\n**Start every agent session at [AGENT_START.md](AGENT_START.md).** The project reference Library is indexed in [docs/LIBRARY_INDEX.md](docs/LIBRARY_INDEX.md).\n\n## Start here
 
 1. Read [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md), [docs/GO_NOGO.md](docs/GO_NOGO.md) and [AGENTS.md](AGENTS.md).
 2. Cursor/Luna: follow [docs/TASK_CURSOR_001.md](docs/TASK_CURSOR_001.md). Audit first; **do not generate an 80 km world**.

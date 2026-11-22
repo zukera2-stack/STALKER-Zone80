@@ -22,3 +22,15 @@ risks:
   - "single WRP streaming feasibility unproven"
   - "CRS and full-world extent undetermined"
   - "third-party asset licenses unknown"
+
+prior_report_evidence:
+  source: "Private ChatGPT Library: /Арма/STALKER-Zone80/03_Отчёты"
+  report_date: "2026-11-21"
+  needs_local_reverification: true
+  windows_reported_by_audit: "Windows 10 Pro"
+  studio_seen_in_older_logs: "0.9"
+  prior_failure_log_signature: "Task disposal of incomplete Task during RawSatelliteImage"
+  private_memory_at_failure_gb_approx: "8.3-8.7 (reported by GRM logs; not measured by this session)"
+  out_of_memory_confirmed: false
+  microprototype_config_exists_in_library: true
+  microprototype_executed: false
