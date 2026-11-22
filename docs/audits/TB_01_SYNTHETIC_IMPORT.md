@@ -1,6 +1,6 @@
 # TB-01 — проверка синтетического набора для Terrain Builder
 
-[Issue #15](https://github.com/zukera2-stack/STALKER-Zone80/issues/15). **Stage 001 / PARTIAL. Реальный GUI-импорт BLOCKED в доступном сеансе.** База набора GRM-01 — `8825afcc6906c5aed1c180e1a922930162c45432` (PR #14). Для проверки интеграции в ветку перенесены неизменённые Python-тесты GIS-04 и их модуль из PR #12, SHA `178f1abcc61c73d5878078003b03c44bbfac9f7b`. Foundation запускает три отдельных шага GIS-04, GRM-01 и TB-01 в одном checkout. PR #12 и #14 остаются отдельными.
+[Issue #15](https://github.com/zukera2-stack/STALKER-Zone80/issues/15). **Stage 001 / PARTIAL. Реальный GUI-импорт BLOCKED в доступном сеансе.** База набора GRM-01 — `8825afcc6906c5aed1c180e1a922930162c45432` (PR #14). Для проверки интеграции в ветку перенесены неизменённые Python-тесты GIS-04 и их модуль из PR #12, SHA `178f1abcc61c73d5878078003b03c44bbfac9f7b`. Foundation запускает три отдельных шага GIS-04, GRM-01 и TB-01 в одном checkout. PR #12 и #14 остаются отдельными. PR TB-01 направлен в main и включает зависимость GRM-01 в сравнении с main до отдельного принятия PR #14.
 
 ## Результат
 
@@ -35,6 +35,8 @@ python -m unittest discover -s tools/grm/grm01 -p "test_export.py" -v
 python -m unittest discover -s tools/grm/grm01 -p "test_tb_import.py" -v
 python tools/grm/grm01/prepare.py grm01-independent-dc054352 tb01-import-candidate
 ```
+
+Локально GRM-01 и TB-01 сначала были запущены общим шаблоном test_*.py (10/10). CI выполняет их отдельными шагами.
 
 Исходный каталог в последней команде — отдельный W/E прогон GRM-01 с TML из .NET ContractProbe. Для новой генерации см. [README GRM-01](../../tools/grm/grm01/README.md). Данные сохраняются только в `reports/`. Воспроизведение на проверенной машине: `reports/TB-01-tests.log` и `reports/tb01-import-candidate/sha256.json`.
 
