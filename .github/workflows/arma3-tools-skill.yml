@@ -1,0 +1,23 @@
+name: Arma 3 Tools skill (offline only)
+on:
+  pull_request:
+    paths:
+      - '.cursor/skills/arma3-tools-zone80/**'
+      - '.github/workflows/arma3-tools-skill.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.cursor/skills/arma3-tools-zone80/**'
+      - '.github/workflows/arma3-tools-skill.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic-format-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test Arma Tools skill without proprietary programs
+        run: python -m unittest discover -s .cursor/skills/arma3-tools-zone80/scripts -p "test_*.py" -v
