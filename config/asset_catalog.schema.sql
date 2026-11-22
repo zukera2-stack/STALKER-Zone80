@@ -1,0 +1,25 @@
+-- Logical metadata-only schema; initial scanner does not claim full population.
+CREATE TABLE IF NOT EXISTS assets (
+  asset_id TEXT PRIMARY KEY,
+  addon TEXT,
+  pbo TEXT,
+  sha256 TEXT,
+  pbo_prefix TEXT,
+  virtual_path TEXT,
+  classname TEXT,
+  model_path TEXT,
+  bbox_x_m REAL,
+  bbox_y_m REAL,
+  bbox_z_m REAL,
+  asset_category TEXT,
+  floors_guess INTEGER,
+  lod_summary TEXT,
+  required_addons_json TEXT,
+  quality_tier TEXT,
+  license_status TEXT NOT NULL DEFAULT 'UNKNOWN',
+  license_source TEXT,
+  redistribution_allowed INTEGER NOT NULL DEFAULT 0,
+  dependency_only INTEGER,
+  allowed_for_zone80 INTEGER NOT NULL DEFAULT 0,
+  notes TEXT
+);

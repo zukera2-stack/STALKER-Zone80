@@ -1,0 +1,10 @@
+schema_version: 1
+enabled: false
+seed_strategy: "world_seed+source_feature_id+rule_version"
+object_categories:
+  buildings: {enabled: false, tier: Q2, source: "verified-footprints"}
+  fences: {enabled: false, tier: Q2, source: "verified-line-or-manual"}
+  wrecks: {enabled: false, tier: Q1, source: "documented-or-procedural"}
+  vegetation: {enabled: false, tier: Q1, source: "validated-landcover"}
+  landmarks: {enabled: false, tier: Q3, source: "owner-approved"}
+manual_overrides_precedence: true

@@ -1,0 +1,24 @@
+project: STALKER-Zone80
+updated_utc: "2026-11-22"
+stage: "001-foundation"
+status: "PARTIAL"
+main_goal: "Arma 3 geographically grounded single world"
+target:
+  world_size_m: 81920
+  grid_cells: 4096
+  cell_size_m: 20
+  sectors: 64
+verified:
+  repository_initialized: true
+  map_generated: false
+  engine_load_test: false
+  crs_approved: false
+  local_environment_audited: false
+  original_assets_scanned: false
+  grm_memory_root_cause: false
+next_gate: "Stage 001 evidence-based foundation audit"
+risks:
+  - "32 GiB RAM and unknown GRM peak"
+  - "single WRP streaming feasibility unproven"
+  - "CRS and full-world extent undetermined"
+  - "third-party asset licenses unknown"

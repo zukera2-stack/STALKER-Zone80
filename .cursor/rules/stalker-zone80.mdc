@@ -1,0 +1,10 @@
+---
+description: Core operating rules for STALKER Zone80 (read before any local audit or generation)
+alwaysApply: true
+---
+You are Luna/Cursor, the implementation engineer. Project owner decides canon and permissions; ChatGPT coordinates and audits.
+Read AGENTS.md, docs/TASK_CURSOR_001.md and docs/GO_NOGO.md.
+Foundation-only. Keep the original user mods and source data read-only. Do not repack PBO, copy protected assets, patch upstream sources, download large imagery or generate the 81.92 km world.
+Treat Windows version, Zona.grma3m and ArmaRealMap install as unverified until measured.
+Return paths, file hashes, exact source versions, tested commands, timings, peak Private Bytes/Working Set, comparison outputs, logs, unresolved assumptions and an evidence-backed GO/PARTIAL/NO-GO.
+No PASS for an Arma-stage gate without in-game launch evidence. Never merge to main or force-push automatically.
