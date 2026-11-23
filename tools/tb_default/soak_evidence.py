@@ -201,7 +201,9 @@ class EvidenceSession:
 def recover_run(runroot: Path, *, write: bool = True) -> dict:
     """Forensic reconstruction; raw logs and original summary stay untouched."""
     result = scan_cycles(runroot / "cycles.jsonl")
-    events, event_errors = _scan_jsonl(runroot / "EVENTS.jsonl")
+    events_path = runroot / "EVENTS.jsonl"
+    legacy_events_missing = not events_path.exists()
+    events, event_errors = _scan_jsonl(events_path) if not legacy_events_missing else ([], [])
     summary_path = runroot / "SUMMARY.json"
     summary = None
     summary_error = None
@@ -222,6 +224,11 @@ def recover_run(runroot: Path, *, write: bool = True) -> dict:
         and result["cycles"] == 120 and result["inventories"] == 12
         and not result["problems"] and terminal_event
     )
+    complete_probe = bool(
+        isinstance(summary, dict) and summary.get("status") == "PROBE_COMPLETE"
+        and not result["problems"] and terminal_event
+    )
+    recorded_reason = summary.get("stopReason") if isinstance(summary, dict) else None
     evidence = {
         "provenance": "offline read-only reconstruction; not Windows/TB test",
         "recoveryUTC": utc_now(),
@@ -230,9 +237,11 @@ def recover_run(runroot: Path, *, write: bool = True) -> dict:
         "cycles": result["cycles"],
         "inventories": result["inventories"],
         "lastElapsedSec": result["lastElapsedSec"],
-        "status": "COMPLETED_RECORDED" if recorded_pass else "INTERRUPTED/PARTIAL",
-        "cause": None if recorded_pass else "CAUSE_UNKNOWN",
-        "firstKnownStop": summary.get("stopReason") if isinstance(summary, dict) else None,
+        "status": ("COMPLETED_RECORDED" if recorded_pass else
+                   "COMPLETED_PROBE_RECORDED" if complete_probe else "INTERRUPTED/PARTIAL"),
+        "cause": None if recorded_pass or complete_probe else (recorded_reason or "CAUSE_UNKNOWN"),
+        "firstKnownStop": recorded_reason,
+        "legacyEventsMissing": legacy_events_missing,
         "summaryError": summary_error,
         "evidenceProblems": result["problems"] + event_errors,
         "terminalEventRecorded": terminal_event,
