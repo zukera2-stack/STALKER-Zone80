@@ -25,11 +25,13 @@ EXPECTED_HASH = '69470C7FB029C5D63F849FDDB197DCE715ED219F7AE08BEC132472FF333A7AC
 PARENT_DESKTOP = r'WinSta0\Default'
 CYCLES, PERIOD, INVENTORY_EVERY = 120, 30, 10
 ROOT = Path(__file__).resolve().parents[2]
-REPORTS = ROOT / 'reports' / 'TB-UIA-02'
+REPORTS = ROOT / 'reports' / 'TB-UIA-03'
 EDITOR_RE = re.compile(r'editorWindow=True; dialogObserved=False; uia=True; responding=True')
 RUNTIME_ID_RE = re.compile(r'^[0-9]+(?:\.[0-9]+)*$')
 METRIC_RE = re.compile(r'WS=(\d+); private=(\d+); responding=(True|False)')
-HWND_RE = re.compile(r'HWND=0x([0-9A-Fa-f]+); class=wxWindowClassNR;')
+HWND_RE = re.compile(
+    r'^HWND=0x([0-9A-Fa-f]+); class=wxWindowClassNR; visible=True; enabled=True; '
+    r'minimized=(?:True|False); title=Terrain Builder(?: - [^\r\n]+)?$', re.MULTILINE)
 
 class Blocked(RuntimeError):
     pass
@@ -46,7 +48,7 @@ def sha256(path: Path) -> str:
 def under_reports(path: Path, base: Path = REPORTS) -> Path:
     out = path.resolve()
     if out != base.resolve() and base.resolve() not in out.parents:
-        raise Blocked('output outside project-local reports/TB-UIA-02')
+        raise Blocked('output outside project-local reports/TB-UIA-03')
     return out
 
 
@@ -199,7 +201,7 @@ def verify_fixture(root: Path) -> dict:
 # assigned to our own kill-on-close Job Object. The ONLY executables launched
 # here are the two approved diagnostic helpers (and a bounded built-in whoami.exe
 # job-smoke), never TerrainBuilder.exe.
-def run_in_job(exe: Path, args: list[str], timeout_ms: int) -> int:
+def run_in_job(exe: Path, args: list[str], timeout_ms: int, *, protected_pid=None, emit=print) -> int:
     if os.name != 'nt':
         raise Blocked('Windows runtime unavailable: NOT RUN')
     import subprocess
@@ -248,38 +250,127 @@ def run_in_job(exe: Path, args: list[str], timeout_ms: int) -> int:
     k.TerminateJobObject.argtypes=[wintypes.HANDLE,wintypes.UINT]
     k.TerminateJobObject.restype=wintypes.BOOL
     k.CloseHandle.argtypes=[wintypes.HANDLE];k.CloseHandle.restype=wintypes.BOOL
-    job=k.CreateJobObjectW(None,None)
-    if not job: raise Blocked(f'CreateJobObjectW Win32={ctypes.get_last_error()}')
-    p=PROCESS_INFORMATION();started=False
-    try:
-        limit=EXTENDED_LIMIT()
-        limit.BasicLimitInformation.LimitFlags=0x2000 # JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
-        if not k.SetInformationJobObject(job,9,ctypes.byref(limit),ctypes.sizeof(limit)):
-            raise Blocked(f'SetInformationJobObject Win32={ctypes.get_last_error()}')
-        si=STARTUPINFO();si.cb=ctypes.sizeof(si)
-        command=ctypes.create_unicode_buffer(subprocess.list2cmdline([str(exe),*args]))
-        if not k.CreateProcessW(str(exe),command,None,None,False,0x4|0x08000000,None,
-                                str(exe.parent),ctypes.byref(si),ctypes.byref(p)):
-            raise Blocked(f'CreateProcessW diagnostic Win32={ctypes.get_last_error()}')
-        started=True
-        if not k.AssignProcessToJobObject(job,p.hProcess):
-            raise Blocked(f'AssignProcessToJobObject Win32={ctypes.get_last_error()}')
-        if k.ResumeThread(p.hThread)==0xffffffff:
-            raise Blocked(f'ResumeThread Win32={ctypes.get_last_error()}')
-        outcome=k.WaitForSingleObject(p.hProcess,timeout_ms)
-        if outcome!=0:
-            k.TerminateJobObject(job,0xE2)
-            k.WaitForSingleObject(p.hProcess,3000)
-            raise Blocked(f'diagnostic timeout/wait failure outcome={outcome}; job terminated')
+    k.TerminateProcess.argtypes=[wintypes.HANDLE,wintypes.UINT]
+    k.TerminateProcess.restype=wintypes.BOOL
+    k.GetProcessTimes.argtypes=[wintypes.HANDLE]+[ctypes.c_void_p]*4
+    k.GetProcessTimes.restype=wintypes.BOOL
+    k.OpenProcess.argtypes=[wintypes.DWORD,wintypes.BOOL,wintypes.DWORD]
+    k.OpenProcess.restype=wintypes.HANDLE
+    k.IsProcessInJob.argtypes=[wintypes.HANDLE,wintypes.HANDLE,ctypes.POINTER(wintypes.BOOL)]
+    k.IsProcessInJob.restype=wintypes.BOOL
+    p=PROCESS_INFORMATION()
+    limit=EXTENDED_LIMIT()
+    limit.BasicLimitInformation.LimitFlags=0x2000
+    si=STARTUPINFO()
+    si.cb=ctypes.sizeof(si)
+    command=ctypes.create_unicode_buffer(subprocess.list2cmdline([str(exe),*args]))
+
+    def require(ok, api):
+        if not ok:
+            raise Blocked(f'{api} Win32={ctypes.get_last_error()}')
+
+    def job_create():
+        job=k.CreateJobObjectW(None,None)
+        require(job,'CreateJobObjectW')
+        return job
+
+    def setup(job):
+        require(k.SetInformationJobObject(job,9,ctypes.byref(limit),ctypes.sizeof(limit)),
+                'SetInformationJobObject')
+        if protected_pid is not None:
+            target=k.OpenProcess(0x1000,False,protected_pid)
+            require(target,'OpenProcess(Terrain Builder, query only)')
+            try:
+                member=wintypes.BOOL()
+                require(k.IsProcessInJob(target,job,ctypes.byref(member)),'IsProcessInJob(Terrain Builder)')
+                if member.value:
+                    raise Blocked('Terrain Builder belongs to diagnostic job')
+                emit(f'protectedPid={protected_pid} inDiagnosticJob=false')
+            finally:
+                k.CloseHandle(target)
+
+    def create():
+        require(k.CreateProcessW(str(exe),command,None,None,False,0x4|0x08000000,None,
+                                 str(exe.parent),ctypes.byref(si),ctypes.byref(p)), 'CreateProcessW')
+
+    def identity():
+        timestamps=[ctypes.c_ulonglong() for _ in range(4)]
+        require(k.GetProcessTimes(p.hProcess,*(ctypes.byref(t) for t in timestamps)), 'GetProcessTimes')
+        return f'pid={p.dwProcessId} startUtcTicks={timestamps[0].value+504911232000000000}'
+
+    def exit_code():
         code=wintypes.DWORD()
-        if not k.GetExitCodeProcess(p.hProcess,ctypes.byref(code)):
-            raise Blocked(f'GetExitCodeProcess Win32={ctypes.get_last_error()}')
+        require(k.GetExitCodeProcess(p.hProcess,ctypes.byref(code)),'GetExitCodeProcess')
         return code.value
+
+    def wait(ms):
+        result=k.WaitForSingleObject(p.hProcess,ms)
+        require(result!=0xffffffff,'WaitForSingleObject')
+        return result
+
+    def close_job(job):
+        require(k.CloseHandle(job),'CloseHandle(job)')
+
+    return job_lifecycle(job_create, setup, create, identity,
+        lambda job: require(k.AssignProcessToJobObject(job,p.hProcess),'AssignProcessToJobObject'),
+        lambda: require(k.ResumeThread(p.hThread)==1,'ResumeThread'),
+        wait, exit_code, close_job,
+        lambda: require(k.TerminateProcess(p.hProcess,0xE2),'TerminateProcess(owned suspended child)'),
+        lambda: (k.CloseHandle(p.hThread), k.CloseHandle(p.hProcess)),
+        timeout_ms, emit)
+
+
+def job_lifecycle(new_job, setup, create, identity, assign, resume, wait, exit_code,
+                  close_job, terminate_suspended, close_child, timeout_ms, emit):
+    """Own handles by construction; never terminate a process obtained by PID."""
+    job = new_job()
+    created = assigned = resumed = finished = False
+    child = 'identity unavailable'
+    try:
+        setup(job)
+        create()
+        created = True
+        child = identity()
+        emit(f'{child} created=true assigned=false resumed=false')
+        assign(job)
+        assigned = True
+        emit(f'{child} assigned=true')
+        resume()
+        resumed = True
+        emit(f'{child} resumed=true')
+        outcome = wait(timeout_ms)
+        if outcome != 0:
+            raise Blocked(f'diagnostic wait outcome={outcome}')
+        code = exit_code()
+        finished = True
+        emit(f'{child} exit={code}')
+        return code
     finally:
-        if started:
-            k.CloseHandle(p.hThread);k.CloseHandle(p.hProcess)
-        # closes our job and all diagnostic descendants, never TB
-        k.CloseHandle(job)
+        try:
+            if created and not finished:
+                try:
+                    if assigned:
+                        close_job(job)
+                        job = None
+                    else:
+                        try:
+                            terminate_suspended()
+                        except Blocked:
+                            if wait(0) != 0:
+                                raise
+                    if wait(3000) != 0:
+                        raise Blocked('owned child did not signal exit')
+                    code = exit_code()
+                except Exception as exc:
+                    raise Blocked(f'UNCONFIRMED CLEANUP {child}: {exc}') from exc
+                emit(f'{child} cleanup=confirmed exit={code} assigned={assigned} resumed={resumed}')
+        finally:
+            try:
+                if job is not None:
+                    close_job(job)
+            finally:
+                if created:
+                    close_child()
 
 
 def process_identity(pid: int, exe: Path, sha: str, ticks: int) -> dict:
@@ -320,7 +411,7 @@ def process_identity(pid: int, exe: Path, sha: str, ticks: int) -> dict:
 
 def diagnostic(exe: Path, args: list[str], runroot: Path, limit_ms: int) -> tuple[int,str,str]:
     existing={p.name for p in exe.parent.iterdir() if p.is_dir()}
-    code=run_in_job(exe,args,limit_ms)
+    code=run_in_job(exe,args,limit_ms,protected_pid=int(args[1]))
     newer=[p for p in exe.parent.iterdir() if p.is_dir() and p.name not in existing]
     if len(newer)!=1 or not newer[0].parent==runroot:
         raise Blocked('diagnostic evidence directory missing or ambiguous')
@@ -424,7 +515,7 @@ def main(argv=None)->int:
             tool=Path(os.environ['WINDIR'])/'System32'/'whoami.exe'
             if not tool.is_file() or tool.name.lower()!='whoami.exe':
                 raise Blocked('known Windows diagnostic executable missing')
-            code=run_in_job(tool,[],5000)
+            code=run_in_job(tool,[],5000,protected_pid=args.pid)
             if code: raise Blocked(f'job-smoke process failed: {code}')
             print('PASS: Windows Job Object owned child completed')
             return 0
