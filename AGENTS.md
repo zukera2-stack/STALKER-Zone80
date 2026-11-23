@@ -12,6 +12,12 @@
 - Asset license status UNKNOWN implies **no redistribution** and **no automatic approval**. Prefer external dependencies.
 - A user-provided path/name is a search hint, not verification that a local file exists.
 
+## Issue-first task delivery
+
+- **Owner directive, 2026-11-23:** ChatGPT/auditors must publish every subsequent task for Cursor/Luna or another project agent as a **GitHub Issue** in `zukera2-stack/STALKER-Zone80`, or update the active Issue when extending the same task. Chat replies should link to that Issue with a concise summary; do not ask the owner to copy a long chat assignment manually.
+- Every assignment Issue must state the base branch/commit SHA, scope, authorized actions, forbidden actions, tests and evidence, outcome gates and stop conditions. New state-changing or destructive actions require explicit owner authorization; creating an Issue is **not** authorization to bypass Stage 001 or other limits.
+- Agent reports and code changes belong in an isolated branch/PR with sanitized evidence and links back to the Issue. Do not merge automatically. If GitHub is unavailable, report the blocker rather than implying the task was published.
+
 ## Development contract
 - Work on a feature branch. Avoid force pushes; do not merge without stage acceptance.
 - Each task must report commit SHA, changed files, test commands/results, measurements, missing dependencies, and a GO/PARTIAL/NO-GO judgement.
