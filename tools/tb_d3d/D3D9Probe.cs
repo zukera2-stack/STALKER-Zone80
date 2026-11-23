@@ -124,9 +124,15 @@ internal static class D3D9Probe
         {
             hwnd = CreateWindowEx(0x08000000, "STATIC", "D3D9 diagnostic", 0x80000000, 0, 0, 64, 64,
                 IntPtr.Zero, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
-            if (hwnd == IntPtr.Zero || !IsWindow(hwnd))
+            if (hwnd == IntPtr.Zero)
             {
-                Console.WriteLine("BLOCKED: own HWND unavailable; Win32 error {0}", Marshal.GetLastWin32Error());
+                int error = Marshal.GetLastWin32Error();
+                Console.WriteLine("BLOCKED: CreateWindowEx returned NULL; Win32 error {0} ({1})", error, Hex(error));
+                return 2;
+            }
+            if (!IsWindow(hwnd))
+            {
+                Console.WriteLine("BLOCKED: IsWindow rejected the returned HWND");
                 return 2;
             }
             Console.WriteLine("ownHwnd=0x{0:X}", hwnd.ToInt64());
