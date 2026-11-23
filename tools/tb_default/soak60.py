@@ -53,8 +53,10 @@ def sha256(path: Path) -> str:
 
 def under_reports(path: Path, base: Path = REPORTS) -> Path:
     out = path.resolve()
-    if out != base.resolve() and base.resolve() not in out.parents:
-        raise Blocked('output outside project-local reports/TB-UIA-03')
+    # Use only the old data root or the new evidence-hardening sandbox.
+    roots=(base.resolve(),(ROOT/'reports'/'TB-UIA-06').resolve())
+    if not any(out==root or root in out.parents for root in roots):
+        raise Blocked('output outside approved TB-UIA reports roots')
     return out
 
 
@@ -513,11 +515,50 @@ def soak(pid:int,ticks:int,exe:Path,launcher:Path,inventory:Path,outbase:Path,
     return runroot
 
 
+def lifetime_probe(outbase:Path, duration_sec:float=1620, period_sec:float=30)->Path:
+    """No-TB runtime longevity test, deliberately exceeds prior ~24.5 min stop.
+
+    Does not create a service/task/daemon and does not escape the agent's Job.
+    A lost process leaves atomic RUNNING/PARTIAL and committed cycle evidence.
+    """
+    if duration_sec < 0 or duration_sec > 1800 or period_sec < .005:
+        raise Blocked('lifetime probe duration/period outside allowed bounds')
+    count=int(duration_sec//period_sec)+1
+    if count>200:
+        raise Blocked('lifetime probe would create too many samples')
+    root=unique_dir(outbase)
+    session=EvidenceSession(root, {
+        'probeType':'synthetic-lived-process', 'tbLaunched':False, 'uiActions':False,
+        'scheduledSeconds':duration_sec,'samplePeriodSec':period_sec,
+        'notTerrainBuilderEvidence':True,
+    })
+    start=time.monotonic()
+    try:
+        for i in range(1,count+1):
+            pause=start+(i-1)*period_sec-time.monotonic()
+            if pause>0: time.sleep(pause)
+            snapshot=i%10==0
+            row={'cycle':i,'elapsedSec':round(time.monotonic()-start,3),
+                 'statusCode':0,'identity':{'synthetic':True}}
+            if snapshot: row['inventory']={'nodes':1,'synthetic':True}
+            session.commit(row)
+        pause=start+duration_sec-time.monotonic()
+        if pause>0: time.sleep(pause)
+        session.finish('PROBE_COMPLETE',time.monotonic()-start,
+                       reason='synthetic only; no Terrain Builder')
+    except BaseException as exc:
+        session.finish('PARTIAL / BLOCKED',time.monotonic()-start,
+                       reason=f'{type(exc).__name__}: {exc}')
+    return root
+
+
 def main(argv=None)->int:
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode',choices=['offline','job-smoke','soak','recover'])
+    parser.add_argument('mode',choices=['offline','job-smoke','soak','recover','lifetime-probe'])
     parser.add_argument('--pid',type=int,default=3856)
     parser.add_argument('--run-dir',type=Path,help='existing local reports run for read-only recovery')
+    parser.add_argument('--probe-seconds',type=float,default=1620)
+    parser.add_argument('--probe-period',type=float,default=30)
     parser.add_argument('--start-ticks',type=int)
     parser.add_argument('--tb-exe',type=Path)
     parser.add_argument('--launcher-bin',type=Path)
@@ -541,6 +582,10 @@ def main(argv=None)->int:
             print(f"RECOVERY: cycles={recovery['cycles']} inventories={recovery['inventories']} "
                   f"status={recovery['status']} cause={recovery['cause']}")
             return 0 if not recovery['evidenceProblems'] else 2
+        if args.mode=='lifetime-probe':
+            result=lifetime_probe(root,args.probe_seconds,args.probe_period)
+            print(f"SYNTHETIC ONLY: evidence={result} (not a TB SOAK)")
+            return 0 if json.loads((result/'SUMMARY.json').read_text())['status']=='PROBE_COMPLETE' else 2
         if args.mode=='offline':
             dest=unique_dir(root)
             fixture=make_fixture(dest/'fixture')
