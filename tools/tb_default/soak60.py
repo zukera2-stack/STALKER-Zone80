@@ -21,6 +21,12 @@ import uuid
 from ctypes import wintypes
 from pathlib import Path
 
+# Unit tests load this file by path, so the sibling module needs an explicit path.
+_THIS_DIR = str(Path(__file__).resolve().parent)
+if _THIS_DIR not in sys.path:
+    sys.path.insert(0, _THIS_DIR)
+from soak_evidence import EvidenceSession, recover_run
+
 EXPECTED_HASH = '69470C7FB029C5D63F849FDDB197DCE715ED219F7AE08BEC132472FF333A7AC7'
 PARENT_DESKTOP = r'WinSta0\Default'
 CYCLES, PERIOD, INVENTORY_EVERY = 120, 30, 10
@@ -423,6 +429,7 @@ def diagnostic(exe: Path, args: list[str], runroot: Path, limit_ms: int) -> tupl
 def soak(pid:int,ticks:int,exe:Path,launcher:Path,inventory:Path,outbase:Path,
          launcher_sha:str,inventory_sha:str,
          cycles:int=CYCLES,period:int=PERIOD,snapshot_every:int=INVENTORY_EVERY) -> Path:
+    """One continuous read-only attempt; every completed cycle is checkpointed."""
     if os.name!='nt': raise Blocked('real SOAK requires Windows Default desktop: NOT RUN')
     if pid<=0 or ticks<=0 or cycles!=120 or period!=30 or snapshot_every!=10:
         raise Blocked('SOAK-60 parameters must remain 120x30sec, 12 UIA snapshots')
@@ -434,66 +441,83 @@ def soak(pid:int,ticks:int,exe:Path,launcher:Path,inventory:Path,outbase:Path,
         raise Blocked('non-allowlisted diagnostic helper name')
     if sha256(launcher) != launcher_sha.upper() or sha256(inventory) != inventory_sha.upper():
         raise Blocked('diagnostic helper hash mismatch')
+
     runroot=unique_dir(outbase)
     runtime=runroot/'runtime';runtime.mkdir()
     copy_launcher=runtime/'DefaultLauncher.exe';copy_uia=runtime/'UiaInventory.exe'
     shutil.copy2(launcher,copy_launcher);shutil.copy2(inventory,copy_uia)
-    log=runroot/'cycles.jsonl';summary={'status':'PARTIAL','cycles':0,'inventories':0,
-        'tbLaunched':False,'uiActions':False,'pid':pid,'startTicks':ticks}
+
+    # SUMMARY exists before cycle 1; every cycle is fsynced before its checkpoint.
+    session=EvidenceSession(runroot, {
+        'tbLaunched':False, 'uiActions':False, 'pid':pid, 'startTicks':ticks,
+        'tbSha256':EXPECTED_HASH, 'launcherSha256':launcher_sha.upper(),
+        'inventorySha256':inventory_sha.upper(),
+        'scheduledCycles':120, 'scheduledInventories':12,
+    })
     start=time.monotonic();latencies=[];memory=[];handles=[];cpu=[]
-    try:
-        with log.open('x',encoding='utf-8') as output:
-            for i, take_inventory in sample_plan(cycles,snapshot_every):
-                remaining=start+(i-1)*period-time.monotonic()
-                if remaining>0: time.sleep(remaining)
-                if time.monotonic()-start>3600+30: raise Blocked('global soak hard cap exceeded')
-                ident=process_identity(pid,exe,EXPECTED_HASH,ticks)
-                before=time.monotonic()
-                statuscode,parent,child=diagnostic(copy_launcher,['status',str(pid),str(ticks)],runtime,12000)
-                if statuscode!=0: raise Blocked(f'status returned {statuscode}')
-                validate_status(child,pid)
-                main_hwnd=status_hwnd(child)
-                metrics=status_metrics(child)
-                memory.append(metrics);handles.append(ident['handles']);cpu.append(ident['cpu100ns'])
-                item={'cycle':i,'elapsedSec':round(time.monotonic()-start,3),
-                      'statusCode':statuscode,'identity':ident,'metrics':metrics,
-                      'statusMs':round((time.monotonic()-before)*1000,2)}
-                latencies.append(item['statusMs'])
-                if take_inventory:
-                    code,p,c=diagnostic(copy_uia,['uia-inventory',str(pid),str(ticks)],runtime,12000)
-                    if code!=0: raise Blocked(f'UIA inventory returned {code}')
-                    nodes=parse_inventory(c)
-                    item['inventory']=validate_inventory(nodes,pid,main_hwnd)
-                    item['inventoryMs']=round((time.monotonic()-before)*1000,2)
-                    summary['inventories']+=1
-                output.write(json.dumps(item,sort_keys=True)+'\n');output.flush()
-                summary['cycles']=i
-        time.sleep(max(0,start+3600-time.monotonic()))
-        summary['status']='PASS'
-    except Exception as exc:
-        summary['status']='PARTIAL / BLOCKED'
-        summary['firstStop']=f'{type(exc).__name__}: {exc}'
-    finally:
-        summary['elapsedSec']=round(time.monotonic()-start,2)
+
+    def result_metrics():
+        resources=None
         if memory:
-            summary['resources']={'first':memory[0], 'last':memory[-1],
+            resources={'first':memory[0], 'last':memory[-1],
                 'deltaWorkingSetBytes':memory[-1]['workingSetBytes']-memory[0]['workingSetBytes'],
                 'deltaPrivateBytes':memory[-1]['privateBytes']-memory[0]['privateBytes'],
                 'deltaHandles':handles[-1]-handles[0],
                 'deltaCpuSeconds':round((cpu[-1]-cpu[0])/10000000,3)}
+        timing=None
         if latencies:
             ordered=sorted(latencies)
-            summary['statusMs']={'p50':statistics.median(ordered),
-                                 'p95':ordered[min(len(ordered)-1,int(.95*len(ordered)))],
-                                 'max':max(ordered)}
-        (runroot/'SUMMARY.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+            timing={'p50':statistics.median(ordered),
+                    'p95':ordered[min(len(ordered)-1,int(.95*len(ordered)))],
+                    'max':max(ordered)}
+        return resources,timing
+
+    try:
+        for i, take_inventory in sample_plan(cycles,snapshot_every):
+            remaining=start+(i-1)*period-time.monotonic()
+            if remaining>0: time.sleep(remaining)
+            if time.monotonic()-start>3600+30: raise Blocked('global soak hard cap exceeded')
+            ident=process_identity(pid,exe,EXPECTED_HASH,ticks)
+            before=time.monotonic()
+            statuscode,parent,child=diagnostic(copy_launcher,['status',str(pid),str(ticks)],runtime,12000)
+            if statuscode!=0: raise Blocked(f'status returned {statuscode}')
+            validate_status(child,pid)
+            main_hwnd=status_hwnd(child)
+            metrics=status_metrics(child)
+            item={'cycle':i,'elapsedSec':round(time.monotonic()-start,3),
+                  'statusCode':statuscode,'identity':ident,'metrics':metrics,
+                  'statusMs':round((time.monotonic()-before)*1000,2)}
+            if take_inventory:
+                code,p,c=diagnostic(copy_uia,['uia-inventory',str(pid),str(ticks)],runtime,12000)
+                if code!=0: raise Blocked(f'UIA inventory returned {code}')
+                nodes=parse_inventory(c)
+                item['inventory']=validate_inventory(nodes,pid,main_hwnd)
+                item['inventoryMs']=round((time.monotonic()-before)*1000,2)
+            # Commit both the cycle and snapshot before updating in-memory metrics.
+            session.commit(item)
+            memory.append(metrics);handles.append(ident['handles']);cpu.append(ident['cpu100ns'])
+            latencies.append(item['statusMs'])
+        time.sleep(max(0,start+3600-time.monotonic()))
+        resources,timing=result_metrics()
+        session.finish('PASS',time.monotonic()-start,resources=resources,timing=timing)
+    except BaseException as exc:
+        # External TerminateProcess, hard timeout and lost session bypass Python
+        # entirely. Their last durable RUNNING/PARTIAL checkpoint remains useful.
+        resources,timing=result_metrics()
+        try:
+            session.finish('PARTIAL / BLOCKED',time.monotonic()-start,
+                reason=f'{type(exc).__name__}: {exc}',resources=resources,timing=timing)
+        except Exception:
+            # Do not hide original failure; the already-fsynced cycles survive.
+            raise
     return runroot
 
 
 def main(argv=None)->int:
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode',choices=['offline','job-smoke','soak'])
+    parser.add_argument('mode',choices=['offline','job-smoke','soak','recover'])
     parser.add_argument('--pid',type=int,default=3856)
+    parser.add_argument('--run-dir',type=Path,help='existing local reports run for read-only recovery')
     parser.add_argument('--start-ticks',type=int)
     parser.add_argument('--tb-exe',type=Path)
     parser.add_argument('--launcher-bin',type=Path)
@@ -504,6 +528,19 @@ def main(argv=None)->int:
     args=parser.parse_args(argv)
     try:
         root=under_reports(args.out)
+        if args.mode=='recover':
+            if args.run_dir is None:
+                raise Blocked('recover requires --run-dir')
+            run_dir=args.run_dir.resolve()
+            reports_root=(ROOT/'reports').resolve()
+            if reports_root not in run_dir.parents:
+                raise Blocked('recovery input must be inside project reports')
+            if not run_dir.is_dir():
+                raise Blocked('run directory missing')
+            recovery=recover_run(run_dir,write=True)
+            print(f"RECOVERY: cycles={recovery['cycles']} inventories={recovery['inventories']} "
+                  f"status={recovery['status']} cause={recovery['cause']}")
+            return 0 if not recovery['evidenceProblems'] else 2
         if args.mode=='offline':
             dest=unique_dir(root)
             fixture=make_fixture(dest/'fixture')
