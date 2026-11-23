@@ -2,6 +2,10 @@
 
 **Read AGENTS.md first.** This is a local engineering job on the owner's Windows system. ChatGPT audits; the owner decides historic/gameplay canon and approves dependencies. Work on branch feat/foundation-audit from the reviewed foundation.
 
+## Текущий статус задания (решение владельца 24.11.2026)
+
+Эта инструкция сохранена как **исторический Foundation-аудит**. Владелец явно прекратил дальнейшую самостоятельную серию TB-UIA/SOAK и разрешил **[MAP-001 / Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35)** — небольшой реальный пилот Припяти (DEM, дороги, контуры зданий, preview, при безопасности — isolated TB sandbox import). Новым агентам не возвращаться к пункту «аудит, затем STOP» как к блокировке MAP-001. Stage 001 всё ещё PARTIAL, Stage 002 GO не объявлен, полномасштабная генерация запрещена. Текущий маршрут подробно изложен в `docs/MAP_001_TASK.md`.
+
 ## Hard limits
 1. Never edit, delete, repack or overwrite original addons, PBO/P3D/PAA, GRM project or GIS source files.
 2. Locate and report a candidate `Zona.grma3m` / `*.grma3a` rather than assuming its existence.
@@ -11,7 +15,7 @@
 6. PASS requires actual test evidence; in-game gate requires Arma 3 launch, RPT and screenshot.
 
 ## A — Verify environment
-Run tools/audit/environment_audit.ps1, inspect JSON manually and supplement with actual Global Mapper 27 (exe/version), Arma 3, Arma 3 Tools, Terrain Builder, Binarize, CfgConvert, .NET SDK and GDAL/ogr2ogr. Confirm Win edition/build, CPU, physical RAM, pagefile and disk free space. Include command output and tool paths only in local report.
+Run tools/audit/environment_audit.ps1, inspect JSON manually and supplement with actual Global Mapper 26.2 Pro 64-bit (указанная владельцем версия; подтвердить EXE/version/license локально), Arma 3, Arma 3 Tools, Terrain Builder, Binarize, CfgConvert, .NET SDK and GDAL/ogr2ogr. Confirm Win edition/build, CPU, physical RAM, pagefile and disk free space. Include command output and tool paths only in local report.
 
 ## B — Discover existing files
 Read-only search appropriate project folders for *.grma3m, *.grma3a, local ArmaRealMap checkout and candidate mod roots. Record filename, full local path, size, timestamp and SHA256 for critical files. Do not recurse the entire disk without a bounded search plan.
@@ -23,7 +27,7 @@ Record upstream URL https://github.com/jetelain/ArmaRealMap, tag/commit SHA and 
 Run `python tools/asset_index/scan_assets.py --root "PATH_TO_ADDONS"` only on an owner-approved addon folder. This initial tool only inventories loose P3D/PBO and hashes; **it cannot yet identify config classnames, virtual paths, dimensions, LOD or addon licenses**. Check existence of BankRev and CfgConvert, then propose a separate tested metadata parser with output into assets/catalog/ and explicit UNKNOWN licenses. Never extract/repack the original mod into a tracked directory.
 
 ## E — GIS and precise extent
-Run `python tools/validation/validate_config.py`. Define intended geographic square with owner; obtain control points on west/east/north/south edges. Investigate crossing of 30°E boundary. Test single UTM36N and, if needed, local Transverse Mercator via tools/gis/projection_probe.py; log inverse residual and geodesic scale error. No production CRS/XY origin approval without results. Prepare a validated Global Mapper v27 .gms DEM import, clip and export to GeoTIFF and ASC only after locating a small approved DEM. Do not label unexecuted scripts tested.
+Run `python tools/validation/validate_config.py`. Define intended geographic square with owner; obtain control points on west/east/north/south edges. Investigate crossing of 30°E boundary. Test single UTM36N and, if needed, local Transverse Mercator via tools/gis/projection_probe.py; log inverse residual and geodesic scale error. No production CRS/XY origin approval without results. Prepare a validated Global Mapper 26.2 Pro .gms DEM import, clip and export to GeoTIFF and ASC only after locating a small approved DEM. Do not label unexecuted scripts tested.
 
 ## F — Data model and first sector experiment
 Review source_registry.yaml, asset_mapping.yaml, object_rules.yaml and stalker_locations.geojson. Ensure every future real feature stores source ID/dataset/date/license, confidence, historical state and manual override. Run `python tools/validation/build_sector_manifests.py`, inspect 64 files, verify adjacent coordinates, stable IDs and zero overlaps. These manifests have no geographic data.
