@@ -176,7 +176,11 @@ class SoakNegativeTests(unittest.TestCase):
     def test_36_status_memory_unresponsive(self):
         with self.assertRaises(soak.Blocked): soak.status_metrics('WS=10; private=10; responding=False')
 
-    def test_37_canonical_import_never_invokes(self):
+    def test_37_job_smoke_blocked_on_linux(self):
+        if soak.os.name != 'nt':
+            self.assertEqual(soak.main(['job-smoke']),2)
+
+    def test_38_canonical_import_never_invokes(self):
         source=(ROOT/'tools/tb_default/soak60.py').read_text()
         for symbol in ('InvokePattern.Invoke(', 'SendKeys', 'SendInput', 'WM_COMMAND', 'SwitchDesktop'):
             self.assertNotIn(symbol,source)
