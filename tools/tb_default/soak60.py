@@ -197,7 +197,8 @@ def verify_fixture(root: Path) -> dict:
 
 # Minimal Windows process isolation. CreateProcessW is suspended until it is
 # assigned to our own kill-on-close Job Object. The ONLY executables launched
-# here are the two approved diagnostic helpers, never TerrainBuilder.exe.
+# here are the two approved diagnostic helpers (and a bounded built-in whoami.exe
+# job-smoke), never TerrainBuilder.exe.
 def run_in_job(exe: Path, args: list[str], timeout_ms: int) -> int:
     if os.name != 'nt':
         raise Blocked('Windows runtime unavailable: NOT RUN')
@@ -400,7 +401,7 @@ def soak(pid:int,ticks:int,exe:Path,launcher:Path,inventory:Path,outbase:Path,
 
 def main(argv=None)->int:
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode',choices=['offline','soak'])
+    parser.add_argument('mode',choices=['offline','job-smoke','soak'])
     parser.add_argument('--pid',type=int,default=3856)
     parser.add_argument('--start-ticks',type=int)
     parser.add_argument('--tb-exe',type=Path)
@@ -417,6 +418,15 @@ def main(argv=None)->int:
             fixture=make_fixture(dest/'fixture')
             (dest/'OFFLINE.json').write_text(json.dumps(fixture,indent=2)+'\n',encoding='utf-8')
             print(f'PASS offline synthetic fixture: {dest}')
+            return 0
+        if args.mode=='job-smoke':
+            if os.name != 'nt': raise Blocked('Windows job smoke requires Windows: NOT RUN')
+            tool=Path(os.environ['WINDIR'])/'System32'/'whoami.exe'
+            if not tool.is_file() or tool.name.lower()!='whoami.exe':
+                raise Blocked('known Windows diagnostic executable missing')
+            code=run_in_job(tool,[],5000)
+            if code: raise Blocked(f'job-smoke process failed: {code}')
+            print('PASS: Windows Job Object owned child completed')
             return 0
         if args.start_ticks is None or not all([args.tb_exe,args.launcher_bin,args.inventory_bin,args.launcher_sha,args.inventory_sha]):
             raise Blocked('soak requires start ticks, TB EXE, and pinned diagnostic helper paths/hashes')
