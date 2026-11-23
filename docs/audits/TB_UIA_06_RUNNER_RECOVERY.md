@@ -52,3 +52,33 @@
 - **NOT TESTED** — GUI Invoke, импорт ASC/CSV/TML, WRP/PBO, реальный повтор SOAK.
 
 **Ограничения:** не запускать/закрывать TB или менять его окна, не использовать мышь/SendKeys/WM_COMMAND/UIA Invoke, не менять P:, Windows ACL, реестр, службы/автозапуск, не запускать Binarize/Arma, не объединять PR и не переходить к Stage 002.
+
+
+## Локальная Windows-проверка
+
+**A PASS (восстановление), причина CAUSE_UNKNOWN. B PASS (25 локальных тестов и CI). C PASS (синтетическая проба). D NOT RUN (SOAK Terrain Builder). Stage 001 / PARTIAL.**
+
+Исходники закреплены на `c047cf8aceb61e3af0a744744c7ecb9e6ffc446c`. Локальные Git blob SHA: runner `3591c56f7bfdf628b4966693baa1bc0cb5fac7af`, evidence `056a89c83d9a350453dd716b9750c4b602f6c4da`, тесты `1a2e59c23e966f1fecdd84938753ac6492355a81`. Проверен [CI job 138022289953](https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45268664092/job/138022289953) на закреплённом HEAD: 75 тестов. На Windows прошли 25 тестов evidence, `python -m unittest discover -s tools/validation -p test_tb_soak_evidence.py -v` из изолированной копии исходников.
+
+### Восстановление предыдущего прогона
+
+50 последовательных JSONL записей, снимки 10/20/30/40/50, единая идентичность Terrain Builder и status exit 0 во всех циклах. Все 55 диагностических запусков сопоставлены с 55 exit 0 по PID и времени создания. Сохранились 55 пар PARENT/CHILD. Последняя запись через 1470,708 с. Код завершения основного Python и терминальная запись отсутствуют.
+
+| Измерение | p50, мс | p95, мс | max, мс |
+| --- | ---: | ---: | ---: |
+| Status | 850,015 | 975,82 | 1008,75 |
+| Снимок, включая status | 1761,24 | 2799,81 | 2799,81 |
+
+От первого до последнего цикла: Working Set +9 711 616 байт, Private Bytes −204 800 байт, handles +3, CPU +5,359375 с. Ошибок в валидных циклах не выявлено.
+
+Вызов `recover_run` из закреплённой локальной копии записал единственный новый RECOVERY.json. Исходный SHA-256 cycles.jsonl совпал с PR #31: `481123F4C26BD98579D7EC88AA498CD94FC35058EB4F22ED7DDFE2163225EB18`. Все 113 исходных файлов до и после имеют одинаковые SHA-256. RECOVERY SHA-256 `C15FB8D5549651C7CEE69DD76E1C58E53F8C85E3DD80ECA061844AD79241BE3A`.
+
+За интервал 21:41–21:47 мск 23 ноября релевантных Application/System событий и подходящих WER ReportArchive/ReportQueue не найдено. Нет доказанного exit code, события краша или внешнего завершения. Ошибка file:///workspace зарегистрирована при последующем чтении. Причина обрыва остаётся **CAUSE_UNKNOWN**.
+
+### Синтетический Windows lifecycle
+
+Из консоли агента выполнены команды `python -u tools/tb_default/soak60.py lifetime-probe --probe-seconds 3 --probe-period .25` и `python -u tools/tb_default/soak60.py lifetime-probe --probe-seconds 1620 --probe-period 30` из закреплённой копии. Путь вывода по умолчанию находится внутри выделенного reports/TB-UIA-06. Отдельная инъекция KeyboardInterrupt во время ожидания сохранила 1 цикл и статус PARTIAL/BLOCKED. Реальная доставка Ctrl+C через терминал в этом сценарии не проверялась.
+
+Длинная проба началась 24 ноября в 00:29:21 мск, PID 30744, сеанс 1. Read-only Toolhelp и IsProcessInJob подтвердили цепочку Python → PowerShell → Codex command runner → Codex, все в Windows Job. Конфигурация лимитов Job недоступна из этих наблюдений. Проба завершилась штатно за **1620,112 с**, **55 синтетических записей и 5 маркеров**, PROBE_COMPLETE, терминальное событие STOP и фактический exit 0. Собственные Python и PowerShell PID после завершения отсутствовали. SHA-256 синтетического cycles.jsonl `90C16B907FC4F69AC3239E5FB1F60BC420C0C0954F71273E41769672B533F496`. В этой пробе обрыв на прежней отметке не воспроизвёлся. Результат не устанавливает причину старого обрыва и не подтверждает 60-минутный лимит среды.
+
+Локальные журналы в reports/TB-UIA-06. Terrain Builder не использовался, новый SOAK-60 не выполнялся. Merge не выполнялся.
