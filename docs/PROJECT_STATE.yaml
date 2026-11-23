@@ -16,7 +16,7 @@ verified:
   local_environment_audited: false
   original_assets_scanned: false
   grm_memory_root_cause: false
-next_gate: "MAP-001 first real Pripyat pilot: obtain legally usable small DEM/vectors, build actual preview, optional isolated TB sandbox import"
+next_gate: "MAP-001: Global Mapper 26.2 Pro 64-bit; real small DEM/roads preview, separate building geocatalog, optional isolated terrain-only TB sandbox import"
 risks:
   - "32 GiB RAM and unknown GRM peak"
   - "single WRP streaming feasibility unproven"
@@ -39,8 +39,14 @@ owner_decision_2026_11_24:
   decision: "Stop general TB-UIA/SOAK tests; begin hands-on real map work"
   source_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
   current_task: "MAP-001"
-  authorized_scope: "1-2 km candidate Pripyat terrain, road and footprint pilot"
+  authorized_scope: "1-2 km candidate Pripyat terrain and roads; footprints in separate GIS inventory only, no placed buildings or 3D models"
   stage_promotion: false
+  owner_named_primary_gis_tool: "Global Mapper 26.2 Pro 64-bit"
+  global_mapper_local_install_verified: false
+  building_placement_authorized: false
+  building_model_generation_authorized: false
+  building_inventory_authorized: true
+  google_360_policy: "store checked reference URLs only; no automated screenshots or bulk downloads"
   full_world_generation_authorized: false
   projected_crs_approved: false
   final_map_extent_approved: false
