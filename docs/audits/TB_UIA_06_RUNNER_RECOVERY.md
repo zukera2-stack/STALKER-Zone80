@@ -22,7 +22,7 @@
 
 ## Предварительная офлайн-проверка
 
-После публикации PR проверить GitHub Actions Foundation validation (stdlib test discovery) и локальные тесты в отчёте. Успех CI подтверждает только переносимую логику checkpoints/recovery, **не поведение Windows Job, реального Cursor lifecycle или Terrain Builder**.
+**Проверено независимо на GitHub Actions:** [Foundation validation run #45268502768](https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45268502768), job #138021727343, HEAD `46da5a44dfd4085b337486b6962d8af3768426b1`: фактический журнал показывает `Ran 75 tests in 0.845s … OK`. Включены 25 новых `test_tb_soak_evidence`, 38 исходных SOAK, 7 lifecycle, 1 signed runtime ID и 4 прочих foundation. В частности `test_historical_50_5_missing_terminal`, `test_simulated_crash_between_cycle_and_checkpoint`, `test_short_synthetic_lifetime_probe` прошли. Успех CI подтверждает только переносимую логику checkpoints/recovery, **не поведение Windows Job, реального Cursor lifecycle или Terrain Builder**.
 
 ## Что поручено локальной Луне — без SOAK Terrain Builder
 
