@@ -14,6 +14,12 @@ Build a geographically defensible Chernobyl exclusion-zone map for Arma 3 with r
 - Every object has immutable source_id, source_date, source/license, confidence, historical state and reviewer status.
 - Input remains immutable, cache is disposable, overrides are versioned.
 
+## Map-first execution decision (owner 2026-11-24)
+
+The Terrain Builder runtime/automation foundation is sufficient **to begin working on a real map**, despite Stage 001 remaining PARTIAL and the hour-long SOAK not finishing (50/120; cause UNKNOWN). Cancel further SOAK-only iterations. Start [MAP-001](https://github.com/zukera2-stack/STALKER-Zone80/issues/35): acquire a small legally usable real DEM and roads/building footprints for a **1–2 km Pripyat pilot**, preserve WGS84 source and provenance, build elevation and vector previews, and attempt one **isolated** Terrain Builder sandbox import only if the current owner's project is not endangered. Do not swap a synthetic fixture for purported real Pripyat.
+
+This is a **bounded hands-on pilot within Stage 001**, not an automatic Stage 002 acceptance. Geographic boundaries, epoch, production CRS and final 81.92 km footprint remain candidate decisions. Progress is measured primarily by actual terrain/preview and verified data, not UI stress hours; only run short tests needed to resolve a concrete import obstacle. The eventual product remains a **single world**, not independent sector WRPs.
+
 ## Stage sequence
 | Stage | Deliverable | Promotion gate |
 |---|---|---|
@@ -25,7 +31,7 @@ Build a geographically defensible Chernobyl exclusion-zone map for Arma 3 with r
 | 006 Full-world dry run | Manifest for all 64 sectors | No full RAM-sized object aggregation |
 | 007 Final world | One 81.92 km WRP, mod dependencies, publishable credits | Verified build, runtime, licensing and owner approval |
 
-Only Stage 001 is authorized by this repository initialization.
+Owner authorization of 2026-11-24 additionally permits the bounded real-geodata **MAP-001** pilot while Stage 001 remains PARTIAL. Formal Stage 002 promotion, 10.24 km production sector and full world still require separate acceptance.
 
 ## Known unknowns
 1. True local Windows/CPU/RAM/pagefile/drive configuration, tool versions and paths.
