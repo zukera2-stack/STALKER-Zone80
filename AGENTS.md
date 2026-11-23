@@ -3,8 +3,9 @@
 **First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.\n\nApplies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read README, docs/MASTER_PLAN.md and docs/GO_NOGO.md before modifying code.
 
 ## Current owner directive: map first (2026-11-24)
-- Active task is **[MAP-001 / Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35)**: make a small **real** 1–2 km Pripyat geographic pilot (terrain, roads, building footprints, preview), with one *isolated* Terrain Builder sandbox import only when safe.
+- Active task is **[MAP-001 / Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35)**: make a small **real** 1–2 km Pripyat geographic pilot (terrain and roads, plus a separate geospatial building-footprint catalog (no building placement or 3D models)), with one *isolated* Terrain Builder sandbox import only when safe.
 - Stop further long UIA/SOAK stability experiments. The earlier 50/120 real SOAK cycles are PARTIAL, not PASS; the 27-minute synthetic runtime test passed. More tests are allowed only to unblock a specific mapping operation, not as a separate workstream.
+- The owner's primary GIS application is **Global Mapper 26.2 Pro, 64-bit**, not v27. Use the existing local v26.2 for elevation/vector inspection and exports; verify installation/license and exact supported scripting commands locally before claiming PASS. The application is a GIS processor, not a geodata/photography source.
 - Stage 001 is still PARTIAL. Owner approved this bounded hands-on map pilot, **not** full-world production, Stage 002 promotion, unresolved CRS or asset licensing.
 - **Issue-first rule:** publish every future Cursor/Luna/agent task as a GitHub Issue (or append to active Issue). Chat responses should link it, not require manual copy/paste. Each Issue states base SHA, deliverable, scope, limits, stop gate and evidence; work on an isolated branch/PR, no automatic merge.
 
