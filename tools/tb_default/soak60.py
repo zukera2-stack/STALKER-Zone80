@@ -27,7 +27,7 @@ CYCLES, PERIOD, INVENTORY_EVERY = 120, 30, 10
 ROOT = Path(__file__).resolve().parents[2]
 REPORTS = ROOT / 'reports' / 'TB-UIA-03'
 EDITOR_RE = re.compile(r'editorWindow=True; dialogObserved=False; uia=True; responding=True')
-RUNTIME_ID_RE = re.compile(r'^[0-9]+(?:\.[0-9]+)*$')
+RUNTIME_ID_RE = re.compile(r'^-?[0-9]+(?:\.-?[0-9]+)*$')
 METRIC_RE = re.compile(r'WS=(\d+); private=(\d+); responding=(True|False)')
 HWND_RE = re.compile(
     r'^HWND=0x([0-9A-Fa-f]+); class=wxWindowClassNR; visible=True; enabled=True; '
