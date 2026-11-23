@@ -194,6 +194,30 @@ class DurableEvidenceTests(unittest.TestCase):
         self.assertEqual(result["summaryError"], "missing")
         self.assertIsNone(result["rawSummarySha256"])
 
+    def test_legacy_run_without_events_is_not_corruption(self):
+        run = self.root / "legacy2"
+        run.mkdir()
+        (run / "cycles.jsonl").write_text(json.dumps(item(1)) + "\n", encoding="utf-8")
+        result = ev.recover_run(run, write=False)
+        self.assertTrue(result["legacyEventsMissing"])
+        self.assertEqual(result["evidenceProblems"], [])
+        self.assertEqual(result["cause"], "CAUSE_UNKNOWN")
+
+    def test_short_synthetic_lifetime_probe(self):
+        path = soak.lifetime_probe(self.root, duration_sec=.035, period_sec=.01)
+        stored = json.loads((path / "SUMMARY.json").read_text())
+        self.assertEqual(stored["status"], "PROBE_COMPLETE")
+        self.assertFalse(stored["tbLaunched"])
+        recovery = ev.recover_run(path, write=False)
+        self.assertEqual(recovery["status"], "COMPLETED_PROBE_RECORDED")
+        self.assertTrue(stored["notTerrainBuilderEvidence"])
+
+    def test_probe_rejects_unbounded_schedule(self):
+        with self.assertRaises(soak.Blocked):
+            soak.lifetime_probe(self.root, duration_sec=4000)
+        with self.assertRaises(soak.Blocked):
+            soak.lifetime_probe(self.root, duration_sec=10, period_sec=.001)
+
     def test_recover_cli_rejects_outside_reports(self):
         result = soak.main(["recover", "--run-dir", str(self.root.parent.parent.parent)])
         self.assertEqual(result, 2)
