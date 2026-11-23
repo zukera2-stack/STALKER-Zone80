@@ -2,6 +2,10 @@
 
 **Read AGENTS.md first.** This is a local engineering job on the owner's Windows system. ChatGPT audits; the owner decides historic/gameplay canon and approves dependencies. Work on branch feat/foundation-audit from the reviewed foundation.
 
+## Текущий статус задания (решение владельца 24.11.2026)
+
+Эта инструкция сохранена как **исторический Foundation-аудит**. Владелец явно прекратил дальнейшую самостоятельную серию TB-UIA/SOAK и разрешил **[MAP-001 / Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35)** — небольшой реальный пилот Припяти (DEM, дороги, контуры зданий, preview, при безопасности — isolated TB sandbox import). Новым агентам не возвращаться к пункту «аудит, затем STOP» как к блокировке MAP-001. Stage 001 всё ещё PARTIAL, Stage 002 GO не объявлен, полномасштабная генерация запрещена. Текущий маршрут подробно изложен в `docs/MAP_001_TASK.md`.
+
 ## Hard limits
 1. Never edit, delete, repack or overwrite original addons, PBO/P3D/PAA, GRM project or GIS source files.
 2. Locate and report a candidate `Zona.grma3m` / `*.grma3a` rather than assuming its existence.
