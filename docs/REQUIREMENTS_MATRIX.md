@@ -44,3 +44,16 @@
 ## Порядок изменения требования
 
 Обнаружив новое требование, обновить **этот ID**, ссылку на решение и критерий приёмки, затем обновить `PROJECT_STATE.yaml`, текущую Issue и доказательство в `VERIFICATION_LEDGER.md`. Новую Issue заводить только для новой самостоятельной работы; уточнения существующей Issue дописывать туда. Не переписывать исторический лог.
+
+## Интеграционный тест MAP-003 (уточнение владельца: максимальное укрупнение)
+
+**Одна [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42)**, один полный локальный прогон, **один сводный отчёт и один Draft PR**. Никаких новых тестовых Issues после каждого этапа. Результат — совместная проверка уже определённых `REQ-102…REQ-111`, **без** повышения Stage и без WRP/PBO/размещения объектов:
+
+| Поток | Принятые REQ | Финальный артефакт | До нового выполнения |
+|---|---|---|---|
+| A GM heights | REQ-102..107 | GM-made 64×64 ASC/GeoTIFF, 0 NoData, 5+ точек, SHA, source/datum | NOT RUN |
+| B road GIS | REQ-108,111 | Совмещённые метры/оси векторов и наглядное preview, OSM IDs | HISTORICAL PARTIAL; новый интегрированный результат NOT RUN |
+| C separate buildings | REQ-109..111 | Геокаталог с relation reconciliation/unknowns + `BUILDING_MODEL_NEEDS.md` без моделей | HISTORICAL PARTIAL; новый интегрированный результат NOT RUN |
+| D TB sandbox | REQ-107,113 | Один безопасный реальный сохранённый heightmap TB sandbox + screenshot; иначе BLOCKED | NOT RUN |
+
+**Автономность:** конкретную безопасную ошибку исправлять в рамках того же Issue; не блокировать независимые B/C из-за A/D. Новые Python/GDAL-generated heights, TB-UIA/SOAK, строения, WRP/PBO запрещены.
