@@ -54,7 +54,7 @@ class ProjectControlDocumentsTests(unittest.TestCase):
         self.assertIn("heights_acquired_and_exported_by:", state)
         self.assertIn("Local Global Mapper 26.2 Pro 64-bit only", state)
         self.assertIn("python_gdal_or_github_actions_new_heightmap_generation_authorized: false", state)
-        self.assertIn("docs/map/MAP_003_GM26_TILES.md", read("docs/PROJECT_CONTROL.md"))
+        self.assertIn("map/MAP_003_GM26_TILES.md", read("docs/PROJECT_CONTROL.md"))
         self.assertIn("Copernicus_DSM_COG_10_N51_00_E030_00_DEM", read("docs/map/MAP_003_GM26_TILES.md"))
 
     def test_pilot_and_world_grids_never_conflated(self):
