@@ -46,6 +46,10 @@ owner_decision_2026_11_24:
   building_placement_authorized: false
   building_model_generation_authorized: false
   building_inventory_authorized: true
+  gm26_gms_batch_implemented_in_draft: true
+  gm26_gms_windows_runtime_verified: false
+  gm26_sdk_required_for_map001: false
+  gm26_supported_experiments: "ASC and GeoTIFF elevation export, roads GeoJSON, buildings-only GeoJSON"
   google_360_policy: "store checked reference URLs only; no automated screenshots or bulk downloads"
   full_world_generation_authorized: false
   projected_crs_approved: false
