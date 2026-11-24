@@ -13,7 +13,7 @@ authority:
   active_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/42"
   parent_epic: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
   current_assignment: "MAP-003: one end-to-end pilot GM elevation + aligned road preview + separate building analysis + optional safe terrain-only TB import; one report"
-  latest_map_work_pr: "https://github.com/zukera2-stack/STALKER-Zone80/pull/44"
+  latest_map_work_pr: "https://github.com/zukera2-stack/STALKER-Zone80/pull/47"
   main_contains_map_work: false
 target:
   world_size_m: 81920
@@ -170,3 +170,14 @@ map003_offline_geocatalog:
   reference_document: "docs/map/PRIPYAT_REFERENCE_REGISTER.md"
   new_heightmap_generated: false
   tb_import_performed: false
+
+local_background_automation:
+  handoff: "docs/automation/LUNA_HANDOFF.md"
+  contract: "docs/automation/WORKER_CONTRACT.md"
+  status: "DESIGN AND SKILLS ONLY; implementation NOT RUN"
+  synthetic_tests: "NOT RUN"
+  native_grm_layer: "NOT RUN; gated"
+  scheduler_registered: false
+  scheduler_registration_authorized: false
+  full_world_authorized: false
+  height_authority: "GM26.2 only"

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "issue": 42,
+  "scope": "synthetic_worker_acceptance_only",
+  "reviewed_code_sha": null,
+  "local_approval": null,
+  "expires_utc": null,
+  "max_parallel_jobs": 1,
+  "jobs": [
+    {
+      "id": "synthetic-001",
+      "kind": "synthetic_probe",
+      "enabled": false,
+      "requires": [],
+      "input_hashes": {},
+      "executable_sha256": null,
+      "output_relative": "synthetic-001",
+      "wall_timeout_seconds": 30,
+      "max_tree_private_bytes": null,
+      "max_tree_working_set_bytes": null,
+      "min_available_ram_bytes": null,
+      "min_free_disk_bytes": null,
+      "expected_validator": "synthetic_probe_v1",
+      "max_attempts": 1
+    }
+  ],
+  "native_jobs_authorized": false,
+  "notes": "Illustrative non-executable manifest. Null limits/approval/hash and enabled=false must block execution. No arbitrary commands. No real GIS/GRM jobs until gates."
+}

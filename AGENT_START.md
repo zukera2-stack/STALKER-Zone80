@@ -15,6 +15,9 @@
 
 **GitHub Issues — обязательный канал задания:** ChatGPT публикует новое задание Cursor/«Луне» непосредственно как GitHub Issue либо дополняет активный Issue; в чате предоставляет ссылку. Прежде чем работать, прочитать текущий Issue, эту инструкцию и `AGENTS.md`; указать base SHA, scope, исходники, ограничения, измеренные результаты и stop conditions. Публикация Issue не отменяет установленные запреты. При недоступности GitHub считать передачу задания блокированной, не требовать ручного переноса длинного текста из чата.
 
+## Дополнение 24.11.2026 — локальный фоновый исполнитель
+Владелец запросил подготовку автономной автоматизации. Читать [LUNA_HANDOFF](docs/automation/LUNA_HANDOFF.md), [WORKER_CONTRACT](docs/automation/WORKER_CONTRACT.md), [GRM](.cursor/skills/zone80-grm/SKILL.md), [Worker](.cursor/skills/zone80-worker/SKILL.md), [Sector pipeline](.cursor/skills/zone80-sector-pipeline/SKILL.md). Текущий Draft PR #47 и Issue #42; новый исполнитель ещё не реализован, допустимы синтетические испытания и preflight, реальные операции только по прежним gates. Не регистрировать scheduler/service без отдельного решения. GM-only высоты и Stage 001 PARTIAL неизменны.
+
 ## 0. Порядок чтения и приоритет сведений
 
 1. Этот файл `AGENT_START.md` — точка входа; `AGENTS.md` — обязательные ограничения и STOP.
