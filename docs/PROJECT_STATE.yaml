@@ -1,65 +1,125 @@
+# Current snapshot, updated only from the cited evidence.
+# A Draft PR is NOT merged into main and a Windows report is not cloud execution.
 project: STALKER-Zone80
 updated_utc: "2026-11-24"
 stage: "001-foundation"
 status: "PARTIAL"
-main_goal: "Arma 3 geographically grounded single world"
+main_goal: "One geographically grounded Arma 3 world; heightmap + roads now, buildings later"
+authority:
+  index: "docs/PROJECT_CONTROL.md"
+  requirements: "docs/REQUIREMENTS_MATRIX.md"
+  evidence_ledger: "docs/VERIFICATION_LEDGER.md"
+  decision_log: "docs/DECISIONS/ADR-0002-owner-pivot-map-and-gm-only.md"
+  active_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/42"
+  parent_epic: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
+  current_assignment: "MAP-003 local Global Mapper 26.2 height source + 64x64 export, then optional isolated TB"
+  latest_map_work_pr: "https://github.com/zukera2-stack/STALKER-Zone80/pull/44"
+  main_contains_map_work: false
 target:
   world_size_m: 81920
   grid_cells: 4096
   cell_size_m: 20
-  sectors: 64
+  sector_rows: 8
+  sector_columns: 8
+  sector_count: 64
+  final_wrp_count_target: 1
+  world_crs_approved: false
+  world_extent_approved: false
+  historical_epoch_approved: false
+pilot:
+  location: "Central Pripyat candidate, not production world origin"
+  original_bbox_wgs84_w_s_e_n: [30.045, 51.398, 30.070, 51.414]
+  target_metric_crs: "EPSG:32636 (PILOT ONLY)"
+  ncols: 64
+  nrows: 64
+  cell_size_m: 30
+  xllcorner_m: 294373.084
+  yllcorner_m: 5698122.108
+  xmax_m: 296293.084
+  ymax_m: 5700042.108
+  geographic_tile: "N51 E030"
+  primary_source_tile_id: "Copernicus_DSM_COG_10_N51_00_E030_00_DEM"
+  alternate_source_tile_id: "SRTM N51E030 (only if explicitly selected)"
+  source_online_layer_available_in_gm: "NOT TESTED"
+  global_mapper_online_height_export: "NOT RUN"
+  global_mapper_new_fixed_grid_64_export: "NOT RUN"
+  terrain_builder_height_only_import: "NOT RUN"
+  grid_first_rule: true
+  no_data_required_for_tb: 0
 verified:
   repository_initialized: true
-  map_generated: false
-  engine_load_test: false
-  crs_approved: false
-  local_environment_audited: false
+  game_map_generated: false
+  map_generated: false  # Back-compatible: means a playable Arma world, not a 2D preview.
+  game_engine_load_test: false
+  crs_approved: false  # Production world CRS, not pilot UTM.
+  local_environment_fully_audited: false
   original_assets_scanned: false
   grm_memory_root_cause: false
-next_gate: "MAP-001: Global Mapper 26.2 Pro 64-bit; real small DEM/roads preview, separate building geocatalog, optional isolated terrain-only TB sandbox import"
-risks:
-  - "32 GiB RAM and unknown GRM peak"
-  - "single WRP streaming feasibility unproven"
-  - "CRS and full-world extent undetermined"
-  - "third-party asset licenses unknown"
-
+  global_mapper_26_2_x64_installed: true  # Per PR #38/#41 local Windows evidence.
+  global_mapper_gms_local_batch_pass: true  # Per PR #41 report, old 60x62 GIS export only.
+  local_gm_elevation_pass_for_old_60x62: true
+  osm_road_preview_reported: true
+  building_inventory_reported: true
+  windows_soak_60_pass: false
+  terrain_builder_import_pass: false
+owner_decision_2026_11_24:
+  map_first: true
+  current_task: "MAP-003 / Issue #42"
+  heights_acquired_and_exported_by: "Local Global Mapper 26.2 Pro 64-bit only"
+  assistant_role: "Provide precise tile, CRS, bounds and grid assignment; audit evidence"
+  python_gdal_or_github_actions_new_heightmap_generation_authorized: false
+  old_cloud_grid_artifacts_accepted_as_new_input: false
+  buildings_placed_on_map_authorized: false
+  building_models_generation_authorized: false
+  building_geocatalog_authorized: true
+  street_view_google_policy: "verified links only, no batch screenshot/download or geometry extraction"
+  tb_allowed_action: "one terrain-only import in separately proven safe empty TB sandbox"
+  generic_tb_uia_soak_retesting_authorized: false
+  stage_promotion_authorized: false
+  full_world_generation_authorized: false
+  auto_merge_authorized: false
+historical_evidence:
+  gm26_old_export:
+    source: "Draft PR #41 / docs/map/MAP_001_PROGRESS.md"
+    local_windows_reported: true
+    batch_exit_code: 0
+    ncols: 60
+    nrows: 62
+    cellsize_m: 30
+    crs: "EPSG:32636"
+    nodata_count: 253
+    assessment: "PASS as GIS intermediate; NOT a ready pilot 64x64 TB heightmap"
+  roads_and_buildings:
+    osm_highway_ways: 446
+    svg_road_polylines_reported: 453
+    building_way_polygons: 439
+    unresolved_osm_relations: 27
+    note: "building=no exists; no model placement, historical validity unknown"
+  tb_automation:
+    autonomous_launch_reported: "PASS in historical Windows test"
+    uia_203_nodes_reported: "PASS read-only; Invoke not executed"
+    real_soak: "PARTIAL: 50/120 cycles, 5/12 UIA inventories"
+    old_stop_cause: "CAUSE_UNKNOWN"
+    synthetic_lifetime: "PASS: 27 min 0.112 sec and exit 0, NOT a real SOAK"
+  cloud_fixed_grid_history:
+    workflow: "https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45386386065"
+    prior_grid: "64x64 and 0 NoData in GitHub; historical only"
+    policy: "SUPERSEDED: PR #43 closed, do not reuse or regenerate as current height source"
 prior_report_evidence:
   source: "Private ChatGPT Library: /Арма/STALKER-Zone80/03_Отчёты"
   report_date: "2026-11-21"
-  needs_local_reverification: true
-  windows_reported_by_audit: "Windows 10 Pro"
+  context: "A specific Windows 10 Pro audit; user also reports Windows 11 Pro host"
+  os_reverification_required: true
   studio_seen_in_older_logs: "0.9"
   prior_failure_log_signature: "Task disposal of incomplete Task during RawSatelliteImage"
-  private_memory_at_failure_gb_approx: "8.3-8.7 (reported by GRM logs; not measured by this session)"
+  private_memory_at_failure_gb_approx: "8.3-8.7 according to historical GRM logs"
   out_of_memory_confirmed: false
-  microprototype_config_exists_in_library: true
-  microprototype_executed: false
-
-owner_decision_2026_11_24:
-  decision: "Stop general TB-UIA/SOAK tests; begin hands-on real map work"
-  source_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
-  current_task: "MAP-001"
-  authorized_scope: "1-2 km candidate Pripyat terrain and roads; footprints in separate GIS inventory only, no placed buildings or 3D models"
-  stage_promotion: false
-  owner_named_primary_gis_tool: "Global Mapper 26.2 Pro 64-bit"
-  global_mapper_local_install_verified: false
-  building_placement_authorized: false
-  building_model_generation_authorized: false
-  building_inventory_authorized: true
-  gm26_gms_batch_implemented_in_draft: true
-  gm26_gms_windows_runtime_verified: false
-  gm26_sdk_required_for_map001: false
-  gm26_supported_experiments: "ASC and GeoTIFF elevation export, roads GeoJSON, buildings-only GeoJSON"
-  google_360_policy: "store checked reference URLs only; no automated screenshots or bulk downloads"
-  full_world_generation_authorized: false
-  projected_crs_approved: false
-  final_map_extent_approved: false
-  extra_soak_required_for_map_pilot: false
-  allowed_terrain_builder_import: "one isolated, empty sandbox project only if original user's editor/project can be protected"
-  terrain_builder_operational_evidence:
-    autonomous_launch: "PASS according to Windows report TB-DEFAULT-01"
-    read_only_uia: "PASS; 203 observed nodes and enabled Import terrain Invoke candidate, no command invoked"
-    real_soak: "PARTIAL: 50/120 cycles, 5/12 snapshots, stop CAUSE_UNKNOWN"
-    synthetic_lifetime: "PASS: 27 minutes 0.112 seconds, exit 0 on Windows"
-    terrain_import: "NOT TESTED"
-    real_pripyat_pilot: "NOT STARTED"
+  old_microprototype_executed: false
+next_gate: "MAP-003: actual local GM Online Data / source tile N51 E030 -> precisely gridded ASC 64x64x30m and 5+ QC points; TB import only if isolated"
+risks:
+  - "Wrong or unavailable GM Online Data source/layer: log actual source and licensing"
+  - "Wrong grid/NoData or pixel centers: block Terrain Builder import"
+  - "Copernicus DSM is not bare-earth or historically validated terrain"
+  - "Production world CRS and 81.92km footprint remain unapproved"
+  - "Main has older docs; many stacked Draft PR are unmerged"
+  - "Arma WRP/PBO and in-game build have never been demonstrated"
