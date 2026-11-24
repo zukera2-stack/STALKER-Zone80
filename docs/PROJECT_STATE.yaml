@@ -12,7 +12,7 @@ authority:
   decision_log: "docs/DECISIONS/ADR-0002-owner-pivot-map-and-gm-only.md"
   active_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/42"
   parent_epic: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
-  current_assignment: "MAP-003 local Global Mapper 26.2 height source + 64x64 export, then optional isolated TB"
+  current_assignment: "MAP-003: one end-to-end pilot GM elevation + aligned road preview + separate building analysis + optional safe terrain-only TB import; one report"
   latest_map_work_pr: "https://github.com/zukera2-stack/STALKER-Zone80/pull/44"
   main_contains_map_work: false
 target:
@@ -64,7 +64,7 @@ verified:
   terrain_builder_import_pass: false
 owner_decision_2026_11_24:
   map_first: true
-  current_task: "MAP-003 / Issue #42"
+  current_task: "MAP-003 integrated pilot / Issue #42"
   heights_acquired_and_exported_by: "Local Global Mapper 26.2 Pro 64-bit only"
   assistant_role: "Provide precise tile, CRS, bounds and grid assignment; audit evidence"
   python_gdal_or_github_actions_new_heightmap_generation_authorized: false
@@ -115,7 +115,7 @@ prior_report_evidence:
   private_memory_at_failure_gb_approx: "8.3-8.7 according to historical GRM logs"
   out_of_memory_confirmed: false
   old_microprototype_executed: false
-next_gate: "MAP-003: actual local GM Online Data / source tile N51 E030 -> precisely gridded ASC 64x64x30m and 5+ QC points; TB import only if isolated"
+next_gate: "MAP-003 one end-to-end result: GM26 64x64/30m height source -> aligned OSM roads preview -> independent building model-needs inventory -> safe single terrain-only TB sandbox import; one consolidated evidence report"
 risks:
   - "Wrong or unavailable GM Online Data source/layer: log actual source and licensing"
   - "Wrong grid/NoData or pixel centers: block Terrain Builder import"
@@ -123,3 +123,17 @@ risks:
   - "Production world CRS and 81.92km footprint remain unapproved"
   - "Main has older docs; many stacked Draft PR are unmerged"
   - "Arma WRP/PBO and in-game build have never been demonstrated"
+
+integrated_map003_assignment:
+  issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/42"
+  single_large_task_authorized: true
+  separate_small_issues_required: false
+  completed_new_run: false
+  streams:
+    height_source_export_in_gm26: "NOT RUN"
+    roads_geospatial_alignment_and_preview: "HISTORICAL PARTIAL; NEW INTEGRATED RESULT NOT RUN"
+    building_catalog_and_model_family_requirements: "HISTORICAL PARTIAL; NEW INTEGRATED RESULT NOT RUN"
+    tb_terrain_only_isolated_import: "NOT RUN; safe sandbox mandatory"
+  consolidated_report_path: "docs/map/MAP_003_INTEGRATED_RESULT.md"
+  building_requirements_report_path: "docs/map/BUILDING_MODEL_NEEDS.md"
+  output_branch_and_pr: "new Draft PR from checked current head; no merge"
