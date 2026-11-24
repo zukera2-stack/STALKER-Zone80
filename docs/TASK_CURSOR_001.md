@@ -1,5 +1,8 @@
 # Cursor / Luna: TASK 001 — Foundation audit, no map generation
 
+> **АРХИВ / НЕ АКТИВНО.** Исторические foundation-задачи/проверки (включая старые версии Global Mapper/GRM) не должны блокировать или подменять [MAP-003 Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42). Для высот последнее решение владельца: **локальный GM 26.2 Pro**, ChatGPT — только координаты и правильный тайл. [PROJECT_CONTROL](PROJECT_CONTROL.md), [ADR-0002](DECISIONS/ADR-0002-owner-pivot-map-and-gm-only.md).
+
+
 **Read AGENTS.md first.** This is a local engineering job on the owner's Windows system. ChatGPT audits; the owner decides historic/gameplay canon and approves dependencies. Work on branch feat/foundation-audit from the reviewed foundation.
 
 ## Текущий статус задания (решение владельца 24.11.2026)
