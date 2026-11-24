@@ -1,0 +1,12 @@
+# MAP-001 — кандидатный участок Припяти
+
+**Кандидат, 24 ноября 2026 г.** Прямоугольник в WGS84, порядок запад, юг, восток, север: **30.045, 51.398, 30.070, 51.414**. Размер приблизительно 1,74 × 1,78 км. Дворец культуры «Энергетик» на центральной площади внутри участка (51,406750 N, 30,056667 E). Bbox ограничивает только пилот. EPSG:32636 — кандидат для временного метрического QC, производственная CRS и эпоха остаются открытыми. [Ориентир](https://en.wikipedia.org/wiki/Palace_of_Culture_Energetik).
+
+| Слой | Источник и условия | Объём и ограничения |
+| --- | --- | --- |
+| Высоты | Copernicus GLO-30 Public 2021, Copernicus/ESA, DLR и Airbus. WGS84, вертикаль EGM2008, метры, номинальный шаг 30 м. Для производного продукта нужна атрибуция по условиям поставщика. [Реестр AWS](https://registry.opendata.aws/copernicus-dem/) · [Условия Copernicus](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM) · [Спецификация](https://dataspace.copernicus.eu/sites/default/files/media/files/2024-06/geo1988-copernicusdem-spe-002_producthandbook_i5.0.pdf) | Запрашивается один кандидатный геотайл N51/E030. HEAD не дошёл до HTTP, поэтому размер и доступность тайла не подтверждены. Лимит получения для пилота — 64 MiB. Перед batch обрезать исходную сетку до bbox проверенным способом. Ожидаемая обрезка порядка нескольких тысяч ячеек. DSM включает растительность и постройки. |
+| Дороги и здания | OpenStreetMap contributors, актуальный снимок на дату фактического получения, ODbL. [Атрибуция и лицензия](https://www.openstreetmap.org/copyright) | Один bbox, два независимых извлечения. Дороги: линии с highway, с обрезкой на границе. Здания: полигоны ways и multipolygon relations с building. Порог 5 MiB на ответ. Современная съёмка и теги не устанавливают состояние на 1986 год. |
+
+Проверенный в плане URL кандидата высот: https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_10_N51_00_E030_00_DEM/Copernicus_DSM_COG_10_N51_00_E030_00_DEM.tif
+
+Overpass bbox в порядке south,west,north,east: `51.398,30.045,51.414,30.070`. Проверялись соединения с https://overpass.kumi.systems/api/interpreter и https://overpass-api.de/api/interpreter. Исходники не получены, фактическая дата снимка, размер, SHA и покрытие остаются неподтверждёнными.
