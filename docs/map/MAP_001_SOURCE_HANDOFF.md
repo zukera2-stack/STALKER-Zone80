@@ -1,5 +1,7 @@
 # MAP-001 — реальные исходники Припяти через GitHub Actions (24.11.2026)
 
+> **ИСТОРИЧЕСКИЙ HANDOFF ДАННЫХ (не текущее задание)** — этот документ описывает раннее получение данных через GitHub Actions и состояние до успешного Windows GM26 экспорта из [PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41). `LOCAL GLOBAL MAPPER NOT RUN` и указанные ниже источники/сроки artifact относятся **только к моменту того запуска**, а не к текущему статусу. По последнему решению владельца **новые высотные карты получает и экспортирует локальный Global Mapper 26.2 Pro**; ChatGPT передаёт лишь координаты/тайл. Актуальное задание: [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42), [MAP_003_GM26_TILES](MAP_003_GM26_TILES.md), [VERIFICATION_LEDGER](../VERIFICATION_LEDGER.md).
+
 **Результат: DATA ACQUIRED / LOCAL GLOBAL MAPPER NOT RUN.** Это продолжение [Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35) и [Draft PR #38](https://github.com/zukera2-stack/STALKER-Zone80/pull/38), а не завершённая карта. Исходный участок сохранён без изменений: **WGS84 bbox [30.045, 51.398, 30.070, 51.414]**.
 
 ## Причина обходного маршрута
