@@ -1,65 +1,66 @@
-# Stage 001 — Agent evidence handoff
+# Agent evidence report — универсальный шаблон
 
-**Engineer:**  
-**Date/time + timezone:**  
-**Git branch / HEAD SHA:**  
-**Issue:**  
-**Gate:** PASS / PARTIAL / FAIL / NOT TESTED  
+**Отчёт по какой Issue:**  
+**Название операции / Gate (T0–T5):**  
+**Исполнитель и реальная среда (local Windows / GitHub Linux / другое):**  
+**UTC время (start–end) и версия ОС / программы:**  
+**Git branch / base SHA / exact HEAD SHA / PR (Draft или merged):**  
+**Фактический итог:** PASS / PARTIAL / BLOCKED / FAIL / NOT RUN  
 
-## 1. What was actually observed
+> Никогда не переносить `PASS` между самостоятельными программами, площадками, тайлами и видами работ. `NOT RUN` означает отсутствие запуска; `BLOCKED` — доказанный запрет/сбой до нужной проверки. Отсутствие ошибки ≠ PASS.
 
-State each observation with source log, screenshot, command or original artifact checksum. List report-only facts separately from newly measured facts.
+## 1. Что требовалось и что реально сделано
 
-## 2. Exact commands and versions
+- Соответствующие **REQ IDs** из `docs/REQUIREMENTS_MATRIX.md`:
+- Точная цель и границы (без домыслов):
+- Команды **фактически выполненные**, а не предложенные:
+- Выполненные шаги:
+- **НЕ выполнено** (обязательно):
 
-```text
-# actual commands executed, not a suggested command list
-```
+## 2. Входные данные / происхождение
 
-Tools (Global Mapper, GRM, Arma Tools, Python, .NET, OS) and exact versions:
+| Объект | Источник / тайл / лицензия | UTC snapshot | CRS / units / размер | SHA-256 | Проверено? |
+|---|---|---|---|---|---|
+| | | | | | |
 
-## 3. Prior GRM incident: task exception vs RAM
+Факт доступности Online Data в конкретной версии Global Mapper: `PASS/NOT RUN/BLOCKED`. Исторический GitHub raster из PR #43 нельзя выдавать за новый локальный output Global Mapper.
 
-- Studio version:
-- Previous log match:
-- Did the small v0.11.1 test run?:
-- Relevant `RawSatelliteImage` output:
-- Private Bytes peak:
-- Working Set peak:
-- Available RAM:
-- Temporary disk usage:
-- Error/exit code:
+## 3. Реальные артефакты и контроль точности
 
-## 4. GIS and assets
+| Выходной файл (путь локально, в Git только метаданные) | Формат | cells / cellsize | EPSG / origin | NoData | SHA-256 | Статус |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
-- Candidate CRS and horizontal control-point residuals:
-- Input DEM/source date/hash/license:
-- Source addon directories **checked read-only**:
-- Number of PBO/P3D files scanned:
-- Unverified model dimensions/classes/licenses:
-- Source ID and coordinate mismatches:
+- Для GIS MAP-003: **tile N51 E030; 64×64; 30м; EPSG:32636; XLL 294373.084, YLL 5698122.108**.
+- Минимум **пять реальных** контрольных точек: row/col, `E/N`, исходный слой, реальная высота, расхождение; axis/order/center-vs-corner явно описать.
+- Диапазон высот / datum / `DSM vs DTM` / наличие неизвестной исторической высоты:
+- Фото/скриншоты и условия лицензии (Google 360 — только ссылки):
 
-## 5. Files, diffs and safety
+## 4. Исполняемые процессы и журналы
 
-- Paths of created files (redact sensitive user paths in public GitHub):
-- Files and SHA-256:
-- Git changed files / commit:
-- Did any protected original change? If yes, STOP and explain:
+- Global Mapper EXE/version/license status (факт в GUI vs текст из лога):
+- GMS/input/output/checkpoint и **настоящий код завершения**, если есть:
+- Terrain Builder workspace/project: новый пустой sandbox **доказан безопасным**? Если нет — `BLOCKED`, не выполнять импорт:
+- Логи (место/хеш), screenshots и сообщения ошибки:
+- Изменились ли чужие файлы/проект/P:/оригинальные PBO/P3D/PAA? Должно быть **NO**.
 
-## 6. Acceptance checklist
+## 5. Пооперационная приёмка
 
-| Criterion | Status | Evidence |
+| Проверка | Status | Фактическое доказательство / причина отсутствия |
 |---|---|---|
-| Environment verification | NOT TESTED | |
-| GRM baseline on small sample | NOT TESTED | |
-| Original addon inventory | NOT TESTED | |
-| Candidate CRS checked | NOT TESTED | |
-| 64 synthetic sector manifests | NOT TESTED | |
-| WRP/PBO + Arma loaded | NOT TESTED | Not required in Stage 001 |
+| T0 GitHub unit/CI | NOT RUN | |
+| T1 Source tile/rights/coverage | NOT RUN | |
+| T2 Actual local Global Mapper export | NOT RUN | |
+| T3 Grid 64²/30м/no real NoData/5 points | NOT RUN | |
+| T4 Isolated TB terrain-only import | NOT RUN | |
+| T5 Game WRP/PBO/in-game runtime | NOT RUN | (не требуется на MAP-003) |
+| Separate OSM building catalog | NOT RUN | (не размещать здания) |
 
-## 7. Decision request
+## 6. STOP и решение
 
-- Recommended GO / PARTIAL / NO-GO:
-- Blockers:
-- What action needs owner approval:
-- Recommended narrow follow-up (no unauthorized new stage):
+- Что блокирует следующий gate:
+- Можно ли устранить **одну** конкретную ошибку без смены объёма задания:
+- Что нуждается в решении владельца:
+- Какие REQ/evidence ledger rows теперь имеют новое подтверждение:
+- Следующее **одно** действие, не новый комплекс тестов:
+- **Оценка только этого задания:** PASS / PARTIAL / BLOCKED / FAIL / NOT RUN. Общий Stage 001 = PARTIAL до отдельной приёмки.
