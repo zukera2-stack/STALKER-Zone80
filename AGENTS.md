@@ -1,6 +1,8 @@
 # Agent instructions: STALKER Zone80
 
-**First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.\n\nApplies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read README, docs/MASTER_PLAN.md and docs/GO_NOGO.md before modifying code.
+**First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.
+
+Applies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read README, docs/MASTER_PLAN.md and docs/GO_NOGO.md before modifying code.
 
 ## Current owner directive: map first (2026-11-24)
 - Active EXECUTION task is **[MAP-003 / Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42)** (Issue #35 is the MAP-001 umbrella): make a small **real** 1–2 km Pripyat geographic pilot (terrain and roads, plus a separate geospatial building-footprint catalog (no building placement or 3D models)), with one *isolated* Terrain Builder sandbox import only when safe.
