@@ -83,3 +83,7 @@
 Нужны исходный commit SHA, исполненные команды, версии инструментов, файлы и их хеши, фактические логи и метрики, статусы по каждому критерию. Если доступа к локальному ПК или данным нет, укажи `NOT TESTED` / `PARTIAL`; не выдумывай запуск. **Выполни только разрешённую MAP-003 операцию (Issue #42) до измеренного GIS результата**, затем остановись и предъяви его владельцу; Stage 001/PARTIAL не повышать автоматически.
 
 **Новый агент начинает здесь, а не с генерации всей карты.**
+
+
+## Cross-project integration
+Read [ZONE80–ZPB contract](docs/integration/ZONE80_ZPB_CONTRACT.md) before work on models, catalog bindings, GRM assets or Terrain Builder templates. Example manifest contains reserved candidate only, not a live asset. Current gates unchanged.

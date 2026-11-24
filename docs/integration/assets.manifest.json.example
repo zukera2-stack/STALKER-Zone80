@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "addon_release": null,
+  "source_commit": null,
+  "assets": [
+    {
+      "model_id": "zpb.house.111_60_12.v01",
+      "family_id": "series_60",
+      "series": "111-60-12",
+      "variant": "v01",
+      "epoch": null,
+      "status": "CANDIDATE",
+      "package": "buildings_60",
+      "pbo_filename": "zpb_buildings_60.pbo",
+      "cfgpatches": "ZPB_Buildings_60",
+      "classname": "ZPB_House_111_60_12_V01",
+      "p3d_path": "\\z\\stalker_pripyat_buildings\\addons\\buildings_60\\models\\house_111_60_12_v01.p3d",
+      "model_sha256": null,
+      "dependencies": [],
+      "dimensions_m": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "local_footprint_xy_m": null,
+      "anchor_xyz_m": null,
+      "facade_forward_xy": null,
+      "ground_offset_m": null,
+      "allowed_scale": 1,
+      "qa": {
+        "source_review": "NOT RUN",
+        "model_roundtrip": "NOT RUN",
+        "build": "NOT RUN",
+        "engine": "NOT RUN",
+        "tb_template": "NOT RUN"
+      },
+      "rights_status": "UNKNOWN",
+      "evidence_refs": []
+    }
+  ]
+}
