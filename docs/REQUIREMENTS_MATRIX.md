@@ -57,3 +57,7 @@
 | D TB sandbox | REQ-107,113 | Один безопасный реальный сохранённый heightmap TB sandbox + screenshot; иначе BLOCKED | NOT RUN |
 
 **Автономность:** конкретную безопасную ошибку исправлять в рамках того же Issue; не блокировать независимые B/C из-за A/D. Новые Python/GDAL-generated heights, TB-UIA/SOAK, строения, WRP/PBO запрещены.
+
+## MAP-003 — актуализация приёмки
+
+[Фактический локальный отчёт](map/MAP_003_INTEGRATED_RESULT.md): A BLOCKED (629 NoData), B PASS в пределах исходной выборки, C PARTIAL (449 записей), D BLOCKED (неполная сетка). Stage 001 / PARTIAL.
