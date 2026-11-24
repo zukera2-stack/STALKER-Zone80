@@ -9,6 +9,14 @@
 ## Geometry
 WGS84 (EPSG:4326) is the input storage convention. Test one projected metric CRS across the entire fixed square. Candidate UTM 36N or a centered custom Transverse Mercator must be evaluated quantitatively at west/east/north/south control points. Do not finalize EPSG or local XY origin before tests. Store CRS, bounds, axis order, vertical datum and inverse mapping in terrain_extent.json when approved.
 
+## Current source-of-truth: GM-only elevations, GRID FIRST (2026-11-24)
+
+**Новая политика владельца:** ChatGPT передаёт географическое **задание** (N51 E030, 4 угла WGS84, точная UTM36N 64×64×30м сетка), а **местная Global Mapper Pro 26.2** загружает источник высот и экспортирует файл. **Нельзя заново создавать heightmap через Python/GDAL/GitHub Actions или подменять новый GM результат старым облачным raster**. Конкретный tile [`map/MAP_003_GM26_TILES.md`](map/MAP_003_GM26_TILES.md); [ADR-0002](DECISIONS/ADR-0002-owner-pivot-map-and-gm-only.md).
+
+**Экспорт задаётся в таком порядке:** фиксируем `EPSG:32636`, `ncols/nrows 64×64`, `cellsize 30m`, `xllcorner 294373.084`, `yllcorner 5698122.108` → Global Mapper выбирает реальный законно доступный height layer и загружает полный охват тайла N51E030 → экспорт ASC/GeoTIFF в эту **фиксированную** метровую сетку → 5 контрольных ячеек + 0 NoData + исходный datum/source и SHA. **Не** выбирать выходной размер по случайному прямоугольнику WGS84: в предыдущем реальном GM26 экспорте это дало **60×62 и 253 NoData**, хотя batch exit 0. `DSM` не равно bare-earth terrain, особенно в городской зоне.
+
+**Состояние:** прежний Windows GM26 `60×62` batch действительно `PASS` как промежуточный GIS продукт по [PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41). **Новый** GM26 Online Data → `64×64` `NOT RUN`; TB импорт `NOT RUN`. Ни один успешный GitHub CI не заменяет эти два шага. Текущий источник только из GM26. Исторические облачные scripts и результаты остаются как evidence/архив (PR #43 closed), **не исполнять их для MAP-003**. Проекция/центр/размер полного мира пока не утверждены.
+
 ## Global Mapper 26.2 Pro (64-bit) — основной локальный инструмент
 
 По уточнению владельца от **24.11.2026** используем **Global Mapper 26.2 Pro, 64-bit**, а не упоминавшуюся прежде v27. Версия/редакция указана владельцем; на Windows агент проверяет установленный EXE, Version/About, доступную лицензию, наличие функций и их фактический результат. Не обновлять программу и не менять лицензию для эксперимента.
@@ -21,7 +29,7 @@ WGS84 (EPSG:4326) is the input storage convention. Test one projected metric CRS
 
 ## Cursor/Луна → Global Mapper 26.2 Pro: официальный .gms batch (MAP-001)
 
-После изучения документации Blue Marble и проекта [Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35) для локальной автоматизации **приоритетен не UI Automation и не SDK, а штатный `.gms` + вызов `global_mapper.exe` из PowerShell**. При передаче `.gms` как аргумента EXE приложение выполняет его в отдельном batch-процессе без обычного UI и завершает процесс после скрипта. Это относится к установленному на Windows настольному Global Mapper; не даёт облачному агенту доступа к пользовательскому компьютеру. **Базовая интеграция подготовлена, запуск на Windows ещё NOT RUN.**
+После изучения документации Blue Marble и проекта [Issue #35](https://github.com/zukera2-stack/STALKER-Zone80/issues/35) для локальной автоматизации **приоритетен не UI Automation и не SDK, а штатный `.gms` + вызов `global_mapper.exe` из PowerShell**. При передаче `.gms` как аргумента EXE приложение выполняет его в отдельном batch-процессе без обычного UI и завершает процесс после скрипта. Это относится к установленному на Windows настольному Global Mapper; не даёт облачному агенту доступа к пользовательскому компьютеру. **Базовая интеграция уже проходила реальный Windows batch по отчёту PR #41 (exit 0 для старой 60×62 GIS сетки). Это не новый MAP-003 64×64 экспорт.**
 
 **Код и инструкции:** [`tools/gm26/README.md`](../tools/gm26/README.md), `tools/gm26/Invoke-GlobalMapper.ps1`, `tools/gm26/scripts/*.gms`. Только 4 задачи на **уже обрезанных малых источниках**: высоты → Arc ASCII / GeoTIFF, дороги → GeoJSON (линии), контуры зданий → отдельный GeoJSON (полигоны без размещения в TB/Arma). Сначала задокументировать происхождение и права источников и получить одобренные локальные файлы в `reports/MAP-001/input/`. Не заимствовать фотографические данные или геометрию у Google 360.
 
