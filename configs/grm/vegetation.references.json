@@ -1,0 +1,957 @@
+{
+  "schema_version": 1,
+  "status": "REFERENCE_ONLY",
+  "upstream": {
+    "repository": "jetelain/ArmaRealMap",
+    "commit": "2aef2040836daa11a8a368bb0c7f9ecd8f405d65",
+    "path": "GameRealisticMap.Arma3/Builtin/CentralEurope.grma3a",
+    "license_notice": "Builtin directory APL; path references only, no copied configurations or assets."
+  },
+  "approved_for_generation": false,
+  "assets": [
+    {
+      "p3d_path": "a3\\plants_f\\tree\\t_FicusB2s_F.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\plants_f\\tree\\t_PinusS2s_F.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpRock_monolith.p3d",
+      "groups": [
+        "BasicCollections.Rocks"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpRock_wallH.p3d",
+      "groups": [
+        "BasicCollections.Rocks"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_01.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_01_LC.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_02.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_02_LC.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_03.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStone_03_LC.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f\\Sharp\\sharpStones_erosion.p3d",
+      "groups": [
+        "BasicCollections.WatercourseAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\Bare_boulder_01_F.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.ScrubAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\Bare_boulder_02_F.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.ScrubAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\Bare_boulder_03_F.p3d",
+      "groups": [
+        "BasicCollections.ScrubAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\RM_boulder1.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.WatercourseAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\RM_boulder2.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.ScrubAdditional",
+        "BasicCollections.WatercourseAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\RM_boulder3.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.WatercourseAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\rocks_f_enoch\\RM_boulder4.p3d",
+      "groups": [
+        "BasicCollections.WatercourseAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\structures_f_argo\\Industrial\\Agriculture\\VineyardFence_01_F.p3d",
+      "groups": [
+        "NaturalRows.VineyardRow"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_argo\\Bushes\\b_Vitis_vinifera_F.p3d",
+      "groups": [
+        "NaturalRows.VineyardRow"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_betula_nana.p3d",
+      "groups": [
+        "BasicCollections.RocksAdditional",
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\Bush\\B_Corylus_heterophylla_1.p3d",
+      "groups": [
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\Bush\\B_Corylus_heterophylla_2.p3d",
+      "groups": [
+        "ClusterCollections.ForestEdge"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_fagussylvatica_1f.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_piceaabies_1f.p3d",
+      "groups": [
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_piceaabies_1fb.p3d",
+      "groups": [
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_rosacanina_1s.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\bush\\b_rosacanina_2s.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\Bush\\b_sambucusNigra_1s.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\Bush\\b_sambucusNigra_2s.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "ClusterCollections.ForestEdge",
+        "ClusterCollections.Scrub"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\clutter\\c_beech_big.p3d",
+      "groups": [
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\clutter\\c_beech_mid.p3d",
+      "groups": [
+        "ClusterCollections.Scrub",
+        "ClusterCollections.ScrubRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\crop\\b_corn_row_f.p3d",
+      "groups": [
+        "NaturalRows.FarmLandRow"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_betula_pendula_stem.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_betula_pendula_stump.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_fagussylvatica_fallen.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_fagussylvatica_fallenb.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_fagussylvatica_fallenc.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional",
+        "BasicCollections.ScrubAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_fagussylvatica_stumpb.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_fagussylvatica_stumpc.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_picea_stem1.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_picea_stem2.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\d_picea_stump.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_betula_pendula_1s.p3d",
+      "groups": [
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_betula_pendula_2f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_betula_pendula_3f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_betula_pendula_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagus2f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagus2s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_1fe.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_1s.p3d",
+      "groups": [
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2d.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2fb.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2fc.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_2sb.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_3d.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_3f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_3fb.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest",
+        "NaturalRows.TreeRow",
+        "Objects.Tree"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_juglansregia_2s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_juglansregia_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_malusdomestica_2s.p3d",
+      "groups": [
+        "BasicCollections.SmallOrchard",
+        "NaturalRows.OrchardRow"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_malusdomestica_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest",
+        "Objects.Tree"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_2f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_2fb.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_2s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_2sb.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_3f.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_piceaabies_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_pinussylvestris_1f.p3d",
+      "groups": [
+        "ClusterCollections.ForestRadial"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_pyruscommunis_2s.p3d",
+      "groups": [
+        "BasicCollections.SmallOrchard",
+        "ClusterCollections.ForestRadial",
+        "NaturalRows.OrchardRow"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_pyruscommunis_3s.p3d",
+      "groups": [
+        "ClusterCollections.Forest",
+        "Objects.Tree"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_stub_picea.p3d",
+      "groups": [
+        "BasicCollections.ForestAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "GENERAL_NATURE_CANDIDATE"
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_exp\\Shrub\\b_FicusC2d_tanoa_F.p3d",
+      "groups": [
+        "BasicCollections.ScrubAdditional"
+      ],
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false,
+      "review": "REGIONAL_OR_LANDUSE_REVIEW"
+    }
+  ]
+}
