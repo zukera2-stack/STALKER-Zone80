@@ -144,3 +144,29 @@ map003_local_evidence:
   roads: "446 source IDs projected by GM; original OSM extent only"
   building_catalog: "PARTIAL; 449 separate footprints"
   tb_import: "BLOCKED; height input incomplete"
+
+map003_offline_geocatalog:
+  status: "PASS for offline analysis of existing snapshot; inventory and historical identification PARTIAL"
+  source_pr: 46
+  source_head: "184e8944911bc7fe190ec9a5970b5e3fd2f8c39e"
+  building_records: 449
+  valid_geometries: 449
+  exact_geometry_duplicates: 0
+  positive_overlap_pairs: 12
+  substantive_overlap_pairs: 11
+  records_flagged_for_overlap_review: 18
+  residential_records_screened: 135
+  candidate_repeat_groups: 28
+  grouped_records: 96
+  singleton_records: 39
+  road_source_ids: 446
+  road_line_parts: 453
+  total_source_line_length_km: 69.863
+  geometry_graph_components: 25
+  graph_is_routable: false
+  candidate_groups_are_confirmed_model_families: false
+  original_relation_member_roles_available: false
+  result_document: "docs/map/PRIPYAT_DIGITAL_GEOCATALOG.md"
+  reference_document: "docs/map/PRIPYAT_REFERENCE_REGISTER.md"
+  new_heightmap_generated: false
+  tb_import_performed: false
