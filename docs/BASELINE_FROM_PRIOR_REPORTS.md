@@ -1,5 +1,7 @@
 # Baseline from earlier Zone80 audit — *source reports*, not new engine tests
 
+> **Исторический контекст 21.11.2026, НЕ текущая конфигурация.** Упоминания `Global Mapper v27`, Windows 10 и исходного GRM относятся к конкретным прежним отчётам, **не** перечёркивают более поздний локальный результат GM Pro **26.2** с двумя batch export exit 0 ([PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41)). Host/VM ОС надо отдельно проверять, не смешивать разные машины. Актуальное задание высот — [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42), [PROJECT_CONTROL](PROJECT_CONTROL.md).
+
 This is a **sanitized summary** of personal-library source reports dated 2026-11-21, preserved privately under `/Арма/STALKER-Zone80/03_Отчёты/`. Their contents have not been independently reproduced by a new local test in the current GitHub repository.
 
 | Item | Reported finding | Confidence / follow-up |

@@ -1,6 +1,8 @@
 # MAP-002 — проверка исходников и локальное превью Припяти
 
-**PARTIAL.** [Issue #39](https://github.com/zukera2-stack/STALKER-Zone80/issues/39) · [исходники и контрольные суммы](MAP_001_SOURCE_HANDOFF.md) · [участок](MAP_001_AREA.md). Bbox WGS84: 30.045, 51.398, 30.070, 51.414.
+> **Статус на конец 24.11.2026:** опубликованный Windows-отчёт подтверждает **реальный Global Mapper Pro 26.2 batch `exit 0`** для промежуточной UTM36N сетки `60×62×30м`, `253 NoData`, с тремя точками (см. раздел «Выполнено в Global Mapper Pro 26.2» ниже). Начальный `PARTIAL/BLOCKED` и ошибка `Start-Process` в таблице относятся к **более ранней попытке**, оставлены как исторический факт, **не** являются текущим статусом batch. Отдельный **новый** MAP-003 Online Data → `64×64` в GM ещё `NOT RUN`; Terrain Builder `NOT RUN`. Текущая [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42) и [VERIFICATION_LEDGER](../VERIFICATION_LEDGER.md). Не переписывать историю и не брать готовую высоту из закрытого PR #43.
+
+**PARTIAL как весь MAP-002 pilot / Stage 001, но batch GIS export PASS по позднему локальному отчёту.** [Issue #39](https://github.com/zukera2-stack/STALKER-Zone80/issues/39) · [исходники и контрольные суммы](MAP_001_SOURCE_HANDOFF.md) · [участок](MAP_001_AREA.md). Bbox WGS84: 30.045, 51.398, 30.070, 51.414.
 
 | Проверка | Результат |
 | --- | --- |

@@ -22,11 +22,17 @@ Use the owner's existing **Global Mapper 26.2 Pro (64-bit)** as the first-choice
 
 This is a **bounded hands-on pilot within Stage 001**, not an automatic Stage 002 acceptance. Geographic boundaries, epoch, production CRS and final 81.92 km footprint remain candidate decisions. Progress is measured primarily by actual terrain/preview and verified data, not UI stress hours; only run short tests needed to resolve a concrete import obstacle. The eventual product remains a **single world**, not independent sector WRPs.
 
+## Текущий исполняемый план — MAP-003 / GM26-only высоты
+
+Последнее решение владельца от 24.11.2026 уточняет предыдущий map-first подход: **высоты получает и экспортирует сама установленная локальная Global Mapper 26.2 Pro**. ChatGPT выдаёт правильные координаты/тайлы, не создаёт новые ASC/GeoTIFF в Python/GDAL/GitHub Actions. **Текущая Issue #42**, [точные углы и тайл N51E030](map/MAP_003_GM26_TILES.md), [статус и доказательства](PROJECT_CONTROL.md). Старый GitHub GRID-FIRST PR #43 — **SUPERSEDED**, не новый source.
+
+**Приёмка ближайшего результата:** GM26 online/источник → собственный ASC 64×64×30м EPSG:32636, 0 NoData, пять реальных точек, hash/лог. Только после него при гарантированной изоляции — один terrain-only TB sandbox import. **Дороги/контуры зданий пока не размещать как игровые объекты**. Производственная 81.92км карта/эпоха и Stage 002 отдельными решениями, а не следствием пилота.
+
 ## Stage sequence
 | Stage | Deliverable | Promotion gate |
 |---|---|---|
 | 001 Foundation | Hardware/GRM/project/asset inventory and GIS projection experiment | Clear facts, reproducible scripts, licenses and measured bottleneck |
-| 002 Pripyat micro-pilot | Real 1–2 km urban area: footprints, model proxies, courtyards, roads, fences | Geographic QC, manual landmark review and measured object placement |
+| 002 Pripyat micro-pilot (**BLOCKED / FUTURE**) | Proposed urban reconstruction with model proxies and objects **only after new owner authorization**; current MAP-003 is terrain-only | Prior Stage 001 acceptance, historic authenticity/asset rights and new owner's GO |
 | 003 10.24 km | 512² × 20 m pilot terrain with roads, buildings, surfaces, objects | WRP/Binarize/PBO and **in-game** loading |
 | 004 Two adjacent sectors | Stable ownership, overlap checks, buffer and deterministic reruns | No missing seams or duplicate objects |
 | 005 Density stress | Q0-Q3 object load and measured runtime | Measured practical FPS/RAM/loading targets approved by owner |

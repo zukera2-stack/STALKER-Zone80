@@ -1,5 +1,7 @@
 # Stage 001-A/GM — Cursor local resources and Global Mapper 27 capability probe
 
+> **АРХИВ / НЕ ИСПОЛНЯТЬ КАК ТЕКУЩЕЕ ЗАДАНИЕ.** Это историческая проверка **Global Mapper 27** и окружения Foundation. Владелец позже указал установленный **Global Mapper 26.2 Pro (64-bit)**; реальный экспорт высот из GM26 `exit 0` уже опубликован в [PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41). Актуально: [PROJECT_CONTROL](PROJECT_CONTROL.md), [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42), [MAP_003_GM26_TILES](map/MAP_003_GM26_TILES.md). Тест `RunSmoke` из этой страницы не является новым требованием и **не запускать его без отдельного основания**.
+
 **Read [AGENT_START.md](../AGENT_START.md), [AGENTS.md](../AGENTS.md) and [docs/GO_NOGO.md](GO_NOGO.md) first.**
 
 Purpose: verify what Cursor can actually access on the owner's Windows workstation and whether the installed **Global Mapper 27.0 64-bit** can be controlled through a `.gms` file from a terminal. No DEM, online tile, OSM, image or WRP generation in this task.
