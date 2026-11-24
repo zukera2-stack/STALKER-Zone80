@@ -16,7 +16,7 @@ verified:
   local_environment_audited: false
   original_assets_scanned: false
   grm_memory_root_cause: false
-next_gate: "MAP-001: Global Mapper 26.2 Pro 64-bit; real small DEM/roads preview, separate building geocatalog, optional isolated terrain-only TB sandbox import"
+next_gate: "MAP-003: download proven 64x64x30m Copernicus heightmap; real GM26 local QC then one isolated terrain-only Terrain Builder sandbox import if safe"
 risks:
   - "32 GiB RAM and unknown GRM peak"
   - "single WRP streaming feasibility unproven"
@@ -38,16 +38,16 @@ prior_report_evidence:
 owner_decision_2026_11_24:
   decision: "Stop general TB-UIA/SOAK tests; begin hands-on real map work"
   source_issue: "https://github.com/zukera2-stack/STALKER-Zone80/issues/35"
-  current_task: "MAP-001"
+  current_task: "MAP-003 / Issue #42"
   authorized_scope: "1-2 km candidate Pripyat terrain and roads; footprints in separate GIS inventory only, no placed buildings or 3D models"
   stage_promotion: false
   owner_named_primary_gis_tool: "Global Mapper 26.2 Pro 64-bit"
-  global_mapper_local_install_verified: false
+  global_mapper_local_install_verified: true
   building_placement_authorized: false
   building_model_generation_authorized: false
   building_inventory_authorized: true
   gm26_gms_batch_implemented_in_draft: true
-  gm26_gms_windows_runtime_verified: false
+  gm26_gms_windows_runtime_verified: true
   gm26_sdk_required_for_map001: false
   gm26_supported_experiments: "ASC and GeoTIFF elevation export, roads GeoJSON, buildings-only GeoJSON"
   google_360_policy: "store checked reference URLs only; no automated screenshots or bulk downloads"
@@ -62,4 +62,28 @@ owner_decision_2026_11_24:
     real_soak: "PARTIAL: 50/120 cycles, 5/12 snapshots, stop CAUSE_UNKNOWN"
     synthetic_lifetime: "PASS: 27 minutes 0.112 seconds, exit 0 on Windows"
     terrain_import: "NOT TESTED"
-    real_pripyat_pilot: "NOT STARTED"
+    real_pripyat_pilot: "GIS source and local GM26 metric export PASS per PR41; fixed 64x64 reference PASS via GitHub Actions; TB import NOT RUN"
+
+map003_fixed_grid_pilot:
+  grid_first_policy: true
+  source: "Copernicus GLO-30 Public DSM (not bare-earth)"
+  source_crs: "EPSG:4326"
+  target_crs: "EPSG:32636 (PILOT ONLY, not canonical world CRS)"
+  ncols: 64
+  nrows: 64
+  cell_size_m: 30
+  xllcorner_m: 294373.084
+  yllcorner_m: 5698122.108
+  full_cell_count: 4096
+  no_data_count: 0
+  minimum_height_m: 105.0
+  maximum_height_m: 136.214722
+  public_source_acquisition: "PASS, workflow 45386386065"
+  public_grid_tests: "PASS 5/5"
+  artifact_id: 14916362052
+  artifact_expires_utc: "2026-11-27T11:41:00Z"
+  asc_sha256: "5A893D21BD918A13240150EBDDF243A8CEE9A871B9BC343ABD78780747D645FB"
+  geotiff_sha256: "6F85376DB6905DC30F3E506915AF6ABFDB0616FC7CEA8F7EFDE77130E4263920"
+  gm26_local_check_of_new_grid: "NOT RUN"
+  terrain_builder_import_of_new_grid: "NOT RUN"
+  stage_promotion: false
