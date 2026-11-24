@@ -1,0 +1,28 @@
+---
+description: MAP-001 GIS exports using local Global Mapper 26.2 Pro
+globs:
+  - "tools/gm26/**"
+  - "docs/MAP_001_TASK.md"
+  - "docs/GIS_PIPELINE.md"
+alwaysApply: false
+---
+
+Use **Global Mapper 26.2 Pro 64-bit** on the owner's local Windows.
+Prefer its officially documented **.gms batch mode** through
+`tools/gm26/Invoke-GlobalMapper.ps1` rather than mouse/GUI automation.
+First verify the real executable/version and user-provided license state.
+Use the exact syntax supported by the installed v26.2; do not use invented COM,
+v27-only script arguments, standalone SDK (separately licensed), or unofficial
+packages. Check the templates and `tools/gm26/README.md` before running.
+
+Allow source datasets only from approved, legal small local
+`reports/MAP-001/input` files. Never fetch Google 360 imagery as GIS data.
+Output and logs stay in new isolated `reports/MAP-001/<run-id>` directories.
+For every run check status, output, logfile, hash, CRS, bbox, units, datum and
+NoData. "EXPORTED_NEEDS_GIS_QC" is **not** map completion.
+
+**Map:** elevation and roads only. **Buildings:** geographic attribute and
+footprint catalog separate from Terrain Builder/Arma. Do not build 3D models,
+place buildings, manipulate P:/game assets, restart UIA soak tests, or merge
+PRs automatically. If actual executable or data is missing, report BLOCKED
+instead of inventing a successful run.
