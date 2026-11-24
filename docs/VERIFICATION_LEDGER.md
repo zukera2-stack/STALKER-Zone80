@@ -1,0 +1,39 @@
+# VERIFICATION LEDGER — что именно проверено, а что нет
+
+Последний аудит: **2026-11-24**. Доказательство привязано к **конкретной операции, среде и версии**, не ко всему проекту. Новые результаты добавлять с датой и ссылкой, не переписывать исторические сведения.
+
+**Словарь:** `PASS` подтверждено для названного критерия; `PARTIAL` часть; `BLOCKED` безопасно остановлено до проверки; `FAIL` реально не выполнен критерий; `NOT RUN` отсутствует запуск; `HISTORICAL` прошлый достоверный тест, но **не инструкция к повтору**; `SUPERSEDED` прежний подход отменён владельцем. Отчёт из Windows = **reported local evidence**, а не облачное непосредственное исполнение.
+
+## Хронология фактических результатов
+
+| ID | Что и где | Факт и ограничения | Статус / доказательство |
+|---|---|---|---|
+| E-001 | Foundation репозиторий | Приняты базовые файлы проекта и первичные ограничения | **PASS для документации**, merged PR [#1](https://github.com/zukera2-stack/STALKER-Zone80/pull/1), [#7](https://github.com/zukera2-stack/STALKER-Zone80/pull/7), [#8](https://github.com/zukera2-stack/STALKER-Zone80/pull/8); это не карта |
+| E-002 | Исторический GRM incident | Лог `A task may only be disposed if it is in a completion state` во время RawSatelliteImage; ~8.3–8.7GB по отчёту | **CAUSE_UNKNOWN / NOT PROVEN OOM**; `AGENT_START.md`, `BASELINE_FROM_PRIOR_REPORTS.md` |
+| E-003 | GIS/GRM синтетические сектора | Предлагались/проверялись форматы ASC/CSV/TML и контрольные сегменты; настоящий игровой импорт синтетики не подтверждён | **Синтетика/архив** [PR #12](https://github.com/zukera2-stack/STALKER-Zone80/pull/12), [#14](https://github.com/zukera2-stack/STALKER-Zone80/pull/14), [Issue #15](https://github.com/zukera2-stack/STALKER-Zone80/issues/15) ещё OPEN (исторический scope) |
+| E-004 | TB-DEFAULT / Windows, прежний локальный отчёт | Автономное обнаружение и запуск редактора; журналы/хеши привязаны к конкретному прошлому окну/процессу, не к текущему PID | **PASS в рамках того запуска**, PR #22 и прежние TB-DEFAULT отчёты, не повторять как общий SOAK |
+| E-005 | TB-UIA / Windows | Прочитано **203** элемента; `Import terrain...` был обнаружен как доступный `InvokePattern`; нажатие **не** совершалось | **PASS READ-ONLY / INVOKE NOT RUN**, [PR #22](https://github.com/zukera2-stack/STALKER-Zone80/pull/22) |
+| E-006 | SOAK-60 / Windows | Реально завершено **50/120** циклов и **5/12** снимков; 55 дочерних diagnostic exit 0; основной runner exit code не сохранился | **PARTIAL, CAUSE_UNKNOWN**, [PR #31](https://github.com/zukera2-stack/STALKER-Zone80/pull/31), [Issue #32](https://github.com/zukera2-stack/STALKER-Zone80/issues/32) |
+| E-007 | Recovery + synthetic lifetime / Windows | Восстановлены 50/5; 113 исходных хешей сохранились; синтетический процесс **27m 0.112s, exit 0**, Ctrl+C через реальный терминал не проверялся | **PASS recovery/probe, НЕ SOAK**, [PR #33](https://github.com/zukera2-stack/STALKER-Zone80/pull/33), CI [#45274819788](https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45274819788) 75/75; серия SOAK отменена |
+| E-008 | MAP-001 / Windows preflight | Определён WGS84 bbox `30.045,51.398,30.070,51.414`; EXE GM26.2 x64 найден, PowerShell синтаксис PASS; Windows curl exit 7 к AWS/Overpass | **AREA/EXE PASS, источники блокированы в том запуске**, [PR #38](https://github.com/zukera2-stack/STALKER-Zone80/pull/38) |
+| E-009 | Github-hosted public geodata | В прошлом GitHub Actions получены Copernicus DSM 60×58 и OSM XML 2.51MB, roads 446 way-lines, building footprints 439 way-polygons; 27 unresolved relations | **PASS для старого удалённого acquisition, HISTORICAL**, [run #45360016809](https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45360016809), [PR #40](https://github.com/zukera2-stack/STALKER-Zone80/pull/40). **Не новый способ доставки высот по текущему решению** |
+| E-010 | MAP-002 / Windows Global Mapper Pro 26.2 | В локальном отчёте **два batch процесса exit 0**; исходный WGS84 ASC 60×58, затем UTM36N `60×62×30м`, 105–136.2558м, **253 NoData**, 3 ASC height samples и GeoTIFF half-pixel tiepoint | **PASS локального GIS экспорта, FAIL как TB-ready 64²**, [PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41), SHA `1eb251f5c48aeb2291f0f6cf7751a75b531ed538`, `map/MAP_001_PROGRESS.md`. Облачный аудитор не повторял Windows |
+| E-011 | MAP-002 / локальное 2D preview | `MAP002-Pripyat-preview.svg` с рельефом и 453 SVG-road полилиниями из 446 OSM way, **без зданий** | **PASS как локальное preview по отчёту**, raw SVG не лежит в Git, [PR #41](https://github.com/zukera2-stack/STALKER-Zone80/pull/41) |
+| E-012 | Building catalog / локальный | Отдельный GeoJSON: **439 way IDs**, один `building=no`, **27 relations unresolved**; этажность тегом 404/439, подлинность/высота/история не подтверждены | **PARTIAL**, [BUILDING_INVENTORY_REPORT](map/BUILDING_INVENTORY_REPORT.md) |
+| E-013 | Облачный GRID-FIRST эксперимент / GitHub Actions | Был получен `64×64×30м` Copernicus-derived ASC+GeoTIFF и 0 NoData; 5 регрессионных тестов PASS | **HISTORICAL PASS СИНТЕТИКИ/УДАЛЁННОЙ ОБРАБОТКИ**, [run #45386386065](https://github.com/zukera2-stack/STALKER-Zone80/actions/runs/45386386065), [PR #43](https://github.com/zukera2-stack/STALKER-Zone80/pull/43) **CLOSED/SUPERSEDED без merge**. **НЕ использовать как готовый raster для текущего MAP-003** |
+| E-014 | MAP-003 / Global Mapper Online Data | Нужен N51 E030 и точный квадрат 64²×30м EPSG:32636. Доступность онлайн-слоя, настоящая GM загрузка и новый экспорт **пока не показаны** | **NOT RUN**, [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42), [Draft PR #44](https://github.com/zukera2-stack/STALKER-Zone80/pull/44) — только координаты |
+| E-015 | Terrain Builder import из пилота | Нет реального отдельно открытого и сохранённого TB-проекта с импортированными высотами; до сих пор только read-only UIA и отчёты | **NOT RUN**; Issue #42 |
+| E-016 | Arma 3 / готовый мир 81.92 км | Нет WRP/PBO/RPT с проверенным запуском в игре | **NOT RUN**, Stage 001/PARTIAL |
+
+### Отдельные уровни тестирования (не заменяют друг друга)
+
+| Уровень | Реальное доказательство PASS | Чего этот PASS НЕ доказывает |
+|---|---|---|
+| T0 docs/CI | валидатор и unit/negative тесты по конкретному SHA, реальные логи GitHub job | запуск GUI, корректную географию, работоспособность Arma |
+| T1 источники | идентификатор тайла, license/date, coverage и исходные heights/OSM фактически доступны | точность ground truth, исторические высоты |
+| T2 GIS local | GM26.2 процесс/лог/exit + проверенные выходные размеры/NoData/CRS/контрольные точки | соответствие heightmap Terrain Builder, полноценный мир |
+| T3 heightmap готов к TB | целевая **квадратная** сетка 64²×30м, origin, 5+ samples, NoData=0, одинаковые ASC/GeoTIFF/CRS | фактический импорт Terrain Builder |
+| T4 TB sandbox | один реально открытый/сохранённый безопасно изолированный heightmap, скриншот и метрики | валидный WRP/PBO и игровой FPS |
+| T5 Arma runtime | фактический WRP/PBO, in-game RPT/скриншот, measured load/perf | готовность всего региона без отдельной приёмки |
+
+**Правило обновления:** у каждой новой строки указать `ID; local/cloud; exact task/commit; command; version; actual result; source log/sha/screenshot; caveats`. Не переносить статус между платформами, версиями, datasets и новыми сетками по аналогии. Истекший artifact — не живой источник, но его прошлая проверка остаётся архивным фактом.
