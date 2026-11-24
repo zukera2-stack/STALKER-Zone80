@@ -1,6 +1,6 @@
 # STALKER Zone80 — Arma 3 exclusion-zone terrain
 
-**Status: FOUNDATION / not yet playable.** This repository is the source-controlled coordination and processing layer for a large, geographically grounded Chernobyl exclusion-zone terrain for Arma 3, enriched with separate S.T.A.L.K.E.R.-style gameplay layers.
+**Status: Stage 001 / PARTIAL — real GIS progress, NOT a playable map.** This repository is the source-controlled coordination and processing layer for a large, geographically grounded Chernobyl exclusion-zone terrain for Arma 3, enriched with separate S.T.A.L.K.E.R.-style gameplay layers.
 
 ## Target, not a demonstrated build
 
@@ -20,7 +20,7 @@
 ## Agent entrypoint\n\n**Start every agent session at [AGENT_START.md](AGENT_START.md).** The project reference Library is indexed in [docs/LIBRARY_INDEX.md](docs/LIBRARY_INDEX.md).\n\n## Start here
 
 1. Read [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md), [docs/GO_NOGO.md](docs/GO_NOGO.md) and [AGENTS.md](AGENTS.md).
-2. Cursor/Luna: follow [docs/TASK_CURSOR_001.md](docs/TASK_CURSOR_001.md). Audit first; **do not generate an 80 km world**.
+2. Cursor/Luna: follow active [Issue #42 / MAP-003](https://github.com/zukera2-stack/STALKER-Zone80/issues/42), not the historical [Stage 001 foundation task](docs/TASK_CURSOR_001.md). **Local Global Mapper Pro 26.2** obtains and exports heights; ChatGPT gives only tile/coordinates. No full world or buildings.
 3. Review the unresolved projection in [config/terrain_extent.json](config/terrain_extent.json). CRS and exact extent must be experimentally approved.
 4. Run local standard-library checks: `python tools/validation/validate_config.py`; generate dry-run sector manifests with `python tools/validation/build_sector_manifests.py`.
 5. Import no copyrighted addon models or large source data into Git; read [docs/ASSET_PROVENANCE.md](docs/ASSET_PROVENANCE.md).
