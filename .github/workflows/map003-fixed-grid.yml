@@ -1,0 +1,46 @@
+name: MAP-003 fixed-grid first 64x64 terrain pilot
+
+on:
+  push:
+    branches:
+      - feature/map003-fixed-grid-first
+    paths:
+      - 'tools/map003/**'
+      - '.github/workflows/map003-fixed-grid.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fixed-grid-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout current candidate
+        uses: actions/checkout@v4
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install raster-only processing
+        run: python -m pip install --disable-pip-version-check rasterio==1.4.3 numpy==2.2.6
+      - name: Verify deterministic fixed-grid geometry
+        run: python -m unittest discover -s tools/map003 -p "test_fixed_grid.py" -v
+      - name: Retrieve only source COG blocks for the fixed 64x64 grid
+        id: grid
+        continue-on-error: true
+        run: python tools/map003/build_fixed_grid.py reports/MAP-003/artifact
+      - name: Save geodata and evidence as temporary artifact (never git)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MAP003-Pripyat-64x64-UTM36
+          path: reports/MAP-003/artifact/
+          retention-days: 3
+          if-no-files-found: error
+      - name: Do not call data retrieval PASS when blocked
+        if: steps.grid.outcome != 'success'
+        run: |
+          echo 'BLOCKED: inspect GRID_MANIFEST.json in artifact; no source coverage claim'
+          exit 1
