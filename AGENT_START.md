@@ -87,3 +87,7 @@
 
 ## Cross-project integration
 Read [ZONE80–ZPB contract](docs/integration/ZONE80_ZPB_CONTRACT.md) before work on models, catalog bindings, GRM assets or Terrain Builder templates. Example manifest contains reserved candidate only, not a live asset. Current gates unchanged.
+
+
+## Owner decision — minimal runtime dependencies (2026-11-24)
+Read [MINIMAL_DEPENDENCIES](docs/integration/MINIMAL_DEPENDENCIES.md). Base Arma 3 + free Enoch + own project packages only as target. No mandatory external mods/paid DLC; actual compatibility untested. Existing gates unchanged.
