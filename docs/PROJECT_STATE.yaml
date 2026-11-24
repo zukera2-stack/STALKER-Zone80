@@ -137,3 +137,10 @@ integrated_map003_assignment:
   consolidated_report_path: "docs/map/MAP_003_INTEGRATED_RESULT.md"
   building_requirements_report_path: "docs/map/BUILDING_MODEL_NEEDS.md"
   output_branch_and_pr: "new Draft PR from checked current head; no merge"
+
+map003_local_evidence:
+  report: "docs/map/MAP_003_INTEGRATED_RESULT.md"
+  exact_asc_diagnostic: "64x64 at 30m, 629 NoData; final output BLOCKED"
+  roads: "446 source IDs projected by GM; original OSM extent only"
+  building_catalog: "PARTIAL; 449 separate footprints"
+  tb_import: "BLOCKED; height input incomplete"
