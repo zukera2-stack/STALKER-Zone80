@@ -9,6 +9,14 @@
 ## Geometry
 WGS84 (EPSG:4326) is the input storage convention. Test one projected metric CRS across the entire fixed square. Candidate UTM 36N or a centered custom Transverse Mercator must be evaluated quantitatively at west/east/north/south control points. Do not finalize EPSG or local XY origin before tests. Store CRS, bounds, axis order, vertical datum and inverse mapping in terrain_extent.json when approved.
 
+## Обязательный порядок для игрового рельефа: GRID FIRST (решение 24.11.2026)
+
+**В первую очередь зафиксировать игровую выходную сетку**: EPSG/метрическую проекцию и её геодезическое преобразование, целое число строк/столбцов, cellsize в метрах, точную `xllcorner/yllcorner`, весь квадратный footprint. **Только затем** получать/обрезать DEM/DSM с достаточным покрытием под эту сетку, пересчитывать высоты, проверять NoData и экспортировать ASC/GeoTIFF с неизменными параметрами. Сначала вырезать произвольный WGS84 bbox и позволить экспортёру автоматически выбирать `ncols/nrows` — **неправильно для Terrain Builder**.
+
+**Подтверждённая ошибка MAP-002:** WGS84-вырезка Copernicus 60×58 ячеек, после UTM36N и `SPATIAL_RES=30,30` возник произвольный прямоугольник 60×62 и **253 NoData**. **Исправлено MAP-003:** квадрат `64×64×30м`, EPSG:32636, `xllcorner=294373.084`, `yllcorner=5698122.108`, 4096 действительных высот NoData=0, обрезка исходных COG блоков **по будущей сетке**, а не по старому прямоугольнику. [Реальные артефакты, SHA и пять контрольных точек](map/MAP_003_GRID_FIRST.md). Этот квадрат только **пилот** и не утверждает финальный CRS/extent всего мира.
+
+**Приёмка для TB:** `ncols/nrows` должны соответствовать выбранному Terrain Builder target grid; все высоты из документированного источника; отсутствие `-9999` / NaN / inf в целевом поле; 5+ контрольных ячеек; одинаковый полный geotransform ASC/GeoTIFF; проверка единиц/meters и origin TB local XY. Объявление `NODATA_value=-9999` в заголовке не значит, что такие значения присутствуют. Никаких искусственных заполнений отсутствующего покрытия и замены DSM на придуманную историческую поверхность. Global Mapper 26.2 Pro должен **проверить и подтвердить** подготовленный raster перед одним TB sandbox import; не нужны общие UIA/SOAK тесты.
+
 ## Global Mapper 26.2 Pro (64-bit) — основной локальный инструмент
 
 По уточнению владельца от **24.11.2026** используем **Global Mapper 26.2 Pro, 64-bit**, а не упоминавшуюся прежде v27. Версия/редакция указана владельцем; на Windows агент проверяет установленный EXE, Version/About, доступную лицензию, наличие функций и их фактический результат. Не обновлять программу и не менять лицензию для эксперимента.
