@@ -54,12 +54,12 @@ try {
         throw "Global Mapper 26.2 not proven by Windows EXE metadata; inspect local About/version"
     }
 
-    $spec=@{
+    $spec=(@{
         ElevationASC=@("export_elevation_asc.gms","terrain.asc")
         ElevationGeoTIFF=@("export_elevation_geotiff.gms","terrain.tif")
         RoadsGeoJSON=@("export_roads_geojson.gms","roads.geojson")
         BuildingsGeoJSON=@("export_buildings_geojson.gms","building_footprints.geojson")
-    }[$Mode]
+    })[$Mode]
     $script=Join-Path $PSScriptRoot ("scripts\" + $spec[0])
     if (-not [IO.File]::Exists($script)) { throw "Missing checked-in GMS template" }
     $run=Join-Path $root ((Get-Date).ToUniversalTime().ToString("yyyyMMddTHHmmssZ") + "-" + [guid]::NewGuid().ToString("N"))
