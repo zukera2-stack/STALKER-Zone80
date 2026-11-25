@@ -1,4 +1,6 @@
 # START HERE — after measured CC-05Q (2026-11-25)
+
+**Superseded:** [RESUME_AFTER_CC05R](RESUME_AFTER_CC05R.md). CC05R measured bounded review integration now exists. This is historical handoff.
 Current cloud work: Draft [PR #48](https://github.com/zukera2-stack/STALKER-Zone80/pull/48), branch feat/cc05q-worker-preflight, parent PR #47. Tested code commit 2c5b696571407b38d2fcf781a0b31a1c6a017a6b; verify actual HEAD before editing. Stage 001 PARTIAL. [Native evidence](CC05Q_NATIVE_RESULT.md) supersedes the preflight environment blocker. [Reproduction](../../tools/automation/cc05q/README.md). Original [CC05Q assignment](RESUME_CC05Q.md) remains historical and defines previous scope. No real map/Windows approval or merge.
  
 ## What changed
