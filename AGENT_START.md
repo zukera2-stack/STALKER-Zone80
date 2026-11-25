@@ -136,3 +136,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05H owner policy and measured result
 Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) and [CC05H_RESULT](docs/automation/CC05H_RESULT.md). Owner-approved separate state overlay replaces blanket road exclusion. Synthetic rectangular policy and unchanged native TreesGenerator PASS twice with actual v03/cache: abandoned road retains observed anchor, operational excludes, unknown review; 6/5/5 records. Stock 2m anchor displacement preserved as evidence. No upstream source changes. Next CC-05I native forest closure and synthetic test, then policy polygon/sector integration. Real gates unchanged. Stage 001 PARTIAL.
+
+## CC-05I measured result
+[CC05I_RESULT](docs/automation/CC05I_RESULT.md): stock ForestBuilder blocked at ElevationWithLakesData; bounded geometry-only adapter uses actual OSM interpretation and native geometry, original ForestGenerator unchanged. Synthetic forest 2829/2769 records, 46 models, 50/0 on-road for abandoned/protected state, 0 lake/cutline, 3/5 final review points; +100m Z and repeat PASS. Next CC-05J forest edge/radial and scrub closure, polygon policy and final point/seam checks. No real generation, Stage 001 PARTIAL.

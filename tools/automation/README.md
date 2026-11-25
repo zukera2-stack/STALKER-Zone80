@@ -24,3 +24,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05H
 [cc05h](cc05h/README.md): synthetic state overlay and native GRM tree placement companion, no production exporter. [Report](../../docs/automation/CC05H_RESULT.md).
+
+## CC-05I
+[cc05i](cc05i/README.md) — native forest geometry adapter and synthetic probe. [Report](../../docs/automation/CC05I_RESULT.md).

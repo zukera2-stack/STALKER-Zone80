@@ -97,3 +97,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05H result — owner-approved succession
 [Policy](../map/VEGETATION_SUCCESSION_POLICY.md), [result](CC05H_RESULT.md). Bounded synthetic policy + native TreesGenerator PASS; abandoned asphalt retains tree, operational road excludes obstruction, unknown review. Stock GRM remains primary. Rectangular fixture, not production polygon/physical geometry. Next CC-05I native forest dependency closure and synthetic test. UI deferred.
+
+## CC-05I result
+[CC05I_RESULT](CC05I_RESULT.md): bounded native ForestGenerator PASS via geometry-only input; original ForestBuilder requests forbidden lake elevation stage. Abandoned 2829 records/50 on-road; protected 2769/0. Final review 3/5, no real export. Next CC-05J native forest edge/radial and scrub graph plus polygon/point/seam validation. UI deferred.

@@ -1,0 +1,6 @@
+SDK 10.0.404; package manifest 39/39 SHA256/size verified.
+Offline restore exit 0, 8 projects.
+Initial build exit 1, 43 upstream warnings, 1 companion CS0136 variable-name conflict, corrected in companion only.
+Final incremental build exit 0, 0 warnings, 0 errors, 3.58s.
+Two final process runs exit 0, identical stdout.
+530 GRM and 173 BIS original archive files byte-identical.

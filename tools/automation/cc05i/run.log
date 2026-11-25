@@ -1,0 +1,8 @@
+CONFIG forest_cluster_collections=1 additional_collections=1
+STOCK_FOREST_BUILDER_REFUSED PASS ElevationWithLakesData
+FOREST state=abandoned delta=0 source_m2=129600.00 selected_m2=125696.67 records=2829 models=46 on_road=50 in_lake=0 in_cutline=0 outside=3 final_review=3 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=725035d9686e2e77907c2455169c3b5fff3ff1c4b0d98053762dbffbc1d4a73b
+FOREST state=abandoned delta=0 source_m2=129600.00 selected_m2=125696.67 records=2829 models=46 on_road=50 in_lake=0 in_cutline=0 outside=3 final_review=3 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=725035d9686e2e77907c2455169c3b5fff3ff1c4b0d98053762dbffbc1d4a73b
+FOREST state=abandoned delta=100 source_m2=129600.00 selected_m2=125696.67 records=2829 models=46 on_road=50 in_lake=0 in_cutline=0 outside=3 final_review=3 grid=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc records_sha=725035d9686e2e77907c2455169c3b5fff3ff1c4b0d98053762dbffbc1d4a73b
+FOREST state=operational delta=0 source_m2=129600.00 selected_m2=123018.34 records=2769 models=46 on_road=0 in_lake=0 in_cutline=0 outside=3 final_review=5 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=c9067b4394de78f04fad94942bdb808cb257cde4b0173a3842fbf4c6b3380839
+FOREST state=unknown delta=0 source_m2=129600.00 selected_m2=123018.34 records=2769 models=46 on_road=0 in_lake=0 in_cutline=0 outside=3 final_review=5 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=c9067b4394de78f04fad94942bdb808cb257cde4b0173a3842fbf4c6b3380839
+PASS bounded synthetic native ForestGenerator; no production output; final overlap review counts are not approval

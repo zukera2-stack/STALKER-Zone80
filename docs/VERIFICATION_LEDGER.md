@@ -96,3 +96,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05H — synthetic state-aware native tree placement
 [CC05H_RESULT](automation/CC05H_RESULT.md): actual offline restore/build, two identical successful native runs, 6/5/5 records by state, road occupancy 1/0/0, stock anchor shift 2m. Initial failed exact model-anchor assertion retained; final test distinguishes native composition offset. 703 upstream files unchanged. No real placements. Stage 001 PARTIAL.
+
+## CC-05I — bounded native forest
+[CC05I_RESULT](automation/CC05I_RESULT.md): actual offline build and two identical final runs, 46 distinct models; same synthetic forest changes road occupancy from 50 to 0, relative Z response +100m, no grid mutation. Stock ForestBuilder dependency denied. Final review counts nonzero, no physical collision or production approval. Stage 001 PARTIAL.

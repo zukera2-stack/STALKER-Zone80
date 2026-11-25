@@ -464,3 +464,18 @@ cc05h_result:
   upstream_source_files_unchanged: 703
   real_generation: false
   next: "CC-05I native forest closure and synthetic policy integration"
+
+cc05i_result:
+  report: "docs/automation/CC05I_RESULT.md"
+  native_forest_probe_passes: 2
+  stock_forest_builder_refused: "ElevationWithLakesData"
+  geometry_adapter_scope: "single synthetic forest polygon"
+  native_model_counts: [2829, 2769, 2769]
+  distinct_models: 46
+  on_road_counts: [50, 0, 0]
+  final_review_counts: [3, 5, 5]
+  lake_and_cutline_points: 0
+  relative_records_unchanged_plus_100m: true
+  multi_polygon_determinism_tested: false
+  real_generation: false
+  next: "CC-05J forest edge/radial and scrub closure, polygon policy and final points/seams"
