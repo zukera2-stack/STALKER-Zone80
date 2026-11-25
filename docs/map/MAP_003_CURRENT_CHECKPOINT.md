@@ -1,6 +1,6 @@
 # MAP-003 / GRM — актуальная контрольная точка 2026-11-25
 
-**Current resume:** [RESUME_CC05Q](../automation/RESUME_CC05Q.md). Latest measured cloud result [CC05P](../automation/CC05P_RESULT.md); local 629 NoData blocker unchanged. Earlier plan below retained as historical context. No new execution.
+**Current cloud resume:** [RESUME_AFTER_CC05Q](../automation/RESUME_AFTER_CC05Q.md). Latest measured [CC05Q native Worker integration](../automation/CC05Q_NATIVE_RESULT.md) in Draft PR #48. Local 629 NoData blocker unchanged. Earlier plan retained as historical context.
 
 Scope: consolidated documentation, not a new execution report. Evidence cutoff ff84106de719dbb17fd1caa749cf5aa5269b9698, Draft PR #47, active Issue #42. Stage 001 PARTIAL. Earlier documents remain historical; this index resolves their outdated NOT RUN statements only within the measured scope. No stage promotion, no new native execution.
 

@@ -69,6 +69,6 @@
 | GRM-02 surface compiler | All 16 usages exactly once, stable RGB IDs, known textures/surfaces, no silent fallbacks | PARTIAL: six restored v02 surfaces, v03 mud pending |
 | GRM-03 base/ice | Verified base-world class and patch; explicit ice policy/approved replacement | BLOCKED |
 | GRM-04 native generator | GM-authoritative elevation adapter, dependency graph, bounded authorized layer with evidence | BLOCKED / NOT RUN |
-| GRM-05 worker | Synthetic lock/stop/resume/crash/resource tests, then separately approved native/background checks | DESIGN ONLY / NOT RUN |
+| GRM-05 worker | Synthetic lock/stop/resume/crash/resource tests, then separately approved native/background checks | PASS bounded Linux native synthetic CC05Q ([evidence](automation/CC05Q_NATIVE_RESULT.md)); PARTIAL overall, Windows/background/hard limits NOT RUN |
 | GRM-06 ZPB | Verified manifest IDs, P3D paths, CfgPatches, anchor/heading and no duplication | Contract only; actual assets/placement NOT RUN |
 Evidence: [checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md), [v03](map/GRM_CONFIG_PREFLIGHT_V03.md), [worker](automation/WORKER_CONTRACT.md), [ZPB](integration/ZONE80_ZPB_CONTRACT.md). Existing REQ-106/107 still BLOCKED at 629 NoData; no stage promotion.
