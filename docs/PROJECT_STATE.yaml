@@ -557,3 +557,21 @@ cc05m_result:
   grid_unchanged: true
   real_generation: false
   next: "CC-05N remaining native infrastructure placement and consolidation"
+
+cc05n_result:
+  report: "docs/automation/CC05N_RESULT.md"
+  native_probe_passes: 2
+  fence_model_records: 55
+  oriented_model_records: 5
+  explicit_tree_row_records: 8
+  sidewalk_records: 0
+  procedural_lamp_records: 0
+  explicit_lamp_records: 1
+  total_model_records: 68
+  fence_points_on_road: 1
+  unsupported_fixture_features: ["retaining_wall", "gate", "power_pole"]
+  postbox_unconfigured: true
+  grid_unchanged: true
+  complete_native_catalog_tested: false
+  real_generation: false
+  next: "CC-05O consolidated synthetic pipeline and review contracts"

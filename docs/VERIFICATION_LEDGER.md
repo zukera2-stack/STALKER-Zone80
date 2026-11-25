@@ -111,3 +111,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05M — bounded surface plan
 [CC05M_RESULT](automation/CC05M_RESULT.md): actual offline build and two identical executions; 17 point controls and all pixels in both masks matched semantic palette, 4 invalid inputs refused per run. Grass/Forest forbidden height dependency observed. Candidate asphalt preservation tested only in fixture. Full stock IdMap, actual coast/ice, runtime and real map NOT RUN. Stage 001 PARTIAL.
+
+## CC-05N — bounded native infrastructure
+[CC05N_RESULT](automation/CC05N_RESULT.md): offline build and two identical executions; 55 fence, 5 oriented, 8 tree-row, 0 sidewalks; +100m Z response; grid unchanged. Actual omitted retaining wall/gate/power pole, unconfigured postbox and one road-overlap fence point are review findings, not physical proof. Full catalog, real map and runtime NOT RUN. Stage 001 PARTIAL.

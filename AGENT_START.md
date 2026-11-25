@@ -154,3 +154,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05M measured result
 [CC05M_RESULT](docs/automation/CC05M_RESULT.md): explicit bounded 18-slot surface plan using native drawing/coordinate helpers, 16 usage mappings, 11 material IDs, 15 visible slots/9 colors, 17 semantic controls and exact all-pixel mapping; two identical runs and unchanged grid. Native AsphaltBuilder excludes forest; candidate retains asphalt under vegetation (2800 pixels changed). Full stock IdMap NOT RUN, Grass/Forest blocked at lake elevation dependency, coast/ice absent in fixture. Next proposed CC-05N remaining native infrastructure placement, then common contracts. Stage 001 PARTIAL, no real generation.
+
+## CC-05N measured result
+[CC05N_RESULT](docs/automation/CC05N_RESULT.md): native fences, explicit oriented objects, explicit tree row, disabled sidewalks PASS bounded; 55/5/8/0 = 68 records, +100m Z/repeat, unchanged grid. All nine road profiles disable procedural lamps/sidewalks, explicit lamp survives. Retaining wall/gate/power pole omitted, postbox unconfigured, one fence point on road. No physical or full catalog approval. Next proposed CC-05O common synthetic pipeline and provenance/review contracts. Stage 001 PARTIAL, no real generation.

@@ -39,3 +39,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05M
 [cc05m](cc05m/README.md) — bounded explicit surface geometry plan and semantic/material mask probe. [Report](../../docs/automation/CC05M_RESULT.md).
+
+## CC-05N
+[cc05n](cc05n/README.md) — native infrastructure, explicit row and lamp probe. [Report](../../docs/automation/CC05N_RESULT.md).

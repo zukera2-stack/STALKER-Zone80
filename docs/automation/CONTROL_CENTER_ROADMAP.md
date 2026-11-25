@@ -115,3 +115,6 @@ Owner requires irregular natural forest, understory, fallen deadwood and standin
 
 ## CC-05M result
 [CC05M_RESULT](CC05M_RESULT.md): bounded ordered surface plan, native drawing/coordinate helpers, semantic mask controls and all-pixel mapping PASS twice; 16 usages, 11 IDs, 2800 changed pixels in experimental preserved-asphalt candidate. Full IdMap and generalized landcover priority graph NOT RUN. Next proposed CC-05N remaining native infrastructure placement and common contract consolidation. GM-only, UI deferred.
+
+## CC-05N result
+[CC05N_RESULT](CC05N_RESULT.md): bounded native infrastructure PASS twice, 68 records, explicit lamps and tree rows only, unchanged supplied heights. Unsupported barriers/poles and crossing fence require review. No generic house generation. Next proposed CC-05O consolidate tested native components in one synthetic pipeline, explicit unsupported layers and immutable inputs, review and ownership manifest. UI deferred.
