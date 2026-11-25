@@ -103,3 +103,6 @@ Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthet
 
 ## CC-02 checkpoint
 [CC02_RESULT](docs/automation/CC02_RESULT.md) is the current Worker result: 13 Linux synthetic tests PASS twice; active stop, actual kill/recovery, inherited lock and owned descendant cleanup. CC-01 remains archived; CC-02 has a new synthetic-only schema/root, no automatic state migration. Next CC-03 logical sector manager on synthetic inputs; no production CRS, real heights, native jobs, P: writes, scheduler, merge or stage promotion. Existing local MAP-003 gates unchanged.
+
+## CC-03 checkpoint
+[CC03_RESULT](docs/automation/CC03_RESULT.md): tested coordinate-only sector planning in tools/automation/cc03, reuses existing foundation manifests, 64 sectors/112 shared edges, 11 tests PASS twice. Dirty sets only, not executed generation. Next CC-04 Config Builder + Asset Manager; reuse editor v03 evidence, explicit unresolved ice/mud/base/22 refs, no invented approvals or native execution. Stage 001 PARTIAL and GM-only elevation unchanged.

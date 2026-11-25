@@ -1,0 +1,14 @@
+{
+  "anchor_owner": "S01_00",
+  "baseline_sha256": "51dbc9177b597cce5e3ab0930d885c20d01404c8afdd85bfaf4919c105631568",
+  "dirty_after_interior_edit": [
+    "S00_00"
+  ],
+  "native_generation": false,
+  "production_crs": null,
+  "reordered_sha256": "51dbc9177b597cce5e3ab0930d885c20d01404c8afdd85bfaf4919c105631568",
+  "scope": "synthetic-only",
+  "seam_issues": [],
+  "sector_count": 64,
+  "shared_edges": 112
+}
