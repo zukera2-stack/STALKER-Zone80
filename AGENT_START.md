@@ -130,3 +130,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05F measured result
 [CC05F_RESULT](docs/automation/CC05F_RESULT.md): actual owner modelinfo.json saved in Library, 491 records, exact 163/163 v03 P3D metadata coverage, strict native parse PASS twice, missing entry/unknown/changed hash refused. 141 prior loose-file evidence, 22 new clutter paths not inventoried; runtime approval still zero. Next CC-05G per-layer offline dependency closure and synthetic actual-config layer test. GM complete grid and local asset gates still required. No real placement, P: writes or merge; Stage 001 PARTIAL.
+
+## CC-05G measured result
+[CC05G_RESULT](docs/automation/CC05G_RESULT.md): actual v03 and owner model cache with native tree layer, seven reviewed native builder types, only elevation preseeded; 26/26 synthetic tree records, +100m Z response, deterministic repeat, unchanged grids, missing dependency refusal. Interior-road clearance FAIL (0m) despite outside-edge 2m PASS. Next CC-05H synthetic post-placement collision validation, no silent relocation; additional forest dependency review. Real GM/OSM/asset gates unchanged. Stage 001 PARTIAL.

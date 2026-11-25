@@ -429,3 +429,19 @@ cc05f_result:
   runtime_approved: 0
   real_generation: false
   next: "CC-05G offline layer closure and synthetic v03 layer test"
+
+cc05g_result:
+  report: "docs/automation/CC05G_RESULT.md"
+  actual_v03_synthetic_layer: "PASS bounded"
+  native_builder_types: 7
+  synthetic_tree_records: 26
+  configured_tree_models_used: 4
+  repeat_identical: true
+  elevation_shift_m: 100
+  grid_unchanged: true
+  missing_dependency_refused: true
+  outside_road_clearance_m: 2
+  inside_road_clearance_m: 0
+  production_collision_gate: "FAIL"
+  real_generation: false
+  next: "CC-05H synthetic placement collision validation; forest layer closure"

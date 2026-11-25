@@ -90,3 +90,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05F — actual native strict model resolution
 [CC05F_RESULT](automation/CC05F_RESULT.md): 491 valid cache records, 163/163 actual v03 lookups with strict parser and no placeholders, missing entry/unknown/modified input rejected. Restore/build exit 0, repeated identical output. No real model files tested, no placement. Stage 001 PARTIAL.
+
+## CC-05G — native v03 layer and clearance
+[CC05G_RESULT](automation/CC05G_RESULT.md): Release 0 errors/0 warnings, 2 identical process runs, 26 records, 7 native builder types, unchanged grid and +100m Z shift, missing dependency rejected. Interior road probe clearance 0m FAIL; outside edge 2m PASS. Real generation blocked.

@@ -18,3 +18,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05F
 [cc05f](cc05f/README.md) — strict native model cache review companion, pinned v03 and owner cache; no generation. [Report](../../docs/automation/CC05F_RESULT.md).
+
+## CC-05G
+[cc05g](cc05g/README.md) — original GRM native synthetic tree layer using actual v03/model cache, bounded OSM graph and collision defect probe. [Report](../../docs/automation/CC05G_RESULT.md).
