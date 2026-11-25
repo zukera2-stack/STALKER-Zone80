@@ -1,0 +1,21 @@
+PASS attempt-f3d430cad3334c499e8d453841bddc52 records 1015
+PASS baseline 64 nodes 112 edges 917/77/21 native records
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+PASS deterministic repeat, 64 reused, no new native child
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+PASS interior review edit: one rebuilt, 63 reused, no native launch
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+PASS cross-border metadata edit: two rebuilt, 62 reused
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+PASS global review rule change: 64 rebuilt, native unchanged
+PASS attempt-91bcce7b2814444ab724af40a951d05c records 1062
+PASS native changed input: actual 1062 records, two dependent nodes rebuilt
+PASS invalid native dependency blocks publication
+PASS expired dependency blocks publication
+PASS stop and explicit resume preserve previous evidence
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+SKIP verified PASS attempt-f3d430cad3334c499e8d453841bddc52
+PASS corrupted cache rejected, old evidence not overwritten
+PASS concurrent review lock refused
+PASS unresolved collinear seam blocks publication
+PASS bounded CC05R; two actual native starts, 64 logical nodes only
