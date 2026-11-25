@@ -1,0 +1,6 @@
+MISSING_ROADS_DEPENDENCY_REFUSED PASS
+INTERIOR_ROAD_PROBE clearance_m=0.0000 production_clearance_gate=FAIL
+delta=0 roads=1 buildings=1 areas=1 cities=1 trees=26 records=26 distinct_models=4 road_clearance_m=2.0000 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=a200be1f73ddd34cc33ad3e8c5532cd08c8ee9b87a0a2d1d0490947149cbddcd
+delta=0 roads=1 buildings=1 areas=1 cities=1 trees=26 records=26 distinct_models=4 road_clearance_m=2.0000 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60 records_sha=a200be1f73ddd34cc33ad3e8c5532cd08c8ee9b87a0a2d1d0490947149cbddcd
+delta=100 roads=1 buildings=1 areas=1 cities=1 trees=26 records=26 distinct_models=4 road_clearance_m=2.0000 grid=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc records_sha=a200be1f73ddd34cc33ad3e8c5532cd08c8ee9b87a0a2d1d0490947149cbddcd
+PASS native v03 TreesGenerator, seven reviewed builder types, actual metadata, repeat, +100m relative Z, no height mutation; synthetic only

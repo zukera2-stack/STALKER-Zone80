@@ -1,0 +1,14 @@
+  BIS.Core -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/bis-file-formats/BIS.Core/bin/linux/amd64/Release/netstandard2.0/BIS.Core.dll
+  GameRealisticMap -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/GameRealisticMap/bin/linux/amd64/Release/net10.0/GameRealisticMap.dll
+  BIS.PBO -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/bis-file-formats/BIS.PBO/bin/linux/amd64/Release/netstandard2.0/BIS.PBO.dll
+  BIS.PAA -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/bis-file-formats/BIS.PAA/bin/linux/amd64/Release/netstandard2.0/BIS.PAA.dll
+  BIS.WRP -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/bis-file-formats/BIS.WRP/bin/linux/amd64/Release/netstandard2.0/BIS.WRP.dll
+  BIS.P3D -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/bis-file-formats/BIS.P3D/bin/linux/amd64/Release/netstandard2.0/BIS.P3D.dll
+  GameRealisticMap.Arma3 -> <CC05I>/upstream/ArmaRealMap-2aef2040836daa11a8a368bb0c7f9ecd8f405d65/GameRealisticMap.Arma3/bin/linux/amd64/Release/net10.0/GameRealisticMap.Arma3.dll
+  Zone80.TransitionProbe -> <CC05J>/bin/linux/amd64/Release/net10.0/Zone80.TransitionProbe.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.50

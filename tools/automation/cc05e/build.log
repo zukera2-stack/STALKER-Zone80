@@ -1,0 +1,14 @@
+  BIS.Core -> <pinned-grm>/bis-file-formats/BIS.Core/bin/linux/amd64/Release/netstandard2.0/BIS.Core.dll
+  GameRealisticMap -> <pinned-grm>/GameRealisticMap/bin/linux/amd64/Release/net10.0/GameRealisticMap.dll
+  BIS.P3D -> <pinned-grm>/bis-file-formats/BIS.P3D/bin/linux/amd64/Release/netstandard2.0/BIS.P3D.dll
+  BIS.PAA -> <pinned-grm>/bis-file-formats/BIS.PAA/bin/linux/amd64/Release/netstandard2.0/BIS.PAA.dll
+  BIS.WRP -> <pinned-grm>/bis-file-formats/BIS.WRP/bin/linux/amd64/Release/netstandard2.0/BIS.WRP.dll
+  BIS.PBO -> <pinned-grm>/bis-file-formats/BIS.PBO/bin/linux/amd64/Release/netstandard2.0/BIS.PBO.dll
+  GameRealisticMap.Arma3 -> <pinned-grm>/GameRealisticMap.Arma3/bin/linux/amd64/Release/net10.0/GameRealisticMap.Arma3.dll
+  Zone80.ConfigProbe -> <probe>/bin/linux/amd64/Release/net10.0/Zone80.ConfigProbe.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.16

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "POLICY_ONLY_NOT_GRM_CONFIG",
+  "runtime_policy": {
+    "stock_arma3": true,
+    "free_enoch": true,
+    "own_packages": [
+      "Zone80",
+      "ZPB"
+    ],
+    "mandatory_external_mods": [],
+    "paid_dlc_required": false
+  },
+  "grm_builtin_reference": "builtin:CentralEurope.grma3a",
+  "unapproved_builtin_dependencies": [
+    "arm_centraleurope",
+    "2982306133"
+  ],
+  "base_world_class": null,
+  "base_cfgpatches": null,
+  "verified_assets": [],
+  "approved_for_generation": false
+}

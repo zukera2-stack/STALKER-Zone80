@@ -61,3 +61,14 @@
 ## MAP-003 — актуализация приёмки
 
 [Фактический локальный отчёт](map/MAP_003_INTEGRATED_RESULT.md): A BLOCKED (629 NoData), B PASS в пределах исходной выборки, C PARTIAL (449 записей), D BLOCKED (неполная сетка). Stage 001 / PARTIAL.
+
+## GRM / automation acceptance — 25.11.2026
+| Requirement | Acceptance | Current status |
+|---|---|---|
+| GRM-01 minimal runtime deps | Actual CfgPatches and transitive resource closure, no paid entitlement dependency, clean game test | PARTIAL: policy and loose scan, engine NOT RUN |
+| GRM-02 surface compiler | All 16 usages exactly once, stable RGB IDs, known textures/surfaces, no silent fallbacks | PARTIAL: six restored v02 surfaces, v03 mud pending |
+| GRM-03 base/ice | Verified base-world class and patch; explicit ice policy/approved replacement | BLOCKED |
+| GRM-04 native generator | GM-authoritative elevation adapter, dependency graph, bounded authorized layer with evidence | BLOCKED / NOT RUN |
+| GRM-05 worker | Synthetic lock/stop/resume/crash/resource tests, then separately approved native/background checks | DESIGN ONLY / NOT RUN |
+| GRM-06 ZPB | Verified manifest IDs, P3D paths, CfgPatches, anchor/heading and no duplication | Contract only; actual assets/placement NOT RUN |
+Evidence: [checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md), [v03](map/GRM_CONFIG_PREFLIGHT_V03.md), [worker](automation/WORKER_CONTRACT.md), [ZPB](integration/ZONE80_ZPB_CONTRACT.md). Existing REQ-106/107 still BLOCKED at 629 NoData; no stage promotion.

@@ -1,0 +1,8 @@
+MATERIAL_IDS PASS usages=16 colors=11 missing_surface=1
+PATHS River:10:2;River:10:2;StreamTunnel:0:2
+delta=0 lake_area=17200.00 river_area=2378.34 sand_area=6400.00 lakes=2 paths=3 mask_colors=3 mask_sha=87aa94e8c71cb2a6d3fe1bfc811b53e337da89e7b9e5d9d55e5240f093380684 native_records=13 radial_refused=True grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+PATHS River:10:2;River:10:2;StreamTunnel:0:2
+delta=0 lake_area=17200.00 river_area=2378.34 sand_area=6400.00 lakes=2 paths=3 mask_colors=3 mask_sha=87aa94e8c71cb2a6d3fe1bfc811b53e337da89e7b9e5d9d55e5240f093380684 native_records=13 radial_refused=True grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+PATHS River:10:2;River:10:2;StreamTunnel:0:2
+delta=100 lake_area=17200.00 river_area=2378.34 sand_area=6400.00 lakes=2 paths=3 mask_colors=3 mask_sha=87aa94e8c71cb2a6d3fe1bfc811b53e337da89e7b9e5d9d55e5240f093380684 native_records=13 radial_refused=True grid=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc
+PASS native hydrography, bounded native polygon mask, native watercourse placement; lake edge clip and fixed width observed; full IdMapRender NOT RUN

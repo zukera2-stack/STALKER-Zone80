@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "status": "REFERENCE_ONLY",
+  "approved_for_generation": false,
+  "upstream": {
+    "repository": "jetelain/ArmaRealMap",
+    "commit": "2aef2040836daa11a8a368bb0c7f9ecd8f405d65",
+    "path": "GameRealisticMap.Arma3/Builtin/CentralEurope.grma3a",
+    "license_notice": "APL in Builtin/LICENSE; reference inventory only"
+  },
+  "reference_texture_size_m": 4,
+  "definitions": [
+    {
+      "usages": [
+        "Default",
+        "Meadow"
+      ],
+      "reference_surface": "arm_meadows_centraleurope",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_meadows_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_meadows_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\plants_f\\Clutter\\c_StrGrassGreen_group.p3d",
+        "A3\\plants_f\\Clutter\\c_GrassGreen_GroupSoft.p3d",
+        "a3\\plants_f\\clutter\\c_GrassGreen_GroupHard.p3d",
+        "A3\\plants_f\\Clutter\\c_Flower_Low_Yellow2.p3d",
+        "A3\\plants_f\\Clutter\\c_Flower_Cakile.p3d",
+        "A3\\plants_f\\Clutter\\c_StrPlantGreenShrub.p3d"
+      ],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "DefaultUrban",
+        "Grass"
+      ],
+      "reference_surface": "arm_grassshort",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_grassshort_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_grassshort_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\plants_f\\Clutter\\c_StrGrassGreen_group.p3d"
+      ],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "DefaultIndustrial"
+      ],
+      "reference_surface": "arm_dirt_centraleurope",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_dirt_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_dirt_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "IceSurface"
+      ],
+      "reference_surface": "arm_ice",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_co.paa",
+        "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_nopx.paa"
+      ],
+      "reference_clutter_paths": [],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "ScreeSurface",
+        "RockGround"
+      ],
+      "reference_surface": "arm_rock",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_rock_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_rock_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "z\\arm\\addons\\common_v2\\data\\clutter\\c_sharpStones_erosion_f.p3d",
+        "z\\arm\\addons\\common_v2\\data\\clutter\\c_sharpStones_erosion_v2_f.p3d",
+        "A3\\plants_f\\Clutter\\c_StrGrassDry.p3d",
+        "A3\\plants_f\\Clutter\\c_StrGrassDry_group.p3d"
+      ],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "Coastline",
+        "Sand"
+      ],
+      "reference_surface": "arm_sand_centraleurope",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_sand_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_sand_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "OceanGround"
+      ],
+      "reference_surface": "GdtSeabed",
+      "reference_texture_paths": [
+        "a3\\map_data\\gdt_seabed_co.paa",
+        "a3\\map_data\\gdt_seabed_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\Plants_F\\Clutter\\c_SeaWeed1.p3d",
+        "A3\\Plants_F\\Clutter\\c_SeaWeed2.p3d",
+        "A3\\Plants_F\\Clutter\\c_Coral4.p3d",
+        "A3\\Plants_F\\Clutter\\c_Coral1.p3d",
+        "A3\\Plants_F\\Clutter\\c_Coral5.p3d",
+        "A3\\Plants_F\\Clutter\\c_Coral3.p3d",
+        "A3\\Plants_F\\Clutter\\c_Coral2.p3d"
+      ],
+      "texture_origin": "STOCK_PATH_CANDIDATE",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "ForestGround"
+      ],
+      "reference_surface": "arm_forest_centraleurope",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_forest_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_forest_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\plants_f\\Clutter\\c_StrWeedGreenTall.p3d",
+        "A3\\plants_f\\Clutter\\c_Grass_Green.p3d",
+        "A3\\plants_f\\Clutter\\c_StrWeedBrownTall_group.p3d",
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_fern_boletus_group.p3d",
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_fern_amanita_single.p3d",
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_Grass_flower1.p3d",
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_fern.p3d",
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_fernTall.p3d"
+      ],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "FarmLand"
+      ],
+      "reference_surface": "GdtKlField",
+      "reference_texture_paths": [
+        "a3\\map_enoch\\data\\gdt_enfield_co.paa",
+        "a3\\map_enoch\\data\\gdt_enfield_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_weat.p3d",
+        "a3\\vegetation_f_enoch\\clutter\\c_weatTall.p3d"
+      ],
+      "texture_origin": "STOCK_PATH_CANDIDATE",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "RiverGround",
+        "LakeGround"
+      ],
+      "reference_surface": "arm_wetland_centraleurope",
+      "reference_texture_paths": [
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_wetland_centraleurope_co.paa",
+        "z\\arm\\addons\\centraleurope\\data\\gdt\\arm_wetland_centraleurope_nopx.paa"
+      ],
+      "reference_clutter_paths": [
+        "A3\\Vegetation_F_Enoch\\Clutter\\c_GrassDryTall.p3d",
+        "A3\\plants_f\\Clutter\\c_StrGrassDry_group.p3d"
+      ],
+      "texture_origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "usages": [
+        "Asphalt"
+      ],
+      "reference_surface": "GdtAsphalt",
+      "reference_texture_paths": [
+        "a3\\map_data_exp\\gdt_asphalt_co.paa",
+        "a3\\map_data_exp\\gdt_asphalt_nopx.paa"
+      ],
+      "reference_clutter_paths": [],
+      "texture_origin": "STOCK_PATH_CANDIDATE",
+      "selected_texture_paths": null,
+      "selected_surface": null,
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    }
+  ],
+  "additional_reference_candidates": [
+    {
+      "path": "A3\\Map_Data\\gdt_grass_green_co.paa",
+      "source": "https://community.bistudio.com/wiki/CfgWorlds_Config_Reference",
+      "note": "Diffuse only, normal texture and surface class not verified",
+      "local_verified": false,
+      "approved_for_generation": false
+    }
+  ],
+  "policy": {
+    "all_usage_ids_explicit": true,
+    "no_silent_default": true,
+    "unique_material_color_ids": true,
+    "unknown_geography": "KEEP_UNKNOWN",
+    "no_external_runtime_dependency": true
+  }
+}

@@ -1,0 +1,13 @@
+POLICY PASS allow=6 deny=1 review=1 partial_density=52/100; seam, local invalidation, duplicates, invalid density, repeat PASS
+STOCK anchor_shift_m=2.0000
+COMPOSITION max_offset_m=0.7431 final_on_road=1
+NATIVE state=Abandoned stock=True count=1 exact_road_anchor=False records_sha=c493a7a9386e6efc663faa186c8022ac912f33627b79f517e628860ee4a4dbc2
+COMPOSITION max_offset_m=2.3656 final_on_road=1
+NATIVE state=Abandoned stock=False count=6 exact_road_anchor=True records_sha=a40d18af713e9977574ac90f3a065f288eb29281af43e62e0b7c10c598e2985b
+COMPOSITION max_offset_m=2.3656 final_on_road=1
+NATIVE state=Abandoned stock=False count=6 exact_road_anchor=True records_sha=a40d18af713e9977574ac90f3a065f288eb29281af43e62e0b7c10c598e2985b
+COMPOSITION max_offset_m=2.3656 final_on_road=0
+NATIVE state=Operational stock=False count=5 exact_road_anchor=False records_sha=54aaa4bc5364fb29265bb7f305556ac5bbfa5b7eb3a4c316712418ca6374612a
+COMPOSITION max_offset_m=2.3656 final_on_road=0
+NATIVE state=Unknown stock=False count=5 exact_road_anchor=False records_sha=54aaa4bc5364fb29265bb7f305556ac5bbfa5b7eb3a4c316712418ca6374612a
+PASS synthetic policy-aware native TreesGenerator; no production geometry or output

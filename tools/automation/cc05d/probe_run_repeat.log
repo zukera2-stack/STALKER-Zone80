@@ -1,0 +1,9 @@
+debug OSM nodes=3 tree points=<30, 30>;<60, 60>;<30, 60>
+delta=0 source_points=3 selected=1 grid=5914cdf2e9040c2953c67a79955bc729885e0ef0841d593cfa121de1a42cb27f records_sha=40e4aac6b8453ec72a6bfc5d8e478a128b73f4412b218cb276b7bbaa54b681ff
+debug OSM nodes=3 tree points=<30, 30>;<60, 60>;<30, 60>
+delta=0 source_points=3 selected=1 grid=5914cdf2e9040c2953c67a79955bc729885e0ef0841d593cfa121de1a42cb27f records_sha=40e4aac6b8453ec72a6bfc5d8e478a128b73f4412b218cb276b7bbaa54b681ff
+debug OSM nodes=3 tree points=<30, 30>;<60, 60>;<30, 60>
+delta=-100 source_points=3 selected=0 grid=7e8613ab8a447bf2c820cd7b998aa11e988e0556a0d79ef13f9c8118a5b0962e records_sha=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+debug OSM nodes=3 tree points=<30, 30>;<60, 60>;<30, 60>
+delta=100 source_points=3 selected=3 grid=4a929fda03f0adc33282d4afdd28b4b83ef0e51589a2c0b8d94e5ac0470fa827 records_sha=0e2c25758068dbe96c5f8e8bd881dd022b6ea0a737b190f148c857a15a8f0f2e
+SYNTHETIC GRM ARMA3 TREES PASS: native OSM builder, height filter, relative Z, deterministic, immutable grid, blocked fallback

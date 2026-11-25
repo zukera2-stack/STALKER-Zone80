@@ -1,0 +1,38 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "exit": 0,
+      "stdout": [
+        "a PASS",
+        "b PASS"
+      ]
+    },
+    {
+      "run": 2,
+      "exit": 0,
+      "stdout": [
+        "a SKIP verified PASS",
+        "b SKIP verified PASS"
+      ]
+    }
+  ],
+  "jobs": {
+    "a": {
+      "artifact_sha256": "b5eb232761afe68b4b2c536556a760480d6ea92e81cd7f05ccdf19cd5c143369",
+      "elapsed_s": 0.146,
+      "exit_code": 0,
+      "sampled_max_members": 1,
+      "sampled_peak_group_rss_bytes": 11141120,
+      "status": "PASS"
+    },
+    "b": {
+      "artifact_sha256": "b5eb232761afe68b4b2c536556a760480d6ea92e81cd7f05ccdf19cd5c143369",
+      "elapsed_s": 0.1476,
+      "exit_code": 0,
+      "sampled_max_members": 1,
+      "sampled_peak_group_rss_bytes": 10878976,
+      "status": "PASS"
+    }
+  }
+}

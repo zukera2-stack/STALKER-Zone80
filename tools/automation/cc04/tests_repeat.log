@@ -1,0 +1,18 @@
+test_absent_surface_is_blocker (test_config_builder.Tests.test_absent_surface_is_blocker) ... ok
+test_assembly_deterministic (test_config_builder.Tests.test_assembly_deterministic) ... ok
+test_catalog_reference_audit (test_config_builder.Tests.test_catalog_reference_audit) ... ok
+test_cli_modes (test_config_builder.Tests.test_cli_modes) ... ok
+test_dependency_graph (test_config_builder.Tests.test_dependency_graph) ... ok
+test_inventory_conflicts (test_config_builder.Tests.test_inventory_conflicts) ... ok
+test_json_invalid (test_config_builder.Tests.test_json_invalid) ... ok
+test_material_lock_negative (test_config_builder.Tests.test_material_lock_negative) ... ok
+test_missing_and_external_never_approved (test_config_builder.Tests.test_missing_and_external_never_approved) ... ok
+test_module_schema (test_config_builder.Tests.test_module_schema) ... ok
+test_resource_path_normalization (test_config_builder.Tests.test_resource_path_normalization) ... ok
+test_road_and_feature_negative (test_config_builder.Tests.test_road_and_feature_negative) ... ok
+test_zpb_never_selectable (test_config_builder.Tests.test_zpb_never_selectable) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.430s
+
+OK

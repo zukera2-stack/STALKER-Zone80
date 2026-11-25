@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "REFERENCE_ONLY",
+  "approved_for_generation": false,
+  "upstream": {
+    "repository": "jetelain/ArmaRealMap",
+    "commit": "2aef2040836daa11a8a368bb0c7f9ecd8f405d65",
+    "path": "GameRealisticMap.Arma3/Builtin/CentralEurope.grma3a",
+    "license_notice": "APL in Builtin/LICENSE; reference inventory only"
+  },
+  "profiles": [
+    {
+      "id": "TwoLanesMotorway",
+      "reference_width_m": 10,
+      "reference_texture_width_m": 12.5,
+      "reference_clear_width_m": 15,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "TwoLanesPrimaryRoad",
+      "reference_width_m": 10,
+      "reference_texture_width_m": 12.5,
+      "reference_clear_width_m": 14,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roadtarmac_highway.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "TwoLanesSecondaryRoad",
+      "reference_width_m": 7.5,
+      "reference_texture_width_m": 9,
+      "reference_clear_width_m": 11.5,
+      "texture_paths": [
+        "a3\\structures_f_exp\\data\\roads\\surf_exp_roadtarmac_main_road_ca.paa",
+        "a3\\structures_f_exp\\data\\roads\\surf_exp_roadtarmac_main_road_end_ca.paa"
+      ],
+      "material_path": "a3\\structures_f_exp\\data\\roads\\surf_exp_roadtarmac_main_road.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "TwoLanesConcreteRoad",
+      "reference_width_m": 7,
+      "reference_texture_width_m": 8.5,
+      "reference_clear_width_m": 10,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "SingleLaneConcreteRoad",
+      "reference_width_m": 4,
+      "reference_texture_width_m": 5,
+      "reference_clear_width_m": 6,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "SingleLaneDirtRoad",
+      "reference_width_m": 3.5,
+      "reference_texture_width_m": 5,
+      "reference_clear_width_m": 5,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_road_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_road_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_road.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "SingleLaneDirtPath",
+      "reference_width_m": 3.5,
+      "reference_texture_width_m": 4.5,
+      "reference_clear_width_m": 6,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_path_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_path_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roaddirt_path.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "ConcreteFootway",
+      "reference_width_m": 2,
+      "reference_texture_width_m": 2.5,
+      "reference_clear_width_m": 3,
+      "texture_paths": [
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_ca.paa",
+        "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road_end_ca.paa"
+      ],
+      "material_path": "a3\\roads_f\\roads_ae\\data\\surf_roadconcrete_city_road.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    },
+    {
+      "id": "Trail",
+      "reference_width_m": 1.5,
+      "reference_texture_width_m": 2,
+      "reference_clear_width_m": 3.5,
+      "texture_paths": [
+        "a3\\structures_f_exp\\data\\roads\\surf_exp_traildirt_trail_ca.paa",
+        "a3\\structures_f_exp\\data\\roads\\surf_exp_traildirt_trail_end_ca.paa"
+      ],
+      "material_path": "a3\\structures_f_exp\\data\\roads\\surf_exp_traildirt_trail.rvmat",
+      "local_verified": false,
+      "approved_for_generation": false,
+      "dependencies": null,
+      "rights_status": "UNKNOWN"
+    }
+  ],
+  "pilot_policy": {
+    "status": "PROPOSED_NOT_MEASURED",
+    "width_m": {
+      "tertiary": 8,
+      "residential": 6,
+      "unclassified": 6,
+      "living_street": 5,
+      "service": 4,
+      "track": 3,
+      "footway": 2,
+      "path": 1.5
+    },
+    "exclude_from_road_centerlines": [
+      "area=yes",
+      "footway=sidewalk",
+      "footway=crossing",
+      "highway=steps"
+    ],
+    "unknown_surface": "REVIEW",
+    "procedural_street_lamps": "None",
+    "automatic_sidewalks": false,
+    "road_ids": "derive from verified GRM enum and generated RoadsLib; not OSM ID"
+  }
+}

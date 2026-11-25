@@ -1,0 +1,6 @@
+{
+  "asc_sha256": "a6d85a93956145bb505a49c8d46c098e998ed85bc6cf3477ba93c1b814e77f6e",
+  "status": "BLOCKED",
+  "reason": "sample centers do not coincide with GRM nodes",
+  "native_generation_authorized": false
+}

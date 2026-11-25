@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "status": "REFERENCE_ONLY",
+  "approved_for_generation": false,
+  "upstream": {
+    "repository": "jetelain/ArmaRealMap",
+    "commit": "2aef2040836daa11a8a368bb0c7f9ecd8f405d65",
+    "path": "GameRealisticMap.Arma3/Builtin/CentralEurope.grma3a",
+    "license_notice": "Builtin/LICENSE APL; path references and segment lengths only, no copied asset definitions/binaries"
+  },
+  "assets": [
+    {
+      "p3d_path": "a3\\plants_f\\tree\\t_FicusB2s_F.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\plants_f\\tree\\t_PinusS2s_F.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\props_f_enoch\\civilian\\camping\\woodentable_02_large_f.p3d",
+      "groups": [
+        "Objects.PicnicTable"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\bridges\\Bridge_Asphalt_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesSecondaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\bridges\\Bridge_Concrete_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesConcreteRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\bridges\\Bridge_HighWay_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesMotorway",
+        "Bridges.TwoLanesPrimaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\dead\\grave_memorial_f.p3d",
+      "groups": [
+        "Objects.WarMemorial"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\dead\\grave_obelisk_f.p3d",
+      "groups": [
+        "Objects.WarMemorial"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\infoboards\\noticeboard_f.p3d",
+      "groups": [
+        "Objects.InformationBoard"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\lamps\\lampstreet_f.p3d",
+      "groups": [
+        "Objects.StreetLamp"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\lamps\\lampstreet_small_f.p3d",
+      "groups": [
+        "Objects.StreetLamp"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\civ\\statues\\maroula_f.p3d",
+      "groups": [
+        "Objects.Statue"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\mil\\Flags\\Mast_F.p3d",
+      "groups": [
+        "Objects.Flagpole"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\walls\\Wired_Fence_4m_F.p3d",
+      "groups": [
+        "Fences.Fence"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f\\walls\\Wired_Fence_8m_F.p3d",
+      "groups": [
+        "Fences.Fence"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_argo\\cultural\\statues\\monument_01_f.p3d",
+      "groups": [
+        "Objects.Statue"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_argo\\cultural\\statues\\statue_01_f.p3d",
+      "groups": [
+        "Objects.Statue"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_argo\\cultural\\statues\\statue_02_f.p3d",
+      "groups": [
+        "Objects.Statue"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\civilian\\Accessories\\ConcreteWell_02_F.p3d",
+      "groups": [
+        "Objects.WaterWell"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\civilian\\Accessories\\StoneWell_01_F.p3d",
+      "groups": [
+        "Objects.WaterWell"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Calvary_03\\Calvary_03_F.p3d",
+      "groups": [
+        "Objects.WaysideCross"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Calvary_04\\Calvary_04_EnochSaints_F.p3d",
+      "groups": [
+        "Objects.WaysideCross"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Calvary_04\\Calvary_04_F.p3d",
+      "groups": [
+        "Objects.WaysideCross"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Statues\\Monument_02_F.p3d",
+      "groups": [
+        "Objects.WarMemorial"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Statues\\OldSculpture_01_F.p3d",
+      "groups": [
+        "Objects.Sculpture"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\cultural\\Statues\\Statue_03_F.p3d",
+      "groups": [
+        "Objects.Statue"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Asphalt_02_center_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesConcreteRoad",
+        "Bridges.TwoLanesSecondaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Asphalt_02_left_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesConcreteRoad",
+        "Bridges.TwoLanesSecondaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Asphalt_02_right_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesConcreteRoad",
+        "Bridges.TwoLanesSecondaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Concrete_02_center_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesMotorway",
+        "Bridges.TwoLanesPrimaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Concrete_02_left_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesMotorway",
+        "Bridges.TwoLanesPrimaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Bridges\\Bridge_Concrete_02_right_F.p3d",
+      "groups": [
+        "Bridges.TwoLanesMotorway",
+        "Bridges.TwoLanesPrimaryRoad"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Pavements\\ConcretePavement_01_wide_F.p3d",
+      "groups": [
+        "Sidewalks.0"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_Track_Down_25_F.p3d",
+      "groups": [
+        "Railways.Crossings"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_Track_Passing_10_F.p3d",
+      "groups": [
+        "Railways.Crossings"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_Track_Passing_25_F.p3d",
+      "groups": [
+        "Railways.Crossings"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_Track_Up_25_F.p3d",
+      "groups": [
+        "Railways.Crossings"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_TrackE_25_F.p3d",
+      "groups": [
+        "Railways.Straights"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_TrackE_2_F.p3d",
+      "groups": [
+        "Railways.Straights"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_TrackE_40_F.p3d",
+      "groups": [
+        "Railways.Straights"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_TrackE_4_F.p3d",
+      "groups": [
+        "Railways.Straights"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\infrastructure\\Railways\\Rail_TrackE_8_F.p3d",
+      "groups": [
+        "Railways.Straights"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\walls\\brick\\brickwall_01_l_5m_f.p3d",
+      "groups": [
+        "Fences.Wall"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_enoch\\walls\\brick\\brickwall_01_l_pole_f.p3d",
+      "groups": [
+        "Fences.Wall"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_epb\\civ\\garbage\\garbagecontainer_closed_f.p3d",
+      "groups": [
+        "Objects.RecyclingContainer"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_epb\\civ\\garbage\\garbagecontainer_open_f.p3d",
+      "groups": [
+        "Objects.RecyclingContainer"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_epc\\Civ\\Accessories\\Bench_01_F.p3d",
+      "groups": [
+        "Objects.Bench"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_epc\\Civ\\Accessories\\Bench_02_F.p3d",
+      "groups": [
+        "Objects.Bench"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_epc\\civ\\garbage\\garbagebin_01_f.p3d",
+      "groups": [
+        "Objects.Basket"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\civilian\\accessories\\bench_03_f.p3d",
+      "groups": [
+        "Objects.Bench"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\civilian\\accessories\\bench_04_f.p3d",
+      "groups": [
+        "Objects.Bench"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\civilian\\accessories\\bench_05_f.p3d",
+      "groups": [
+        "Objects.Bench"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\civilian\\accessories\\garbagebin_02_f.p3d",
+      "groups": [
+        "Objects.Basket"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\civilian\\accessories\\picnictable_01_f.p3d",
+      "groups": [
+        "Objects.PicnicTable"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\walls\\hedges\\hedge_01_s_2m_f.p3d",
+      "groups": [
+        "Fences.Hedge"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_exp\\walls\\hedges\\hedge_01_s_4m_f.p3d",
+      "groups": [
+        "Fences.Hedge"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\structures_f_heli\\civ\\garbage\\wheeliebin_01_f.p3d",
+      "groups": [
+        "Objects.RecyclingContainer"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_fagussylvatica_3s.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_malusdomestica_3s.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "a3\\vegetation_f_enoch\\tree\\t_pyruscommunis_3s.p3d",
+      "groups": [
+        "Objects.Tree"
+      ],
+      "origin": "STOCK_PATH_CANDIDATE",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "z\\arm\\addons\\common_v2\\data\\water\\arm_pond_blue_10.p3d",
+      "groups": [
+        "Ponds.Size10"
+      ],
+      "origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "z\\arm\\addons\\common_v2\\data\\water\\arm_pond_blue_20.p3d",
+      "groups": [
+        "Ponds.Size20"
+      ],
+      "origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "z\\arm\\addons\\common_v2\\data\\water\\arm_pond_blue_40.p3d",
+      "groups": [
+        "Ponds.Size40"
+      ],
+      "origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "z\\arm\\addons\\common_v2\\data\\water\\arm_pond_blue_5.p3d",
+      "groups": [
+        "Ponds.Size5"
+      ],
+      "origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    },
+    {
+      "p3d_path": "z\\arm\\addons\\common_v2\\data\\water\\arm_pond_blue_80.p3d",
+      "groups": [
+        "Ponds.Size80"
+      ],
+      "origin": "EXTERNAL_REPLACEMENT_REQUIRED",
+      "status": "REFERENCE_ONLY",
+      "local_verified": false,
+      "cfgpatches": null,
+      "rights_status": "UNKNOWN",
+      "approved_for_generation": false
+    }
+  ],
+  "segment_reference_m": {
+    "bridges": {
+      "TwoLanesMotorway": {
+        "Single": 40,
+        "Start": 19.8,
+        "Middle": 40.3,
+        "End": 20
+      },
+      "TwoLanesPrimaryRoad": {
+        "Single": 40,
+        "Start": 19.8,
+        "Middle": 40.3,
+        "End": 20
+      },
+      "TwoLanesSecondaryRoad": {
+        "Single": 42,
+        "Start": 28,
+        "Middle": 24,
+        "End": 28
+      },
+      "TwoLanesConcreteRoad": {
+        "Single": 42,
+        "Start": 28,
+        "Middle": 24,
+        "End": 28
+      }
+    },
+    "rail_straight_m": [
+      2,
+      4,
+      8,
+      25,
+      40
+    ],
+    "rail_crossing_reference_m": [
+      {
+        "length": 75,
+        "road_max_width": 14
+      },
+      {
+        "length": 60,
+        "road_max_width": 9
+      }
+    ],
+    "fence_straight_m": {
+      "Wall": [
+        5
+      ],
+      "Fence": [
+        4,
+        8
+      ],
+      "Hedge": [
+        2,
+        4
+      ]
+    },
+    "sidewalk_straight_m": [
+      4
+    ],
+    "pond_nominal_size_m": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ]
+  },
+  "policy": {
+    "unknown_feature": "KEEP_UNKNOWN",
+    "generic_street_objects": "DISABLED_PENDING_REVIEW",
+    "procedural_street_lamps": "DISABLED",
+    "procedural_sidewalks": "DISABLED",
+    "native_layer_execution": "BLOCKED_PENDING_GATES",
+    "pond_models": "REPLACE_OR_DISABLE_LAYER_AFTER_DEPENDENCY_AUDIT",
+    "transforms": "MEASURE_LOCALLY_NO_GUESSES",
+    "automatic_building_generation": "DISABLED"
+  }
+}

@@ -1,5 +1,7 @@
 # Agent instructions: STALKER Zone80
 
+**Current handoff:** [RESUME_CC05Q](docs/automation/RESUME_CC05Q.md). Next cloud task CC-05Q (NOT RUN), latest measured SHA `ff84106de719dbb17fd1caa749cf5aa5269b9698`; check actual Draft PR #47 HEAD. Reuse CC02 Worker and CC05P native child, no rewrite. Local MAP-003 and all STOP rules unchanged.
+
 **First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.
 
 Applies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read README, docs/MASTER_PLAN.md and docs/GO_NOGO.md before modifying code.
@@ -32,3 +34,6 @@ Applies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read READM
 - Code and tests must run without requiring user-owned Arma tools where possible; platform-specific integration should skip with an explanation.
 
 Active work order: Issue #42 and docs/map/MAP_003_GM26_TILES.md. Epic: Issue #35. Historical foundation: docs/TASK_CURSOR_001.md. Project gate: docs/GO_NOGO.md.
+
+## Current GRM checkpoint (2026-11-25)
+Read [MAP_003_CURRENT_CHECKPOINT](docs/map/MAP_003_CURRENT_CHECKPOINT.md) and [minimal dependencies](docs/integration/MINIMAL_DEPENDENCIES.md). Owner v02 Studio save is real evidence for six recovered surfaces, not game generation. v03 remains editor/review-only for production; native strict parser and bounded synthetic Linux generation measured through CC-05P. No real native map or runtime approval. Reuse prior audits; actual new checks only. No external mandatory mods, no ice/default or base world guesses. Existing Issue #42 and Draft PR #47; GM-only and STOP rules unchanged.

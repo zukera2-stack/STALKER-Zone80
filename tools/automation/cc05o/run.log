@@ -1,0 +1,88 @@
+CATALOG total=27 selected=13 NOT_RUN=BuildingGenerator,DefaultAgriculturalAreasGenerator,DefaultAreasGenerator,DefaultCommercialAreasGenerator,DefaultIndustrialAreasGenerator,DefaultMilitaryAreasGenerator,DefaultResidentialAreasGenerator,DefaultRetailAreasGenerator,LakeSurfaceGenerator,OrchardGenerator,RocksGenerator,ScreeGenerator,VineyardsGenerator,WatercourseRadialGenerator
+MISSING_DEPENDENCIES_REFUSED PASS
+abandoned delta=0 OrientedObjectsGenerator records=2
+abandoned delta=0 BridgeGenerator records=5
+abandoned delta=0 FenceGenerator records=8
+abandoned delta=0 RailwayGenerator records=4
+abandoned delta=0 SidewalksGenerator records=0
+abandoned delta=0 ForestEdgeGenerator records=245
+abandoned delta=0 ForestGenerator records=504
+abandoned delta=0 ForestRadialGenerator records=176
+abandoned delta=0 ScrubGenerator records=42
+abandoned delta=0 ScrubRadialGenerator records=14
+abandoned delta=0 TreesGenerator records=2
+abandoned delta=0 TreeRowsGenerator records=8
+abandoned delta=0 WatercourseGenerator records=5
+SOURCE_REVIEW fixture_way_ids=101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; tagged_node_ids=73,74,75,76,77,78,79; state_way115=abandoned; tree_anchor_decisions=73:allow_anchor,74:allow_anchor; power_pole=unsupported;postbox=unconfigured;gate=unsupported;building=ZPB_pending
+abandoned delta=0 total=1015 review=21 left=917 right=77 point_pass_road_plants=31 duplicate_csv_groups=0 roads=1 mask=9765495897e209dafc4d5719460a5a894d20ac315faa7f78f9bc8601d20bf7f3 road=cd78d7a35d2e75e9fd6e1830451057f5ce193e8263d313c91708394f71617466 review_manifest=8527ce79de90cc7739b4ea55b08cae7a808bd3227786c7f965ab2358da4c7c5a grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+nature_name_candidates fallen=8 stump=12 stem=5 bush_folder=357 (filename heuristics only)
+review_reasons=fence_road_review:1,outside_layer_domain:20
+abandoned delta=0 OrientedObjectsGenerator records=2
+abandoned delta=0 BridgeGenerator records=5
+abandoned delta=0 FenceGenerator records=8
+abandoned delta=0 RailwayGenerator records=4
+abandoned delta=0 SidewalksGenerator records=0
+abandoned delta=0 ForestEdgeGenerator records=245
+abandoned delta=0 ForestGenerator records=504
+abandoned delta=0 ForestRadialGenerator records=176
+abandoned delta=0 ScrubGenerator records=42
+abandoned delta=0 ScrubRadialGenerator records=14
+abandoned delta=0 TreesGenerator records=2
+abandoned delta=0 TreeRowsGenerator records=8
+abandoned delta=0 WatercourseGenerator records=5
+SOURCE_REVIEW fixture_way_ids=101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; tagged_node_ids=73,74,75,76,77,78,79; state_way115=abandoned; tree_anchor_decisions=73:allow_anchor,74:allow_anchor; power_pole=unsupported;postbox=unconfigured;gate=unsupported;building=ZPB_pending
+abandoned delta=0 total=1015 review=21 left=917 right=77 point_pass_road_plants=31 duplicate_csv_groups=0 roads=1 mask=9765495897e209dafc4d5719460a5a894d20ac315faa7f78f9bc8601d20bf7f3 road=cd78d7a35d2e75e9fd6e1830451057f5ce193e8263d313c91708394f71617466 review_manifest=8527ce79de90cc7739b4ea55b08cae7a808bd3227786c7f965ab2358da4c7c5a grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+nature_name_candidates fallen=8 stump=12 stem=5 bush_folder=357 (filename heuristics only)
+review_reasons=fence_road_review:1,outside_layer_domain:20
+abandoned delta=100 OrientedObjectsGenerator records=2
+abandoned delta=100 BridgeGenerator records=5
+abandoned delta=100 FenceGenerator records=8
+abandoned delta=100 RailwayGenerator records=4
+abandoned delta=100 SidewalksGenerator records=0
+abandoned delta=100 ForestEdgeGenerator records=245
+abandoned delta=100 ForestGenerator records=504
+abandoned delta=100 ForestRadialGenerator records=176
+abandoned delta=100 ScrubGenerator records=42
+abandoned delta=100 ScrubRadialGenerator records=14
+abandoned delta=100 TreesGenerator records=2
+abandoned delta=100 TreeRowsGenerator records=8
+abandoned delta=100 WatercourseGenerator records=5
+SOURCE_REVIEW fixture_way_ids=101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; tagged_node_ids=73,74,75,76,77,78,79; state_way115=abandoned; tree_anchor_decisions=73:allow_anchor,74:allow_anchor; power_pole=unsupported;postbox=unconfigured;gate=unsupported;building=ZPB_pending
+abandoned delta=100 total=1015 review=21 left=917 right=77 point_pass_road_plants=31 duplicate_csv_groups=0 roads=1 mask=9765495897e209dafc4d5719460a5a894d20ac315faa7f78f9bc8601d20bf7f3 road=cd78d7a35d2e75e9fd6e1830451057f5ce193e8263d313c91708394f71617466 review_manifest=8527ce79de90cc7739b4ea55b08cae7a808bd3227786c7f965ab2358da4c7c5a grid=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc
+nature_name_candidates fallen=8 stump=12 stem=5 bush_folder=357 (filename heuristics only)
+review_reasons=fence_road_review:1,outside_layer_domain:20
+operational delta=0 OrientedObjectsGenerator records=2
+operational delta=0 BridgeGenerator records=5
+operational delta=0 FenceGenerator records=8
+operational delta=0 RailwayGenerator records=4
+operational delta=0 SidewalksGenerator records=0
+operational delta=0 ForestEdgeGenerator records=330
+operational delta=0 ForestGenerator records=478
+operational delta=0 ForestRadialGenerator records=171
+operational delta=0 ScrubGenerator records=37
+operational delta=0 ScrubRadialGenerator records=13
+operational delta=0 TreesGenerator records=1
+operational delta=0 TreeRowsGenerator records=8
+operational delta=0 WatercourseGenerator records=5
+SOURCE_REVIEW fixture_way_ids=101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; tagged_node_ids=73,74,75,76,77,78,79; state_way115=operational; tree_anchor_decisions=73:protected_exclusion,74:allow_anchor; power_pole=unsupported;postbox=unconfigured;gate=unsupported;building=ZPB_pending
+operational delta=0 total=1062 review=14 left=977 right=71 point_pass_road_plants=0 duplicate_csv_groups=0 roads=1 mask=9fbcee62493fbecb9bf3abb7a5ebaf162aca77766f46d539a51f2e032ca9f167 road=cd78d7a35d2e75e9fd6e1830451057f5ce193e8263d313c91708394f71617466 review_manifest=e95cda8e980d46ec42365a45561a2ded56d64a8c07201da380ec54a073e81902 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+nature_name_candidates fallen=8 stump=8 stem=3 bush_folder=436 (filename heuristics only)
+review_reasons=fence_road_review:1,outside_layer_domain:13,protected_vegetation:2
+unknown delta=0 OrientedObjectsGenerator records=2
+unknown delta=0 BridgeGenerator records=5
+unknown delta=0 FenceGenerator records=8
+unknown delta=0 RailwayGenerator records=4
+unknown delta=0 SidewalksGenerator records=0
+unknown delta=0 ForestEdgeGenerator records=330
+unknown delta=0 ForestGenerator records=478
+unknown delta=0 ForestRadialGenerator records=171
+unknown delta=0 ScrubGenerator records=37
+unknown delta=0 ScrubRadialGenerator records=13
+unknown delta=0 TreesGenerator records=1
+unknown delta=0 TreeRowsGenerator records=8
+unknown delta=0 WatercourseGenerator records=5
+SOURCE_REVIEW fixture_way_ids=101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; tagged_node_ids=73,74,75,76,77,78,79; state_way115=unknown; tree_anchor_decisions=73:review_unknown,74:allow_anchor; power_pole=unsupported;postbox=unconfigured;gate=unsupported;building=ZPB_pending
+unknown delta=0 total=1062 review=14 left=977 right=71 point_pass_road_plants=0 duplicate_csv_groups=0 roads=1 mask=9fbcee62493fbecb9bf3abb7a5ebaf162aca77766f46d539a51f2e032ca9f167 road=cd78d7a35d2e75e9fd6e1830451057f5ce193e8263d313c91708394f71617466 review_manifest=bba08986f4a11862173d8ee1b614850f6254ca017d18e064c03d01317d10eea3 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+nature_name_candidates fallen=8 stump=8 stem=3 bush_folder=436 (filename heuristics only)
+review_reasons=fence_road_review:1,outside_layer_domain:13,protected_vegetation:2
+PASS common synthetic context; no export/runtime approval; unsupported catalog layers NOT RUN

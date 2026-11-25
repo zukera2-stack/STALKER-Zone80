@@ -1,0 +1,16 @@
+# MAP-003 — owner local inventory and material candidates
+2026-11-25. Issue #42, PR #47 base 1d8b752dfebcc59c089fdff7e57828ba0834e697. Owner supplied Zone80_inventory.json UTF-16 BOM, 181176 bytes SHA256 bced5f4e610ef0c3667f1f91f6dd2016e5f0223fb147f5986664c17d9493668e. Actual parsed reference set matches Zone80_base.grma3a exactly (344 unique case-insensitive P3D/PAA/RVMAT paths). 321/321 a3 references present as loose files, 23/23 z/arm absent as loose files, zero reported errors. 55 candidate color textures, 54 have normal candidate, 1 lacks pair (Enoch seabed). No dependency_verified true; no proof PBO resolution, entitlement or runtime closure. No claim absent from installed PBO. All texture/surface approvals false.
+## Editor-only copy
+Zone80_materials_PREVIEW_ONLY.grma3a SHA256 3e771c3655fe308d49963146366ab1eb99ad9f300d3f976289b1bc9ac4b2694e, 104311 bytes. Derived from prior preview SHA256 212f8d2400e5e10dc9d9b5d9b57896c923d804cb43940f0597f8ebaf57e64752. Keep all non-Materials sections identical, buildings/ponds/sidewalks disabled and lamps off. Seven explicit candidate pairs from inventory:
+- Default/Meadow: map_enoch/data/gdt_engrass2
+- DefaultUrban/Grass: map_enoch/data/gdt_engrass1
+- DefaultIndustrial: map_enoch/data/gdt_dirt
+- ScreeSurface/RockGround: map_data/gdt_rock
+- Coastline/Sand: map_data/gdt_beach
+- ForestGround: map_enoch/data/gdt_enforestdec
+- RiverGround/LakeGround: map_enoch/data/gdt_enmud
+All paths a3 prefix, _co.paa + _nopx.paa actual listed pairs. Semantic candidate selection by names only, visual review pending; pine alternative gdt_enforestcon exists. Preserve 11 definitions, all 16 usages and 11 color IDs. Remove old Surface and FakeSatPngImage on seven changed definitions only: TerrainMaterialDefinition constructor checks Surface.Files vs new texture filename, stale surface would be rejected/dropped; old fake sat swatches not applicable. No invented surface classes, no substitute ice. Remaining 2 external resource paths = arm_ice pair; base world arm_world_centraleurope / arm_centraleurope still unresolved. 179 unique references, 177 listed stock candidates, 2 external. Other existing surfaces unchanged incl ocean coral (not approved for inland use). Editor inspection only; no native generation, demo/preview map, or game.
+## Verified
+Python static checks: exact original inventory set, deterministic repeated transformation, unchanged non-material sections, unique IDs and all usages preserved, 7 pairs validated, all other referenced paths except ice found in inventory, re-read output equals generated object. Native parser NOT RUN. Files delivered locally to owner, not committed. Review JSON SHA256 7384fe8c75739aa203d001eff13ecd90308591a0f90397a5b609f3a11cd92a07.
+## Next local step
+Luna read-only inventory exact stock CfgSurfaces/CfgSurfaceCharacters/clutter, world class and CfgPatches transitive closure from installed configs, match stock texture file masks and sound/friction/etc, confirm no paid DLC requirement. Ice needs explicit supported unused policy or actual verified replacement (do not guess from white texture). Verify actual editor/parser without running generation; restore appropriate surfaces with evidence. Build compiler and GM elevation adapter gates remain. No P: writes, no WRP/PBO, no merge, Stage 001 PARTIAL.

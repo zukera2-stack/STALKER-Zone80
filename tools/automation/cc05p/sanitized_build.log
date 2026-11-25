@@ -1,0 +1,14 @@
+  BIS.Core -> <GRM>/bis-file-formats/BIS.Core/bin/linux/amd64/Release/netstandard2.0/BIS.Core.dll
+  GameRealisticMap -> <GRM>/GameRealisticMap/bin/linux/amd64/Release/net10.0/GameRealisticMap.dll
+  BIS.PAA -> <GRM>/bis-file-formats/BIS.PAA/bin/linux/amd64/Release/netstandard2.0/BIS.PAA.dll
+  BIS.PBO -> <GRM>/bis-file-formats/BIS.PBO/bin/linux/amd64/Release/netstandard2.0/BIS.PBO.dll
+  BIS.P3D -> <GRM>/bis-file-formats/BIS.P3D/bin/linux/amd64/Release/netstandard2.0/BIS.P3D.dll
+  BIS.WRP -> <GRM>/bis-file-formats/BIS.WRP/bin/linux/amd64/Release/netstandard2.0/BIS.WRP.dll
+  GameRealisticMap.Arma3 -> <GRM>/GameRealisticMap.Arma3/bin/linux/amd64/Release/net10.0/GameRealisticMap.Arma3.dll
+  Zone80.JobProbe -> <COMPANION>/bin/linux/amd64/Release/net10.0/Zone80.JobProbe.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.56

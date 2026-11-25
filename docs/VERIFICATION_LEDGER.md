@@ -45,3 +45,81 @@
 ## Локальное измерение MAP-003
 
 [Единый отчёт](map/MAP_003_INTEGRATED_RESULT.md), 24.11.2026. Global Mapper Pro 26.2 экспортировал диагностический ASC 64×64 / 30 м с 629 NoData, а также UTM дороги с 446 уникальными IDs. Каталог зданий 449 записей остаётся PARTIAL. Terrain Builder не запускался.
+
+## E-017 — офлайн-аудит геокаталога Припяти (24.11.2026)
+
+[PRIPYAT_DIGITAL_GEOCATALOG](map/PRIPYAT_DIGITAL_GEOCATALOG.md). Реально обработан предоставленный владельцем MAP-003 verification ZIP из PR #46. 449 валидных полигонов/мультиполигонов, 0 точных геометрических дублей, 12 пар положительных наложений, 11 выше порога ревью. 135 жилых записей допущены к проверке сходства, 28 групп / 96 записей; 39 одиночных. 446 дорожных ID, 69,863 км суммы длин, 25 компонент геометрического графа. Два прогона дали побайтно одинаковые выходы. **PASS только для офлайн-анализа данного снимка**, не окончательный каталог физических зданий, не маршрутизируемая сеть, не доказательство советских серий. Исходные OSM роли отношений отсутствуют в ZIP. Исторические референсы и типы остаются PARTIAL; GM высоты с полным покрытием BLOCKED, TB NOT RUN. Никаких новых высот или игровых файлов.
+
+## Дополнение 25.11.2026 — актуальные свидетельства (E-018…E-023)
+| ID | Среда / операция | Измерение | Статус и источник |
+|---|---|---|---|
+| E-018 | Offline Python GIS, existing snapshot | 444/449 building records, 427/446 road IDs fully covered; two identical runs | PASS analysis only [coverage](map/MAP_003_COVERAGE_AUDIT.md) |
+| E-019 | Offline road/surface audit | 784 contact candidates, 45 malformed tag fields, 45 area polygons; deterministic repeat | PASS static analysis only [roads](map/MAP_003_ROAD_AUDIT.md), [surfaces](map/MAP_003_SURFACE_AUDIT.md) |
+| E-020 | Pinned GRM source / in-memory JS | 204 combined references, 23 external; 5+8+10 negative cases reported | PASS reference analysis only [vegetation](map/GRM_VEGETATION_PREFLIGHT.md), [roads/materials](map/GRM_ROADS_MATERIALS_PREFLIGHT.md), [infrastructure](map/GRM_INFRASTRUCTURE_PREFLIGHT.md) |
+| E-021 | Owner Windows, read-only inventory | 321/321 a3 loose refs present, 23 external absent loose; 55 color candidates, 54 pairs | PASS existence scan only [inventory](map/GRM_LOCAL_INVENTORY_RESULT.md) |
+| E-022 | Owner Studio open/save v02 | 6/7 changed materials restored Surface metadata; all 11 IDs/16 usages preserved | PASS editor roundtrip only [roundtrip](map/GRM_STUDIO_ROUNDTRIP.md) |
+| E-023 | Cloud Python v03 transformer | 2 unittest methods PASS, 12 negative subcases; 203 refs, ZIP CRC PASS | PASS bounded transform only [v03 hashes/tests](map/GRM_CONFIG_PREFLIGHT_V03.md); native v03 NOT RUN |
+E-014 original online acquisition remains NOT RUN; later local diagnostic export in integrated report has 629 NoData. No final full heightmap, no native generation, no TB import, no game PASS. [Current checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md).
+
+## E-024 — CC-01 Linux synthetic Worker (25.11.2026)
+Actual Python 3.13.5 Linux tests: `python -m unittest -v test_worker.py` 9 methods PASS, 14 negative manifest subcases, repeat suite PASS 2.104s. Actual CLI two dependent jobs PASS then two verified skips. Code blobs checked against tested Git blob SHA, artifact hashes and scope in [CC01_RESULT](automation/CC01_RESULT.md). No native tools, Windows, detached survival, full process tree or scheduler tested. CC-02 next; Stage 001 PARTIAL.
+
+## E-025 — CC-02 Linux synthetic failure/recovery (25.11.2026)
+Actual Python 3.13.5 Linux, `python -m py_compile worker.py test_worker.py cc01_base.py`; `python -m unittest -v test_worker.py` twice, 13/13 methods in 14.418s / 14.198s, 9 invalid manifest subcases rejected. Actual runner SIGKILL during B, recovery blocked while child holds flock, then explicit recovery preserves A and creates new B attempt. Active child + descendant cancellation, unrelated sentinel alive, concurrent runner, nonzero/missing/wrong output, timeout, low disk and sampled RSS breach, two subprocess checkpoint exits around replace. CLI first a/b PASS, second both verified skip; measured sample peaks 11141120 and 10878976 bytes. [Report](automation/CC02_RESULT.md) / logs and source hashes. PASS only within fixed Linux synthetic scope; no hard tree/cgroup guarantee, Windows or native operation. Stage 001 PARTIAL.
+
+## E-026 — CC-03 logical sector manager (25.11.2026)
+Python 3.13.5 Linux stdlib. `python -m py_compile sector_manager.py demo.py test_sector_manager.py`; `python -m unittest -v test_sector_manager.py` twice: 11/11 methods, 0.042s / 0.041s. Demo used five exact base repository blobs (existing foundation generator and validator plus three config files) verified by Git blob IDs: 64 coordinate-only manifests, 112 shared edges, zero seam issues for fixture, boundary anchor S01_00, interior edit dirty S00_00 only, reordered input hash identical. [Report and hashes](automation/CC03_RESULT.md). PASS synthetic planning only; not native seams, real CRS, placement, worker scheduling or Stage promotion.
+
+## E-027 — CC-04 Config Builder review / Asset Manager (25.11.2026)
+Linux Python 3.13.5, standard library. `python -m py_compile config_builder.py test_config_builder.py demo.py` PASS; `python -m unittest -v test_config_builder.py` twice 13/13 in 1.380s and 1.430s. Real owner v02/inventory/v03 ZIP SHA matched previous reports, two demo reports byte-identical; counts 203/179/22/2, 0 runtime approval. Separate connector source audit 204 unique reference paths (181 stock candidates, 23 external). [CC04_RESULT](automation/CC04_RESULT.md), source/tests/logs in tools/automation/cc04. PASS review-only, production/native BLOCKED. No native output, GIS generation, placement, Windows validation or stage promotion.
+
+## E-028 — CC-05 read-only GM input validation (25.11.2026)
+Python 3.13.5 Linux stdlib: py_compile PASS, 12 unittest methods PASS twice (0.088s / 0.093s). Actual pinned owner MAP-003 ZIP CRC/hash checked; read-only ASC/PRJ review returned expected exit 2 twice, identical report, 3467 valid +629 NoData; 5/5 historical control samples matched exactly. Source review at GRM 2aef2040836daa11a8a368bb0c7f9ecd8f405d65: BuildContext.SetData seam, lazy elevation builders, native nodes vs ASC centers, mutation/out-of-bounds and OSM dependencies. [CC05_RESULT](automation/CC05_RESULT.md). PASS validation only, native provider not implemented or tested. No real heights created, Stage 001 PARTIAL.
+
+## E-029 — CC-05B GM-only bridge candidate (25.11.2026)
+Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twice (0.001s each); asymmetric 3x3 in-memory test, exact node-center alignment, hash, NoData, metadata and numeric rejection, Float32 conversion measurement. Actual historical pinned ASC rejected by node-alignment gate; earlier CC-05 count 629 NoData unchanged. Native C# source and smoke harness written against inspected upstream API, NOT compiled locally: dotnet absent, DNS to NuGet/GitHub failed. No native GIS/GRM layer, new raster or approved runtime dependency. [CC05B_RESULT](automation/CC05B_RESULT.md).
+
+## E-029 — CC-05C actual native core bridge
+[CC05C_RESULT](automation/CC05C_RESULT.md): owner 34/34 package hashes, 32/32 resolved lock entries, upstream core 344 files unchanged. Actual restore exit 0, Release build exit 0 (31 upstream warnings/0 errors), synthetic native smoke twice exit 0 identical fingerprint, Python 8 PASS. First restore timeouts and mistaken DLL path documented. No Arma3 module or real GM generation tested. Stage 001 PARTIAL.
+
+## E-030 — CC-05D native synthetic Arma3 tree layer
+[CC05D_RESULT](automation/CC05D_RESULT.md): actual Arma3 restore/build PASS (12 upstream warnings, 0 errors), 39 package hashes and 35+3 resolved lock entries match; 530+173 archive files unchanged. Actual native probe twice exit 0 identical output, synthetic OSM three nodes and supplied grid yielded 0/1/3 selected; relative Z, unchanged grid and denied fallback PASS. First equator fixture failed point count, documented. No real GM input or output; Stage 001 PARTIAL.
+
+## E-031 — CC-05E native config and pilot coordinate review
+[CC05E_RESULT](automation/CC05E_RESULT.md): actual Release companion build 0 warnings/errors incremental, two identical native diagnostic runs, strict missing model refusal and 163 unresolved paths; 11 materials/16 usages/10 surfaces/9 roads. Four corners max local 0.000122 m/absolute UTM 0.000933 m; two modified input copies rejected by SHA. Ten private Library file copies confirmed by listing. No actual real grid or generation; Stage 001 PARTIAL.
+
+## CC-05F — actual native strict model resolution
+[CC05F_RESULT](automation/CC05F_RESULT.md): 491 valid cache records, 163/163 actual v03 lookups with strict parser and no placeholders, missing entry/unknown/modified input rejected. Restore/build exit 0, repeated identical output. No real model files tested, no placement. Stage 001 PARTIAL.
+
+## CC-05G — native v03 layer and clearance
+[CC05G_RESULT](automation/CC05G_RESULT.md): Release 0 errors/0 warnings, 2 identical process runs, 26 records, 7 native builder types, unchanged grid and +100m Z shift, missing dependency rejected. Interior road probe clearance 0m FAIL; outside edge 2m PASS. Real generation blocked.
+
+## CC-05H — synthetic state-aware native tree placement
+[CC05H_RESULT](automation/CC05H_RESULT.md): actual offline restore/build, two identical successful native runs, 6/5/5 records by state, road occupancy 1/0/0, stock anchor shift 2m. Initial failed exact model-anchor assertion retained; final test distinguishes native composition offset. 703 upstream files unchanged. No real placements. Stage 001 PARTIAL.
+
+## CC-05I — bounded native forest
+[CC05I_RESULT](automation/CC05I_RESULT.md): actual offline build and two identical final runs, 46 distinct models; same synthetic forest changes road occupancy from 50 to 0, relative Z response +100m, no grid mutation. Stock ForestBuilder dependency denied. Final review counts nonzero, no physical collision or production approval. Stage 001 PARTIAL.
+
+## CC-05J — native vegetation transitions
+[CC05J_RESULT](automation/CC05J_RESULT.md): actual offline incremental build, two identical runs, 5 native layers, 41/0 road points, no persistent grid mutation, +100m Z response. Per-layer final review and ownership reconciled. Clip-first equivalence FAIL; cross-layer/real seam/halo NOT TESTED. Stage 001 PARTIAL.
+
+## CC-05K — bounded native roads, rail and bridges
+[CC05K_RESULT](automation/CC05K_RESULT.md): offline build 0 errors/warnings incremental, two identical runs, 9 road profiles/2 non-bridge shape records read back; 13 native object records. Unchanged grid and +100m response. Short isolated bridge omission and disused rail state loss observed. Physical fit/runtime NOT RUN. Stage 001 PARTIAL.
+
+## CC-05L — bounded native hydrography and diagnostic mask
+[CC05L_RESULT](automation/CC05L_RESULT.md): two identical runs, 13 native placements, +100m Z, unchanged grid, six pixel controls; 16 usages/11 colors checked. Full IdMap and actual water rendering NOT RUN. StreamTunnel flag, width and canal defects preserved as observations, not approvals. Stage 001 PARTIAL.
+
+## CC-05M — bounded surface plan
+[CC05M_RESULT](automation/CC05M_RESULT.md): actual offline build and two identical executions; 17 point controls and all pixels in both masks matched semantic palette, 4 invalid inputs refused per run. Grass/Forest forbidden height dependency observed. Candidate asphalt preservation tested only in fixture. Full stock IdMap, actual coast/ice, runtime and real map NOT RUN. Stage 001 PARTIAL.
+
+## CC-05N — bounded native infrastructure
+[CC05N_RESULT](automation/CC05N_RESULT.md): offline build and two identical executions; 55 fence, 5 oriented, 8 tree-row, 0 sidewalks; +100m Z response; grid unchanged. Actual omitted retaining wall/gate/power pole, unconfigured postbox and one road-overlap fence point are review findings, not physical proof. Full catalog, real map and runtime NOT RUN. Stage 001 PARTIAL.
+
+## CC-05O — integrated synthetic GRM
+[CC05O_RESULT](automation/CC05O_RESULT.md): 13 generators in same context, two byte-identical runs, +100m world Z, unchanged grid, 994/1048 point-pass records. Unknown state explicitly recorded. Full native catalog, native IdMap, physical collision, worker integration and real map NOT RUN. Stage 001 PARTIAL.
+
+## CC-05P — guarded job/result contract
+[CC05P_RESULT](automation/CC05P_RESULT.md): two identical suites, each 5 actual native jobs, 20 input refusals, 6 modified result refusals. Exact 27 catalog names and logical/content/review digests checked, +100m response. No worker, durable publication, real map, full physical or source lineage proof. Stage 001 PARTIAL.
+
+## Documentation handoff after CC-05P — 25.11.2026
+No new native execution or new PASS. Re-read current PR #47 HEAD `ff84106de719dbb17fd1caa749cf5aa5269b9698`, confirmed repository tree contains prior CC reports and current Worker/sector/child sources; private Library names checked by listing, not byte rehash. [RESUME_CC05Q](automation/RESUME_CC05Q.md) supersedes old next-step instructions, distinguishes evidence from planned work and documents CC05Q criteria. Stage 001 PARTIAL; local MAP-003 blockers unchanged.

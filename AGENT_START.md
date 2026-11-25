@@ -1,8 +1,11 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
+## АКТУАЛЬНО — продолжение после CC-05P (25.11.2026)
+**Начни с [RESUME_CC05Q](docs/automation/RESUME_CC05Q.md).** Текущая ветка `audit/map003-digital-geocatalog`, Draft PR #47, Issue #42. Последний измеренный SHA `ff84106de719dbb17fd1caa749cf5aa5269b9698`; текущий HEAD сверять. CC01–CC05P уже выполнены в ограниченном synthetic/review scope, следующий CC05Q — native synthetic child + существующий Worker. Локальный MAP-003 остаётся независимым и BLOCKED по полным высотам. Не начинать с нуля, не считать старые указания о CC01/CC05B/CC05F текущей задачей. Stage 001 PARTIAL. Ниже история и обязательные ограничения, не конкурирующие задания.
+
 **Для:** Cursor/«Луна», Codex, ChatGPT и любого нового агента.  
 **Контрольная точка:** Stage 001 — Foundation / PARTIAL; реальный WRP и запуск Arma 3 не подтверждены.  
-**Источник истины:** `main` — только принятый Foundation; **текущая разрешённая работа и её точный SHA находятся в GitHub [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42) и зависимом [Draft PR #44](https://github.com/zukera2-stack/STALKER-Zone80/pull/44)**. Единый навигатор — [`docs/PROJECT_CONTROL.md`](docs/PROJECT_CONTROL.md), реестр результатов — [`docs/VERIFICATION_LEDGER.md`](docs/VERIFICATION_LEDGER.md). Документы аудита находятся в отдельном Draft PR, пока не `main`.  
+**Источник истины:** `main` — только принятый Foundation; **текущая разрешённая работа и её точный SHA находятся в GitHub [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42) и зависимом [Draft PR #47](https://github.com/zukera2-stack/STALKER-Zone80/pull/47)**. Единый навигатор — [`docs/PROJECT_CONTROL.md`](docs/PROJECT_CONTROL.md), реестр результатов — [`docs/VERIFICATION_LEDGER.md`](docs/VERIFICATION_LEDGER.md). Документы аудита находятся в отдельном Draft PR, пока не `main`.  
 **Библиотека проектных источников (личная ChatGPT Library):** `/Арма/STALKER-Zone80/`; её структура описана в [docs/LIBRARY_INDEX.md](docs/LIBRARY_INDEX.md).
 
 ## Решение владельца 24.11.2026 — переходим от тестов к карте
@@ -14,6 +17,9 @@
 **Границы свидетельств:** автономный запуск, read-only UIA 203 элемента и 50/120 циклов подтверждены предыдущими опытами; **60-минутный SOAK не PASS**, первая причина обрыва **CAUSE_UNKNOWN**. Длительная синтетическая 27-минутная проба прошла. Это достаточно для *старта ограниченного картографирования*, но не является доказанной стабильностью финального WRP/Arma 3. **Stage 001 остаётся PARTIAL; Stage 002 формально не повышается.** Не строить весь мир, не утверждать CRS, центр и историческую эпоху без отдельной проверки/одобрения.
 
 **GitHub Issues — обязательный канал задания:** ChatGPT публикует новое задание Cursor/«Луне» непосредственно как GitHub Issue либо дополняет активный Issue; в чате предоставляет ссылку. Прежде чем работать, прочитать текущий Issue, эту инструкцию и `AGENTS.md`; указать base SHA, scope, исходники, ограничения, измеренные результаты и stop conditions. Публикация Issue не отменяет установленные запреты. При недоступности GitHub считать передачу задания блокированной, не требовать ручного переноса длинного текста из чата.
+
+## Дополнение 24.11.2026 — локальный фоновый исполнитель
+Владелец запросил подготовку автономной автоматизации. Читать [LUNA_HANDOFF](docs/automation/LUNA_HANDOFF.md), [WORKER_CONTRACT](docs/automation/WORKER_CONTRACT.md), [GRM](.cursor/skills/zone80-grm/SKILL.md), [Worker](.cursor/skills/zone80-worker/SKILL.md), [Sector pipeline](.cursor/skills/zone80-sector-pipeline/SKILL.md). Текущий Draft PR #47 и Issue #42; новый исполнитель ещё не реализован, допустимы синтетические испытания и preflight, реальные операции только по прежним gates. Не регистрировать scheduler/service без отдельного решения. GM-only высоты и Stage 001 PARTIAL неизменны.
 
 ## 0. Порядок чтения и приоритет сведений
 
@@ -80,3 +86,83 @@
 Нужны исходный commit SHA, исполненные команды, версии инструментов, файлы и их хеши, фактические логи и метрики, статусы по каждому критерию. Если доступа к локальному ПК или данным нет, укажи `NOT TESTED` / `PARTIAL`; не выдумывай запуск. **Выполни только разрешённую MAP-003 операцию (Issue #42) до измеренного GIS результата**, затем остановись и предъяви его владельцу; Stage 001/PARTIAL не повышать автоматически.
 
 **Новый агент начинает здесь, а не с генерации всей карты.**
+
+
+## Cross-project integration
+Read [ZONE80–ZPB contract](docs/integration/ZONE80_ZPB_CONTRACT.md) before work on models, catalog bindings, GRM assets or Terrain Builder templates. Example manifest contains reserved candidate only, not a live asset. Current gates unchanged.
+
+
+## Owner decision — minimal runtime dependencies (2026-11-24)
+Read [MINIMAL_DEPENDENCIES](docs/integration/MINIMAL_DEPENDENCIES.md). Base Arma 3 + free Enoch + own project packages only as target. No mandatory external mods/paid DLC; actual compatibility untested. Existing gates unchanged.
+
+## Контрольная точка 25.11.2026 — читать перед продолжением
+[MAP_003_CURRENT_CHECKPOINT](docs/map/MAP_003_CURRENT_CHECKPOINT.md) — единый актуальный индекс геокаталога, GRM и фоновой автоматизации. Рабочая ветка Draft PR #47; точный HEAD проверять перед задачей. [v03](docs/map/GRM_CONFIG_PREFLIGHT_V03.md) — editor-only, 179/203 refs covered, 22 stock refs unverified, 2 external ice + external base world; шесть материалов подтверждены сохранением v02 в Studio. Не повторять исходные инвентаризации и ручную настройку. Следующий локальный preflight: новые clutter refs, mud, классы/зависимости, затем gates адаптера GM. A GM diagnostic 629 NoData / D TB BLOCKED, B existing bbox PASS, C PARTIAL. Stage 001 PARTIAL. Все запреты сохраняются.
+
+## План разработки без Луны — 25.11.2026
+[Zone80 Control Center / CC-01…07](docs/automation/CONTROL_CENTER_ROADMAP.md) — семиэтапный план автономной разработки программного ядра: Worker → отказоустойчивость → Sector Manager → Config Builder → GM Adapter → Control Center → интеграция с Луной. Следующий программный подэтап CC-01 (синтетика). Это не повышение Stage 001 и не разрешение реальной генерации. Локальный MAP-003 и preflight остаются независимыми; соблюдать WORKER_CONTRACT и все gates. Не считать план выполнением.
+
+## CC-01 checkpoint
+Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthetic worker in tools/automation/cc01; next CC-02 fault injection. Windows deliberately blocked; old disabled manifest not executable by this prototype. No actual GIS/native job, no Stage promotion. Existing local MAP-003 gates unchanged.
+
+## CC-02 checkpoint
+[CC02_RESULT](docs/automation/CC02_RESULT.md) is the current Worker result: 13 Linux synthetic tests PASS twice; active stop, actual kill/recovery, inherited lock and owned descendant cleanup. CC-01 remains archived; CC-02 has a new synthetic-only schema/root, no automatic state migration. Next CC-03 logical sector manager on synthetic inputs; no production CRS, real heights, native jobs, P: writes, scheduler, merge or stage promotion. Existing local MAP-003 gates unchanged.
+
+## CC-03 checkpoint
+[CC03_RESULT](docs/automation/CC03_RESULT.md): tested coordinate-only sector planning in tools/automation/cc03, reuses existing foundation manifests, 64 sectors/112 shared edges, 11 tests PASS twice. Dirty sets only, not executed generation. Next CC-04 Config Builder + Asset Manager; reuse editor v03 evidence, explicit unresolved ice/mud/base/22 refs, no invented approvals or native execution. Stage 001 PARTIAL and GM-only elevation unchanged.
+
+## CC-04 checkpoint
+[CC04_RESULT](docs/automation/CC04_RESULT.md): tested six-module review-only GRM Config Builder / Asset Manager, actual v03 input audit and synthetic dependency graph/asset gates. 13 tests PASS twice. 179 inventory-present +22 stock unverified +2 ice; zero runtime-approved, missing mud surface and external base unchanged. No native production output. Next CC-05 read-only GM adapter source review and synthetic fixtures, no RawElevationBuilder/new real heights, native GIS or P: writes. Stage 001 PARTIAL.
+
+## CC-05 checkpoint
+[CC05_RESULT](docs/automation/CC05_RESULT.md): 12 synthetic tests PASS twice, actual pinned diagnostic 3467/4096 valid and 629 NoData; 5/5 controls match. GRM source seam identified, but native provider BLOCKED by missing heights, node/center mismatch, mutation and external dependencies. No native patch, no new elevations. Next CC-06 offline Control Center with synthetic integration; separate CC-07 local validation gates. No P: writes, generation or merge; Stage 001 PARTIAL.
+
+## Owner-approved pivot CC-05B
+Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Read [CC05B_RESULT](docs/automation/CC05B_RESULT.md) and tools/automation/cc05b/README.md. Python node-compatible input gate tested; C# source candidate NOT compiled or run locally; synthetic-only factory, real context disabled. Next CC-05C compile against pinned GRM net10 and verify native synthetic consumer; no real generation until source/CRS/grid/edge/asset/offline dependency gates. Do not claim recognized upstream source license or distribute modified GRM. Stage 001 PARTIAL, no P: writes, merge or native map output.
+
+## CC-05C environment checkpoint
+[CC05C_ENVIRONMENT](docs/automation/CC05C_ENVIRONMENT.md): owner SDK 10.0.404 Linux extracted and dependency-free C# smoke PASS; pinned-name GRM source ZIP CRC PASS. Actual restore blocked by absent NuGet packages / DNS. Collector ZIP delivered to owner; Windows collector NOT RUN. Next verify offline package bundle, restore/build/test actual GRM core and bridge. No native real map run; UI deferred.
+
+## CC-05C measured result
+[CC05C_RESULT](docs/automation/CC05C_RESULT.md): owner offline packages received; actual GRM core and existing bridge built, 0 errors/31 upstream warnings, native synthetic smoke PASS twice; 8 Python tests PASS. CC-05D next: missing pinned BIS submodule and Arma3 dependency closure, new collector delivered. Real factory remains disabled; no generation/Stage promotion. CC-06 deferred.
+
+## CC-05D measured result
+[CC05D_RESULT](docs/automation/CC05D_RESULT.md): owner 39-package Arma3 bundle verified; pinned native Arma3 assembly compiled offline (0 errors/12 warnings). Original TreesBuilder and TreesGenerator ran on synthetic inline OSM + supplied node grid via GM adapter; 0/1/3 selections, relative Z, repeat and forbidden elevation fallback tests PASS. No real geography/output. Next CC-05E offline input/config/coordinate gates; CC-06 and Vercel deferred. Stage 001 PARTIAL, no P: writes or merge.
+
+## CC-05E measured result and persistent Library
+[CC05E_RESULT](docs/automation/CC05E_RESULT.md): actual v03 native parser diagnostic PASS, strict missing metadata refusal, 11 materials/16 usages/10 surfaces/9 roads, 163 unresolved distinct model paths. Four pilot corner checks max absolute UTM residual 0.000933 m, no real grid or placement. Owner toolchain and input archives saved in personal Library [exact locations and SHA256](docs/LIBRARY_INDEX.md); authorized agents retrieve from there, not Git. Next CC-05F reviewed model metadata resolver and per-layer offline source gates, then GM-only complete node-compatible grid. UI deferred; real generation blocked, Stage 001 PARTIAL.
+
+## CC-05F measured result
+[CC05F_RESULT](docs/automation/CC05F_RESULT.md): actual owner modelinfo.json saved in Library, 491 records, exact 163/163 v03 P3D metadata coverage, strict native parse PASS twice, missing entry/unknown/changed hash refused. 141 prior loose-file evidence, 22 new clutter paths not inventoried; runtime approval still zero. Next CC-05G per-layer offline dependency closure and synthetic actual-config layer test. GM complete grid and local asset gates still required. No real placement, P: writes or merge; Stage 001 PARTIAL.
+
+## CC-05G measured result
+[CC05G_RESULT](docs/automation/CC05G_RESULT.md): actual v03 and owner model cache with native tree layer, seven reviewed native builder types, only elevation preseeded; 26/26 synthetic tree records, +100m Z response, deterministic repeat, unchanged grids, missing dependency refusal. Interior-road clearance FAIL (0m) despite outside-edge 2m PASS. Next CC-05H synthetic post-placement collision validation, no silent relocation; additional forest dependency review. Real GM/OSM/asset gates unchanged. Stage 001 PARTIAL.
+
+## CC-05H owner policy and measured result
+Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) and [CC05H_RESULT](docs/automation/CC05H_RESULT.md). Owner-approved separate state overlay replaces blanket road exclusion. Synthetic rectangular policy and unchanged native TreesGenerator PASS twice with actual v03/cache: abandoned road retains observed anchor, operational excludes, unknown review; 6/5/5 records. Stock 2m anchor displacement preserved as evidence. No upstream source changes. Next CC-05I native forest closure and synthetic test, then policy polygon/sector integration. Real gates unchanged. Stage 001 PARTIAL.
+
+## CC-05I measured result
+[CC05I_RESULT](docs/automation/CC05I_RESULT.md): stock ForestBuilder blocked at ElevationWithLakesData; bounded geometry-only adapter uses actual OSM interpretation and native geometry, original ForestGenerator unchanged. Synthetic forest 2829/2769 records, 46 models, 50/0 on-road for abandoned/protected state, 0 lake/cutline, 3/5 final review points; +100m Z and repeat PASS. Next CC-05J forest edge/radial and scrub closure, polygon policy and final point/seam checks. No real generation, Stage 001 PARTIAL.
+
+## CC-05J measured result
+[CC05J_RESULT](docs/automation/CC05J_RESULT.md): all five native vegetation generators exercised on multi-polygon synthetic input; 1616/1692 records, 41/0 on-road, 21/33 final review. Native ForestEdgeBuilder safe on supplied forest geometry; scrub/radial stock builders refused lake elevation dependency. Full-polygon generation then half-open ownership reconciled; clip-first differs (737 vs 738, 216 common). Do not clip natural features before generation assuming equivalence. Next proposed CC-05K native road/rail/infrastructure dependency review and bounded synthetic road layer, GM-only. Cross-layer/halo/general geometry pending. No real generation, Stage 001 PARTIAL.
+
+## Требование к лесу
+Владелец требует естественный лес без искусственной рядности, подлесок, валежник и сухостой. [Политика и проверка исходников](docs/map/VEGETATION_SUCCESSION_POLICY.md#требования-владельца-к-естественному-лесу--25112026). Штатный GRM Forest + ForestAdditional в приоритете. Фактический состав, естественность, посадка валежника и визуальная приёмка ещё не доказаны. Следующий CC-05K не изменён.
+
+## CC-05K measured result
+[CC05K_RESULT](docs/automation/CC05K_RESULT.md): native RoadsBuilder/RailwaysBuilder, memory-only RoadsCompiler/reader, BridgeGenerator and RailwayGenerator PASS bounded synthetic. 3 roads/2 non-bridge shape records, 9 profiles, 4 rail segments, 4 bridge and 9 rail model records, +100m Z and repeat PASS. Short isolated bridge omitted and disused rail treated as normal; preserve source/state, review before production. No grade/physical fit or runtime proof. Next proposed CC-05L hydrography and surface dependencies, GM-only. No real generation; Stage 001 PARTIAL.
+
+## CC-05L measured result
+[CC05L_RESULT](docs/automation/CC05L_RESULT.md): native lakes/watercourses/sand and WatercourseGenerator PASS bounded, 13 records, +100m Z and repeat. Native polygon draw helper produced memory-only 480x480 mask, 16 usage/11 material mapping PASS; full IdMapRender NOT RUN due to ElevationWithLakesData, radial actually refused. River width fixed, canal omitted, StreamTunnel flag false, lake inset clips edge. Next proposed CC-05M GM-only surface geometry contract and priority graph tests. Stage 001 PARTIAL, no real generation.
+
+## CC-05M measured result
+[CC05M_RESULT](docs/automation/CC05M_RESULT.md): explicit bounded 18-slot surface plan using native drawing/coordinate helpers, 16 usage mappings, 11 material IDs, 15 visible slots/9 colors, 17 semantic controls and exact all-pixel mapping; two identical runs and unchanged grid. Native AsphaltBuilder excludes forest; candidate retains asphalt under vegetation (2800 pixels changed). Full stock IdMap NOT RUN, Grass/Forest blocked at lake elevation dependency, coast/ice absent in fixture. Next proposed CC-05N remaining native infrastructure placement, then common contracts. Stage 001 PARTIAL, no real generation.
+
+## CC-05N measured result
+[CC05N_RESULT](docs/automation/CC05N_RESULT.md): native fences, explicit oriented objects, explicit tree row, disabled sidewalks PASS bounded; 55/5/8/0 = 68 records, +100m Z/repeat, unchanged grid. All nine road profiles disable procedural lamps/sidewalks, explicit lamp survives. Retaining wall/gate/power pole omitted, postbox unconfigured, one fence point on road. No physical or full catalog approval. Next proposed CC-05O common synthetic pipeline and provenance/review contracts. Stage 001 PARTIAL, no real generation.
+
+## CC-05O measured result
+[CC05O_RESULT](docs/automation/CC05O_RESULT.md): one shared native context, 13/27 generator instances, memory road roundtrip and bounded surface mask. 1015/1062 records, 21/14 held, 31/0 point-pass road plants, source-tree unknown review separate. +100m Z and identical repeated runs PASS; 530 GRM files unchanged. 14 catalog layers NOT RUN, no generic building or physical proof. Next proposed CC-05P catalog disposition, fail-closed shared job/input and manifest contract, then worker/sector integration. No real generation; Stage 001 PARTIAL.
+
+## CC-05P measured result
+[CC05P_RESULT](docs/automation/CC05P_RESULT.md): closed synthetic job and explicit 27-name catalog policy, 12 enabled, 2 disabled (sidewalk zero check, ZPB building), 13 pending. Two identical verification suites (5 native jobs, 20 input refusals and 6 result refusals each); stable logical IDs and height-sensitive content hashes, unknown state distinct. Explicit incomplete per-model lineage. No Worker integration or durable publication. Next proposed CC-05Q guarded synthetic native child integration with CC02 Worker, pinned executables, finite approval/attempts, validation and recovery. Stage 001 PARTIAL, no real generation.

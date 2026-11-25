@@ -1,0 +1,15 @@
+{
+  "TileSize": 512,
+  "Resolution": 4,
+  "PboPrefix": "z\\zone80\\addons\\zone80_grm_pilot",
+  "FakeSatBlend": 0.5,
+  "WorldName": "zone80_grm_pilot",
+  "GridCellSize": 30,
+  "GridSize": 64,
+  "SouthWest": "51.397007839, 30.043987574",
+  "Center": null,
+  "AssetConfigFile": "builtin:CentralEurope.grma3a",
+  "TargetModDirectory": null,
+  "UseColorCorrection": false,
+  "IdMapMultiplier": 1
+}

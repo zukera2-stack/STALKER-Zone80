@@ -1,0 +1,16 @@
+  BIS.Core -> <GRM>/bis-file-formats/BIS.Core/bin/linux/amd64/Release/netstandard2.0/BIS.Core.dll
+  BIS.PBO -> <GRM>/bis-file-formats/BIS.PBO/bin/linux/amd64/Release/netstandard2.0/BIS.PBO.dll
+  BIS.PAA -> <GRM>/bis-file-formats/BIS.PAA/bin/linux/amd64/Release/netstandard2.0/BIS.PAA.dll
+  BIS.WRP -> <GRM>/bis-file-formats/BIS.WRP/bin/linux/amd64/Release/netstandard2.0/BIS.WRP.dll
+  BIS.P3D -> <GRM>/bis-file-formats/BIS.P3D/bin/linux/amd64/Release/netstandard2.0/BIS.P3D.dll
+  GameRealisticMap -> <GRM>/GameRealisticMap/bin/linux/amd64/Release/net10.0/GameRealisticMap.dll
+  GameRealisticMap.Arma3 -> <GRM>/GameRealisticMap.Arma3/bin/linux/amd64/Release/net10.0/GameRealisticMap.Arma3.dll
+<PROBE>/Program.cs(74,57): error CS0019: Operator '&&' cannot be applied to operands of type 'bool?' and 'bool' [<PROBE>/Zone80.InfrastructureProbe.csproj]
+
+Build FAILED.
+
+<PROBE>/Program.cs(74,57): error CS0019: Operator '&&' cannot be applied to operands of type 'bool?' and 'bool' [<PROBE>/Zone80.InfrastructureProbe.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:03.44

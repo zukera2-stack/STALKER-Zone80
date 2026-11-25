@@ -1,0 +1,17 @@
+test_actual_mode_block (test_gm_adapter.Tests.test_actual_mode_block) ... ok
+test_all_nodata (test_gm_adapter.Tests.test_all_nodata) ... ok
+test_determinism (test_gm_adapter.Tests.test_determinism) ... ok
+test_full_grid (test_gm_adapter.Tests.test_full_grid) ... ok
+test_geometry (test_gm_adapter.Tests.test_geometry) ... ok
+test_half_cell (test_gm_adapter.Tests.test_half_cell) ... ok
+test_malformed (test_gm_adapter.Tests.test_malformed) ... ok
+test_meta (test_gm_adapter.Tests.test_meta) ... ok
+test_nodata (test_gm_adapter.Tests.test_nodata) ... ok
+test_orientation (test_gm_adapter.Tests.test_orientation) ... ok
+test_outside (test_gm_adapter.Tests.test_outside) ... ok
+test_projection (test_gm_adapter.Tests.test_projection) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.093s
+
+OK

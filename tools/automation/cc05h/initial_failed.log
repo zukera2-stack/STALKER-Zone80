@@ -1,0 +1,8 @@
+POLICY PASS allow=6 deny=1 review=1 partial_density=52/100; seam, local invalidation, duplicates, invalid density, repeat PASS
+STOCK anchor_shift_m=2.6113
+NATIVE state=Abandoned stock=True count=1 exact_road_anchor=False records_sha=c493a7a9386e6efc663faa186c8022ac912f33627b79f517e628860ee4a4dbc2
+REJECTED: System.IO.InvalidDataException: native road anchor policy
+   at Program.<<Main>$>g__Check|0_0(Boolean ok, String message) in <probe>/Program.cs:line 28
+   at Program.<>c__DisplayClass0_0.<<<Main>$>g__Run|22>d.MoveNext() in <probe>/Program.cs:line 119
+--- End of stack trace from previous location ---
+   at Program.<Main>$(String[] args) in <probe>/Program.cs:line 126

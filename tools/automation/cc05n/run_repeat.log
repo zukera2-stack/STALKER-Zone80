@@ -1,0 +1,22 @@
+delta=0 roads=1 fences=4 tree_rows=1 oriented=6 procedural_lamps=0 retaining_wall_omitted=true gate_omitted=true power_pole_omitted=true postbox_unconfigured=true
+FenceGenerator records=55 models=5 on_road_points=1
+gate_nearest_model_point_m=3.991 gate_opening_not_proven
+OrientedObjectsGenerator records=5 models=5 on_road_points=0
+SidewalksGenerator records=0 models=0 on_road_points=0
+TreeRowsGenerator records=8 models=1 on_road_points=0
+total=68 records_sha=50b7a73c92e6e3cd2b19f1dfdcb1992a3714e157e2794a9f9a679fc3ccf4cc59 grid_sha=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+delta=0 roads=1 fences=4 tree_rows=1 oriented=6 procedural_lamps=0 retaining_wall_omitted=true gate_omitted=true power_pole_omitted=true postbox_unconfigured=true
+FenceGenerator records=55 models=5 on_road_points=1
+gate_nearest_model_point_m=3.991 gate_opening_not_proven
+OrientedObjectsGenerator records=5 models=5 on_road_points=0
+SidewalksGenerator records=0 models=0 on_road_points=0
+TreeRowsGenerator records=8 models=1 on_road_points=0
+total=68 records_sha=50b7a73c92e6e3cd2b19f1dfdcb1992a3714e157e2794a9f9a679fc3ccf4cc59 grid_sha=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+delta=100 roads=1 fences=4 tree_rows=1 oriented=6 procedural_lamps=0 retaining_wall_omitted=true gate_omitted=true power_pole_omitted=true postbox_unconfigured=true
+FenceGenerator records=55 models=5 on_road_points=1
+gate_nearest_model_point_m=3.991 gate_opening_not_proven
+OrientedObjectsGenerator records=5 models=5 on_road_points=0
+SidewalksGenerator records=0 models=0 on_road_points=0
+TreeRowsGenerator records=8 models=1 on_road_points=0
+total=68 records_sha=50b7a73c92e6e3cd2b19f1dfdcb1992a3714e157e2794a9f9a679fc3ccf4cc59 grid_sha=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc
+PASS bounded infrastructure; no real export, physical geometry or runtime approval
