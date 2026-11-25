@@ -684,3 +684,13 @@ cc05r_result:
   next_proposed: "CC06A read-only Control Center"
   next_status: "NOT RUN"
   handoff: "docs/automation/RESUME_AFTER_CC05R.md"
+
+owner_map_first_2026_11_25:
+  supersedes_next_proposed: "CC06A"
+  cc06_status: "DEFERRED"
+  reason: "Owner requires practical real-map validation first"
+  active_task: "MAP-003 GM26.2 full pilot elevation coverage"
+  last_measured_nodata: 629
+  required_nodata: 0
+  real_native_placement_authorized: false
+  stage_promotion: false
