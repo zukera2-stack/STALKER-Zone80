@@ -575,3 +575,26 @@ cc05n_result:
   complete_native_catalog_tested: false
   real_generation: false
   next: "CC-05O consolidated synthetic pipeline and review contracts"
+
+cc05o_result:
+  report: "docs/automation/CC05O_RESULT.md"
+  integrated_synthetic_probe_passes: 2
+  native_catalog_count: 27
+  native_generators_invoked: 13
+  native_generators_not_run: 14
+  tagged_way_count: 21
+  tagged_node_count: 7
+  native_records: [1015, 1062, 1062]
+  point_review_held: [21, 14, 14]
+  point_pass_records: [994, 1048, 1048]
+  point_pass_road_plants: [31, 0, 0]
+  unknown_source_review_separate: true
+  duplicate_csv_groups: 0
+  road_memory_roundtrip: true
+  surface_pixels_checked_per_run: 230400
+  full_native_idmap_tested: false
+  grid_unchanged: true
+  complete_provenance_and_halo_tested: false
+  worker_integration_tested: false
+  real_generation: false
+  next: "CC-05P catalog disposition and fail-closed common job/input contract"

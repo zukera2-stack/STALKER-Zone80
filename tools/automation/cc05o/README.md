@@ -1,0 +1,11 @@
+# CC-05O — common synthetic GRM pipeline
+Synthetic-only Linux .NET SDK 10.0.404, pinned GRM/BIS, CC05B bridge, offline feed. Use the exact v03 and modelinfo snapshots from the project Library. No new real elevations or map output. Commands (replace placeholders with reviewed local paths):
+
+```
+export DOTNET_PROCESSOR_COUNT=2 NUGET_CERT_REVOCATION_MODE=offline DOTNET_CLI_TELEMETRY_OPTOUT=1 DOTNET_NOLOGO=1
+dotnet restore Zone80.PipelineProbe.csproj -p:GrmRoot=<source> -p:BridgeSource=<cc05b> --source <offline-feed> -p:NuGetAudit=false
+dotnet build Zone80.PipelineProbe.csproj -p:GrmRoot=<source> -p:BridgeSource=<cc05b> --no-restore -c Release --disable-build-servers -p:GeneratePackageOnBuild=false
+dotnet <actual-bin>/Zone80.PipelineProbe.dll <v03-editor-config> <modelinfo.json>
+```
+
+One shared context per run, one 480m synthetic area, 21 tagged ways/7 tagged nodes, exact strict input hashes, common elevation, state-dependent forest/scrub/observed-tree input, native forest-edge builder, original 13 placement generators (one disabled), native road compiler/reader in memory, CC05M SurfacePlan unchanged. Native catalog total 27; 14 explicitly NOT RUN. No stock full renderer or building generation. Fixture-specific source geometry adapters not generalized GIS ingestion; exact source ID inventory and explicit source decisions for tree nodes, unknown road and unsupported features, not complete per-model feature lineage. Unknown road conservatively protected, source decision separately recorded. The review manifest fingerprints model transforms without absolute Z, reasons and final point ownership; not a signed output manifest or export authorization. 21/14 held records; no silent relocation. Point and exact CSV duplicate checks do not prove physical collision clearance. Both independent final runs identical, +100m Z response, input hashes unchanged, forbidden dependencies refused. Native name-based deadwood and bush counts are heuristics only. Prior initial run also passed but lacked distinct unknown-state provenance and extracted tree anchors; corrected for final. Final incremental build 0 warnings/errors. No full halo, general geometry, resource approval, real map, P: writes, WRP/PBO, merge or Stage promotion. Stage 001 PARTIAL.

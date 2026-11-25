@@ -157,3 +157,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05N measured result
 [CC05N_RESULT](docs/automation/CC05N_RESULT.md): native fences, explicit oriented objects, explicit tree row, disabled sidewalks PASS bounded; 55/5/8/0 = 68 records, +100m Z/repeat, unchanged grid. All nine road profiles disable procedural lamps/sidewalks, explicit lamp survives. Retaining wall/gate/power pole omitted, postbox unconfigured, one fence point on road. No physical or full catalog approval. Next proposed CC-05O common synthetic pipeline and provenance/review contracts. Stage 001 PARTIAL, no real generation.
+
+## CC-05O measured result
+[CC05O_RESULT](docs/automation/CC05O_RESULT.md): one shared native context, 13/27 generator instances, memory road roundtrip and bounded surface mask. 1015/1062 records, 21/14 held, 31/0 point-pass road plants, source-tree unknown review separate. +100m Z and identical repeated runs PASS; 530 GRM files unchanged. 14 catalog layers NOT RUN, no generic building or physical proof. Next proposed CC-05P catalog disposition, fail-closed shared job/input and manifest contract, then worker/sector integration. No real generation; Stage 001 PARTIAL.

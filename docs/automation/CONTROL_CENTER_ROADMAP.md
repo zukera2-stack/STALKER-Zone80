@@ -118,3 +118,6 @@ Owner requires irregular natural forest, understory, fallen deadwood and standin
 
 ## CC-05N result
 [CC05N_RESULT](CC05N_RESULT.md): bounded native infrastructure PASS twice, 68 records, explicit lamps and tree rows only, unchanged supplied heights. Unsupported barriers/poles and crossing fence require review. No generic house generation. Next proposed CC-05O consolidate tested native components in one synthetic pipeline, explicit unsupported layers and immutable inputs, review and ownership manifest. UI deferred.
+
+## CC-05O result
+[CC05O_RESULT](CC05O_RESULT.md): 13 native generators in one context, shared geometry, memory road/diagnostic surface outputs, 1015/1062 records, 21/14 held, stable point ownership, source state review. 14 native layers NOT RUN; no general provenance or worker integration. Next proposed CC-05P explicit catalog disposition and fail-closed job/input/manifest contract before worker integration. UI deferred.

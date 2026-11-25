@@ -114,3 +114,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05N — bounded native infrastructure
 [CC05N_RESULT](automation/CC05N_RESULT.md): offline build and two identical executions; 55 fence, 5 oriented, 8 tree-row, 0 sidewalks; +100m Z response; grid unchanged. Actual omitted retaining wall/gate/power pole, unconfigured postbox and one road-overlap fence point are review findings, not physical proof. Full catalog, real map and runtime NOT RUN. Stage 001 PARTIAL.
+
+## CC-05O — integrated synthetic GRM
+[CC05O_RESULT](automation/CC05O_RESULT.md): 13 generators in same context, two byte-identical runs, +100m world Z, unchanged grid, 994/1048 point-pass records. Unknown state explicitly recorded. Full native catalog, native IdMap, physical collision, worker integration and real map NOT RUN. Stage 001 PARTIAL.

@@ -42,3 +42,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05N
 [cc05n](cc05n/README.md) — native infrastructure, explicit row and lamp probe. [Report](../../docs/automation/CC05N_RESULT.md).
+
+## CC-05O
+[cc05o](cc05o/README.md) — common synthetic native pipeline, shared inputs, geometry and point review. [Report](../../docs/automation/CC05O_RESULT.md).
