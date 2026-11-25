@@ -82,3 +82,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05C measured result
 [CC05C_RESULT](CC05C_RESULT.md): actual GRM core and existing C# bridge compiled offline and native synthetic consumer smoke PASS twice; 34 package hashes and 32 lock entries verified. Real factory disabled. Next CC-05D actual Arma3 assembly build and bounded synthetic layer, after missing pinned BIS submodule/dependencies delivered. UI deferred. No real map generation.
+
+## CC-05D measured result
+[CC05D_RESULT](CC05D_RESULT.md): native Arma3 assembly compiled, 39 package hashes verified. Original TreesBuilder and TreesGenerator ran with synthetic OSM and supplied node-grid; 0/1/3 selections, relative Z, no persistent grid mutation, repeat and denied fallback. No real generation. Next CC-05E reviewed offline pilot input/config/coordinate gates. UI and Vercel deferred.

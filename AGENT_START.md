@@ -121,3 +121,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05C measured result
 [CC05C_RESULT](docs/automation/CC05C_RESULT.md): owner offline packages received; actual GRM core and existing bridge built, 0 errors/31 upstream warnings, native synthetic smoke PASS twice; 8 Python tests PASS. CC-05D next: missing pinned BIS submodule and Arma3 dependency closure, new collector delivered. Real factory remains disabled; no generation/Stage promotion. CC-06 deferred.
+
+## CC-05D measured result
+[CC05D_RESULT](docs/automation/CC05D_RESULT.md): owner 39-package Arma3 bundle verified; pinned native Arma3 assembly compiled offline (0 errors/12 warnings). Original TreesBuilder and TreesGenerator ran on synthetic inline OSM + supplied node grid via GM adapter; 0/1/3 selections, relative Z, repeat and forbidden elevation fallback tests PASS. No real geography/output. Next CC-05E offline input/config/coordinate gates; CC-06 and Vercel deferred. Stage 001 PARTIAL, no P: writes or merge.

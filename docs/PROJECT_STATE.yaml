@@ -378,3 +378,20 @@ cc05c_result:
   arma3_assembly_tested: false
   real_elevation_input_enabled: false
   next: "CC-05D Arma3 layer companion; CC-06 deferred"
+
+cc05d_result:
+  report: "docs/automation/CC05D_RESULT.md"
+  base_sha: "aa5d847f1811c0682d1b22210e96eb02f93fe001"
+  offline_package_hashes_verified: 39
+  arma3_resolved_lock_matches: 35
+  bis_core_resolved_lock_matches: 3
+  grm_source_files_unchanged: 530
+  bis_source_files_unchanged: 173
+  arma3_build_errors: 0
+  arma3_build_warnings: 12
+  synthetic_native_tree_probe_passes: 2
+  synthetic_source_tree_points: 3
+  synthetic_selected_counts: [0, 1, 3]
+  actual_gm_input_enabled: false
+  real_layer_generation: false
+  next: "CC-05E offline pilot input/config/coordinate gates; UI deferred"

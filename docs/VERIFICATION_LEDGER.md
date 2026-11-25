@@ -81,3 +81,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## E-029 — CC-05C actual native core bridge
 [CC05C_RESULT](automation/CC05C_RESULT.md): owner 34/34 package hashes, 32/32 resolved lock entries, upstream core 344 files unchanged. Actual restore exit 0, Release build exit 0 (31 upstream warnings/0 errors), synthetic native smoke twice exit 0 identical fingerprint, Python 8 PASS. First restore timeouts and mistaken DLL path documented. No Arma3 module or real GM generation tested. Stage 001 PARTIAL.
+
+## E-030 — CC-05D native synthetic Arma3 tree layer
+[CC05D_RESULT](automation/CC05D_RESULT.md): actual Arma3 restore/build PASS (12 upstream warnings, 0 errors), 39 package hashes and 35+3 resolved lock entries match; 530+173 archive files unchanged. Actual native probe twice exit 0 identical output, synthetic OSM three nodes and supplied grid yielded 0/1/3 selected; relative Z, unchanged grid and denied fallback PASS. First equator fixture failed point count, documented. No real GM input or output; Stage 001 PARTIAL.
