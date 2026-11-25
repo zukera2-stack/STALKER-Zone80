@@ -1,4 +1,7 @@
 # Zone80 Worker
+
+**Current entrypoint:** [RESUME_CC05Q](../../docs/automation/RESUME_CC05Q.md). Use existing cc02 Worker, cc03 Sector Manager, cc05b bridge and cc05p native child/validator. CC05Q integration NOT RUN; earlier companions are historical evidence, not required to rerun all.
+
 Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recovery prototype. From cc02: `python -m unittest -v test_worker.py`. [Report](../../docs/automation/CC02_RESULT.md), [contract](../../docs/automation/WORKER_CONTRACT.md), [roadmap](../../docs/automation/CONTROL_CENTER_ROADMAP.md). CC-01 remains in cc01/ with original evidence; old state/schema not automatically migrated. Windows/native jobs, hard resource isolation, scheduler, GIS generation NOT enabled. Next CC-03 synthetic sector manager.
 
 ## CC-03 sector planner

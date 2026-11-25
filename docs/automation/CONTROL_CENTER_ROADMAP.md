@@ -1,5 +1,7 @@
 # Zone80 Control Center — план автономной разработки
 
+**Текущий статус после CC05P:** CC01–CC04 bounded synthetic PASS, CC05B–P native synthetic/review progress, CC05Q NEXT / NOT RUN, CC06 UI deferred, CC07 local gated. [Единый handoff](RESUME_CC05Q.md). Таблица ниже — исторический первоначальный план, а не актуальные статусы.
+
 Дата: 25.11.2026. Владелец попросил закрепить предложенный семиэтапный план. Baseline b53d0db35a384efac84b84199bda98c6db8548fe, Draft PR #47, Issue #42. Это план разработки, не отчёт о выполнении и не новое разрешение на native generation. Stage 001 / PARTIAL. Номера CC-01…07 — подэтапы инструментария, НЕ Stage 001…007 всего проекта.
 
 ## Цель
@@ -57,7 +59,7 @@ No broad new data acquisition, no generated real heightmaps through Python/GDAL/
 
 ## Start and stop
 
-Next proposed development task: CC-01, working bounded synthetic worker in tools/automation/ plus tests, documented interface and reproducible logs. Then CC-02 before native integration. User request at this checkpoint is documentation only: no new code or tests executed here. Update PROJECT_STATE and ledger only when actual evidence arrives. The seven-step roadmap records direction; later real native actions require their existing gates. Continue existing Issue #42; no new microissues.
+Historical starting task was CC-01, then CC-02. Current next block is CC-05Q (see RESUME_CC05Q.md), not a new Worker from scratch. User request at this checkpoint is documentation only: no new code or tests executed here. Update PROJECT_STATE and ledger only when actual evidence arrives. The seven-step roadmap records direction; later real native actions require their existing gates. Continue existing Issue #42; no new microissues.
 
 ## CC-01 result / 2026-11-25
 [CC01_RESULT](CC01_RESULT.md): bounded Linux synthetic core implemented and tested (9 unittest methods incl 14 invalid-manifest subcases, two CLI jobs PASS and verified resume skips). CC-01 cloud core PASS in scope; full WORKER_CONTRACT remains PARTIAL. Windows and real process-tree limits not implemented, no active cancellation or crash reconciliation proof. Next CC-02. No native execution or scheduler. Earlier table is the original plan, not the current execution state.

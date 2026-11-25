@@ -176,7 +176,7 @@ local_background_automation:
   contract: "docs/automation/WORKER_CONTRACT.md"
   status: "CC-02 bounded Linux synthetic recovery tested; Windows NOT RUN"
   synthetic_tests: "CC-01 historical PASS; CC-02 13 methods PASS twice, 9 invalid manifest subcases"
-  native_grm_layer: "NOT RUN; gated"
+  native_grm_layer: "PASS bounded Linux synthetic CC05P; real generation gated; Worker integration NOT RUN"
   scheduler_registered: false
   scheduler_registration_authorized: false
   full_world_authorized: false
@@ -184,7 +184,8 @@ local_background_automation:
 
 current_checkpoint:
   report: "docs/map/MAP_003_CURRENT_CHECKPOINT.md"
-  evidence_cutoff_sha: "bbbd43916c712830de26f9779a3ab010788b70fb"
+  evidence_cutoff_sha: "ff84106de719dbb17fd1caa749cf5aa5269b9698"
+  agent_resume: "docs/automation/RESUME_CC05Q.md"
   date: "2026-11-25"
 grm_configuration:
   upstream_version: "v0.11.1"
@@ -202,7 +203,7 @@ grm_configuration:
   inventory_errors: 0
   dependency_closure_verified: false
   v02_studio_open_save: "PASS editor only; 6/7 changed surfaces restored"
-  v03_status: "EDITOR ONLY; bounded Python transform tested; native parser NOT RUN"
+  v03_status: "EDITOR/REVIEW ONLY for production; strict native parser and synthetic placement PASS CC05P"
   v03_reference_count: 203
   v03_inventory_or_pair_covered: 179
   v03_new_stock_surface_unverified: 22
@@ -216,9 +217,10 @@ grm_configuration:
   unresolved_base_dependency: "arm_centraleurope"
   mud_surface_verified: false
   production_compiler_ready: false
-  gm_adapter_implemented: false
+  gm_adapter_implemented: true  # Bounded synthetic bridge only; real GM factory disabled.
   native_generation_authorized: false
-  native_generation_tested: false
+  native_generation_tested: false  # Real generation only; synthetic native probe separately PASS.
+  native_synthetic_generation_tested: true
   report: "docs/map/GRM_CONFIG_PREFLIGHT_V03.md"
 map003_surface_and_coverage:
   valid_height_cells: 3467
@@ -238,14 +240,14 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "CC-05E native parser diagnostic and pilot corners PASS; strict real asset load BLOCKED"
-  next_proposed_step: "CC-05F verified model metadata resolver and offline source/layer gates; CC-06 deferred"
+  status: "CC-05P bounded integrated native job/result PASS; production gates BLOCKED"
+  next_proposed_step: "CC-05Q guarded synthetic native child + existing CC02 Worker; CC-06 deferred"
   stages:
     CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
     CC-02: "PASS bounded Linux synthetic fault injection; hard resource/Windows gates pending"
     CC-03: "PASS synthetic logical sector planning; native GIS seams NOT RUN"
     CC-04: "PASS review-only assembly/audit core; production compiler BLOCKED"
-    CC-05: "PARTIAL; native core and synthetic trees PASS, native diagnostic config/coordinates PASS; strict real generation BLOCKED"
+    CC-05: "PARTIAL; through CC05P integrated synthetic job/result PASS; CC05Q next; real generation BLOCKED"
     CC-06: "DEFERRED until GM-only GRM integration prototype verified"
     CC-07: "PLANNED; gated Windows integration"
   actual_windows_validation: false
@@ -619,3 +621,17 @@ cc05p_result:
   durable_manifest_tested: false
   real_generation: false
   next: "CC-05Q guarded native synthetic child and Worker integration"
+
+agent_handoff_2026_11_25:
+  document: "docs/automation/RESUME_CC05Q.md"
+  working_branch: "audit/map003-digital-geocatalog"
+  draft_pr: 47
+  evidence_cutoff_sha: "ff84106de719dbb17fd1caa749cf5aa5269b9698"
+  last_measured_cloud_block: "CC-05P"
+  next_cloud_block: "CC-05Q"
+  next_cloud_status: "NOT RUN"
+  local_parallel_task: "MAP-003 complete GM-only coverage and read-only asset gates; TB terrain-only after safety"
+  local_grid_nodata: 629
+  cc06_ui: "DEFERRED"
+  stage_promotion: false
+  docs_only_update: true

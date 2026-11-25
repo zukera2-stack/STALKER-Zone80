@@ -1,8 +1,11 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
+## АКТУАЛЬНО — продолжение после CC-05P (25.11.2026)
+**Начни с [RESUME_CC05Q](docs/automation/RESUME_CC05Q.md).** Текущая ветка `audit/map003-digital-geocatalog`, Draft PR #47, Issue #42. Последний измеренный SHA `ff84106de719dbb17fd1caa749cf5aa5269b9698`; текущий HEAD сверять. CC01–CC05P уже выполнены в ограниченном synthetic/review scope, следующий CC05Q — native synthetic child + существующий Worker. Локальный MAP-003 остаётся независимым и BLOCKED по полным высотам. Не начинать с нуля, не считать старые указания о CC01/CC05B/CC05F текущей задачей. Stage 001 PARTIAL. Ниже история и обязательные ограничения, не конкурирующие задания.
+
 **Для:** Cursor/«Луна», Codex, ChatGPT и любого нового агента.  
 **Контрольная точка:** Stage 001 — Foundation / PARTIAL; реальный WRP и запуск Arma 3 не подтверждены.  
-**Источник истины:** `main` — только принятый Foundation; **текущая разрешённая работа и её точный SHA находятся в GitHub [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42) и зависимом [Draft PR #44](https://github.com/zukera2-stack/STALKER-Zone80/pull/44)**. Единый навигатор — [`docs/PROJECT_CONTROL.md`](docs/PROJECT_CONTROL.md), реестр результатов — [`docs/VERIFICATION_LEDGER.md`](docs/VERIFICATION_LEDGER.md). Документы аудита находятся в отдельном Draft PR, пока не `main`.  
+**Источник истины:** `main` — только принятый Foundation; **текущая разрешённая работа и её точный SHA находятся в GitHub [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42) и зависимом [Draft PR #47](https://github.com/zukera2-stack/STALKER-Zone80/pull/47)**. Единый навигатор — [`docs/PROJECT_CONTROL.md`](docs/PROJECT_CONTROL.md), реестр результатов — [`docs/VERIFICATION_LEDGER.md`](docs/VERIFICATION_LEDGER.md). Документы аудита находятся в отдельном Draft PR, пока не `main`.  
 **Библиотека проектных источников (личная ChatGPT Library):** `/Арма/STALKER-Zone80/`; её структура описана в [docs/LIBRARY_INDEX.md](docs/LIBRARY_INDEX.md).
 
 ## Решение владельца 24.11.2026 — переходим от тестов к карте

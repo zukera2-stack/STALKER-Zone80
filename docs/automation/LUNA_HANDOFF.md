@@ -1,4 +1,8 @@
 # LUNA — unified MAP-003 automation assignment
+
+## АКТУАЛЬНО — не начинать заново
+Сначала [RESUME_CC05Q](RESUME_CC05Q.md). Cloud уже реализовал CC01–CC05P (Linux synthetic/review); старые указания B/C/E ниже — историческое задание. CC02 Worker, CC03 Sector Manager, CC05B bridge, CC05P child/verifier находятся в Git. Луна не должна заново создавать Worker/GRM адаптер. Продолжать локальные A/D и недостающие Windows/asset gates; сверить реальный HEAD PR #47 и Issue #42. CC05Q cloud integration пока NOT RUN. Доступ к private Library не предполагать. Прежние ограничения без изменений.
+
 Owner asks 24.11.2026: prepare skills/instructions and background local automation. Continue existing Issue #42 and PR #47, branch audit/map003-digital-geocatalog; base 4d00692e7f56581df8062f65cffa5e7c8005e5fc before this handoff. Re-read actual HEAD and do not modify other agents' work; new commits only in agreed draft branch or isolated implementation branch with one consolidated report. No merge.
 Read AGENT_START, AGENTS, this file, WORKER_CONTRACT, MAP_003_GRM_AUTOMATION, MAP_003_GM26_TILES, three .cursor/skills SKILL.md files and current #42. Older Foundation and UIA tasks are historical.
 ## Do in one autonomous cycle

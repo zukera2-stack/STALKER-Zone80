@@ -1,5 +1,7 @@
 # PROJECT CONTROL — единый навигатор STALKER-Zone80
 
+**Текущая передача:** [RESUME_CC05Q](automation/RESUME_CC05Q.md) — единый рабочий маршрут после CC05P, evidence cutoff `ff84106de719dbb17fd1caa749cf5aa5269b9698`. Два независимых потока: CC05Q synthetic в облаке; локальный MAP-003 full GM coverage/asset gate при доступности Cursor. Stage 001 PARTIAL.
+
 **Аудит:** 2026-11-24; актуализация 2026-11-25, см. [контрольную точку](map/MAP_003_CURRENT_CHECKPOINT.md). **Статус этого документа:** proposed in Draft PR, **не объединён с `main`**. Владелец принимает решения, GitHub Issues задают разрешённый объём, независимые журналы подтверждают результаты. Любой новый агент сначала читает `AGENT_START.md`, `AGENTS.md`, **этот файл**, затем текущую Issue.
 
 ## 1. Где мы сейчас
@@ -29,7 +31,7 @@
 6. **Проектный замысел:** `MASTER_PLAN.md`, `ARCHITECTURE.md`, `ADR-0001`. План не подтверждает выполнение.
 7. **Архивные задания:** `TASK_CURSOR_001*.md`, PR #14/#15, старые TB-UIA Issue, старый PR #43. Читать как историю, **не исполнять заново**.
 
-**Ветки:** `main` остаётся стабильным Foundation (см. merged PR #1/#7/#8), в нём **нет** большинства поздних результатов MAP-001/002/003. Актуальная MAP-003 постановка сейчас [Draft PR #44](https://github.com/zukera2-stack/STALKER-Zone80/pull/44) от PR #41; этот аудит — отдельный **зависимый Draft PR от #44**. Не считать Draft PR уже внедрённым в main. Любой исполнитель указывает реальный base/head SHA и ветку.
+**Ветки:** `main` остаётся стабильным Foundation, не содержит большинства поздних результатов. Актуальный рабочий [Draft PR #47](https://github.com/zukera2-stack/STALKER-Zone80/pull/47), `audit/map003-digital-geocatalog`; PR #44/#46 — предшествующие checkpoint. Не считать Draft PR внедрённым в main. Любой исполнитель указывает фактический base/head SHA и ветку.
 
 ## 3. Как не потерять задачи и результаты
 
@@ -67,7 +69,7 @@
 **Противоречия не скрывать**: если найдено старое `NOT RUN` в историческом отчёте, а более поздний опыт подтвердил запуск, указать *дату и область обоих результатов*; не перезаписывать прежнее свидетельство.
 
 ## 6. Актуальная карта работ 25.11.2026
-[Единый checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md) в Draft PR #47 содержит факты, ограничения, все отчёты и следующий шаг. Предыдущие формулировки разделов 4–5 о NOT RUN относятся к постановке до локального диагностического экспорта; не являются текущим статусом. A BLOCKED, B PASS existing bbox, C PARTIAL, D BLOCKED/NOT RUN. GRM v03 — только редактор; worker — design only. Issue #42 не дробим, Stage не повышаем.
+[Единый checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md) в Draft PR #47 содержит факты, ограничения, все отчёты и следующий шаг. Предыдущие формулировки разделов 4–5 о NOT RUN относятся к постановке до локального диагностического экспорта; не являются текущим статусом. A BLOCKED, B PASS existing bbox, C PARTIAL, D BLOCKED/NOT RUN. GRM v03 — editor/review-only для production, native synthetic parser/placement проверены; Worker CC02 — Linux synthetic PASS, CC05P child/job PASS, их интеграция NOT RUN. Issue #42 не дробим, Stage не повышаем.
 
 ## 7. Автономная разработка Control Center
-[CONTROL_CENTER_ROADMAP](automation/CONTROL_CENTER_ROADMAP.md) — порядок CC-01…07, критерии приёмки и разделение cloud/synthetic и локальной Windows-интеграции. Следующий предлагаемый подэтап CC-01 Worker core. План не заменяет текущую Issue #42 и не блокирует независимое разрешённое MAP-003 локальное GIS задание. Stage 001 PARTIAL.
+[CONTROL_CENTER_ROADMAP](automation/CONTROL_CENTER_ROADMAP.md) — порядок CC-01…07, критерии приёмки и разделение cloud/synthetic и локальной Windows-интеграции. Следующий программный подэтап CC-05Q — интеграция существующего CC02 Worker и CC05P native child, [handoff](automation/RESUME_CC05Q.md). План не заменяет текущую Issue #42 и не блокирует независимое разрешённое MAP-003 локальное GIS задание. Stage 001 PARTIAL.

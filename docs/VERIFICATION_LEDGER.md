@@ -120,3 +120,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05P — guarded job/result contract
 [CC05P_RESULT](automation/CC05P_RESULT.md): two identical suites, each 5 actual native jobs, 20 input refusals, 6 modified result refusals. Exact 27 catalog names and logical/content/review digests checked, +100m response. No worker, durable publication, real map, full physical or source lineage proof. Stage 001 PARTIAL.
+
+## Documentation handoff after CC-05P — 25.11.2026
+No new native execution or new PASS. Re-read current PR #47 HEAD `ff84106de719dbb17fd1caa749cf5aa5269b9698`, confirmed repository tree contains prior CC reports and current Worker/sector/child sources; private Library names checked by listing, not byte rehash. [RESUME_CC05Q](automation/RESUME_CC05Q.md) supersedes old next-step instructions, distinguishes evidence from planned work and documents CC05Q criteria. Stage 001 PARTIAL; local MAP-003 blockers unchanged.
