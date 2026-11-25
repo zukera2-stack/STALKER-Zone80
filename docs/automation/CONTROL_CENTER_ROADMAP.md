@@ -85,3 +85,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05D measured result
 [CC05D_RESULT](CC05D_RESULT.md): native Arma3 assembly compiled, 39 package hashes verified. Original TreesBuilder and TreesGenerator ran with synthetic OSM and supplied node-grid; 0/1/3 selections, relative Z, no persistent grid mutation, repeat and denied fallback. No real generation. Next CC-05E reviewed offline pilot input/config/coordinate gates. UI and Vercel deferred.
+
+## CC-05E measured result
+[CC05E_RESULT](CC05E_RESULT.md): actual native v03 diagnostic parse and native pilot four-corner controls PASS, 163 unresolved models, strict load BLOCKED; two identical runs and two hash negatives. Library snapshots confirmed, [retrieval index](../LIBRARY_INDEX.md). Next CC-05F real model metadata intake/strict resolver, layer-specific offline source gates, no runtime placeholders. Complete GM-only grid and real generation remain blocked. UI deferred.

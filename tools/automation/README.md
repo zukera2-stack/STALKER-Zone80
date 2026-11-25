@@ -12,3 +12,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05B GM-only bridge (owner-selected)
 [cc05b/](cc05b/README.md): read-only node-compatible input contract, 8 Python tests PASS twice; original C# bridge candidate and synthetic smoke harness for actual GRM APIs, compile NOT RUN locally. No native real-context entrypoint. [Report](../../docs/automation/CC05B_RESULT.md). UI deferred; CC-05C build and native synthetic smoke next.
+
+## CC-05E config and coordinate review
+[cc05e/](cc05e/README.md) is native diagnostic-only companion using real v03 and exact pilot example. Requires offline toolchain from [Library index](../../docs/LIBRARY_INDEX.md). No native layer call, strict missing metadata rejection; actual generation blocked. [Report](../../docs/automation/CC05E_RESULT.md). Next CC-05F.

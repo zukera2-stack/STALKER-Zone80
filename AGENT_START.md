@@ -124,3 +124,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05D measured result
 [CC05D_RESULT](docs/automation/CC05D_RESULT.md): owner 39-package Arma3 bundle verified; pinned native Arma3 assembly compiled offline (0 errors/12 warnings). Original TreesBuilder and TreesGenerator ran on synthetic inline OSM + supplied node grid via GM adapter; 0/1/3 selections, relative Z, repeat and forbidden elevation fallback tests PASS. No real geography/output. Next CC-05E offline input/config/coordinate gates; CC-06 and Vercel deferred. Stage 001 PARTIAL, no P: writes or merge.
+
+## CC-05E measured result and persistent Library
+[CC05E_RESULT](docs/automation/CC05E_RESULT.md): actual v03 native parser diagnostic PASS, strict missing metadata refusal, 11 materials/16 usages/10 surfaces/9 roads, 163 unresolved distinct model paths. Four pilot corner checks max absolute UTM residual 0.000933 m, no real grid or placement. Owner toolchain and input archives saved in personal Library [exact locations and SHA256](docs/LIBRARY_INDEX.md); authorized agents retrieve from there, not Git. Next CC-05F reviewed model metadata resolver and per-layer offline source gates, then GM-only complete node-compatible grid. UI deferred; real generation blocked, Stage 001 PARTIAL.

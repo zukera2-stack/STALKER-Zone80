@@ -1,0 +1,9 @@
+STRICT_MODEL_RESOLUTION BLOCKED as expected
+EDITOR_REVIEW_PARSE PASS material_defs=11 usages=16 surfaces=10 roads=9 unresolved_model_paths=163 runtime_approved=0
+PRODUCTION BLOCKED: missing verified model metadata, external base, ice and mud review
+corner 0,0 local_error_m=0.000000 absolute_utm_error_m=0.000933
+corner 0,1920 local_error_m=0.000041 absolute_utm_error_m=0.000933
+corner 1920,0 local_error_m=0.000076 absolute_utm_error_m=0.000933
+corner 1920,1920 local_error_m=0.000122 absolute_utm_error_m=0.000933
+COORDINATE_REVIEW max_local_m=0.000122 max_absolute_utm_m=0.000933 threshold_m=0.2
+PASS REVIEW ONLY; no generation or native placement

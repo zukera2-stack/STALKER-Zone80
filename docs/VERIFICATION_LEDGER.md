@@ -84,3 +84,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## E-030 — CC-05D native synthetic Arma3 tree layer
 [CC05D_RESULT](automation/CC05D_RESULT.md): actual Arma3 restore/build PASS (12 upstream warnings, 0 errors), 39 package hashes and 35+3 resolved lock entries match; 530+173 archive files unchanged. Actual native probe twice exit 0 identical output, synthetic OSM three nodes and supplied grid yielded 0/1/3 selected; relative Z, unchanged grid and denied fallback PASS. First equator fixture failed point count, documented. No real GM input or output; Stage 001 PARTIAL.
+
+## E-031 — CC-05E native config and pilot coordinate review
+[CC05E_RESULT](automation/CC05E_RESULT.md): actual Release companion build 0 warnings/errors incremental, two identical native diagnostic runs, strict missing model refusal and 163 unresolved paths; 11 materials/16 usages/10 surfaces/9 roads. Four corners max local 0.000122 m/absolute UTM 0.000933 m; two modified input copies rejected by SHA. Ten private Library file copies confirmed by listing. No actual real grid or generation; Stage 001 PARTIAL.

@@ -238,14 +238,14 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "CC-05B GM-only C# bridge candidate written; Python intake PASS; native compilation BLOCKED locally"
-  next_proposed_step: "CC-05C compile and verify guarded native GRM bridge; CC-06 deferred by owner"
+  status: "CC-05E native parser diagnostic and pilot corners PASS; strict real asset load BLOCKED"
+  next_proposed_step: "CC-05F verified model metadata resolver and offline source/layer gates; CC-06 deferred"
   stages:
     CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
     CC-02: "PASS bounded Linux synthetic fault injection; hard resource/Windows gates pending"
     CC-03: "PASS synthetic logical sector planning; native GIS seams NOT RUN"
     CC-04: "PASS review-only assembly/audit core; production compiler BLOCKED"
-    CC-05: "PARTIAL; CC-05B source candidate and verified Python intake; native runtime NOT RUN"
+    CC-05: "PARTIAL; native core and synthetic trees PASS, native diagnostic config/coordinates PASS; strict real generation BLOCKED"
     CC-06: "DEFERRED until GM-only GRM integration prototype verified"
     CC-07: "PLANNED; gated Windows integration"
   actual_windows_validation: false
@@ -395,3 +395,25 @@ cc05d_result:
   actual_gm_input_enabled: false
   real_layer_generation: false
   next: "CC-05E offline pilot input/config/coordinate gates; UI deferred"
+
+cc05e_result:
+  report: "docs/automation/CC05E_RESULT.md"
+  base_sha: "7194dafa8c43c02e8484a7f1556f29378bfa3149"
+  native_config_diagnostic_passes: 2
+  strict_unresolved_model_refusal: true
+  unresolved_model_paths: 163
+  material_definitions: 11
+  material_usages: 16
+  material_surfaces: 10
+  road_profiles: 9
+  coordinate_control_corners: 4
+  max_local_corner_error_m: 0.000122
+  max_absolute_utm_error_m: 0.000933
+  modified_input_rejections: 2
+  runtime_approved_resources: 0
+  library_toolchain_archives_confirmed: 5
+  library_input_snapshots_confirmed: 5
+  library_index: "docs/LIBRARY_INDEX.md"
+  real_gm_grid_consumed: false
+  real_layer_generation: false
+  next: "CC-05F model metadata and offline source gates; UI deferred"
