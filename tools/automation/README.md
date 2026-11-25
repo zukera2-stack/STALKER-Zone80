@@ -21,3 +21,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05G
 [cc05g](cc05g/README.md) — original GRM native synthetic tree layer using actual v03/model cache, bounded OSM graph and collision defect probe. [Report](../../docs/automation/CC05G_RESULT.md).
+
+## CC-05H
+[cc05h](cc05h/README.md): synthetic state overlay and native GRM tree placement companion, no production exporter. [Report](../../docs/automation/CC05H_RESULT.md).

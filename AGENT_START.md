@@ -133,3 +133,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05G measured result
 [CC05G_RESULT](docs/automation/CC05G_RESULT.md): actual v03 and owner model cache with native tree layer, seven reviewed native builder types, only elevation preseeded; 26/26 synthetic tree records, +100m Z response, deterministic repeat, unchanged grids, missing dependency refusal. Interior-road clearance FAIL (0m) despite outside-edge 2m PASS. Next CC-05H synthetic post-placement collision validation, no silent relocation; additional forest dependency review. Real GM/OSM/asset gates unchanged. Stage 001 PARTIAL.
+
+## CC-05H owner policy and measured result
+Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) and [CC05H_RESULT](docs/automation/CC05H_RESULT.md). Owner-approved separate state overlay replaces blanket road exclusion. Synthetic rectangular policy and unchanged native TreesGenerator PASS twice with actual v03/cache: abandoned road retains observed anchor, operational excludes, unknown review; 6/5/5 records. Stock 2m anchor displacement preserved as evidence. No upstream source changes. Next CC-05I native forest closure and synthetic test, then policy polygon/sector integration. Real gates unchanged. Stage 001 PARTIAL.

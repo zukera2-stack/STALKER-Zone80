@@ -93,3 +93,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05G — native v03 layer and clearance
 [CC05G_RESULT](automation/CC05G_RESULT.md): Release 0 errors/0 warnings, 2 identical process runs, 26 records, 7 native builder types, unchanged grid and +100m Z shift, missing dependency rejected. Interior road probe clearance 0m FAIL; outside edge 2m PASS. Real generation blocked.
+
+## CC-05H — synthetic state-aware native tree placement
+[CC05H_RESULT](automation/CC05H_RESULT.md): actual offline restore/build, two identical successful native runs, 6/5/5 records by state, road occupancy 1/0/0, stock anchor shift 2m. Initial failed exact model-anchor assertion retained; final test distinguishes native composition offset. 703 upstream files unchanged. No real placements. Stage 001 PARTIAL.

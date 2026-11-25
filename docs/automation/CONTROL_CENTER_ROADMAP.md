@@ -94,3 +94,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05G measured result
 [CC05G_RESULT](CC05G_RESULT.md): native actual-v03 tree layer synthetic PASS, 26 records, 7 native builder types, only supplied elevation preseeded. Actual wide-road interior clearance gate FAIL. Next CC-05H bounded deterministic post-placement validation, no silent movement; later additional layer closure. UI deferred.
+
+## CC-05H result — owner-approved succession
+[Policy](../map/VEGETATION_SUCCESSION_POLICY.md), [result](CC05H_RESULT.md). Bounded synthetic policy + native TreesGenerator PASS; abandoned asphalt retains tree, operational road excludes obstruction, unknown review. Stock GRM remains primary. Rectangular fixture, not production polygon/physical geometry. Next CC-05I native forest dependency closure and synthetic test. UI deferred.

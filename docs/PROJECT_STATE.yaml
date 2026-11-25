@@ -444,4 +444,23 @@ cc05g_result:
   inside_road_clearance_m: 0
   production_collision_gate: "FAIL"
   real_generation: false
-  next: "CC-05H synthetic placement collision validation; forest layer closure"
+  next: "CC-05H owner-approved policy-aware placement; forest layer closure"
+
+cc05h_result:
+  report: "docs/automation/CC05H_RESULT.md"
+  policy: "docs/map/VEGETATION_SUCCESSION_POLICY.md"
+  owner_approved: true
+  universal_road_exclusion: false
+  synthetic_native_runs: 2
+  state_overlay_scope: "synthetic axis-aligned rectangles"
+  native_selected_counts: [6, 5, 5]
+  native_on_road_counts: [1, 0, 0]
+  observed_abandoned_anchor_preserved: true
+  max_composition_offset_m: 2.3656
+  synthetic_partial_density_selected: 52
+  duplicate_and_invalid_density_refused: true
+  sector_ownership_tested: true
+  local_digest_invalidation_tested: true
+  upstream_source_files_unchanged: 703
+  real_generation: false
+  next: "CC-05I native forest closure and synthetic policy integration"
