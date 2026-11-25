@@ -598,3 +598,24 @@ cc05o_result:
   worker_integration_tested: false
   real_generation: false
   next: "CC-05P catalog disposition and fail-closed common job/input contract"
+
+cc05p_result:
+  report: "docs/automation/CC05P_RESULT.md"
+  verification_suites_passed: 2
+  native_jobs_per_suite: 5
+  input_refusals_per_suite: 20
+  output_refusals_per_suite: 6
+  native_catalog_count: 27
+  enabled_synthetic: 12
+  disabled_verified_empty: 1
+  disabled_zpb: 1
+  pending_review: 13
+  canonical_job_id_tested: true
+  stable_logical_ids_height_shift_tested: true
+  content_hash_height_shift_tested: true
+  per_model_source_lineage_complete: false
+  executable_hash_bound_in_job: false
+  worker_integration_tested: false
+  durable_manifest_tested: false
+  real_generation: false
+  next: "CC-05Q guarded native synthetic child and Worker integration"

@@ -1,0 +1,33 @@
+PASS abandoned job=ff2178a9d0c96d4093c0b038ffcc79e4e404d80ffe12611e58dbf9972f2ec640 records=1015 held=21 left=917 right=77 on_road=31 manifest_sha256=d3620a62f8ca820707191abc104f26c890f339899916945d79b2629f89004264
+PASS repeat job=ff2178a9d0c96d4093c0b038ffcc79e4e404d80ffe12611e58dbf9972f2ec640 records=1015 held=21 left=917 right=77 on_road=31 manifest_sha256=d3620a62f8ca820707191abc104f26c890f339899916945d79b2629f89004264
+PASS shift job=1c8ec80e6471d44bd17bfbe75a6b920e36d811e58c33810c069169c44368b0fd records=1015 held=21 left=917 right=77 on_road=31 manifest_sha256=80d6f27e832c26ddc2ea310404d092bd7526f0062139bc73009d08a1c7012228
+PASS operational job=ddd5d73035111e9da2054b2d33d7cf6de098e33317a0b73ca5bc6fc65ab0f729 records=1062 held=14 left=977 right=71 on_road=0 manifest_sha256=b18f6dc79c5d1d57dc3d4d844fe77c0dc86f8774dfe72e34ddc2b10c7d87ce47
+PASS unknown job=fac2c319194769e2a187fd9660cf8d78f60b63df2052e5d8bd59413ef0d3c6ab records=1062 held=14 left=977 right=71 on_road=0 manifest_sha256=8879149da3be17180ac89d0153d5201bd81ebdc0fd1a3c1d4ca0892d75ae9b4c
+PASS canonical repeat, stable logical IDs, +100m payload change, unknown state distinct
+REFUSED real_scope exit=2
+REFUSED export exit=2
+REFUSED fixture exit=2
+REFUSED version exit=2
+REFUSED state exit=2
+REFUSED delta exit=2
+REFUSED float_delta exit=2
+REFUSED boolean_delta exit=2
+REFUSED config_hash exit=2
+REFUSED cache_hash exit=2
+REFUSED osm_hash exit=2
+REFUSED extra_command exit=2
+REFUSED extra_layers exit=2
+REFUSED missing exit=2
+REFUSED wrong_type exit=2
+REFUSED array exit=2
+REFUSED duplicate_key exit=2
+REFUSED malformed exit=2
+REFUSED oversize exit=2
+REFUSED changed_cache exit=2
+OUTPUT_REFUSED job
+OUTPUT_REFUSED missing_record
+OUTPUT_REFUSED payload
+OUTPUT_REFUSED held_sector
+OUTPUT_REFUSED review
+OUTPUT_REFUSED export
+PASS 5 native jobs, 20 input refusals, 6 output refusals; synthetic review only

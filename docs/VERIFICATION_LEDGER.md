@@ -117,3 +117,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05O — integrated synthetic GRM
 [CC05O_RESULT](automation/CC05O_RESULT.md): 13 generators in same context, two byte-identical runs, +100m world Z, unchanged grid, 994/1048 point-pass records. Unknown state explicitly recorded. Full native catalog, native IdMap, physical collision, worker integration and real map NOT RUN. Stage 001 PARTIAL.
+
+## CC-05P — guarded job/result contract
+[CC05P_RESULT](automation/CC05P_RESULT.md): two identical suites, each 5 actual native jobs, 20 input refusals, 6 modified result refusals. Exact 27 catalog names and logical/content/review digests checked, +100m response. No worker, durable publication, real map, full physical or source lineage proof. Stage 001 PARTIAL.

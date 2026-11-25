@@ -160,3 +160,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05O measured result
 [CC05O_RESULT](docs/automation/CC05O_RESULT.md): one shared native context, 13/27 generator instances, memory road roundtrip and bounded surface mask. 1015/1062 records, 21/14 held, 31/0 point-pass road plants, source-tree unknown review separate. +100m Z and identical repeated runs PASS; 530 GRM files unchanged. 14 catalog layers NOT RUN, no generic building or physical proof. Next proposed CC-05P catalog disposition, fail-closed shared job/input and manifest contract, then worker/sector integration. No real generation; Stage 001 PARTIAL.
+
+## CC-05P measured result
+[CC05P_RESULT](docs/automation/CC05P_RESULT.md): closed synthetic job and explicit 27-name catalog policy, 12 enabled, 2 disabled (sidewalk zero check, ZPB building), 13 pending. Two identical verification suites (5 native jobs, 20 input refusals and 6 result refusals each); stable logical IDs and height-sensitive content hashes, unknown state distinct. Explicit incomplete per-model lineage. No Worker integration or durable publication. Next proposed CC-05Q guarded synthetic native child integration with CC02 Worker, pinned executables, finite approval/attempts, validation and recovery. Stage 001 PARTIAL, no real generation.

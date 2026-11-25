@@ -121,3 +121,6 @@ Owner requires irregular natural forest, understory, fallen deadwood and standin
 
 ## CC-05O result
 [CC05O_RESULT](CC05O_RESULT.md): 13 native generators in one context, shared geometry, memory road/diagnostic surface outputs, 1015/1062 records, 21/14 held, stable point ownership, source state review. 14 native layers NOT RUN; no general provenance or worker integration. Next proposed CC-05P explicit catalog disposition and fail-closed job/input/manifest contract before worker integration. UI deferred.
+
+## CC-05P result
+[CC05P_RESULT](CC05P_RESULT.md): strict bounded job, all catalog dispositions, per-record logical/content identities and independent validator PASS two full suites. 12 enabled synthetic, 2 disabled, 13 pending review. Source lineage incomplete; executable pinning, durable manifests and Worker integration not yet implemented. Next proposed CC-05Q guarded synthetic child integration under Worker contract. GM-only, UI deferred.

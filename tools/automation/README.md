@@ -45,3 +45,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05O
 [cc05o](cc05o/README.md) — common synthetic native pipeline, shared inputs, geometry and point review. [Report](../../docs/automation/CC05O_RESULT.md).
+
+## CC-05P
+[cc05p](cc05p/README.md) — closed synthetic job, explicit catalog disposition and independent output verifier. [Report](../../docs/automation/CC05P_RESULT.md).

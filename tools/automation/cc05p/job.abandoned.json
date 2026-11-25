@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "scope": "synthetic_review_only",
+  "fixture": "cc05o-inline-480m-v1",
+  "road_state": "abandoned",
+  "height_delta_m": 0,
+  "config_sha256": "418a6b1db5493c8b9f89f288024a769522f568483a5e614383d934506e7a941e",
+  "cache_sha256": "1177ec6d4618f198bd40f79880d3434ecbd7e0b8414881e23159c3e2a4cd9e94",
+  "export": false,
+  "osm_sha256": "d20dbe01972c981946bf17254f94a8180cbbd7c867e9741d88a91301fa0a222c"
+}
