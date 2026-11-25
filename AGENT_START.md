@@ -1,7 +1,7 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
-## АКТУАЛЬНО — продолжение после CC-05P (25.11.2026)
-**Начни с [RESUME_CC05Q](docs/automation/RESUME_CC05Q.md).** Текущая ветка `audit/map003-digital-geocatalog`, Draft PR #47, Issue #42. Последний измеренный SHA `ff84106de719dbb17fd1caa749cf5aa5269b9698`; текущий HEAD сверять. CC01–CC05P уже выполнены в ограниченном synthetic/review scope, следующий CC05Q — native synthetic child + существующий Worker. Локальный MAP-003 остаётся независимым и BLOCKED по полным высотам. Не начинать с нуля, не считать старые указания о CC01/CC05B/CC05F текущей задачей. Stage 001 PARTIAL. Ниже история и обязательные ограничения, не конкурирующие задания.
+## АКТУАЛЬНО — после CC-05Q (25.11.2026)
+**Начни с [RESUME_AFTER_CC05Q](docs/automation/RESUME_AFTER_CC05Q.md).** Draft PR #48, ветка `feat/cc05q-worker-preflight`, проверенный код `2c5b696571407b38d2fcf781a0b31a1c6a017a6b`; сверить HEAD. CC05Q Linux native synthetic integration PASS в ограниченном объёме, остальное PARTIAL. Следующий предложенный облачный блок CC05R (Worker→Sector Manager), NOT RUN. Локальный MAP-003 независим, 629 NoData; Stage 001 PARTIAL. Исторические записи ниже не являются конкурирующими заданиями.
 
 **Для:** Cursor/«Луна», Codex, ChatGPT и любого нового агента.  
 **Контрольная точка:** Stage 001 — Foundation / PARTIAL; реальный WRP и запуск Arma 3 не подтверждены.  
