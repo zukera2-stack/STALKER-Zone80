@@ -123,3 +123,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## Documentation handoff after CC-05P — 25.11.2026
 No new native execution or new PASS. Re-read current PR #47 HEAD `ff84106de719dbb17fd1caa749cf5aa5269b9698`, confirmed repository tree contains prior CC reports and current Worker/sector/child sources; private Library names checked by listing, not byte rehash. [RESUME_CC05Q](automation/RESUME_CC05Q.md) supersedes old next-step instructions, distinguishes evidence from planned work and documents CC05Q criteria. Stage 001 PARTIAL; local MAP-003 blockers unchanged.
+
+## CC-05Q — native synthetic Worker integration, 25.11.2026
+[CC05Q_NATIVE_RESULT](automation/CC05Q_NATIVE_RESULT.md), Draft PR #48, measured code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b. Owner files and offline SDK/GRM/BIS verified; clean build 0 errors/43 warnings. CC05P suite matches prior digest. Two native integration suites, 12 checks each, 4 successful and 4 deliberately cancelled/failed/interrupted child starts per suite. Verified durable review, skip, changed input/binary, tamper, expiry, stop/RSS/timeout, lock and same-boot recovery after Worker SIGKILL. Only bounded Linux synthetic; hard memory/Windows/reboot/unknown PID/production gates remain open. Stage 001 PARTIAL; local 629 NoData unchanged.
