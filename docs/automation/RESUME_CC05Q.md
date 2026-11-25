@@ -1,5 +1,7 @@
 # START HERE — передача Zone80 после CC-05P
 
+**Superseded checkpoint:** [RESUME_AFTER_CC05Q](RESUME_AFTER_CC05Q.md), measured [CC05Q result](CC05Q_NATIVE_RESULT.md), Draft PR #48. This older assignment is historical; do not start again. Real/local gates unchanged.
+
 Дата: 25.11.2026. Документ передачи, не новый тест. Последний измеренный код: `ff84106de719dbb17fd1caa749cf5aa5269b9698`. Этот SHA — **evidence cutoff**, не обещание текущего HEAD. Рабочая ветка `audit/map003-digital-geocatalog`, [Draft PR #47](https://github.com/zukera2-stack/STALKER-Zone80/pull/47), активная [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42). Main не содержит всех результатов. Stage 001 / PARTIAL.
 
 ## 1. Первые действия любого нового агента
