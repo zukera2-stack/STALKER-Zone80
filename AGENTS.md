@@ -1,6 +1,6 @@
 # Agent instructions: STALKER Zone80
 
-**Current handoff:** [RESUME_AFTER_CC05Q](docs/automation/RESUME_AFTER_CC05Q.md). Draft PR #48, measured code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b; CC05Q bounded Linux synthetic PASS, overall PARTIAL. Proposed next CC05R NOT RUN. Reuse current components, do not rewrite. Local MAP-003 and all STOP rules unchanged.
+**Current handoff:** [RESUME_AFTER_CC05R](docs/automation/RESUME_AFTER_CC05R.md). Branch feat/cc05r-sector-review, measured code 7954bd57b9d7ca72404b1841204989f906686459. CC05R bounded Linux synthetic PASS / overall PARTIAL; proposed CC06A read-only UI NOT RUN. Reuse prior components. Local MAP-003 and all STOP rules unchanged.
 
 **First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.
 
