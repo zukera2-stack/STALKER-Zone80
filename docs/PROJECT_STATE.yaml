@@ -1,7 +1,7 @@
 # Current snapshot, updated only from the cited evidence.
 # A Draft PR is NOT merged into main and a Windows report is not cloud execution.
 project: STALKER-Zone80
-updated_utc: "2026-11-24"
+updated_utc: "2026-11-25"
 stage: "001-foundation"
 status: "PARTIAL"
 main_goal: "One geographically grounded Arma 3 world; heightmap + roads now, buildings later"
@@ -42,8 +42,8 @@ pilot:
   alternate_source_tile_id: "SRTM N51E030 (only if explicitly selected)"
   source_online_layer_available_in_gm: "NOT TESTED"
   global_mapper_online_height_export: "NOT RUN"
-  global_mapper_new_fixed_grid_64_export: "NOT RUN"
-  terrain_builder_height_only_import: "NOT RUN"
+  global_mapper_new_fixed_grid_64_export: "DIAGNOSTIC PASS geometry; 629 NoData; final export BLOCKED"
+  terrain_builder_height_only_import: "NOT RUN; BLOCKED by 629 NoData"
   grid_first_rule: true
   no_data_required_for_tb: 0
 verified:
@@ -130,10 +130,10 @@ integrated_map003_assignment:
   separate_small_issues_required: false
   completed_new_run: false
   streams:
-    height_source_export_in_gm26: "NOT RUN"
-    roads_geospatial_alignment_and_preview: "HISTORICAL PARTIAL; NEW INTEGRATED RESULT NOT RUN"
-    building_catalog_and_model_family_requirements: "HISTORICAL PARTIAL; NEW INTEGRATED RESULT NOT RUN"
-    tb_terrain_only_isolated_import: "NOT RUN; safe sandbox mandatory"
+    height_source_export_in_gm26: "DIAGNOSTIC PASS; final BLOCKED (629 NoData)"
+    roads_geospatial_alignment_and_preview: "PASS for existing source bbox; coverage incomplete"
+    building_catalog_and_model_family_requirements: "PARTIAL; 449 records, candidate groups not confirmed series"
+    tb_terrain_only_isolated_import: "BLOCKED; NOT RUN; safe sandbox mandatory"
   consolidated_report_path: "docs/map/MAP_003_INTEGRATED_RESULT.md"
   building_requirements_report_path: "docs/map/BUILDING_MODEL_NEEDS.md"
   output_branch_and_pr: "new Draft PR from checked current head; no merge"
@@ -142,7 +142,7 @@ map003_local_evidence:
   report: "docs/map/MAP_003_INTEGRATED_RESULT.md"
   exact_asc_diagnostic: "64x64 at 30m, 629 NoData; final output BLOCKED"
   roads: "446 source IDs projected by GM; original OSM extent only"
-  building_catalog: "PARTIAL; 449 separate footprints"
+  building_catalog: "PARTIAL; 449 records, not independent physical buildings"
   tb_import: "BLOCKED; height input incomplete"
 
 map003_offline_geocatalog:
@@ -181,3 +181,55 @@ local_background_automation:
   scheduler_registration_authorized: false
   full_world_authorized: false
   height_authority: "GM26.2 only"
+
+current_checkpoint:
+  report: "docs/map/MAP_003_CURRENT_CHECKPOINT.md"
+  evidence_cutoff_sha: "bbbd43916c712830de26f9779a3ab010788b70fb"
+  date: "2026-11-25"
+grm_configuration:
+  upstream_version: "v0.11.1"
+  upstream_sha: "2aef2040836daa11a8a368bb0c7f9ecd8f405d65"
+  installed_version_verified: false
+  minimal_dependencies_policy: "docs/integration/MINIMAL_DEPENDENCIES.md"
+  source_reference_unique_paths: 204
+  source_reference_stock_candidates: 181
+  source_reference_external: 23
+  owner_base_references: 344
+  owner_base_stock_loose_present: 321
+  owner_base_external_loose_absent: 23
+  ground_color_candidates: 55
+  paired_normal_candidates: 54
+  inventory_errors: 0
+  dependency_closure_verified: false
+  v02_studio_open_save: "PASS editor only; 6/7 changed surfaces restored"
+  v03_status: "EDITOR ONLY; bounded Python transform tested; native parser NOT RUN"
+  v03_reference_count: 203
+  v03_inventory_or_pair_covered: 179
+  v03_new_stock_surface_unverified: 22
+  v03_external_ice: 2
+  v03_negative_subcases_passed: 12
+  v03_material_definitions: 11
+  v03_material_usages: 16
+  v03_zip_sha256: "5c1acdf80eaa5e0fd61adddd41845946e8df6e994881c16faaaf2a20cdbee90a"
+  v03_artifact: "Zone80_Config_Preflight_v03.zip (owner copy; not committed)"
+  unresolved_base_world: "arm_world_centraleurope"
+  unresolved_base_dependency: "arm_centraleurope"
+  mud_surface_verified: false
+  production_compiler_ready: false
+  gm_adapter_implemented: false
+  native_generation_authorized: false
+  native_generation_tested: false
+  report: "docs/map/GRM_CONFIG_PREFLIGHT_V03.md"
+map003_surface_and_coverage:
+  valid_height_cells: 3467
+  nodata_cells: 629
+  building_records_fully_covered: 444
+  road_ids_fully_covered: 427
+  pedestrian_area_polygons: 45
+  pedestrian_area_m2: 32994.114
+  pedestrian_area_building_overlap_count: 32
+  landcover_complete: false
+  reports:
+    - "docs/map/MAP_003_COVERAGE_AUDIT.md"
+    - "docs/map/MAP_003_ROAD_AUDIT.md"
+    - "docs/map/MAP_003_SURFACE_AUDIT.md"

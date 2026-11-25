@@ -91,3 +91,6 @@ Read [ZONE80–ZPB contract](docs/integration/ZONE80_ZPB_CONTRACT.md) before wor
 
 ## Owner decision — minimal runtime dependencies (2026-11-24)
 Read [MINIMAL_DEPENDENCIES](docs/integration/MINIMAL_DEPENDENCIES.md). Base Arma 3 + free Enoch + own project packages only as target. No mandatory external mods/paid DLC; actual compatibility untested. Existing gates unchanged.
+
+## Контрольная точка 25.11.2026 — читать перед продолжением
+[MAP_003_CURRENT_CHECKPOINT](docs/map/MAP_003_CURRENT_CHECKPOINT.md) — единый актуальный индекс геокаталога, GRM и фоновой автоматизации. Рабочая ветка Draft PR #47; точный HEAD проверять перед задачей. [v03](docs/map/GRM_CONFIG_PREFLIGHT_V03.md) — editor-only, 179/203 refs covered, 22 stock refs unverified, 2 external ice + external base world; шесть материалов подтверждены сохранением v02 в Studio. Не повторять исходные инвентаризации и ручную настройку. Следующий локальный preflight: новые clutter refs, mud, классы/зависимости, затем gates адаптера GM. A GM diagnostic 629 NoData / D TB BLOCKED, B existing bbox PASS, C PARTIAL. Stage 001 PARTIAL. Все запреты сохраняются.

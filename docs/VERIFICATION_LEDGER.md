@@ -49,3 +49,14 @@
 ## E-017 — офлайн-аудит геокаталога Припяти (24.11.2026)
 
 [PRIPYAT_DIGITAL_GEOCATALOG](map/PRIPYAT_DIGITAL_GEOCATALOG.md). Реально обработан предоставленный владельцем MAP-003 verification ZIP из PR #46. 449 валидных полигонов/мультиполигонов, 0 точных геометрических дублей, 12 пар положительных наложений, 11 выше порога ревью. 135 жилых записей допущены к проверке сходства, 28 групп / 96 записей; 39 одиночных. 446 дорожных ID, 69,863 км суммы длин, 25 компонент геометрического графа. Два прогона дали побайтно одинаковые выходы. **PASS только для офлайн-анализа данного снимка**, не окончательный каталог физических зданий, не маршрутизируемая сеть, не доказательство советских серий. Исходные OSM роли отношений отсутствуют в ZIP. Исторические референсы и типы остаются PARTIAL; GM высоты с полным покрытием BLOCKED, TB NOT RUN. Никаких новых высот или игровых файлов.
+
+## Дополнение 25.11.2026 — актуальные свидетельства (E-018…E-023)
+| ID | Среда / операция | Измерение | Статус и источник |
+|---|---|---|---|
+| E-018 | Offline Python GIS, existing snapshot | 444/449 building records, 427/446 road IDs fully covered; two identical runs | PASS analysis only [coverage](map/MAP_003_COVERAGE_AUDIT.md) |
+| E-019 | Offline road/surface audit | 784 contact candidates, 45 malformed tag fields, 45 area polygons; deterministic repeat | PASS static analysis only [roads](map/MAP_003_ROAD_AUDIT.md), [surfaces](map/MAP_003_SURFACE_AUDIT.md) |
+| E-020 | Pinned GRM source / in-memory JS | 204 combined references, 23 external; 5+8+10 negative cases reported | PASS reference analysis only [vegetation](map/GRM_VEGETATION_PREFLIGHT.md), [roads/materials](map/GRM_ROADS_MATERIALS_PREFLIGHT.md), [infrastructure](map/GRM_INFRASTRUCTURE_PREFLIGHT.md) |
+| E-021 | Owner Windows, read-only inventory | 321/321 a3 loose refs present, 23 external absent loose; 55 color candidates, 54 pairs | PASS existence scan only [inventory](map/GRM_LOCAL_INVENTORY_RESULT.md) |
+| E-022 | Owner Studio open/save v02 | 6/7 changed materials restored Surface metadata; all 11 IDs/16 usages preserved | PASS editor roundtrip only [roundtrip](map/GRM_STUDIO_ROUNDTRIP.md) |
+| E-023 | Cloud Python v03 transformer | 2 unittest methods PASS, 12 negative subcases; 203 refs, ZIP CRC PASS | PASS bounded transform only [v03 hashes/tests](map/GRM_CONFIG_PREFLIGHT_V03.md); native v03 NOT RUN |
+E-014 original online acquisition remains NOT RUN; later local diagnostic export in integrated report has 629 NoData. No final full heightmap, no native generation, no TB import, no game PASS. [Current checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md).

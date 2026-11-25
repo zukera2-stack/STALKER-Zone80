@@ -23,3 +23,6 @@ Two distinct locations serve different purposes:
 ## Document authority
 
 A historical report proves what that report observed, not the current installed state. A passing CI validates config and small scripts only; it does not prove the WRP generation, model permissions, or game loading. When uncertain, label claims PROVISIONAL / NOT TESTED. Agent workflow described by root AGENT_START.md.
+
+## Owner artifact register — 2026-11-25
+Files delivered in conversation (not claimed copied to personal Library or local Cursor): Zone80_base.grma3a, Zone80_inventory.json, Zone80_v02.grma3a, Zone80_Config_Preflight_v03.zip and prior editor-only copies. Exact hashes and scope in [owner preflight](map/GRM_OWNER_CONFIG_PREFLIGHT.md), [inventory](map/GRM_LOCAL_INVENTORY_RESULT.md), [roundtrip](map/GRM_STUDIO_ROUNDTRIP.md), [v03](map/GRM_CONFIG_PREFLIGHT_V03.md). If unavailable request owner copy; no blind download or public upload. GIS audit ZIP names and hashes in [checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md) linked reports. This is a register, not a file transfer.
