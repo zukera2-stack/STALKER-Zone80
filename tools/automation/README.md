@@ -36,3 +36,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05L
 [cc05l](cc05l/README.md) — bounded native hydrography and diagnostic material mask probe. [Report](../../docs/automation/CC05L_RESULT.md).
+
+## CC-05M
+[cc05m](cc05m/README.md) — bounded explicit surface geometry plan and semantic/material mask probe. [Report](../../docs/automation/CC05M_RESULT.md).

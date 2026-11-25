@@ -1,0 +1,16 @@
+  BIS.Core -> <GRM_ROOT>/bis-file-formats/BIS.Core/bin/linux/amd64/Release/netstandard2.0/BIS.Core.dll
+  GameRealisticMap -> <GRM_ROOT>/GameRealisticMap/bin/linux/amd64/Release/net10.0/GameRealisticMap.dll
+  BIS.PBO -> <GRM_ROOT>/bis-file-formats/BIS.PBO/bin/linux/amd64/Release/netstandard2.0/BIS.PBO.dll
+  BIS.PAA -> <GRM_ROOT>/bis-file-formats/BIS.PAA/bin/linux/amd64/Release/netstandard2.0/BIS.PAA.dll
+  BIS.WRP -> <GRM_ROOT>/bis-file-formats/BIS.WRP/bin/linux/amd64/Release/netstandard2.0/BIS.WRP.dll
+  BIS.P3D -> <GRM_ROOT>/bis-file-formats/BIS.P3D/bin/linux/amd64/Release/netstandard2.0/BIS.P3D.dll
+  GameRealisticMap.Arma3 -> <GRM_ROOT>/GameRealisticMap.Arma3/bin/linux/amd64/Release/net10.0/GameRealisticMap.Arma3.dll
+<PROBE_ROOT>/SurfacePlan.cs(30,114): error CS0103: The name 'PolygonDrawHelper' does not exist in the current context [<PROBE_ROOT>/Zone80.SurfaceProbe.csproj]
+
+Build FAILED.
+
+<PROBE_ROOT>/SurfacePlan.cs(30,114): error CS0103: The name 'PolygonDrawHelper' does not exist in the current context [<PROBE_ROOT>/Zone80.SurfaceProbe.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:03.35

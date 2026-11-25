@@ -536,3 +536,24 @@ cc05l_result:
   grid_unchanged: true
   real_generation: false
   next: "CC-05M GM-only surface geometry contract and full priority review"
+
+cc05m_result:
+  report: "docs/automation/CC05M_RESULT.md"
+  native_probe_passes: 2
+  fixture_osm_ways: 15
+  material_usages: 16
+  material_ids: 11
+  render_slots_including_default: 18
+  visible_semantic_slots: 15
+  visible_material_colors: 9
+  diagnostic_mask_pixels: [480, 480]
+  semantic_controls_per_run: 17
+  invalid_input_refusals_per_run: 4
+  all_pixels_mapping_checked: true
+  asphalt_candidate_changed_pixels: 2800
+  native_asphalt_excludes_forest: true
+  full_native_idmap_tested: false
+  full_priority_graph_tested: false
+  grid_unchanged: true
+  real_generation: false
+  next: "CC-05N remaining native infrastructure placement and consolidation"

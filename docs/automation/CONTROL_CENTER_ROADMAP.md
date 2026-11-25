@@ -112,3 +112,6 @@ Owner requires irregular natural forest, understory, fallen deadwood and standin
 
 ## CC-05L result
 [CC05L_RESULT](CC05L_RESULT.md): bounded native hydrography, 13 watercourse records, native polygon diagnostic mask and exact material mapping PASS; full IdMap NOT RUN, radial denied elevation dependency. River width, canal, StreamTunnel flag and lake inset review required. Next proposed CC-05M GM-only surface geometry contract and priority graph. UI deferred.
+
+## CC-05M result
+[CC05M_RESULT](CC05M_RESULT.md): bounded ordered surface plan, native drawing/coordinate helpers, semantic mask controls and all-pixel mapping PASS twice; 16 usages, 11 IDs, 2800 changed pixels in experimental preserved-asphalt candidate. Full IdMap and generalized landcover priority graph NOT RUN. Next proposed CC-05N remaining native infrastructure placement and common contract consolidation. GM-only, UI deferred.

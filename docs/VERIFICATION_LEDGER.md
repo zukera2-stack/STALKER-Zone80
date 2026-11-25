@@ -108,3 +108,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05L — bounded native hydrography and diagnostic mask
 [CC05L_RESULT](automation/CC05L_RESULT.md): two identical runs, 13 native placements, +100m Z, unchanged grid, six pixel controls; 16 usages/11 colors checked. Full IdMap and actual water rendering NOT RUN. StreamTunnel flag, width and canal defects preserved as observations, not approvals. Stage 001 PARTIAL.
+
+## CC-05M — bounded surface plan
+[CC05M_RESULT](automation/CC05M_RESULT.md): actual offline build and two identical executions; 17 point controls and all pixels in both masks matched semantic palette, 4 invalid inputs refused per run. Grass/Forest forbidden height dependency observed. Candidate asphalt preservation tested only in fixture. Full stock IdMap, actual coast/ice, runtime and real map NOT RUN. Stage 001 PARTIAL.

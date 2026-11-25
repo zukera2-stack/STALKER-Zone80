@@ -151,3 +151,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05L measured result
 [CC05L_RESULT](docs/automation/CC05L_RESULT.md): native lakes/watercourses/sand and WatercourseGenerator PASS bounded, 13 records, +100m Z and repeat. Native polygon draw helper produced memory-only 480x480 mask, 16 usage/11 material mapping PASS; full IdMapRender NOT RUN due to ElevationWithLakesData, radial actually refused. River width fixed, canal omitted, StreamTunnel flag false, lake inset clips edge. Next proposed CC-05M GM-only surface geometry contract and priority graph tests. Stage 001 PARTIAL, no real generation.
+
+## CC-05M measured result
+[CC05M_RESULT](docs/automation/CC05M_RESULT.md): explicit bounded 18-slot surface plan using native drawing/coordinate helpers, 16 usage mappings, 11 material IDs, 15 visible slots/9 colors, 17 semantic controls and exact all-pixel mapping; two identical runs and unchanged grid. Native AsphaltBuilder excludes forest; candidate retains asphalt under vegetation (2800 pixels changed). Full stock IdMap NOT RUN, Grass/Forest blocked at lake elevation dependency, coast/ice absent in fixture. Next proposed CC-05N remaining native infrastructure placement, then common contracts. Stage 001 PARTIAL, no real generation.
