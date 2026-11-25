@@ -58,3 +58,6 @@ No broad new data acquisition, no generated real heightmaps through Python/GDAL/
 ## Start and stop
 
 Next proposed development task: CC-01, working bounded synthetic worker in tools/automation/ plus tests, documented interface and reproducible logs. Then CC-02 before native integration. User request at this checkpoint is documentation only: no new code or tests executed here. Update PROJECT_STATE and ledger only when actual evidence arrives. The seven-step roadmap records direction; later real native actions require their existing gates. Continue existing Issue #42; no new microissues.
+
+## CC-01 result / 2026-11-25
+[CC01_RESULT](CC01_RESULT.md): bounded Linux synthetic core implemented and tested (9 unittest methods incl 14 invalid-manifest subcases, two CLI jobs PASS and verified resume skips). CC-01 cloud core PASS in scope; full WORKER_CONTRACT remains PARTIAL. Windows and real process-tree limits not implemented, no active cancellation or crash reconciliation proof. Next CC-02. No native execution or scheduler. Earlier table is the original plan, not the current execution state.

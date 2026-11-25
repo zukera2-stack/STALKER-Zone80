@@ -97,3 +97,6 @@ Read [MINIMAL_DEPENDENCIES](docs/integration/MINIMAL_DEPENDENCIES.md). Base Arma
 
 ## План разработки без Луны — 25.11.2026
 [Zone80 Control Center / CC-01…07](docs/automation/CONTROL_CENTER_ROADMAP.md) — семиэтапный план автономной разработки программного ядра: Worker → отказоустойчивость → Sector Manager → Config Builder → GM Adapter → Control Center → интеграция с Луной. Следующий программный подэтап CC-01 (синтетика). Это не повышение Stage 001 и не разрешение реальной генерации. Локальный MAP-003 и preflight остаются независимыми; соблюдать WORKER_CONTRACT и все gates. Не считать план выполнением.
+
+## CC-01 checkpoint
+Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthetic worker in tools/automation/cc01; next CC-02 fault injection. Windows deliberately blocked; old disabled manifest not executable by this prototype. No actual GIS/native job, no Stage promotion. Existing local MAP-003 gates unchanged.

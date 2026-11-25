@@ -1,0 +1,24 @@
+test_cli_real_process (test_worker.WorkerTests.test_cli_real_process) ... ok
+test_corrupted_artifact_not_skipped (test_worker.WorkerTests.test_corrupted_artifact_not_skipped) ... ok
+test_duplicate_json_keys (test_worker.WorkerTests.test_duplicate_json_keys) ... ok
+test_interrupt_conservative (test_worker.WorkerTests.test_interrupt_conservative) ... ok
+test_negative_manifests (test_worker.WorkerTests.test_negative_manifests) ... ok
+test_os_lock (test_worker.WorkerTests.test_os_lock) ... ok
+test_resource_block_and_dependencies (test_worker.WorkerTests.test_resource_block_and_dependencies) ... ok
+test_stop_and_symlink (test_worker.WorkerTests.test_stop_and_symlink) ... ok
+test_success_resume_and_invalidation (test_worker.WorkerTests.test_success_resume_and_invalidation) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.104s
+
+OK
+a PASS
+b PASS
+a PASS
+b SKIP verified PASS
+a PASS
+b PASS
+a SKIP verified PASS
+b SKIP verified PASS
+a PASS
+b PASS

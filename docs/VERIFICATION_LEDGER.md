@@ -60,3 +60,6 @@
 | E-022 | Owner Studio open/save v02 | 6/7 changed materials restored Surface metadata; all 11 IDs/16 usages preserved | PASS editor roundtrip only [roundtrip](map/GRM_STUDIO_ROUNDTRIP.md) |
 | E-023 | Cloud Python v03 transformer | 2 unittest methods PASS, 12 negative subcases; 203 refs, ZIP CRC PASS | PASS bounded transform only [v03 hashes/tests](map/GRM_CONFIG_PREFLIGHT_V03.md); native v03 NOT RUN |
 E-014 original online acquisition remains NOT RUN; later local diagnostic export in integrated report has 629 NoData. No final full heightmap, no native generation, no TB import, no game PASS. [Current checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md).
+
+## E-024 — CC-01 Linux synthetic Worker (25.11.2026)
+Actual Python 3.13.5 Linux tests: `python -m unittest -v test_worker.py` 9 methods PASS, 14 negative manifest subcases, repeat suite PASS 2.104s. Actual CLI two dependent jobs PASS then two verified skips. Code blobs checked against tested Git blob SHA, artifact hashes and scope in [CC01_RESULT](automation/CC01_RESULT.md). No native tools, Windows, detached survival, full process tree or scheduler tested. CC-02 next; Stage 001 PARTIAL.

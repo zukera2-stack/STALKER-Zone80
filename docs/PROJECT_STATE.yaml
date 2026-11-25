@@ -174,8 +174,8 @@ map003_offline_geocatalog:
 local_background_automation:
   handoff: "docs/automation/LUNA_HANDOFF.md"
   contract: "docs/automation/WORKER_CONTRACT.md"
-  status: "DESIGN AND SKILLS ONLY; implementation NOT RUN"
-  synthetic_tests: "NOT RUN"
+  status: "CC-01 bounded Linux synthetic core tested; Windows NOT RUN"
+  synthetic_tests: "CC-01 Linux PASS 9 unittest methods; 14 manifest negatives; CC-02 pending"
   native_grm_layer: "NOT RUN; gated"
   scheduler_registered: false
   scheduler_registration_authorized: false
@@ -238,11 +238,11 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "DOCUMENTED; no new implementation or tests"
-  next_proposed_step: "CC-01 synthetic worker core"
+  status: "CC-01 Linux synthetic implementation PASS in scope; contract partial"
+  next_proposed_step: "CC-02 fault injection and recovery"
   stages:
-    CC-01: "DESIGN ONLY; NEXT"
-    CC-02: "PLANNED; fault injection"
+    CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
+    CC-02: "NEXT; fault injection"
     CC-03: "PLANNED; logical sector manager"
     CC-04: "PARTIAL precursor v03; production compiler PLANNED"
     CC-05: "PLANNED; native GM-GRM adapter BLOCKED"
@@ -252,3 +252,14 @@ control_center_roadmap:
   production_generation_authorized: false
   scheduler_registration_authorized: false
   overall_stage_unchanged: "001 / PARTIAL"
+
+cc01_result:
+  report: "docs/automation/CC01_RESULT.md"
+  base_sha: "134b07632bfe271a8cc1d3431381e83b26379b83"
+  synthetic_test_methods_passed: 9
+  manifest_negative_subcases_passed: 14
+  linux_cli_demo_jobs_passed: 2
+  linux_cli_resume_jobs_skipped: 2
+  windows_tested: false
+  scheduler_registered: false
+  native_jobs_authorized: false

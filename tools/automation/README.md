@@ -1,2 +1,2 @@
-# Zone80 Worker implementation placeholder
-Luna implements here per docs/automation/WORKER_CONTRACT.md and LUNA_HANDOFF.md. Start with synthetic-only runner and tests; no actual worker shipped yet. No execution of configs/automation/map003-queue.json.example. Local runtime state and outputs only in ignored reports/ or output/ outside P:. No services/scheduler until approved.
+# Zone80 Worker
+Current CC-01 implementation in [cc01/](cc01/README.md). Linux synthetic-only prototype. Run from that directory: `python -m unittest -v test_worker.py`. Read [result](../../docs/automation/CC01_RESULT.md), [contract](../../docs/automation/WORKER_CONTRACT.md), [roadmap](../../docs/automation/CONTROL_CENTER_ROADMAP.md). No native adapters, Windows execution, scheduler or GIS generation. The older disabled queue example remains a non-executable contract illustration; CC-01 has its own narrower schema. Next CC-02.
