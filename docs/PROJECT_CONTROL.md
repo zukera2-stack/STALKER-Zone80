@@ -1,6 +1,6 @@
 # PROJECT CONTROL — единый навигатор STALKER-Zone80
 
-**Текущая передача:** [RESUME_CC05Q](automation/RESUME_CC05Q.md) — единый рабочий маршрут после CC05P, evidence cutoff `ff84106de719dbb17fd1caa749cf5aa5269b9698`. Два независимых потока: CC05Q synthetic в облаке; локальный MAP-003 full GM coverage/asset gate при доступности Cursor. Stage 001 PARTIAL.
+**Текущая передача:** [RESUME_AFTER_CC05Q](automation/RESUME_AFTER_CC05Q.md), Draft PR #48, tested code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b. CC05Q Linux synthetic native integration measured PASS; proposed next CC05R NOT RUN. Local MAP-003 full GM coverage remains independently blocked; Stage 001 PARTIAL.
 
 **Аудит:** 2026-11-24; актуализация 2026-11-25, см. [контрольную точку](map/MAP_003_CURRENT_CHECKPOINT.md). **Статус этого документа:** proposed in Draft PR, **не объединён с `main`**. Владелец принимает решения, GitHub Issues задают разрешённый объём, независимые журналы подтверждают результаты. Любой новый агент сначала читает `AGENT_START.md`, `AGENTS.md`, **этот файл**, затем текущую Issue.
 
@@ -73,3 +73,6 @@
 
 ## 7. Автономная разработка Control Center
 [CONTROL_CENTER_ROADMAP](automation/CONTROL_CENTER_ROADMAP.md) — порядок CC-01…07, критерии приёмки и разделение cloud/synthetic и локальной Windows-интеграции. Следующий программный подэтап CC-05Q — интеграция существующего CC02 Worker и CC05P native child, [handoff](automation/RESUME_CC05Q.md). План не заменяет текущую Issue #42 и не блокирует независимое разрешённое MAP-003 локальное GIS задание. Stage 001 PARTIAL.
+
+## 8. CC05Q — измеренная интеграция 25.11.2026
+[Отчёт](automation/CC05Q_NATIVE_RESULT.md): восстановлена офлайн-среда, native Worker + CC05P два прогона, skip/invalidation/cancel/timeout/lock/crash recovery. Ранее NOT RUN в разделах 6–7 — исторический статус до этого прогона. PR #48 зависим от #47, no merge. Следующий предложенный CC05R — Worker→Sector Manager, NOT RUN. Никаких изменений реального MAP-003.
