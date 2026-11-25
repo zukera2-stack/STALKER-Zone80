@@ -1,0 +1,13 @@
+PASS real native baseline 1015 1.7244 115453952
+PASS validated resume skip
+PASS altered review rejected; new native attempt, old evidence preserved
+PASS changed binary refused
+PASS changed valid input; actual 1062-record native attempt
+PASS expiry refused even for cached result
+PASS stop before start
+PASS actual native cancellation; group empty; no publication
+PASS sampled RSS limit
+PASS actual native wall timeout; owned group empty
+PASS concurrent runner refused
+PASS worker SIGKILL; no second live child; explicit native recovery
+PASS bounded native acceptance; not production or Windows
