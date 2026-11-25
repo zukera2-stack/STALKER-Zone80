@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><OutputType>Exe</OutputType><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="$(GrmRoot)/GameRealisticMap/GameRealisticMap.csproj" /></ItemGroup>
+  <Target Name="RequirePinnedUpstream" BeforeTargets="PrepareForBuild" Condition="'$(GrmRoot)' == ''"><Error Text="Supply -p:GrmRoot to a separately checked-out pinned GRM source tree." /></Target>
+</Project>

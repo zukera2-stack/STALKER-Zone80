@@ -238,15 +238,15 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "CC-05 read-only GM input validator PASS in scope; native adapter BLOCKED"
-  next_proposed_step: "CC-06 offline Control Center and synthetic integration"
+  status: "CC-05B GM-only C# bridge candidate written; Python intake PASS; native compilation BLOCKED locally"
+  next_proposed_step: "CC-05C compile and verify guarded native GRM bridge; CC-06 deferred by owner"
   stages:
     CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
     CC-02: "PASS bounded Linux synthetic fault injection; hard resource/Windows gates pending"
     CC-03: "PASS synthetic logical sector planning; native GIS seams NOT RUN"
     CC-04: "PASS review-only assembly/audit core; production compiler BLOCKED"
-    CC-05: "PASS read-only validation and source design; native provider BLOCKED"
-    CC-06: "NEXT; offline Control Center and synthetic integration"
+    CC-05: "PARTIAL; CC-05B source candidate and verified Python intake; native runtime NOT RUN"
+    CC-06: "DEFERRED until GM-only GRM integration prototype verified"
     CC-07: "PLANNED; gated Windows integration"
   actual_windows_validation: false
   production_generation_authorized: false
@@ -336,3 +336,20 @@ cc05_result:
   general_crs_parser_implemented: false
   current_actual_input_pinned_historical_only: true
   next: "CC-06 offline Control Center"
+
+cc05b_result:
+  report: "docs/automation/CC05B_RESULT.md"
+  base_sha: "51d364e3b5e6a410412b5ab6da8e04c3094f8902"
+  owner_selected_direct_gm_to_grm: true
+  python_tests_passed: 8
+  python_full_suite_passes: 2
+  historical_node_alignment_rejected: true
+  csharp_candidate_written: true
+  csharp_compiled_locally: false
+  csharp_smoke_tested: false
+  real_context_enabled: false
+  native_layer_tested: false
+  node_aligned_real_export_verified: false
+  upstream_source_license_verified: false
+  ui_deferred: true
+  next: "CC-05C native synthetic smoke test then reviewed offline layer integration"

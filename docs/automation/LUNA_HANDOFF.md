@@ -16,3 +16,6 @@ Deliver one report docs/automation/WORKER_LOCAL_RESULT.md (redacted), real logs 
 
 ## Разделение разработки — 25.11.2026
 [CONTROL_CENTER_ROADMAP](CONTROL_CENTER_ROADMAP.md) фиксирует автономные CC-01…06 и локальную интеграцию CC-07. Cloud может реализовать и протестировать синтетическое ядро; Луна проверяет Windows-specific process ownership, ресурсы и нативные инструменты, продолжает разрешённую GM работу. Перед кодом сверить HEAD и назначение в Issue #42, не дублировать работу cloud. Никакого scheduler/native bypass. На дату записи нового кода нет.
+
+## Owner-approved CC-05B integration priority
+CC-06 UI deferred. [CC05B_RESULT](CC05B_RESULT.md) defines direct GM→GRM provider candidate and separate node-aligned GM export request, not a real result or new authorization to generate layers. Do not replace existing cell-centered TB ASC. GM remains sole real height authority; verify sample lattice, complete coverage, NoData=0, native GRM coordinates and last-strip clamp. Original C# candidate requires .NET 10 and pinned upstream dependencies; no recognized upstream source license verified, no redistribution. Native layer remains gated.

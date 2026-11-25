@@ -112,3 +112,6 @@ Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthet
 
 ## CC-05 checkpoint
 [CC05_RESULT](docs/automation/CC05_RESULT.md): 12 synthetic tests PASS twice, actual pinned diagnostic 3467/4096 valid and 629 NoData; 5/5 controls match. GRM source seam identified, but native provider BLOCKED by missing heights, node/center mismatch, mutation and external dependencies. No native patch, no new elevations. Next CC-06 offline Control Center with synthetic integration; separate CC-07 local validation gates. No P: writes, generation or merge; Stage 001 PARTIAL.
+
+## Owner-approved pivot CC-05B
+Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Read [CC05B_RESULT](docs/automation/CC05B_RESULT.md) and tools/automation/cc05b/README.md. Python node-compatible input gate tested; C# source candidate NOT compiled or run locally; synthetic-only factory, real context disabled. Next CC-05C compile against pinned GRM net10 and verify native synthetic consumer; no real generation until source/CRS/grid/edge/asset/offline dependency gates. Do not claim recognized upstream source license or distribute modified GRM. Stage 001 PARTIAL, no P: writes, merge or native map output.

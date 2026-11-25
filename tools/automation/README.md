@@ -9,3 +9,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05 GM input review
 [cc05/](cc05/README.md): strict read-only ASC review of the pinned historical owner archive, synthetic center sampling and validation; native integration design only. Run `python -m unittest -v test_gm_adapter.py` from cc05. Diagnostic CLI exit 2 is expected (NoData), not a successful native import. No raster output. [Report](../../docs/automation/CC05_RESULT.md). Next CC-06.
+
+## CC-05B GM-only bridge (owner-selected)
+[cc05b/](cc05b/README.md): read-only node-compatible input contract, 8 Python tests PASS twice; original C# bridge candidate and synthetic smoke harness for actual GRM APIs, compile NOT RUN locally. No native real-context entrypoint. [Report](../../docs/automation/CC05B_RESULT.md). UI deferred; CC-05C build and native synthetic smoke next.

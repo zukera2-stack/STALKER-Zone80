@@ -1,0 +1,17 @@
+{
+  "status": "VALIDATED_INPUT_ONLY",
+  "size": 3,
+  "nodes": 9,
+  "nodata": 0,
+  "asc_sha256": "bc03691bf80ebf7a43ccca95216d7f234609a6d8d10b979224a8a1c63dab9cc5",
+  "prj_sha256": "76b091aa72fb0be13da3782ed525a3363555a119fd427fb97d61d2b9d62b8316",
+  "float32_sha256": "d946f8fd6db6b57ef25b7ab54a7c4fff3142db0798c513e134c06231642ff6d6",
+  "max_float32_rounding_m": "0",
+  "node_origin_m": [
+    "1000",
+    "2000"
+  ],
+  "cell_m": "30",
+  "outer_edge_policy": "UNRESOLVED_NATIVE_CLAMP",
+  "native_generation_authorized": false
+}

@@ -1,0 +1,13 @@
+test_bad_grid (test_gm_node_input.Tests.test_bad_grid) ... ok
+test_deterministic (test_gm_node_input.Tests.test_deterministic) ... ok
+test_hash (test_gm_node_input.Tests.test_hash) ... ok
+test_metadata (test_gm_node_input.Tests.test_metadata) ... ok
+test_nodata (test_gm_node_input.Tests.test_nodata) ... ok
+test_orientation (test_gm_node_input.Tests.test_orientation) ... ok
+test_pixel_shift (test_gm_node_input.Tests.test_pixel_shift) ... ok
+test_quantization (test_gm_node_input.Tests.test_quantization) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
