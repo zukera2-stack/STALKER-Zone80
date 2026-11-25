@@ -1,7 +1,7 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
-## АКТУАЛЬНО — после CC-05Q (25.11.2026)
-**Начни с [RESUME_AFTER_CC05Q](docs/automation/RESUME_AFTER_CC05Q.md).** Draft PR #48, ветка `feat/cc05q-worker-preflight`, проверенный код `2c5b696571407b38d2fcf781a0b31a1c6a017a6b`; сверить HEAD. CC05Q Linux native synthetic integration PASS в ограниченном объёме, остальное PARTIAL. Следующий предложенный облачный блок CC05R (Worker→Sector Manager), NOT RUN. Локальный MAP-003 независим, 629 NoData; Stage 001 PARTIAL. Исторические записи ниже не являются конкурирующими заданиями.
+## АКТУАЛЬНО — после CC-05R (25.11.2026)
+**Начни с [RESUME_AFTER_CC05R](docs/automation/RESUME_AFTER_CC05R.md).** Ветка `feat/cc05r-sector-review`, родительский Draft PR #48, измеренный код `7954bd57b9d7ca72404b1841204989f906686459`. CC05R bounded Linux synthetic PASS / overall PARTIAL; 64 review nodes, 112 edges, native fixture only two sectors. Решение владельца: CC06/CC06A DEFERRED до практической проверки на реальной карте. Следующий активный шаг MAP-003, полное покрытие высот в GM26.2. Локальный MAP-003 независим, 629 NoData; Stage 001 PARTIAL. Исторические записи ниже не являются конкурирующими заданиями.
 
 **Для:** Cursor/«Луна», Codex, ChatGPT и любого нового агента.  
 **Контрольная точка:** Stage 001 — Foundation / PARTIAL; реальный WRP и запуск Arma 3 не подтверждены.  

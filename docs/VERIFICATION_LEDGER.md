@@ -126,3 +126,6 @@ No new native execution or new PASS. Re-read current PR #47 HEAD `ff84106de719db
 
 ## CC-05Q — native synthetic Worker integration, 25.11.2026
 [CC05Q_NATIVE_RESULT](automation/CC05Q_NATIVE_RESULT.md), Draft PR #48, measured code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b. Owner files and offline SDK/GRM/BIS verified; clean build 0 errors/43 warnings. CC05P suite matches prior digest. Two native integration suites, 12 checks each, 4 successful and 4 deliberately cancelled/failed/interrupted child starts per suite. Verified durable review, skip, changed input/binary, tamper, expiry, stop/RSS/timeout, lock and same-boot recovery after Worker SIGKILL. Only bounded Linux synthetic; hard memory/Windows/reboot/unknown PID/production gates remain open. Stage 001 PARTIAL; local 629 NoData unchanged.
+
+## CC05R — native-to-sector review integration, 25.11.2026
+[CC05R_RESULT](automation/CC05R_RESULT.md), code 7954bd57b9d7ca72404b1841204989f906686459. 2 suites x 12 checks, 2 actual native launches per suite. Deterministic 64 review nodes/112 edges, fixture covers two nodes, 62 NOT_COVERED. Verified selective review cache, actual changed native input, failed dependency, expiry, stop/resume, corruption, lock, collinear seam gate. No independent sector generation, Windows, real geometry or stage promotion.

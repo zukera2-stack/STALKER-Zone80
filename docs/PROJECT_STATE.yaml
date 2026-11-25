@@ -659,3 +659,38 @@ cc05q_result:
   next_proposed: "CC-05R Worker to Sector Manager contract"
   next_status: "NOT RUN"
   handoff: "docs/automation/RESUME_AFTER_CC05Q.md"
+
+cc05r_result:
+  report: "docs/automation/CC05R_RESULT.md"
+  code_sha: "7954bd57b9d7ca72404b1841204989f906686459"
+  branch: "feat/cc05r-sector-review"
+  status: "PASS_BOUNDED_SYNTHETIC"
+  overall_status: "PARTIAL"
+  suites_passed: 2
+  checks_per_suite: 12
+  native_starts_per_suite: 2
+  logical_review_nodes: 64
+  shared_edges: 112
+  covered_fixture_nodes: 2
+  not_covered_nodes: 62
+  baseline_records: [917, 77, 21]
+  changed_native_total: 1062
+  rebuilt_interior: 1
+  rebuilt_boundary: 2
+  rebuilt_review_rules: 64
+  rebuilt_native_dependency: 2
+  independent_native_sectors_tested: false
+  real_generation: false
+  next_proposed: "CC06A read-only Control Center"
+  next_status: "NOT RUN"
+  handoff: "docs/automation/RESUME_AFTER_CC05R.md"
+
+owner_map_first_2026_11_25:
+  supersedes_next_proposed: "CC06A"
+  cc06_status: "DEFERRED"
+  reason: "Owner requires practical real-map validation first"
+  active_task: "MAP-003 GM26.2 full pilot elevation coverage"
+  last_measured_nodata: 629
+  required_nodata: 0
+  real_native_placement_authorized: false
+  stage_promotion: false

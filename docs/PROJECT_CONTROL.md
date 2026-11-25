@@ -1,6 +1,6 @@
 # PROJECT CONTROL — единый навигатор STALKER-Zone80
 
-**Текущая передача:** [RESUME_AFTER_CC05Q](automation/RESUME_AFTER_CC05Q.md), Draft PR #48, tested code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b. CC05Q Linux synthetic native integration measured PASS; proposed next CC05R NOT RUN. Local MAP-003 full GM coverage remains independently blocked; Stage 001 PARTIAL.
+**Текущая передача:** [RESUME_AFTER_CC05R](automation/RESUME_AFTER_CC05R.md), branch feat/cc05r-sector-review, code 7954bd57b9d7ca72404b1841204989f906686459. CC05R measured review integration PASS; owner defers CC06/CC06A until real-map validation; next MAP-003 GM-only coverage. Local MAP-003 independent BLOCKED, Stage 001 PARTIAL.
 
 **Аудит:** 2026-11-24; актуализация 2026-11-25, см. [контрольную точку](map/MAP_003_CURRENT_CHECKPOINT.md). **Статус этого документа:** proposed in Draft PR, **не объединён с `main`**. Владелец принимает решения, GitHub Issues задают разрешённый объём, независимые журналы подтверждают результаты. Любой новый агент сначала читает `AGENT_START.md`, `AGENTS.md`, **этот файл**, затем текущую Issue.
 
@@ -76,3 +76,9 @@
 
 ## 8. CC05Q — измеренная интеграция 25.11.2026
 [Отчёт](automation/CC05Q_NATIVE_RESULT.md): восстановлена офлайн-среда, native Worker + CC05P два прогона, skip/invalidation/cancel/timeout/lock/crash recovery. Ранее NOT RUN в разделах 6–7 — исторический статус до этого прогона. PR #48 зависим от #47, no merge. Следующий предложенный CC05R — Worker→Sector Manager, NOT RUN. Никаких изменений реального MAP-003.
+
+## 9. CC05R — выборочное обновление секторных отчётов
+[CC05R_RESULT](automation/CC05R_RESULT.md): два native suites, 64 review nodes, 112 edges; 1/2/64 rebuilt on metadata/rule changes, only 2 native dependent nodes on changed native job. 62 NOT_COVERED; no independent sector generation. Proposed CC06A read-only dashboard, NOT RUN. No production or stage promotion.
+
+## 10. Решение владельца — карта прежде интерфейса (25.11.2026)
+CC06/CC06A DEFERRED. Возврат к MAP-003: полный GM26.2 экспорт, 0 NoData, проверка реальных данных; TB terrain-only только после безопасной изоляции и прохождения gate. Реальная нативная генерация и размещение объектов отдельно согласуются. Stage 001 PARTIAL. CC05R evidence unchanged.

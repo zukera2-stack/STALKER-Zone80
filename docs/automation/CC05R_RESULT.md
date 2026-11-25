@@ -1,0 +1,30 @@
+# CC-05R — measured Worker to Sector Manager review contract
+25.11.2026; Issue #42; isolated branch feat/cc05r-sector-review from Draft PR #48 HEAD a114ca1f993401c47f954bdc2deaf2a9790cba29. Code commit 7954bd57b9d7ca72404b1841204989f906686459. **PASS bounded synthetic integration / overall PARTIAL; Stage 001 PARTIAL.**
+
+## Actual architecture
+Unmodified CC03 plan/validate_seams and CC05Q native_worker/preflight/CC05P verifier. A single fixed native 480m whole-geometry job is the shared dependency of S00_00 and S01_00. Translate its seam x=240m to the logical common edge; Decimal anchor ownership, half-open boundaries, no clipping before generation, no CRS. Native records retained in their original fixture coordinates, not projected real positions. Held records stay in the revision-level review list. The other 62 sector nodes are explicitly NOT_COVERED, not verified empty or generated terrain. The test constructs the exact CC03 foundation schema fixture; it is not a new export from the real-world manifest writer. CC03 metadata points/segments and review rules affect review-node identity only: they are NOT actual native OSM input. Changing a supported native input (road state) runs the complete native fixture again and invalidates both dependent review nodes; no independent native sector recomputation or halo proof. Global rules in this test are review-only, not changes to GRM generator configuration.
+Uses separate review root with child CC05Q state, exclusive review lock, existing native lock, immutable content-addressed cache and revisions, atomic current pointer. Rechecks native PASS, exact identity, output hashes and verifier via CC05Q, rejects inconsistent native results; rechecks snapshot before publication. Cache payload includes local CC03 identity, actual bridge code hash, native review digest where covered, scope and exact records; cache reuse compares full expected payload. Native envelope binds runtime/config/cache/job/code hashes and expiry. Failed dependencies, stop, invalid seams and cache mismatch prevent pointer publication. Partial cache files may remain reusable after interruption. No overwrite of corrupted cache. A previous pointer is not proof of current readiness: if an underlying artifact is corrupted, it is unusable until reviewed/repaired. No durable transaction failure log or independent read-side dashboard verifier yet.
+
+## Measured evidence
+Reused actual prior restored snapshot, no SDK rebuild or downloads. Python 3.13.5. Recovered CC03 file from canonical repo and confirmed Git blob efacc0b25bbc438ed6f6bb90499e5a1eaf94f039 and SHA256 514072c171cf29128215e8fa4163612f2b3b38ecfb326e307c8d59c14845e66c. Existing CC02/CC05P/Q code and snapshot unchanged. New envelope has finite expiry and explicit owner continuation scope for CC05R; prior exact snapshot hashes retained. Commands from tools/automation/cc05r:
+- python -m py_compile review_queue.py test_review_queue.py: exit 0.
+- python test_review_queue.py <verified CC05Q snapshot> <existing envelope>: two runs, both exit 0, 12 explicit scenario checks each and exact seam ownership control. Each run performs two actual native child launches, not 64.
+| Scenario | Run 1 and run 2 |
+|---|---|
+| Baseline | 64 cache nodes, 112 edges; 917 left, 77 right, 21 held, 1015 native records |
+| Reversed metadata input order | same revision, 64 reused, no native launch |
+| Interior metadata edit | 1 rebuilt, 63 reused, no native launch |
+| Shared-boundary metadata edit | 2 rebuilt, 62 reused, no native launch |
+| Global review rule change | 64 rebuilt, no native launch |
+| Valid changed native job road state | 1062 records, 2 rebuilt, 62 reused, actual native launch |
+| Invalid native dependency / expiry | refuse, no new child, previous current pointer preserved |
+| Stop before start / resume | refuse then verified cached revision, no new child |
+| Tampered cache | refuse, preserve corrupted evidence, no pointer change |
+| Concurrent review lock | refuse |
+| Collinear seam ambiguity | refuse, no new child |
+Two test stdout logs below are original nonprivate outputs. No full-world performance claims. 64 nodes are review manifests; 62 have zero fixture records because NOT_COVERED, not because world is empty.
+SHA256 review_queue.py b4a0805ccb0e9284013c37e5c1ce29c75a4aaa6aacfda618cc0983f1a70f3e62; test_review_queue.py 3d953c5fb5f52f3202c4bdf8b7a0db889f2d4167ff860c6c480a972ef2dc1b56. Git blobs 76b84a2b7dfedbd516288bb527606a421c8f72f3 and bc642b099b8f2ca95c1616d33d699a1116ab7598 match measured source. stdout SHA256 run1 172b3a0da7304a5dd0d30e3a7a920be23b2506a7800c98f5d5981684dfc9d387, run2 51a9d3e3e6d914b381934c83b50adfac243419196c05f289ae7430d128606e3f. UUIDs differ by design. No private assets or binaries published.
+
+## Limits / stop
+Actual review orchestration is a fixed dependency graph, not arbitrary/general-purpose DAG scheduling. Per-run plans and expected payloads are recalculated to validate the cache; only affected persisted review nodes are rewritten. Native result is regenerated for the entire fixed fixture when required. No real-source geographic invalidation, independent sector generation, native halo, physical seam verification or production CRS. Source-to-model lineage incomplete. Cancellation during native process and SIGKILL recovery were tested in CC05Q, not repeated at this orchestration level; CC05R stop-before/resume measured only. Crash during cache publication, unknown-PID recovery, attempt exhaustion, power-loss durability, strict memory caps, hostile filesystem, Windows, scheduler and detached survival NOT RUN. Trusted local synthetic only. MAP-003 629 NoData still blocks real GM-only coverage and TB. No P:, WRP/PBO/game, no merge or stage promotion.
+Proposed next CC06A read-only Control Center state adapter/dashboard: show current revision, freshness, coverage, blocked dependency, native attempts and safe status; verify content-addressed artifacts before presenting PASS, distinguish old last-good pointer from current status. No production job controls, scheduler or arbitrary commands. Further native independent-sector research requires separately scoped gates.
