@@ -103,3 +103,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05J result
 [CC05J_RESULT](CC05J_RESULT.md): five native vegetation layers PASS bounded multi-polygon synthetic runs. 1616/1692 records; 21/33 final review; clip-first forest output differs from full polygons (737/738, 216 common). Candidate whole-feature tasks then final sector assignment; no full seam/halo guarantee. Next proposed CC-05K native road/rail/infrastructure graph and bounded road layer. GM-only and all real gates remain. UI deferred.
+
+## Forest quality requirement
+Owner requires irregular natural forest, understory, fallen deadwood and standing deadwood. [Policy](../map/VEGETATION_SUCCESSION_POLICY.md). Source confirms random point filling and ForestAdditional; verify actual config/output category composition, absence of artificial rows, ground contact and visual/game performance before production acceptance. Not a new generation test. CC-05K remains next.

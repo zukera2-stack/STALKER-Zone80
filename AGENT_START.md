@@ -142,3 +142,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05J measured result
 [CC05J_RESULT](docs/automation/CC05J_RESULT.md): all five native vegetation generators exercised on multi-polygon synthetic input; 1616/1692 records, 41/0 on-road, 21/33 final review. Native ForestEdgeBuilder safe on supplied forest geometry; scrub/radial stock builders refused lake elevation dependency. Full-polygon generation then half-open ownership reconciled; clip-first differs (737 vs 738, 216 common). Do not clip natural features before generation assuming equivalence. Next proposed CC-05K native road/rail/infrastructure dependency review and bounded synthetic road layer, GM-only. Cross-layer/halo/general geometry pending. No real generation, Stage 001 PARTIAL.
+
+## Требование к лесу
+Владелец требует естественный лес без искусственной рядности, подлесок, валежник и сухостой. [Политика и проверка исходников](docs/map/VEGETATION_SUCCESSION_POLICY.md#требования-владельца-к-естественному-лесу--25112026). Штатный GRM Forest + ForestAdditional в приоритете. Фактический состав, естественность, посадка валежника и визуальная приёмка ещё не доказаны. Следующий CC-05K не изменён.
