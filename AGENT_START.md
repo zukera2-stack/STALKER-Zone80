@@ -139,3 +139,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05I measured result
 [CC05I_RESULT](docs/automation/CC05I_RESULT.md): stock ForestBuilder blocked at ElevationWithLakesData; bounded geometry-only adapter uses actual OSM interpretation and native geometry, original ForestGenerator unchanged. Synthetic forest 2829/2769 records, 46 models, 50/0 on-road for abandoned/protected state, 0 lake/cutline, 3/5 final review points; +100m Z and repeat PASS. Next CC-05J forest edge/radial and scrub closure, polygon policy and final point/seam checks. No real generation, Stage 001 PARTIAL.
+
+## CC-05J measured result
+[CC05J_RESULT](docs/automation/CC05J_RESULT.md): all five native vegetation generators exercised on multi-polygon synthetic input; 1616/1692 records, 41/0 on-road, 21/33 final review. Native ForestEdgeBuilder safe on supplied forest geometry; scrub/radial stock builders refused lake elevation dependency. Full-polygon generation then half-open ownership reconciled; clip-first differs (737 vs 738, 216 common). Do not clip natural features before generation assuming equivalence. Next proposed CC-05K native road/rail/infrastructure dependency review and bounded synthetic road layer, GM-only. Cross-layer/halo/general geometry pending. No real generation, Stage 001 PARTIAL.

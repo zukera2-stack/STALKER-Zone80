@@ -479,3 +479,22 @@ cc05i_result:
   multi_polygon_determinism_tested: false
   real_generation: false
   next: "CC-05J forest edge/radial and scrub closure, polygon policy and final points/seams"
+
+cc05j_result:
+  report: "docs/automation/CC05J_RESULT.md"
+  native_generators_tested: 5
+  native_probe_passes: 2
+  synthetic_forest_source_polygons: 2
+  native_model_counts: [1616, 1692, 1692]
+  on_road_counts: [41, 0, 0]
+  final_review_counts: [21, 33, 33]
+  stock_scrub_radial_elevation_dependency_refused: true
+  global_final_ownership_reconciled: true
+  clip_first_equivalence: "FAIL"
+  full_forest_records: 737
+  clip_first_records: 738
+  common_exact_csv_records: 216
+  full_halo_tested: false
+  cross_layer_collision_tested: false
+  real_generation: false
+  next: "CC-05K native road/rail/infrastructure review and bounded road layer"

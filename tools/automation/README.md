@@ -27,3 +27,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05I
 [cc05i](cc05i/README.md) — native forest geometry adapter and synthetic probe. [Report](../../docs/automation/CC05I_RESULT.md).
+
+## CC-05J
+[cc05j](cc05j/README.md) — multi-polygon native vegetation transitions, point review and clip-first comparison. [Report](../../docs/automation/CC05J_RESULT.md).

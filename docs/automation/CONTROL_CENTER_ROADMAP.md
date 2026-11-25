@@ -100,3 +100,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05I result
 [CC05I_RESULT](CC05I_RESULT.md): bounded native ForestGenerator PASS via geometry-only input; original ForestBuilder requests forbidden lake elevation stage. Abandoned 2829 records/50 on-road; protected 2769/0. Final review 3/5, no real export. Next CC-05J native forest edge/radial and scrub graph plus polygon/point/seam validation. UI deferred.
+
+## CC-05J result
+[CC05J_RESULT](CC05J_RESULT.md): five native vegetation layers PASS bounded multi-polygon synthetic runs. 1616/1692 records; 21/33 final review; clip-first forest output differs from full polygons (737/738, 216 common). Candidate whole-feature tasks then final sector assignment; no full seam/halo guarantee. Next proposed CC-05K native road/rail/infrastructure graph and bounded road layer. GM-only and all real gates remain. UI deferred.

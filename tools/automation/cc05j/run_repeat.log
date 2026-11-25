@@ -1,0 +1,28 @@
+STOCK_SCRUB_AND_RADIAL_REFUSED PASS
+abandoned delta=0 ForestEdgeGenerator polygons=3 records=482 road=9 outside=19 protected=0 review=19 left=182 right=281 duplicate_csv=0 sha=33d98d2a15389f0ead6570223dd90fd9afdb80dbbb8236199d0f1f427f535c2b
+abandoned delta=0 ForestGenerator polygons=2 records=737 road=31 outside=2 protected=0 review=2 left=331 right=404 duplicate_csv=0 sha=d5b82f1fbb6ce59bca49e3950c10b9942188f76439af1188d993913a15bbc958
+abandoned delta=0 ForestRadialGenerator polygons=2 records=297 road=1 outside=0 protected=0 review=0 left=98 right=199 duplicate_csv=0 sha=ad4fa9b83a72d4f36357febd498054b404fc6eb8bc5a217ef656edaa55add206
+abandoned delta=0 ScrubGenerator polygons=1 records=82 road=0 outside=0 protected=0 review=0 left=82 right=0 duplicate_csv=0 sha=b0a7f78a3acff4e7ae7d798083be9e5d1d54bee54091db2deb95d9ba885133af
+abandoned delta=0 ScrubRadialGenerator polygons=1 records=18 road=0 outside=0 protected=0 review=0 left=18 right=0 duplicate_csv=0 sha=bfd59c4befb5d7e25d2072fa97d7d5d0ca442f0818c63a7194f10c3a270406a9
+CLIP_FIRST polygons=3 count=738 full_count=737 identical=False common=216
+abandoned delta=0 ForestEdgeGenerator polygons=3 records=482 road=9 outside=19 protected=0 review=19 left=182 right=281 duplicate_csv=0 sha=33d98d2a15389f0ead6570223dd90fd9afdb80dbbb8236199d0f1f427f535c2b
+abandoned delta=0 ForestGenerator polygons=2 records=737 road=31 outside=2 protected=0 review=2 left=331 right=404 duplicate_csv=0 sha=d5b82f1fbb6ce59bca49e3950c10b9942188f76439af1188d993913a15bbc958
+abandoned delta=0 ForestRadialGenerator polygons=2 records=297 road=1 outside=0 protected=0 review=0 left=98 right=199 duplicate_csv=0 sha=ad4fa9b83a72d4f36357febd498054b404fc6eb8bc5a217ef656edaa55add206
+abandoned delta=0 ScrubGenerator polygons=1 records=82 road=0 outside=0 protected=0 review=0 left=82 right=0 duplicate_csv=0 sha=b0a7f78a3acff4e7ae7d798083be9e5d1d54bee54091db2deb95d9ba885133af
+abandoned delta=0 ScrubRadialGenerator polygons=1 records=18 road=0 outside=0 protected=0 review=0 left=18 right=0 duplicate_csv=0 sha=bfd59c4befb5d7e25d2072fa97d7d5d0ca442f0818c63a7194f10c3a270406a9
+abandoned delta=100 ForestEdgeGenerator polygons=3 records=482 road=9 outside=19 protected=0 review=19 left=182 right=281 duplicate_csv=0 sha=33d98d2a15389f0ead6570223dd90fd9afdb80dbbb8236199d0f1f427f535c2b
+abandoned delta=100 ForestGenerator polygons=2 records=737 road=31 outside=2 protected=0 review=2 left=331 right=404 duplicate_csv=0 sha=d5b82f1fbb6ce59bca49e3950c10b9942188f76439af1188d993913a15bbc958
+abandoned delta=100 ForestRadialGenerator polygons=2 records=297 road=1 outside=0 protected=0 review=0 left=98 right=199 duplicate_csv=0 sha=ad4fa9b83a72d4f36357febd498054b404fc6eb8bc5a217ef656edaa55add206
+abandoned delta=100 ScrubGenerator polygons=1 records=82 road=0 outside=0 protected=0 review=0 left=82 right=0 duplicate_csv=0 sha=b0a7f78a3acff4e7ae7d798083be9e5d1d54bee54091db2deb95d9ba885133af
+abandoned delta=100 ScrubRadialGenerator polygons=1 records=18 road=0 outside=0 protected=0 review=0 left=18 right=0 duplicate_csv=0 sha=bfd59c4befb5d7e25d2072fa97d7d5d0ca442f0818c63a7194f10c3a270406a9
+operational delta=0 ForestEdgeGenerator polygons=4 records=599 road=0 outside=29 protected=6 review=29 left=265 right=305 duplicate_csv=0 sha=611ce699a9f91a36ea4af676fc139724ece8aefdaa2c39c062742d9973925d04
+operational delta=0 ForestGenerator polygons=3 records=701 road=0 outside=2 protected=1 review=2 left=293 right=406 duplicate_csv=0 sha=e9964fe55ca2c0698c4222aa2f8e8b988b157a2bab72a1434477a0953f077926
+operational delta=0 ForestRadialGenerator polygons=3 records=292 road=0 outside=2 protected=0 review=2 left=106 right=184 duplicate_csv=0 sha=affaf65606bdc615a4a0e796615dbb2b4e669f76d24f29cc14999901bc7ed941
+operational delta=0 ScrubGenerator polygons=1 records=82 road=0 outside=0 protected=0 review=0 left=82 right=0 duplicate_csv=0 sha=b0a7f78a3acff4e7ae7d798083be9e5d1d54bee54091db2deb95d9ba885133af
+operational delta=0 ScrubRadialGenerator polygons=1 records=18 road=0 outside=0 protected=0 review=0 left=18 right=0 duplicate_csv=0 sha=bfd59c4befb5d7e25d2072fa97d7d5d0ca442f0818c63a7194f10c3a270406a9
+unknown delta=0 ForestEdgeGenerator polygons=4 records=599 road=0 outside=29 protected=6 review=29 left=265 right=305 duplicate_csv=0 sha=611ce699a9f91a36ea4af676fc139724ece8aefdaa2c39c062742d9973925d04
+unknown delta=0 ForestGenerator polygons=3 records=701 road=0 outside=2 protected=1 review=2 left=293 right=406 duplicate_csv=0 sha=e9964fe55ca2c0698c4222aa2f8e8b988b157a2bab72a1434477a0953f077926
+unknown delta=0 ForestRadialGenerator polygons=3 records=292 road=0 outside=2 protected=0 review=2 left=106 right=184 duplicate_csv=0 sha=affaf65606bdc615a4a0e796615dbb2b4e669f76d24f29cc14999901bc7ed941
+unknown delta=0 ScrubGenerator polygons=1 records=82 road=0 outside=0 protected=0 review=0 left=82 right=0 duplicate_csv=0 sha=b0a7f78a3acff4e7ae7d798083be9e5d1d54bee54091db2deb95d9ba885133af
+unknown delta=0 ScrubRadialGenerator polygons=1 records=18 road=0 outside=0 protected=0 review=0 left=18 right=0 duplicate_csv=0 sha=bfd59c4befb5d7e25d2072fa97d7d5d0ca442f0818c63a7194f10c3a270406a9
+PASS five native layers; synthetic final point review and global ownership only

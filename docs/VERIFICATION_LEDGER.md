@@ -99,3 +99,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05I — bounded native forest
 [CC05I_RESULT](automation/CC05I_RESULT.md): actual offline build and two identical final runs, 46 distinct models; same synthetic forest changes road occupancy from 50 to 0, relative Z response +100m, no grid mutation. Stock ForestBuilder dependency denied. Final review counts nonzero, no physical collision or production approval. Stage 001 PARTIAL.
+
+## CC-05J — native vegetation transitions
+[CC05J_RESULT](automation/CC05J_RESULT.md): actual offline incremental build, two identical runs, 5 native layers, 41/0 road points, no persistent grid mutation, +100m Z response. Per-layer final review and ownership reconciled. Clip-first equivalence FAIL; cross-layer/real seam/halo NOT TESTED. Stage 001 PARTIAL.

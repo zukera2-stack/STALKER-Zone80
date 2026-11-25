@@ -1,0 +1,10 @@
+# CC-05J — native vegetation transitions and sector ownership probe
+Synthetic-only. Reuses CC05I isolated .NET 10.0.404 Linux x64 environment; GRM 2aef2040836daa11a8a368bb0c7f9ecd8f405d65, BIS 5e406d5021ba19ced8babcadd89ed26119f71f48. Obtain pinned v03 and modelinfo from docs/LIBRARY_INDEX.md, verify exact hashes. Source and bridge remain unchanged. Set DOTNET_CLI_HOME, XDG_RUNTIME_DIR, NUGET_PACKAGES to isolated paths, NUGET_CERT_REVOCATION_MODE=offline, DOTNET_PROCESSOR_COUNT=2. No online restore.
+
+```
+dotnet restore Zone80.TransitionProbe.csproj -p:GrmRoot=<source> -p:BridgeSource=<cc05b> --source <offline-feed> -p:NuGetAudit=false
+dotnet build Zone80.TransitionProbe.csproj -p:GrmRoot=<source> -p:BridgeSource=<cc05b> --no-restore -c Release --disable-build-servers -p:GeneratePackageOnBuild=false
+dotnet <actual-bin>/Zone80.TransitionProbe.dll <v03-editor-config> <modelinfo.json>
+```
+
+The finite fixture has two forest ways of unequal size, one scrub way, road, lake and cutline. Actual native ForestEdgeBuilder uses preseeded ForestData; original ScrubBuilder and both radial builders are denied at ElevationWithLakesData. Explicit synthetic geometry seam uses native polygon operations, not replacement procedural placement. Only the fixture's known priority geometry is supported; no general OSM relation, category/farmland/rock/orchard/vineyard closure. No real map generation. All five native vegetation generators execute unchanged. Final point review retains out-of-domain and protected records separately in memory; this is not physical collision validation or export. No cross-layer collision/duplicate analysis. Exact CSV duplicate count is per layer. Two half-open sector assignments after global generation reconcile per-layer accepted records. A separate clip-first experiment demonstrates non-equivalence; it is not an independent per-sector/halo test. AreaDefinition uses centroid-seeded random, source also has parallel scheduling, so only the tested fixture and processor count are supported. No upstream modifications, no P: writes, WRP/PBO, or merge. See report.
