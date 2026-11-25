@@ -6,3 +6,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-04 config/asset review
 [cc04/](cc04/README.md) contains review-only six-module assembler, material/road locks, resource inventory reconciliation, synthetic dependency graph checks and ZPB metadata gate. From cc04: `python -m unittest -v test_config_builder.py`. Actual owner v03 reproduction requires separate owner inputs. No native config output, production mode disabled. [Report](../../docs/automation/CC04_RESULT.md). Next CC-05.
+
+## CC-05 GM input review
+[cc05/](cc05/README.md): strict read-only ASC review of the pinned historical owner archive, synthetic center sampling and validation; native integration design only. Run `python -m unittest -v test_gm_adapter.py` from cc05. Diagnostic CLI exit 2 is expected (NoData), not a successful native import. No raster output. [Report](../../docs/automation/CC05_RESULT.md). Next CC-06.

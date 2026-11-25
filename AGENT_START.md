@@ -109,3 +109,6 @@ Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthet
 
 ## CC-04 checkpoint
 [CC04_RESULT](docs/automation/CC04_RESULT.md): tested six-module review-only GRM Config Builder / Asset Manager, actual v03 input audit and synthetic dependency graph/asset gates. 13 tests PASS twice. 179 inventory-present +22 stock unverified +2 ice; zero runtime-approved, missing mud surface and external base unchanged. No native production output. Next CC-05 read-only GM adapter source review and synthetic fixtures, no RawElevationBuilder/new real heights, native GIS or P: writes. Stage 001 PARTIAL.
+
+## CC-05 checkpoint
+[CC05_RESULT](docs/automation/CC05_RESULT.md): 12 synthetic tests PASS twice, actual pinned diagnostic 3467/4096 valid and 629 NoData; 5/5 controls match. GRM source seam identified, but native provider BLOCKED by missing heights, node/center mismatch, mutation and external dependencies. No native patch, no new elevations. Next CC-06 offline Control Center with synthetic integration; separate CC-07 local validation gates. No P: writes, generation or merge; Stage 001 PARTIAL.

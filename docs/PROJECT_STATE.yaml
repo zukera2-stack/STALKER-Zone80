@@ -238,15 +238,15 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "CC-04 review-only config/asset core PASS in scope; production BLOCKED"
-  next_proposed_step: "CC-05 GM-to-GRM adapter design and synthetic import validation"
+  status: "CC-05 read-only GM input validator PASS in scope; native adapter BLOCKED"
+  next_proposed_step: "CC-06 offline Control Center and synthetic integration"
   stages:
     CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
     CC-02: "PASS bounded Linux synthetic fault injection; hard resource/Windows gates pending"
     CC-03: "PASS synthetic logical sector planning; native GIS seams NOT RUN"
     CC-04: "PASS review-only assembly/audit core; production compiler BLOCKED"
-    CC-05: "NEXT; synthetic import and source-level adapter design; native BLOCKED"
-    CC-06: "CONCEPT ONLY; Control Center"
+    CC-05: "PASS read-only validation and source design; native provider BLOCKED"
+    CC-06: "NEXT; offline Control Center and synthetic integration"
     CC-07: "PLANNED; gated Windows integration"
   actual_windows_validation: false
   production_generation_authorized: false
@@ -318,3 +318,21 @@ cc04_result:
   production_output_enabled: false
   native_schema_or_runtime_verified: false
   real_dependency_closure_verified: false
+
+cc05_result:
+  report: "docs/automation/CC05_RESULT.md"
+  base_sha: "3658b56cff0dfab28778da688165dde9ae94d6bc"
+  synthetic_test_methods_passed: 12
+  full_suite_passes: 2
+  actual_archive_reviewed: true
+  actual_control_samples_match: 5
+  actual_valid_cells: 3467
+  actual_nodata_cells: 629
+  actual_cli_exit: 2
+  cell_center_to_node_offset_m_each_axis: 15
+  native_provider_implemented: false
+  native_grm_tested: false
+  real_raster_written: false
+  general_crs_parser_implemented: false
+  current_actual_input_pinned_historical_only: true
+  next: "CC-06 offline Control Center"

@@ -1,0 +1,25 @@
+{
+  "actual_cli_exit": 2,
+  "archive_sha256": "457f1fdb363d0f586ef3fde82cec4f407784f1ab68af867e099c1bac84e72869",
+  "asc_sha256": "a6d85a93956145bb505a49c8d46c098e998ed85bc6cf3477ba93c1b814e77f6e",
+  "cell_size_m": "30",
+  "control_samples_checked": 5,
+  "control_samples_match": 5,
+  "grid_validation": "BLOCKED_NODATA",
+  "max_m": "136.2558",
+  "min_m": "105",
+  "native_alignment": "BLOCKED_CELL_CENTER_VS_NODE",
+  "native_grm_authorized": false,
+  "nodata_cells": 629,
+  "offset_each_axis_m": "15",
+  "prj_sha256": "fdab6e893555dc5503ea414374724e48aa547eedf16896329215cfa07a851bfe",
+  "raster_written": false,
+  "repeat_report_identical": true,
+  "scope": "OWNER_DIAGNOSTIC",
+  "shape": [
+    64,
+    64
+  ],
+  "source": "owner MAP-003 diagnostic only; provenance from existing report",
+  "valid_cells": 3467
+}
