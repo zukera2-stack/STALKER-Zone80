@@ -15,3 +15,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05E config and coordinate review
 [cc05e/](cc05e/README.md) is native diagnostic-only companion using real v03 and exact pilot example. Requires offline toolchain from [Library index](../../docs/LIBRARY_INDEX.md). No native layer call, strict missing metadata rejection; actual generation blocked. [Report](../../docs/automation/CC05E_RESULT.md). Next CC-05F.
+
+## CC-05F
+[cc05f](cc05f/README.md) — strict native model cache review companion, pinned v03 and owner cache; no generation. [Report](../../docs/automation/CC05F_RESULT.md).

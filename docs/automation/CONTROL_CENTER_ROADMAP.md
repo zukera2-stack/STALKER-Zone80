@@ -88,3 +88,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05E measured result
 [CC05E_RESULT](CC05E_RESULT.md): actual native v03 diagnostic parse and native pilot four-corner controls PASS, 163 unresolved models, strict load BLOCKED; two identical runs and two hash negatives. Library snapshots confirmed, [retrieval index](../LIBRARY_INDEX.md). Next CC-05F real model metadata intake/strict resolver, layer-specific offline source gates, no runtime placeholders. Complete GM-only grid and real generation remain blocked. UI deferred.
+
+## CC-05F measured result
+[CC05F_RESULT](CC05F_RESULT.md): owner cache 163/163 requested model paths, actual strict parser PASS twice. Metadata resolution blocker removed in review scope. Local ODOL/dependency verification and 22 new clutter checks remain; no runtime approvals. Next CC-05G synthetic actual-config layer and offline OSM closure. UI deferred.

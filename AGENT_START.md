@@ -127,3 +127,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05E measured result and persistent Library
 [CC05E_RESULT](docs/automation/CC05E_RESULT.md): actual v03 native parser diagnostic PASS, strict missing metadata refusal, 11 materials/16 usages/10 surfaces/9 roads, 163 unresolved distinct model paths. Four pilot corner checks max absolute UTM residual 0.000933 m, no real grid or placement. Owner toolchain and input archives saved in personal Library [exact locations and SHA256](docs/LIBRARY_INDEX.md); authorized agents retrieve from there, not Git. Next CC-05F reviewed model metadata resolver and per-layer offline source gates, then GM-only complete node-compatible grid. UI deferred; real generation blocked, Stage 001 PARTIAL.
+
+## CC-05F measured result
+[CC05F_RESULT](docs/automation/CC05F_RESULT.md): actual owner modelinfo.json saved in Library, 491 records, exact 163/163 v03 P3D metadata coverage, strict native parse PASS twice, missing entry/unknown/changed hash refused. 141 prior loose-file evidence, 22 new clutter paths not inventoried; runtime approval still zero. Next CC-05G per-layer offline dependency closure and synthetic actual-config layer test. GM complete grid and local asset gates still required. No real placement, P: writes or merge; Stage 001 PARTIAL.

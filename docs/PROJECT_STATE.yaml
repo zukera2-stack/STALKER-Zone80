@@ -417,3 +417,15 @@ cc05e_result:
   real_gm_grid_consumed: false
   real_layer_generation: false
   next: "CC-05F model metadata and offline source gates; UI deferred"
+
+cc05f_result:
+  report: "docs/automation/CC05F_RESULT.md"
+  cache_records: 491
+  required_model_paths: 163
+  metadata_covered: 163
+  prior_inventory_present: 141
+  new_clutter_unverified: 22
+  native_strict_parse_passes: 2
+  runtime_approved: 0
+  real_generation: false
+  next: "CC-05G offline layer closure and synthetic v03 layer test"

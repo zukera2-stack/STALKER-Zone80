@@ -87,3 +87,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## E-031 — CC-05E native config and pilot coordinate review
 [CC05E_RESULT](automation/CC05E_RESULT.md): actual Release companion build 0 warnings/errors incremental, two identical native diagnostic runs, strict missing model refusal and 163 unresolved paths; 11 materials/16 usages/10 surfaces/9 roads. Four corners max local 0.000122 m/absolute UTM 0.000933 m; two modified input copies rejected by SHA. Ten private Library file copies confirmed by listing. No actual real grid or generation; Stage 001 PARTIAL.
+
+## CC-05F — actual native strict model resolution
+[CC05F_RESULT](automation/CC05F_RESULT.md): 491 valid cache records, 163/163 actual v03 lookups with strict parser and no placeholders, missing entry/unknown/modified input rejected. Restore/build exit 0, repeated identical output. No real model files tested, no placement. Stage 001 PARTIAL.
