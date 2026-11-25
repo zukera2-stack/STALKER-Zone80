@@ -106,3 +106,6 @@ Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthet
 
 ## CC-03 checkpoint
 [CC03_RESULT](docs/automation/CC03_RESULT.md): tested coordinate-only sector planning in tools/automation/cc03, reuses existing foundation manifests, 64 sectors/112 shared edges, 11 tests PASS twice. Dirty sets only, not executed generation. Next CC-04 Config Builder + Asset Manager; reuse editor v03 evidence, explicit unresolved ice/mud/base/22 refs, no invented approvals or native execution. Stage 001 PARTIAL and GM-only elevation unchanged.
+
+## CC-04 checkpoint
+[CC04_RESULT](docs/automation/CC04_RESULT.md): tested six-module review-only GRM Config Builder / Asset Manager, actual v03 input audit and synthetic dependency graph/asset gates. 13 tests PASS twice. 179 inventory-present +22 stock unverified +2 ice; zero runtime-approved, missing mud surface and external base unchanged. No native production output. Next CC-05 read-only GM adapter source review and synthetic fixtures, no RawElevationBuilder/new real heights, native GIS or P: writes. Stage 001 PARTIAL.

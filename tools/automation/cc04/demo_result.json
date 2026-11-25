@@ -1,0 +1,45 @@
+{
+  "blockers": [
+    "BASE_WORLD_CLASS_NOT_VERIFIED",
+    "EXTERNAL_BASE_DEPENDENCY",
+    "EXTERNAL_RESOURCE_PATHS",
+    "GM_ADAPTER_AND_COMPLETE_HEIGHTS_NOT_VERIFIED",
+    "ICE_POLICY_NOT_APPROVED",
+    "LOCAL_DEPENDENCY_AND_ENTITLEMENT_CLOSURE_NOT_VERIFIED",
+    "MISSING_SURFACE_METADATA",
+    "NATIVE_GENERATION_NOT_AUTHORIZED",
+    "NATIVE_PARSER_NOT_RUN",
+    "UNVERIFIED_OR_MISSING_PATHS"
+  ],
+  "config_sha256_canonical": "1af9a48f87d8d30c72bf7fac15b9fce14beafa7df04432e0033d72e714f58132",
+  "input_sha256": {
+    "baseline": "84e0cdee7501b7e9f01cc92b6635c70e8d6503f591e0b1a0ffffef2a2d6bf41a",
+    "inventory": "bced5f4e610ef0c3667f1f91f6dd2016e5f0223fb147f5986664c17d9493668e",
+    "v03_config": "418a6b1db5493c8b9f89f288024a769522f568483a5e614383d934506e7a941e",
+    "v03_zip": "5c1acdf80eaa5e0fd61adddd41845946e8df6e994881c16faaaf2a20cdbee90a"
+  },
+  "material_definitions": 11,
+  "material_usages": 16,
+  "missing_surfaces": [
+    "LakeGround",
+    "RiverGround"
+  ],
+  "module_hashes": {
+    "buildings": "d0870cfb6d28eb135d7e824b8e81f3cfdcc1dd0a954052c72fc27079318154c1",
+    "dependencies": "0d5b5c2be6c368b469803701895430b4bfe51f119734d6dfd190957659361a73",
+    "infrastructure": "d1d012378596e9d492096e1442003d665e289f9ed31853784821dbac61fc9e05",
+    "materials": "171d9215bb62318be7d4e454e9869e8f1f35f1d5ce2a62a613c682b21230b34e",
+    "roads": "1db4407cadc164722f376e4468d51edcd6b6016839a2587bc3deca4fc67d54ed",
+    "vegetation": "59a87d0edc9dba71bca736d3970f185a0747e233a31f9bbfa6991c6d17e66f24"
+  },
+  "native_generation_authorized": false,
+  "resource_counts": {
+    "external": 2,
+    "inventory_present": 179,
+    "runtime_approved": 0,
+    "stock_unverified": 22,
+    "total": 203
+  },
+  "road_profiles": 9,
+  "status": "REVIEW_ONLY_GENERATION_BLOCKED"
+}
