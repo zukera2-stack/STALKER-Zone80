@@ -635,3 +635,27 @@ agent_handoff_2026_11_25:
   cc06_ui: "DEFERRED"
   stage_promotion: false
   docs_only_update: true
+
+# Supersedes earlier historical CC05P handoff, not its measured scope.
+cc05q_result:
+  report: "docs/automation/CC05Q_NATIVE_RESULT.md"
+  code_sha: "2c5b696571407b38d2fcf781a0b31a1c6a017a6b"
+  draft_pr: 48
+  native_linux_synthetic_status: "PASS_BOUNDED"
+  overall_status: "PARTIAL"
+  suites_passed: 2
+  checks_per_suite: 12
+  successful_native_starts_per_suite: 4
+  interrupted_or_failed_native_starts_per_suite: 4
+  restored_sdk: "10.0.404"
+  runtime: "10.0.15"
+  native_build_errors: 0
+  native_build_warnings: 43
+  worker_integration_tested: true
+  durable_review_manifest_tested: true
+  windows_tested: false
+  real_generation: false
+  local_grid_nodata: 629
+  next_proposed: "CC-05R Worker to Sector Manager contract"
+  next_status: "NOT RUN"
+  handoff: "docs/automation/RESUME_AFTER_CC05Q.md"
