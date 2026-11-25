@@ -359,8 +359,22 @@ cc05c_environment:
   sdk_version: "10.0.404"
   sdk_smoke: "PASS dependency-free net10.0"
   source_archive_crc: "PASS"
-  nuget_restore: "BLOCKED NU1101; DNS unavailable"
+  nuget_restore: "PASS core from owner offline packages"
   offline_collector_delivered: true
   windows_collector_tested: false
-  bridge_compilation: "NOT RUN"
-  next: "Receive offline NuGet archive; restore/build actual GRM core and synthetic bridge"
+  bridge_compilation: "PASS net10.0 Release; 0 errors; 31 upstream warnings"
+  next: "CC-05D pinned BIS source + Arma3 offline dependencies; synthetic layer integration"
+
+cc05c_result:
+  report: "docs/automation/CC05C_RESULT.md"
+  base_sha: "92feae3bc30f12cda711c3803e3b7071fde8ee46"
+  offline_package_hashes_verified: 34
+  core_resolved_lock_matches: 32
+  upstream_core_files_unchanged: 344
+  build_errors: 0
+  upstream_build_warnings: 31
+  native_core_smoke_passes: 2
+  python_tests_passed: 8
+  arma3_assembly_tested: false
+  real_elevation_input_enabled: false
+  next: "CC-05D Arma3 layer companion; CC-06 deferred"

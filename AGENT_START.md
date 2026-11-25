@@ -118,3 +118,6 @@ Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Re
 
 ## CC-05C environment checkpoint
 [CC05C_ENVIRONMENT](docs/automation/CC05C_ENVIRONMENT.md): owner SDK 10.0.404 Linux extracted and dependency-free C# smoke PASS; pinned-name GRM source ZIP CRC PASS. Actual restore blocked by absent NuGet packages / DNS. Collector ZIP delivered to owner; Windows collector NOT RUN. Next verify offline package bundle, restore/build/test actual GRM core and bridge. No native real map run; UI deferred.
+
+## CC-05C measured result
+[CC05C_RESULT](docs/automation/CC05C_RESULT.md): owner offline packages received; actual GRM core and existing bridge built, 0 errors/31 upstream warnings, native synthetic smoke PASS twice; 8 Python tests PASS. CC-05D next: missing pinned BIS submodule and Arma3 dependency closure, new collector delivered. Real factory remains disabled; no generation/Stage promotion. CC-06 deferred.

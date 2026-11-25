@@ -79,3 +79,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## CC-05C environment intake
 [CC05C_ENVIRONMENT](CC05C_ENVIRONMENT.md): SDK smoke PASS, source archive inspected, actual NuGet restore BLOCKED. Owner supplied SDK/source; offline package collector delivered. Next actual GRM core/bridge compile after verified offline package intake; CC-06 remains deferred. No real map generation.
+
+## CC-05C measured result
+[CC05C_RESULT](CC05C_RESULT.md): actual GRM core and existing C# bridge compiled offline and native synthetic consumer smoke PASS twice; 34 package hashes and 32 lock entries verified. Real factory disabled. Next CC-05D actual Arma3 assembly build and bounded synthetic layer, after missing pinned BIS submodule/dependencies delivered. UI deferred. No real map generation.

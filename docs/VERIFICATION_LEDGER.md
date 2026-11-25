@@ -78,3 +78,6 @@ Python 3.13.5 Linux stdlib: py_compile PASS, 12 unittest methods PASS twice (0.0
 
 ## E-029 — CC-05B GM-only bridge candidate (25.11.2026)
 Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twice (0.001s each); asymmetric 3x3 in-memory test, exact node-center alignment, hash, NoData, metadata and numeric rejection, Float32 conversion measurement. Actual historical pinned ASC rejected by node-alignment gate; earlier CC-05 count 629 NoData unchanged. Native C# source and smoke harness written against inspected upstream API, NOT compiled locally: dotnet absent, DNS to NuGet/GitHub failed. No native GIS/GRM layer, new raster or approved runtime dependency. [CC05B_RESULT](automation/CC05B_RESULT.md).
+
+## E-029 — CC-05C actual native core bridge
+[CC05C_RESULT](automation/CC05C_RESULT.md): owner 34/34 package hashes, 32/32 resolved lock entries, upstream core 344 files unchanged. Actual restore exit 0, Release build exit 0 (31 upstream warnings/0 errors), synthetic native smoke twice exit 0 identical fingerprint, Python 8 PASS. First restore timeouts and mistaken DLL path documented. No Arma3 module or real GM generation tested. Stage 001 PARTIAL.
