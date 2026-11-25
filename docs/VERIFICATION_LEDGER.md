@@ -102,3 +102,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05J — native vegetation transitions
 [CC05J_RESULT](automation/CC05J_RESULT.md): actual offline incremental build, two identical runs, 5 native layers, 41/0 road points, no persistent grid mutation, +100m Z response. Per-layer final review and ownership reconciled. Clip-first equivalence FAIL; cross-layer/real seam/halo NOT TESTED. Stage 001 PARTIAL.
+
+## CC-05K — bounded native roads, rail and bridges
+[CC05K_RESULT](automation/CC05K_RESULT.md): offline build 0 errors/warnings incremental, two identical runs, 9 road profiles/2 non-bridge shape records read back; 13 native object records. Unchanged grid and +100m response. Short isolated bridge omission and disused rail state loss observed. Physical fit/runtime NOT RUN. Stage 001 PARTIAL.

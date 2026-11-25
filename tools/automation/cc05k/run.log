@@ -1,0 +1,17 @@
+MISSING_DEPENDENCIES_REFUSED PASS
+roads TwoLanesConcreteRoad:Normal:420,120;240,120;60,120 | SingleLaneDirtPath:Normal:180,240;60,240 | TwoLanesPrimaryRoad:Bridge:180,330;60,330
+rails Normal:240,60;240,82.5 | Crossing:240,82.5;240,120;240.00002,157.5 | Normal:240.00002,157.5;240,210 | Normal:420,390;300,390
+BridgeGenerator records=4 models=3 mode=Absolute
+RailwayGenerator records=9 models=5 mode=Relative
+delta=0 roads=3 rail_segments=4 roundtrip=2 profiles=9 records=13 road_fingerprint=a4256d04b6b9ad93aa1be02d1e3cf2feeed9f2ef4d041e918d6b13ec19d4bbc0 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+roads TwoLanesConcreteRoad:Normal:420,120;240,120;60,120 | SingleLaneDirtPath:Normal:180,240;60,240 | TwoLanesPrimaryRoad:Bridge:180,330;60,330
+rails Normal:240,60;240,82.5 | Crossing:240,82.5;240,120;240.00002,157.5 | Normal:240.00002,157.5;240,210 | Normal:420,390;300,390
+BridgeGenerator records=4 models=3 mode=Absolute
+RailwayGenerator records=9 models=5 mode=Relative
+delta=0 roads=3 rail_segments=4 roundtrip=2 profiles=9 records=13 road_fingerprint=a4256d04b6b9ad93aa1be02d1e3cf2feeed9f2ef4d041e918d6b13ec19d4bbc0 grid=92d0451235a854328b5412a4bca163c9a27bdb0e3fbcdb614b92f38e672bea60
+roads TwoLanesConcreteRoad:Normal:420,120;240,120;60,120 | SingleLaneDirtPath:Normal:180,240;60,240 | TwoLanesPrimaryRoad:Bridge:180,330;60,330
+rails Normal:240,60;240,82.5 | Crossing:240,82.5;240,120;240.00002,157.5 | Normal:240.00002,157.5;240,210 | Normal:420,390;300,390
+BridgeGenerator records=4 models=3 mode=Absolute
+RailwayGenerator records=9 models=5 mode=Relative
+delta=100 roads=3 rail_segments=4 roundtrip=2 profiles=9 records=13 road_fingerprint=a4256d04b6b9ad93aa1be02d1e3cf2feeed9f2ef4d041e918d6b13ec19d4bbc0 grid=aece1faa356062cb435d8233438f335940481bb586eb3eb3964eb4a3a16a8ddc
+PASS synthetic native roads compiler/reader, railway and bridge; +100m Z, repeat, unchanged grids; no physical fit proof

@@ -145,3 +145,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## Требование к лесу
 Владелец требует естественный лес без искусственной рядности, подлесок, валежник и сухостой. [Политика и проверка исходников](docs/map/VEGETATION_SUCCESSION_POLICY.md#требования-владельца-к-естественному-лесу--25112026). Штатный GRM Forest + ForestAdditional в приоритете. Фактический состав, естественность, посадка валежника и визуальная приёмка ещё не доказаны. Следующий CC-05K не изменён.
+
+## CC-05K measured result
+[CC05K_RESULT](docs/automation/CC05K_RESULT.md): native RoadsBuilder/RailwaysBuilder, memory-only RoadsCompiler/reader, BridgeGenerator and RailwayGenerator PASS bounded synthetic. 3 roads/2 non-bridge shape records, 9 profiles, 4 rail segments, 4 bridge and 9 rail model records, +100m Z and repeat PASS. Short isolated bridge omitted and disused rail treated as normal; preserve source/state, review before production. No grade/physical fit or runtime proof. Next proposed CC-05L hydrography and surface dependencies, GM-only. No real generation; Stage 001 PARTIAL.

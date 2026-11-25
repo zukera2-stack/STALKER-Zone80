@@ -106,3 +106,6 @@ Owner selected option 2: retain GM as the only authority for real elevation, use
 
 ## Forest quality requirement
 Owner requires irregular natural forest, understory, fallen deadwood and standing deadwood. [Policy](../map/VEGETATION_SUCCESSION_POLICY.md). Source confirms random point filling and ForestAdditional; verify actual config/output category composition, absence of artificial rows, ground contact and visual/game performance before production acceptance. Not a new generation test. CC-05K remains next.
+
+## CC-05K result
+[CC05K_RESULT](CC05K_RESULT.md): native road/rail geometry, virtual-memory road SHP/DBF roundtrip and native bridge/rail placements PASS bounded. 13 records, +100m world Z, unchanged grid. Short bridge omitted; disused rail normal; feature provenance and physical fit review remain. Next proposed CC-05L native hydrography/surface graph, GM-only. UI deferred.

@@ -30,3 +30,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05J
 [cc05j](cc05j/README.md) — multi-polygon native vegetation transitions, point review and clip-first comparison. [Report](../../docs/automation/CC05J_RESULT.md).
+
+## CC-05K
+[cc05k](cc05k/README.md) — native road compiler/reader memory roundtrip and bridge/rail placement probe. [Report](../../docs/automation/CC05K_RESULT.md).

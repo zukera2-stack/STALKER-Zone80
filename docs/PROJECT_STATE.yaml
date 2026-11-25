@@ -498,3 +498,20 @@ cc05j_result:
   cross_layer_collision_tested: false
   real_generation: false
   next: "CC-05K native road/rail/infrastructure review and bounded road layer"
+
+cc05k_result:
+  report: "docs/automation/CC05K_RESULT.md"
+  native_probe_passes: 2
+  synthetic_roads: 3
+  native_shape_roundtrip_records: 2
+  road_profiles_checked: 9
+  native_rail_segments: 4
+  bridge_model_records: 4
+  rail_model_records: 9
+  short_isolated_bridge_omitted: true
+  disused_rail_state_preserved: false
+  absolute_z_shift_m: 100
+  grid_unchanged: true
+  physical_grade_and_fit_tested: false
+  real_generation: false
+  next: "CC-05L hydrography and surface dependency review"
