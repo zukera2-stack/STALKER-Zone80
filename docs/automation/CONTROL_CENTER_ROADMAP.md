@@ -76,3 +76,6 @@ Next proposed development task: CC-01, working bounded synthetic worker in tools
 
 ## Owner decision — direct GM→GRM integration, CC-05B (25.11.2026)
 Owner selected option 2: retain GM as the only authority for real elevation, use actual GRM to generate environment, not a duplicate generator. CC-06 GUI is deferred until a working software prototype can consume existing GM heights, reviewed local geographic data and resource configs. [CC05B_RESULT](CC05B_RESULT.md): 8 Python input tests PASS twice; original C# bridge candidate targets actual upstream public interfaces, pre-seeds ElevationData, blocks default builders, tests proposed native consumer. C# compile/smoke NOT RUN locally (.NET 10 absent, NuGet/GitHub DNS blocked); no real context or layer entrypoint enabled. CC-05C: verify build/synthetic consumer, then close dependencies, coordinate/edge and resource/OSM gates. No new real height generation, no installed binary changes or license assumptions.
+
+## CC-05C environment intake
+[CC05C_ENVIRONMENT](CC05C_ENVIRONMENT.md): SDK smoke PASS, source archive inspected, actual NuGet restore BLOCKED. Owner supplied SDK/source; offline package collector delivered. Next actual GRM core/bridge compile after verified offline package intake; CC-06 remains deferred. No real map generation.

@@ -115,3 +115,6 @@ Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthet
 
 ## Owner-approved pivot CC-05B
 Owner selects direct GM-only elevation injection into GRM; CC-06 UI deferred. Read [CC05B_RESULT](docs/automation/CC05B_RESULT.md) and tools/automation/cc05b/README.md. Python node-compatible input gate tested; C# source candidate NOT compiled or run locally; synthetic-only factory, real context disabled. Next CC-05C compile against pinned GRM net10 and verify native synthetic consumer; no real generation until source/CRS/grid/edge/asset/offline dependency gates. Do not claim recognized upstream source license or distribute modified GRM. Stage 001 PARTIAL, no P: writes, merge or native map output.
+
+## CC-05C environment checkpoint
+[CC05C_ENVIRONMENT](docs/automation/CC05C_ENVIRONMENT.md): owner SDK 10.0.404 Linux extracted and dependency-free C# smoke PASS; pinned-name GRM source ZIP CRC PASS. Actual restore blocked by absent NuGet packages / DNS. Collector ZIP delivered to owner; Windows collector NOT RUN. Next verify offline package bundle, restore/build/test actual GRM core and bridge. No native real map run; UI deferred.
