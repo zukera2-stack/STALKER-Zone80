@@ -1,6 +1,6 @@
 # Zone80 Control Center — план автономной разработки
 
-**Текущий статус после CC05Q:** CC01–CC04 bounded synthetic PASS, CC05B–P native synthetic/review, CC05Q measured bounded Linux native integration PASS / overall PARTIAL. Proposed CC05R NOT RUN, CC06 UI deferred, CC07 local gated. [Handoff](RESUME_AFTER_CC05Q.md). Таблица ниже — исторический первоначальный план.
+**Текущий статус после CC05R:** CC01–05Q measured bounded prototypes; CC05R fixed native-to-sector review bridge PASS / overall PARTIAL. Proposed CC06A read-only dashboard NOT RUN; CC07 local gated. [Handoff](RESUME_AFTER_CC05R.md). Historical plan below.
 
 Дата: 25.11.2026. Владелец попросил закрепить предложенный семиэтапный план. Baseline b53d0db35a384efac84b84199bda98c6db8548fe, Draft PR #47, Issue #42. Это план разработки, не отчёт о выполнении и не новое разрешение на native generation. Stage 001 / PARTIAL. Номера CC-01…07 — подэтапы инструментария, НЕ Stage 001…007 всего проекта.
 
