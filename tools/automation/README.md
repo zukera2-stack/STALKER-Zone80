@@ -33,3 +33,6 @@ Current implementation: [CC-02](cc02/README.md), bounded Linux synthetic recover
 
 ## CC-05K
 [cc05k](cc05k/README.md) — native road compiler/reader memory roundtrip and bridge/rail placement probe. [Report](../../docs/automation/CC05K_RESULT.md).
+
+## CC-05L
+[cc05l](cc05l/README.md) — bounded native hydrography and diagnostic material mask probe. [Report](../../docs/automation/CC05L_RESULT.md).

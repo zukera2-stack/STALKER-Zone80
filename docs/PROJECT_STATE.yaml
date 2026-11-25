@@ -515,3 +515,24 @@ cc05k_result:
   physical_grade_and_fit_tested: false
   real_generation: false
   next: "CC-05L hydrography and surface dependency review"
+
+cc05l_result:
+  report: "docs/automation/CC05L_RESULT.md"
+  native_probe_passes: 2
+  lake_polygons: 2
+  watercourse_paths: 3
+  native_watercourse_records: 13
+  material_usages_checked: 16
+  material_ids_checked: 11
+  missing_surface_definitions: 1
+  diagnostic_mask_pixels: [480, 480]
+  diagnostic_mask_colors: 3
+  full_native_idmap_tested: false
+  native_radial_elevation_dependency_refused: true
+  stream_tunnel_flag_correct: false
+  canal_emitted: false
+  source_river_width_preserved: false
+  lake_edge_inset_m: 25
+  grid_unchanged: true
+  real_generation: false
+  next: "CC-05M GM-only surface geometry contract and full priority review"

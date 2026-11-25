@@ -105,3 +105,6 @@ Python stdlib `python -m unittest -v test_gm_node_input.py` 8/8 methods PASS twi
 
 ## CC-05K — bounded native roads, rail and bridges
 [CC05K_RESULT](automation/CC05K_RESULT.md): offline build 0 errors/warnings incremental, two identical runs, 9 road profiles/2 non-bridge shape records read back; 13 native object records. Unchanged grid and +100m response. Short isolated bridge omission and disused rail state loss observed. Physical fit/runtime NOT RUN. Stage 001 PARTIAL.
+
+## CC-05L — bounded native hydrography and diagnostic mask
+[CC05L_RESULT](automation/CC05L_RESULT.md): two identical runs, 13 native placements, +100m Z, unchanged grid, six pixel controls; 16 usages/11 colors checked. Full IdMap and actual water rendering NOT RUN. StreamTunnel flag, width and canal defects preserved as observations, not approvals. Stage 001 PARTIAL.

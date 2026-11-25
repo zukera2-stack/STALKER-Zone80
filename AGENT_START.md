@@ -148,3 +148,6 @@ Read [VEGETATION_SUCCESSION_POLICY](docs/map/VEGETATION_SUCCESSION_POLICY.md) an
 
 ## CC-05K measured result
 [CC05K_RESULT](docs/automation/CC05K_RESULT.md): native RoadsBuilder/RailwaysBuilder, memory-only RoadsCompiler/reader, BridgeGenerator and RailwayGenerator PASS bounded synthetic. 3 roads/2 non-bridge shape records, 9 profiles, 4 rail segments, 4 bridge and 9 rail model records, +100m Z and repeat PASS. Short isolated bridge omitted and disused rail treated as normal; preserve source/state, review before production. No grade/physical fit or runtime proof. Next proposed CC-05L hydrography and surface dependencies, GM-only. No real generation; Stage 001 PARTIAL.
+
+## CC-05L measured result
+[CC05L_RESULT](docs/automation/CC05L_RESULT.md): native lakes/watercourses/sand and WatercourseGenerator PASS bounded, 13 records, +100m Z and repeat. Native polygon draw helper produced memory-only 480x480 mask, 16 usage/11 material mapping PASS; full IdMapRender NOT RUN due to ElevationWithLakesData, radial actually refused. River width fixed, canal omitted, StreamTunnel flag false, lake inset clips edge. Next proposed CC-05M GM-only surface geometry contract and priority graph tests. Stage 001 PARTIAL, no real generation.

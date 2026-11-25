@@ -109,3 +109,6 @@ Owner requires irregular natural forest, understory, fallen deadwood and standin
 
 ## CC-05K result
 [CC05K_RESULT](CC05K_RESULT.md): native road/rail geometry, virtual-memory road SHP/DBF roundtrip and native bridge/rail placements PASS bounded. 13 records, +100m world Z, unchanged grid. Short bridge omitted; disused rail normal; feature provenance and physical fit review remain. Next proposed CC-05L native hydrography/surface graph, GM-only. UI deferred.
+
+## CC-05L result
+[CC05L_RESULT](CC05L_RESULT.md): bounded native hydrography, 13 watercourse records, native polygon diagnostic mask and exact material mapping PASS; full IdMap NOT RUN, radial denied elevation dependency. River width, canal, StreamTunnel flag and lake inset review required. Next proposed CC-05M GM-only surface geometry contract and priority graph. UI deferred.
