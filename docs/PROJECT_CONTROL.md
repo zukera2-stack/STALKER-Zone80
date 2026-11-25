@@ -68,3 +68,6 @@
 
 ## 6. Актуальная карта работ 25.11.2026
 [Единый checkpoint](map/MAP_003_CURRENT_CHECKPOINT.md) в Draft PR #47 содержит факты, ограничения, все отчёты и следующий шаг. Предыдущие формулировки разделов 4–5 о NOT RUN относятся к постановке до локального диагностического экспорта; не являются текущим статусом. A BLOCKED, B PASS existing bbox, C PARTIAL, D BLOCKED/NOT RUN. GRM v03 — только редактор; worker — design only. Issue #42 не дробим, Stage не повышаем.
+
+## 7. Автономная разработка Control Center
+[CONTROL_CENTER_ROADMAP](automation/CONTROL_CENTER_ROADMAP.md) — порядок CC-01…07, критерии приёмки и разделение cloud/synthetic и локальной Windows-интеграции. Следующий предлагаемый подэтап CC-01 Worker core. План не заменяет текущую Issue #42 и не блокирует независимое разрешённое MAP-003 локальное GIS задание. Stage 001 PARTIAL.

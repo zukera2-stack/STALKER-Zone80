@@ -30,3 +30,6 @@ v03 bounded Python editor-only transformer changes mud to a3/map_data/gdt_mud pa
 3. Audit GRM transitive elevation dependencies; forest/trees require ConditionEvaluator/ElevationData; bridge/fence/objects/sidewalks/ponds have elevation dependencies, rail transitive chain unverified. Design reviewed GM-input adapter; no RawElevationBuilder or generated substitute heights, no unauthorized smoothing/halo.
 4. Independently complete authorized GM full N51E030 and exact grid NoData=0; only then one isolated terrain-only TB import. Existing GIS audits need no repeat unless source changes.
 5. Worker synthetic process tests, restart/stop/checkpoint and resource limits under existing contract. Native layer and scheduler remain gated. No full-world generation, gentb/genwrp/genmod, placement, P: writes, power changes, or automatic merge. Report actual results in existing Issue #42.
+
+## План автономного инструментария — 25.11.2026
+[Control Center roadmap](../automation/CONTROL_CENTER_ROADMAP.md) закрепляет семь подэтапов CC-01…07 без смены текущего Stage 001. Следующий предлагаемый программный шаг — CC-01 synthetic Worker core; локальный read-only preflight и GM full coverage остаются независимыми. Статусы ранее проверенных артефактов неизменны; новых тестов нет.

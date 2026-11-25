@@ -13,3 +13,6 @@ Deliver one report docs/automation/WORKER_LOCAL_RESULT.md (redacted), real logs 
 
 ## Resume checkpoint — 2026-11-25 (read first)
 [Current checkpoint](../map/MAP_003_CURRENT_CHECKPOINT.md) supersedes earlier assumptions about missing owner config. Source inventories, owner loose scan, v02 Studio roundtrip and v03 bounded transform already done. Do not request the same screenshots/inventory or rerun without cause. Retrieve owner Zone80_Config_Preflight_v03.zip only if accessible, verify SHA from [v03 report](../map/GRM_CONFIG_PREFLIGHT_V03.md); no assumption that chat artifacts are locally mounted. Next read-only check: 22 new clutter refs, mud, stock surface/class/world/dependency closure, explicit ice policy. Continue compiler tests, GM adapter design and synthetic worker independently; current GM 629 NoData and TB BLOCKED unchanged. Keep all native/scheduler gates; no new task/merge.
+
+## Разделение разработки — 25.11.2026
+[CONTROL_CENTER_ROADMAP](CONTROL_CENTER_ROADMAP.md) фиксирует автономные CC-01…06 и локальную интеграцию CC-07. Cloud может реализовать и протестировать синтетическое ядро; Луна проверяет Windows-specific process ownership, ресурсы и нативные инструменты, продолжает разрешённую GM работу. Перед кодом сверить HEAD и назначение в Issue #42, не дублировать работу cloud. Никакого scheduler/native bypass. На дату записи нового кода нет.

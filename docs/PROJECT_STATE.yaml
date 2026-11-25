@@ -233,3 +233,22 @@ map003_surface_and_coverage:
     - "docs/map/MAP_003_COVERAGE_AUDIT.md"
     - "docs/map/MAP_003_ROAD_AUDIT.md"
     - "docs/map/MAP_003_SURFACE_AUDIT.md"
+
+control_center_roadmap:
+  document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
+  date: "2026-11-25"
+  baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
+  status: "DOCUMENTED; no new implementation or tests"
+  next_proposed_step: "CC-01 synthetic worker core"
+  stages:
+    CC-01: "DESIGN ONLY; NEXT"
+    CC-02: "PLANNED; fault injection"
+    CC-03: "PLANNED; logical sector manager"
+    CC-04: "PARTIAL precursor v03; production compiler PLANNED"
+    CC-05: "PLANNED; native GM-GRM adapter BLOCKED"
+    CC-06: "CONCEPT ONLY; Control Center"
+    CC-07: "PLANNED; gated Windows integration"
+  actual_windows_validation: false
+  production_generation_authorized: false
+  scheduler_registration_authorized: false
+  overall_stage_unchanged: "001 / PARTIAL"
