@@ -1,6 +1,6 @@
 # Agent instructions: STALKER Zone80
 
-**Current handoff:** [RESUME_CC05Q](docs/automation/RESUME_CC05Q.md). Next cloud task CC-05Q (NOT RUN), latest measured SHA `ff84106de719dbb17fd1caa749cf5aa5269b9698`; check actual Draft PR #47 HEAD. Reuse CC02 Worker and CC05P native child, no rewrite. Local MAP-003 and all STOP rules unchanged.
+**Current handoff:** [RESUME_AFTER_CC05Q](docs/automation/RESUME_AFTER_CC05Q.md). Draft PR #48, measured code 2c5b696571407b38d2fcf781a0b31a1c6a017a6b; CC05Q bounded Linux synthetic PASS, overall PARTIAL. Proposed next CC05R NOT RUN. Reuse current components, do not rewrite. Local MAP-003 and all STOP rules unchanged.
 
 **First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.
 
