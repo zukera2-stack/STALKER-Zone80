@@ -1,0 +1,37 @@
+test_active_cancel_descendant_and_unrelated_sentinel (test_worker.Tests.test_active_cancel_descendant_and_unrelated_sentinel) ... ok
+test_actual_false_success_missing (test_worker.Tests.test_actual_false_success_missing) ... a FAIL
+ok
+test_actual_false_success_wrong (test_worker.Tests.test_actual_false_success_wrong) ... a FAIL
+ok
+test_actual_nonzero (test_worker.Tests.test_actual_nonzero) ... a FAIL
+ok
+test_actual_timeout (test_worker.Tests.test_actual_timeout) ... a FAIL
+ok
+test_bad_manifests_and_resource_gate (test_worker.Tests.test_bad_manifests_and_resource_gate) ... ok
+test_concurrent_runner (test_worker.Tests.test_concurrent_runner) ... ok
+test_leader_exit_with_descendant (test_worker.Tests.test_leader_exit_with_descendant) ... a FAIL
+ok
+test_pass_resume_corruption_and_invalidation (test_worker.Tests.test_pass_resume_corruption_and_invalidation) ... a PASS
+b PASS
+a SKIP verified PASS
+b SKIP verified PASS
+a PASS
+b SKIP verified PASS
+a PASS
+b PASS
+ok
+test_real_checkpoint_crash_before_after_replace (test_worker.Tests.test_real_checkpoint_crash_before_after_replace) ... ok
+test_real_kill_restart_and_explicit_recovery (test_worker.Tests.test_real_kill_restart_and_explicit_recovery) ... a SKIP verified PASS
+a SKIP verified PASS
+b PASS
+ok
+test_sampled_rss_limit (test_worker.Tests.test_sampled_rss_limit) ... a FAIL
+ok
+test_stop_keeps_completed_pass (test_worker.Tests.test_stop_keeps_completed_pass) ... a PASS
+b PASS
+ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 14.418s
+
+OK

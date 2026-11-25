@@ -100,3 +100,6 @@ Read [MINIMAL_DEPENDENCIES](docs/integration/MINIMAL_DEPENDENCIES.md). Base Arma
 
 ## CC-01 checkpoint
 Read [CC01_RESULT](docs/automation/CC01_RESULT.md): tested bounded Linux synthetic worker in tools/automation/cc01; next CC-02 fault injection. Windows deliberately blocked; old disabled manifest not executable by this prototype. No actual GIS/native job, no Stage promotion. Existing local MAP-003 gates unchanged.
+
+## CC-02 checkpoint
+[CC02_RESULT](docs/automation/CC02_RESULT.md) is the current Worker result: 13 Linux synthetic tests PASS twice; active stop, actual kill/recovery, inherited lock and owned descendant cleanup. CC-01 remains archived; CC-02 has a new synthetic-only schema/root, no automatic state migration. Next CC-03 logical sector manager on synthetic inputs; no production CRS, real heights, native jobs, P: writes, scheduler, merge or stage promotion. Existing local MAP-003 gates unchanged.

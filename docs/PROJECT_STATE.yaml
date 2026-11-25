@@ -174,8 +174,8 @@ map003_offline_geocatalog:
 local_background_automation:
   handoff: "docs/automation/LUNA_HANDOFF.md"
   contract: "docs/automation/WORKER_CONTRACT.md"
-  status: "CC-01 bounded Linux synthetic core tested; Windows NOT RUN"
-  synthetic_tests: "CC-01 Linux PASS 9 unittest methods; 14 manifest negatives; CC-02 pending"
+  status: "CC-02 bounded Linux synthetic recovery tested; Windows NOT RUN"
+  synthetic_tests: "CC-01 historical PASS; CC-02 13 methods PASS twice, 9 invalid manifest subcases"
   native_grm_layer: "NOT RUN; gated"
   scheduler_registered: false
   scheduler_registration_authorized: false
@@ -238,12 +238,12 @@ control_center_roadmap:
   document: "docs/automation/CONTROL_CENTER_ROADMAP.md"
   date: "2026-11-25"
   baseline_sha: "b53d0db35a384efac84b84199bda98c6db8548fe"
-  status: "CC-01 Linux synthetic implementation PASS in scope; contract partial"
-  next_proposed_step: "CC-02 fault injection and recovery"
+  status: "CC-02 Linux synthetic recovery PASS in scope; full contract PARTIAL"
+  next_proposed_step: "CC-03 logical sector manager"
   stages:
     CC-01: "PASS bounded Linux synthetic core; Windows and full resource contract pending"
-    CC-02: "NEXT; fault injection"
-    CC-03: "PLANNED; logical sector manager"
+    CC-02: "PASS bounded Linux synthetic fault injection; hard resource/Windows gates pending"
+    CC-03: "NEXT; logical sector manager"
     CC-04: "PARTIAL precursor v03; production compiler PLANNED"
     CC-05: "PLANNED; native GM-GRM adapter BLOCKED"
     CC-06: "CONCEPT ONLY; Control Center"
@@ -263,3 +263,19 @@ cc01_result:
   windows_tested: false
   scheduler_registered: false
   native_jobs_authorized: false
+
+cc02_result:
+  report: "docs/automation/CC02_RESULT.md"
+  base_sha: "f585327a32849c7c83601a275c4d23a178b54cf0"
+  synthetic_test_methods_passed: 13
+  full_suite_passes: 2
+  invalid_manifest_subcases_passed: 9
+  actual_runner_kill_recovery: true
+  actual_active_cancel_descendant: true
+  linux_cli_demo_jobs_passed: 2
+  linux_cli_resume_jobs_skipped: 2
+  sampled_group_rss_limit_tested: true
+  hard_tree_resource_limit_verified: false
+  windows_tested: false
+  native_jobs_authorized: false
+  scheduler_registered: false

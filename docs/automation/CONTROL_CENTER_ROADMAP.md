@@ -61,3 +61,6 @@ Next proposed development task: CC-01, working bounded synthetic worker in tools
 
 ## CC-01 result / 2026-11-25
 [CC01_RESULT](CC01_RESULT.md): bounded Linux synthetic core implemented and tested (9 unittest methods incl 14 invalid-manifest subcases, two CLI jobs PASS and verified resume skips). CC-01 cloud core PASS in scope; full WORKER_CONTRACT remains PARTIAL. Windows and real process-tree limits not implemented, no active cancellation or crash reconciliation proof. Next CC-02. No native execution or scheduler. Earlier table is the original plan, not the current execution state.
+
+## CC-02 result / 2026-11-25
+[CC02_RESULT](CC02_RESULT.md): Linux bounded synthetic fault-injection core, 13 tests PASS twice, actual SIGKILL runner recovery gated by inherited flock, active cancel/timeout and owned descendant cleanup, actual concurrent-run block, sampled RSS guard, checkpoint subprocess exit before/after replace. Completed A preserved across B crash and explicit recovery. Windows, arbitrary descendants, strict cgroup/tree private/commit limits, power loss and detached lifetime remain NOT RUN/PARTIAL. Full worker contract not accepted for native use. Next CC-03: synthetic logical sector manager; no geographic generation or stage promotion.
