@@ -1,5 +1,9 @@
 # LUNA — unified MAP-003 automation assignment
 
+## ТЕКУЩЕЕ ПОРУЧЕНИЕ — 26.11.2026 (имеет приоритет над историей ниже)
+Выполнять Issue #42 полным автономным циклом, не дробить. Обязательные навыки: [zone80-luna-autonomous](../../.cursor/skills/zone80-luna-autonomous/SKILL.md), [zone80-map003-gm-tb](../../.cursor/skills/zone80-map003-gm-tb/SKILL.md). Последнее подтверждение локальной работы: GM direct URL failed pre-HTTP; IMPORT_OSM_TILE missing OSM_BASE_URL pre-network; TB launch PASS, import NOT RUN; 629 NoData. Следующая цель — получить покрытие непосредственно через встроенный GM Online Data, экспорт 64²/30м, независимая QC, проверить существующее совмещение дорог, один terrain-only TB sandbox при PASS и изоляции. Самопроверка и исправление безопасных ошибок обязательны, повтор неизменной неудачной операции запрещён. Одна итоговая сдача в #42; никаких новых Worker/CC06/GRM/SOAK задач, внешних загрузчиков, WRP/PBO, P:, merge. Исторические задания ниже не являются активными.
+
+
 ## АКТУАЛЬНО — не начинать заново
 Сначала [RESUME_CC05Q](RESUME_CC05Q.md). Cloud уже реализовал CC01–CC05P (Linux synthetic/review); старые указания B/C/E ниже — историческое задание. CC02 Worker, CC03 Sector Manager, CC05B bridge, CC05P child/verifier находятся в Git. Луна не должна заново создавать Worker/GRM адаптер. Продолжать локальные A/D и недостающие Windows/asset gates; сверить реальный HEAD PR #47 и Issue #42. CC05Q cloud integration пока NOT RUN. Доступ к private Library не предполагать. Прежние ограничения без изменений.
 
