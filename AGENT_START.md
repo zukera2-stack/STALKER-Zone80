@@ -1,5 +1,9 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
+## АКТУАЛЬНО — Луна, 26.11.2026: автономный MAP-003
+Владелец поручил укрупнить задачу и выполнять её с самопроверкой. **Единственный активный практический маршрут — Issue #42, встроенный Online Data Global Mapper 26.2 → полный рельеф → QC → один безопасный TB terrain-only импорт.** Прочитай [автономный навык](.cursor/skills/zone80-luna-autonomous/SKILL.md) и [профиль GM→TB](.cursor/skills/zone80-map003-gm-tb/SKILL.md), затем [LUNA_HANDOFF](docs/automation/LUNA_HANDOFF.md). Старые указания о внешнем получении тайла и новом Worker/UI/SOAK не исполнять. TB launch PASS по локальному отчёту 26.11; импорт NOT RUN; 629 NoData. Stage 001 PARTIAL. Самостоятельно исправлять безопасные ошибки и проверять результат, не расширяя полномочия. Никаких новых высот вне GM, P:, WRP/PBO, реального GRM placement, merge. 
+
+
 ## АКТУАЛЬНО — после CC-05R (25.11.2026)
 **Начни с [RESUME_AFTER_CC05R](docs/automation/RESUME_AFTER_CC05R.md).** Ветка `feat/cc05r-sector-review`, родительский Draft PR #48, измеренный код `7954bd57b9d7ca72404b1841204989f906686459`. CC05R bounded Linux synthetic PASS / overall PARTIAL; 64 review nodes, 112 edges, native fixture only two sectors. Решение владельца: CC06/CC06A DEFERRED до практической проверки на реальной карте. Следующий активный шаг MAP-003, полное покрытие высот в GM26.2. Локальный MAP-003 независим, 629 NoData; Stage 001 PARTIAL. Исторические записи ниже не являются конкурирующими заданиями.
 
