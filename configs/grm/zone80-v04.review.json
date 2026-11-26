@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_ONLY_BLOCKED_FOR_GENERATION",
+  "approved_for_generation": false,
+  "source": {
+    "name": "Zone80_v02.grma3a",
+    "documented_raw_sha256": "84e0cdee7501b7e9f01cc92b6635c70e8d6503f591e0b1a0ffffef2a2d6bf41a",
+    "source_access": "all 3272 indexed text lines parsed; exact original bytes unavailable",
+    "v03_raw_sha256": "418a6b1db5493c8b9f89f288024a769522f568483a5e614383d934506e7a941e",
+    "v03_access": "NOT_AVAILABLE; documented two-path transform independently reconstructed in memory only"
+  },
+  "reference_inventory": {
+    "unique_paths": 203,
+    "stock_present": 201,
+    "stock_missing": 0,
+    "external_paths": [
+      "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_nopx.paa",
+      "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_co.paa"
+    ],
+    "source_scope": "actual v02; case-insensitive leaf references, no runtime verification"
+  },
+  "base_candidate": {
+    "old_world": "arm_world_centraleurope",
+    "old_dependency": "arm_centraleurope",
+    "world": "CAWorld",
+    "dependency": "A3_Map_Data",
+    "evidence": "P:\\a3\\map_data\\config.cpp defines CAWorld: DefaultWorld and CfgPatches A3_Map_Data; not sufficient alone for all assets"
+  },
+  "changes": [
+    {
+      "path": "BaseWorldName",
+      "from": "arm_world_centraleurope",
+      "to": "CAWorld"
+    },
+    {
+      "path": "BaseDependency",
+      "from": "arm_centraleurope",
+      "to": "A3_Map_Data"
+    },
+    {
+      "path": "Materials.Definitions[Usages=RiverGround,LakeGround].Material.ColorTexture",
+      "from": "a3\\map_enoch\\data\\gdt_enmud_co.paa",
+      "to": "a3\\map_data\\gdt_mud_co.paa"
+    },
+    {
+      "path": "Materials.Definitions[Usages=RiverGround,LakeGround].Material.NormalTexture",
+      "from": "a3\\map_enoch\\data\\gdt_enmud_nopx.paa",
+      "to": "a3\\map_data\\gdt_mud_nopx.paa"
+    }
+  ],
+  "materials": [
+    {
+      "usages": [
+        "Default",
+        "Meadow"
+      ],
+      "id": "6B8E23FF",
+      "color": "a3\\map_enoch\\data\\gdt_engrass2_co.paa",
+      "normal": "a3\\map_enoch\\data\\gdt_engrass2_nopx.paa",
+      "surface": "GdtKLGrass2",
+      "clutterCount": 7
+    },
+    {
+      "usages": [
+        "DefaultUrban",
+        "Grass"
+      ],
+      "id": "569600FF",
+      "color": "a3\\map_enoch\\data\\gdt_engrass1_co.paa",
+      "normal": "a3\\map_enoch\\data\\gdt_engrass1_nopx.paa",
+      "surface": "GdtKLGrass1",
+      "clutterCount": 9
+    },
+    {
+      "usages": [
+        "DefaultIndustrial"
+      ],
+      "id": "A52A2AFF",
+      "color": "a3\\map_enoch\\data\\gdt_dirt_co.paa",
+      "normal": "a3\\map_enoch\\data\\gdt_dirt_nopx.paa",
+      "surface": "GdtKLDirt",
+      "clutterCount": 0
+    },
+    {
+      "usages": [
+        "IceSurface"
+      ],
+      "id": "C3E6FFFF",
+      "color": "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_co.paa",
+      "normal": "z\\arm\\addons\\common_v2\\data\\gdt\\arm_ice_nopx.paa",
+      "surface": "arm_ice",
+      "clutterCount": 0
+    },
+    {
+      "usages": [
+        "ScreeSurface",
+        "RockGround"
+      ],
+      "id": "808080FF",
+      "color": "a3\\map_data\\gdt_rock_co.paa",
+      "normal": "a3\\map_data\\gdt_rock_nopx.paa",
+      "surface": "GdtCliff",
+      "clutterCount": 1
+    },
+    {
+      "usages": [
+        "Coastline",
+        "Sand"
+      ],
+      "id": "F4A460FF",
+      "color": "a3\\map_data\\gdt_beach_co.paa",
+      "normal": "a3\\map_data\\gdt_beach_nopx.paa",
+      "surface": "GdtBeach",
+      "clutterCount": 0
+    },
+    {
+      "usages": [
+        "OceanGround"
+      ],
+      "id": "0026FFFF",
+      "color": "a3\\map_data\\gdt_seabed_co.paa",
+      "normal": "a3\\map_data\\gdt_seabed_nopx.paa",
+      "surface": "GdtSeabed",
+      "clutterCount": 7
+    },
+    {
+      "usages": [
+        "ForestGround"
+      ],
+      "id": "664A00FF",
+      "color": "a3\\map_enoch\\data\\gdt_enforestdec_co.paa",
+      "normal": "a3\\map_enoch\\data\\gdt_enforestdec_nopx.paa",
+      "surface": "GdtKLForestDec",
+      "clutterCount": 9
+    },
+    {
+      "usages": [
+        "FarmLand"
+      ],
+      "id": "805C00FF",
+      "color": "a3\\map_enoch\\data\\gdt_enfield_co.paa",
+      "normal": "a3\\map_enoch\\data\\gdt_enfield_nopx.paa",
+      "surface": "GdtKlField",
+      "clutterCount": 2
+    },
+    {
+      "usages": [
+        "RiverGround",
+        "LakeGround"
+      ],
+      "id": "ADD8E6FF",
+      "color": "a3\\map_data\\gdt_mud_co.paa",
+      "normal": "a3\\map_data\\gdt_mud_nopx.paa",
+      "surface": null,
+      "clutterCount": 0,
+      "native_surface_candidate": "GdtMud",
+      "note": "Surface metadata absent in source; preserve absence until verified inherited MudClutter"
+    },
+    {
+      "usages": [
+        "Asphalt"
+      ],
+      "id": "000000FF",
+      "color": "a3\\map_data_exp\\gdt_asphalt_co.paa",
+      "normal": "a3\\map_data_exp\\gdt_asphalt_nopx.paa",
+      "surface": "GdtAsphalt",
+      "clutterCount": 0
+    }
+  ],
+  "gates": {
+    "ice": "BLOCKED_EXTERNAL_ICE_PAIR; no silent substitution",
+    "surface_generator": "BLOCKED_STOCK_GLOBAL_REDECLARATIONS; review stock-reference emission and per-world clutter inheritance",
+    "dependency_closure": "NOT_RUN",
+    "dlc_entitlement": "NOT_RUN",
+    "native_parser": "NOT_RUN",
+    "regional_fit": "NOT_RUN",
+    "source_acceptance": "NOT_RUN",
+    "generation": "FORBIDDEN"
+  },
+  "tests": {
+    "actual_v02_parsed": true,
+    "determinism": "PASS",
+    "reverse_exact_semantics": "PASS",
+    "documented_v03_semantic_equivalence": "PASS",
+    "negative_cases": [
+      "bad base",
+      "bad mask ID",
+      "bad mud",
+      "ice alias",
+      "buildings",
+      "ponds",
+      "duplicate usage",
+      "duplicate RGB"
+    ],
+    "negative_pass": 8,
+    "native": "NOT_RUN"
+  }
+}
