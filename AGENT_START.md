@@ -1,5 +1,8 @@
 # ☢️ AGENT_START — единая точка входа STALKER-Zone80
 
+## ЦЕЛЬ И РОЛИ — уточнение владельца 26.11.2026
+Готовим **конвейер секторного производства**, а не серию разовых чат-экспортов. ChatGPT — разработчик и проверяющий технологию; Codex/Луна на ПК — исполнитель конечных задач и QC. Global Mapper — высоты и отдельно качественная геопривязанная спутниковая подложка; GameRealisticMap — генерация игровых слоёв по профилям Zone80; Terrain Builder — конечная сборка единого мира. Читать [технологический план и gates](docs/automation/ZONE80_PRODUCTION_PIPELINE.md). Переиспользовать CC02–CC05R, CC06 отложен. Текущий разрешённый MAP-003: v06 geographic diagnostic ASC PASS, v07 полный локальный промежуточный GM raster → UTM QC; источник SRTM не принят для production. Imagery, real GRM layers, two sectors and full queue require respective source/asset/owner gates. Не расширять текущие разрешения; Stage 001 PARTIAL.
+
 ## АКТУАЛЬНО — Луна, 26.11.2026: автономный MAP-003
 Владелец поручил укрупнить задачу и выполнять её с самопроверкой. **Единственный активный практический маршрут — Issue #42, встроенный Online Data Global Mapper 26.2 → полный рельеф → QC → один безопасный TB terrain-only импорт.** Прочитай [автономный навык](.cursor/skills/zone80-luna-autonomous/SKILL.md) и [профиль GM→TB](.cursor/skills/zone80-map003-gm-tb/SKILL.md), затем [LUNA_HANDOFF](docs/automation/LUNA_HANDOFF.md). Старые указания о внешнем получении тайла и новом Worker/UI/SOAK не исполнять. TB launch PASS по локальному отчёту 26.11; импорт NOT RUN; 629 NoData. Stage 001 PARTIAL. Самостоятельно исправлять безопасные ошибки и проверять результат, не расширяя полномочия. Никаких новых высот вне GM, P:, WRP/PBO, реального GRM placement, merge. 
 
