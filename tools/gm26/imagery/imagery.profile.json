@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "scope": "MAP-003_G2_PREFLIGHT_ONLY",
+  "production_approved": false,
+  "source_approved": false,
+  "epsg": 32636,
+  "outer_bounds_m": [294373.084, 5698122.108, 296293.084, 5700042.108],
+  "terrain": {"cols": 64, "rows": 64, "step_m": 30},
+  "imagery": {"cols": 480, "rows": 480, "step_m": 4, "pixel_convention": "area", "center_bounds_candidate_m": [294375.084, 5698124.108, 296291.084, 5700040.108], "encoding": "classic_tiff_uncompressed_rgba8", "max_file_bytes": 16777216, "resampling": "BILINEAR", "native_source_gsd_m": null},
+  "grm": {"upstream_sha": "2aef2040836daa11a8a368bb0c7f9ecd8f405d65", "resolution_m": 4, "tile_size": 512, "sample_convention": "SW_node_north_first", "adapter_status": "DESIGN_ONLY"},
+  "source_candidates": ["Copernicus Sentinel-2 L2A true-color 10m", "EOX Sentinel-2 cloudless 2016 exact licensed layer"],
+  "source_selection": null,
+  "coverage_provenance": null
+}

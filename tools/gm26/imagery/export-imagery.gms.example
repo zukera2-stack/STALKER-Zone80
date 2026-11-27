@@ -1,0 +1,6 @@
+// NON-RUNNABLE TEMPLATE. Review source, license and locally verified GM26.2 projection/import first.
+// Only one authorized local image layer in a new isolated batch. Never render terrain/roads/labels.
+// Copy the actual successful MAP-003 projection command from the measured GMS, not a guessed command.
+// Outer bounds below are a CANDIDATE for imagery: unlike elevation, EXPORT_RASTER's pixel convention must be measured.
+// If wrong, preserve evidence and diagnose; do not shift metadata by hand.
+// EXPORT_RASTER FILENAME="<NEW_LOCAL_OUTPUT>/satellite.tif" TYPE=GEOTIFF GLOBAL_BOUNDS="294373.084,5698122.108,296293.084,5700042.108" PIXEL_SIZE="480x480" SAMPLING_METHOD=BILINEAR COMPRESSION=NONE BG_TRANSPARENT=YES FILL_GAPS=NO INC_VECTOR_DATA=NO SAVE_SCALE_AND_LEGEND=NO GEN_PRJ_FILE=YES GEN_WORLD_FILE=YES OVERWRITE_EXISTING=NO SNAP_BOUNDS_TO_SPACING=NO

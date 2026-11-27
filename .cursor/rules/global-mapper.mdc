@@ -1,9 +1,10 @@
 ---
-description: MAP-001 GIS exports using local Global Mapper 26.2 Pro
+description: MAP-001 and MAP-003 GIS exports using local Global Mapper 26.2 Pro
 globs:
   - "tools/gm26/**"
   - "docs/MAP_001_TASK.md"
   - "docs/GIS_PIPELINE.md"
+  - "docs/map/MAP_003*.md"
 alwaysApply: false
 ---
 
@@ -15,14 +16,12 @@ Use the exact syntax supported by the installed v26.2; do not use invented COM,
 v27-only script arguments, standalone SDK (separately licensed), or unofficial
 packages. Check the templates and `tools/gm26/README.md` before running.
 
-Allow source datasets only from approved, legal small local
-`reports/MAP-001/input` files. Never fetch Google 360 imagery as GIS data.
-Output and logs stay in new isolated `reports/MAP-001/<run-id>` directories.
+For MAP-001 historical work, approved small local inputs remain allowed. For real data acquisition under MAP-005 (historical MAP-003 rule), owner 26.11 requires acquisition exclusively via built-in GM Online Data/Terrain/Elevation and GM-only export; no external downloader or browser acquisition. Read `.cursor/skills/zone80-map003-gm-tb/SKILL.md` and `.cursor/skills/zone80-luna-autonomous/SKILL.md`. Output/logs in new isolated task-specific reports directories. Follow the mandatory autonomy v2.0 skill and alwaysApply rule; do not repeat already verified GM exports. Never fetch Google 360 imagery as GIS data.
 For every run check status, output, logfile, hash, CRS, bbox, units, datum and
 NoData. "EXPORTED_NEEDS_GIS_QC" is **not** map completion.
 
 **Map:** elevation and roads only. **Buildings:** geographic attribute and
 footprint catalog separate from Terrain Builder/Arma. Do not build 3D models,
-place buildings, manipulate P:/game assets, restart UIA soak tests, or merge
+place real buildings without explicit gates (bounded synthetic MAP-005 placements only), manipulate P:/game assets, restart UIA soak tests, or merge
 PRs automatically. If actual executable or data is missing, report BLOCKED
-instead of inventing a successful run.
+after bounded, materially different safe diagnostic attempts instead of inventing a successful run. Do not repeat unchanged failed commands.
