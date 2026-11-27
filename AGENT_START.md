@@ -4,7 +4,9 @@
 
 ## ПРИОРИТЕТ №1 — Луна / MAP-005 (решение владельца 27.11.2026)
 
-**Свежий checkpoint TB-VISUAL-01:** [визуальный QC и PAA](tools/automation/grm-auto04/TB_VISUAL_RESULT.md). Actual 2D native screenshot, satellite 246016/246016 exact, overlap 0/15616; 8 native ImageToPAA conversions+reverse, DXT1 mask 34 mismatches, stock draftlco ARGB1555 0/262144 RGBA. Separate 34-file material candidate, not linked to TB or engine tested. 92-file ZIP verified. Buldozer launch blocked by current P: cfg/workdir; need scoped preview isolation authorization, no config/P: edits. Native per-object/vertex/height export not run. Stage001 PARTIAL.
+**Свежий checkpoint TB-BULDOZER-CLI-01:** [прямой запуск без изменения настроек](tools/automation/grm-auto04/TB_BULDOZER_CLI.md). Native Buldozer x86/DX11 launch and actual empty-scene screenshot PASS with D: cwd/cfg/profiles; original cfg/opt/tv4p unchanged. Map connection NOT PROVEN, map render NOT RUN; historical -connect=pipe argument requires actual supported channel/handshake, no guesses. Viewer left running. Stage001 PARTIAL.
+
+**Предыдущий checkpoint TB-VISUAL-01:** [визуальный QC и PAA](tools/automation/grm-auto04/TB_VISUAL_RESULT.md). Actual 2D native screenshot, satellite 246016/246016 exact, overlap 0/15616; 8 native ImageToPAA conversions+reverse, DXT1 mask 34 mismatches, stock draftlco ARGB1555 0/262144 RGBA. Separate 34-file material candidate, not linked to TB or engine tested. 92-file ZIP verified. Buldozer launch blocked by current P: cfg/workdir; need scoped preview isolation authorization, no config/P: edits. Native per-object/vertex/height export not run. Stage001 PARTIAL.
 
 **Предыдущий checkpoint TB-AUTO-04:** [нативная сборка и reopen GRMAUTO04](tools/automation/grm-auto04/TB_NATIVE_RESULT.md). Actual 4562 objects, 3 models, ASC/BMP/mask/road shape import, 8 PNG/26 RVMAT, saved/reopened PASS, 67-file archive verified. Previous MAP005 untouched. Native per-object/shape coordinates, Buldozer/PAA and game readiness NOT RUN. Stage001 PARTIAL. Не повторять прошедший импорт; следующий gate — native spatial readback and safe preview.
 

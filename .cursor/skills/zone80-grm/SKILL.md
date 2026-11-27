@@ -4,6 +4,9 @@ description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asse
 ---
 # Zone80 GRM
 
+## Активный checkpoint TB-BULDOZER-CLI-01
+[Прямой запуск](../../../tools/automation/grm-auto04/TB_BULDOZER_CLI.md): owner prefers command-line keys over config edits. Native standalone Buldozer x86 window/DX11 PASS, D: working dir + copied cfg + profiles, exact original cfg/opt/tv4p unchanged. Actual empty-scene screenshot; GRMAUTO04 connection/render NOT PROVEN. TB normally supplies a connection channel; do not guess -connect pipe, launch second viewer via P: defaults or silently edit shared settings. Preserve P: read-only, scope and Stage001 PARTIAL.
+
 ## Активный checkpoint TB-VISUAL-01
 [Native visual and texture QC](../../../tools/automation/grm-auto04/TB_VISUAL_RESULT.md): actual 2D screenshot, satellite 246016/246016 exact, overlap 0/15616. ImageToPAA eight forward+reverse conversions; default DXT1 mask 34 changed pixels, installed *_draftlco alternative exact 262144 RGBA base-mip pixels. Candidate 8 PAA/26 RVMAT separate, not linked to original project or engine proven. Buldozer current workingDir/cfg P:; do not launch unisolated or edit shared settings without scoped authorization. Native coordinate export/3D preview still needed. All STOP and GM-only gates remain.
 
