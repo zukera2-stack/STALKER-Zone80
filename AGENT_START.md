@@ -4,7 +4,9 @@
 
 ## ПРИОРИТЕТ №1 — Луна / MAP-005 (решение владельца 27.11.2026)
 
-**Свежий checkpoint GRM-AUTO-03:** [измеренные четыре блока/сектора](tools/automation/grm-auto03/README.md). 12 native runs, 36/36 repeat, 4562 unique retained objects +2 conflict holds, 57600 full storage mask pixels, localized SW edit PASS; raw mask overlap FAIL 19 pixels. Next correct raster discrepancy and prepare integrated TB-compatible handoff; merged roads, actual geometry collision and native TB import NOT RUN. Stage001 PARTIAL.
+**Свежий checkpoint GRM-AUTO-04:** [объединённый TB import candidate](tools/automation/grm-auto04/README.md). 4562 retained placements, 2 native full roads/20 vertices, 4096 unchanged GM heights, corrected 11/11 repeat, canonical crop mismatch 0/57600, 15-file ZIP verified. Native TB import NOT RUN; previous saved MAP005 intact, editor minimized, need safe owner-confirmed unload/new own sandbox. Next actual import/save/reopen/readback. Stage001 PARTIAL.
+
+**Предыдущий checkpoint GRM-AUTO-03:** [измеренные четыре блока/сектора](tools/automation/grm-auto03/README.md). 12 native runs, 36/36 repeat, 4562 unique retained objects +2 conflict holds, 57600 full storage mask pixels, localized SW edit PASS; raw mask overlap FAIL 19 pixels. Next correct raster discrepancy and prepare integrated TB-compatible handoff; merged roads, actual geometry collision and native TB import NOT RUN. Stage001 PARTIAL.
 
 **Предыдущий checkpoint GRM-AUTO-02:** [измеренные результаты стыка](tools/automation/grm-auto02/README.md). GM shared nodes/road crossings PASS, independent forest and strict mask overlap FAIL; fixed shared 720m generation block/partition bounded PASS (2331 объектов, 9/9 повтор, 27000 mask pixels). Scalable seam, full core package and native TB transfer remain NOT PROVEN/NOT RUN. Stage001 PARTIAL. Не использовать независимую генерацию секторов как финальное размещение без canonical ownership/overlap arbitration.
 
