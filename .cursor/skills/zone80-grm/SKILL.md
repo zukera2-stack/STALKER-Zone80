@@ -3,6 +3,11 @@ name: zone80-grm
 description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asset configurations for MAP-003. Use before any GRM layer or configuration task.
 ---
 # Zone80 GRM
+
+## Активный checkpoint GRM-AUTO-01 (27.11.2026)
+Читать [измеренный нативный Windows результат и исходники](../../../tools/automation/grm-auto01/README.md) и актуальный #42. Бounded native ForestGenerator + RoadsCompiler, 2103 relative placements, 2 дороги, companion mask, повторяемость 10/10 PASS; отдельный aligned TB file handoff PASS. Использовать именно проверенный адаптер CC05B, закрытый каталог и fixed synthetic inputs; не повторять неизменные проверки. v04 EDITOR_ONLY неизменен, отдельный reduced profile для синтетики. GM cell centers → GRM node origin +15m, затем явная общая трансляция к TB и векторная отрисовка маски, не репроекция. Не считать full Studio/CLI generation, native IdMapRender, production profile, seam или TB import проверенными. Оригинальный MAP005 открыт и неизменен; не снимать защиту DefaultLauncher, не закрывать пользовательские процессы. Следующее: безопасный отдельный TB sandbox и readback, затем независимый соседний сектор и проверенные дополнительные GRM слои. Все STOP gates сохранены.
+
+Старые шаги ниже — исторический preflight там, где их уже заменяет измеренный GRM-AUTO-01; новые права не предоставляются.
 Read AGENT_START.md, AGENTS.md, Issue #42, docs/map/MAP_003_GRM_AUTOMATION.md, docs/automation/LUNA_HANDOFF.md. Latest owner constraints win. This skill does not grant execution permission.
 
 1. Identify actual installed Studio and CLI, versions, executable hashes, upstream tag/SHA v0.11.1 / 2aef2040836daa11a8a368bb0c7f9ecd8f405d65. Do not update installed Studio. Use separate local checkout only after recording provenance and license. No vendored upstream or licensed models.
