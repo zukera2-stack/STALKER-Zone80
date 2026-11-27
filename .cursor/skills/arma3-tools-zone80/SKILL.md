@@ -5,6 +5,9 @@ description: Safe Arma 3 Tools workflows for Cursor in STALKER-Zone80. Use for T
 
 # Arma 3 Tools — STALKER-Zone80 / Cursor
 
+**Новое решение владельца 27.11.2026 — штатная среда P: (TB-P-NATIVE-01, [Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42#issuecomment-7226176532)).** Использовать `P:\` как Data Directory Terrain Builder/Buldozer и штатные ресурсы `a3`, `bin`, `core`, без копирования набора ресурсов на D:. Общий `P:\buldozer.cfg` единственный, штатный, read-only; не менять и не создавать альтернативных cfg. Профили, GIS-производство, логи и архивы на D:. Разрешена запись только в собственный новый каталог `P:\zone80` после проверки containment, отсутствия reparse/чужих данных и необходимости. Остальное на P: неприкосновенно; не монтировать/размонтировать диск. Эта узкая оговорка имеет приоритет над прежними абсолютными запретами P: и требованием отдельных cfg/cwd; изоляция профилей, выходов, editor/IPC, принадлежности процесса и контроль хешей обязательны. Для TB использовать штатный Connect, без `-noLand`; чужой Buldozer не закрывать. При конфликте редактора или нехватке ресурсов STOP. Сохраняются запреты WRP/PBO, имитации ввода, merge, stage promotion. Исторические результаты не переписывать. Официальная инструкция: https://community.bistudio.com/wiki/Buldozer_Manual.
+
+
 Read AGENT_START.md, AGENTS.md, docs/PROJECT_STATE.yaml, docs/GO_NOGO.md and current Issue #42. Mandatory: read ../zone80-luna-autonomous/SKILL.md and ../zone80-map003-gm-tb/SKILL.md. Stage 001 / PARTIAL remains; the owner-approved MAP-005 bounded synthetic editor scope supersedes historical TB-01 examples, not the safety limits. Do not merge PRs automatically.
 
 ## Use
