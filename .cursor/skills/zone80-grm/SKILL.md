@@ -6,6 +6,9 @@ description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asse
 
 **Правило владельца (27.11.2026) — завершение Buldozer:** после каждого испытания штатно закрывать только экземпляр Buldozer, запущенный агентом (проверить PID, время старта и путь exe). Если он уже завершён, повторно не запускать. Подтвердить завершение процесса и записать результат в отчёт, включая неудачный тест. При тайм-ауте сообщить о незавершённом процессе; не применять принудительное завершение без отдельного разрешения. Terrain Builder и чужие экземпляры не закрывать. Сохранять снимки и журналы в рабочем каталоге до закрытия.
 
+## Активный checkpoint TB-BULDOZER-RESOURCES-03/04
+[Native local resource preview](../../../tools/automation/grm-auto04/TB_BULDOZER_RENDER.md): two real CONN runs, 81+3 staged assets; 11 previous path errors and 3 bisurf errors eliminated in RPT, but white planes persist. Correct textured rendering FAIL; investigate actual model/LOD/renderer before more asset copying. Both own viewers exited, temporary preferences restored, cfg/opt/tv4p/archive hashes unchanged. No game asset upload. Stage001 PARTIAL.
+
 ## Активный checkpoint TB-BULDOZER-RESOURCES-01
 [Isolated resources](../../../tools/automation/grm-auto04/TB_BULDOZER_RESOURCES.md): local 81/81 verified copies (11 direct +70 related), no missing a3 paths in 33 text RVMAT, not full P3D dependency closure or render proof. 8 automatic PAA equal prior DXT1 bytes; mask issue remains. Native connection test blocked before changing preferences by recurrent external Arma processes. Do not touch other agents' processes; resume only with free session using isolated cwd/cfg/profiles and verified stock Connect. Close own viewer after evidence and restore temporary settings. Do not commit copied game assets. Stage001 PARTIAL.
 
