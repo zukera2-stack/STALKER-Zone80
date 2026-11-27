@@ -4,6 +4,8 @@ description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asse
 ---
 # Zone80 GRM
 
+**Правило владельца (27.11.2026) — завершение Buldozer:** после каждого испытания штатно закрывать только экземпляр Buldozer, запущенный агентом (проверить PID, время старта и путь exe). Если он уже завершён, повторно не запускать. Подтвердить завершение процесса и записать результат в отчёт, включая неудачный тест. При тайм-ауте сообщить о незавершённом процессе; не применять принудительное завершение без отдельного разрешения. Terrain Builder и чужие экземпляры не закрывать. Сохранять снимки и журналы в рабочем каталоге до закрытия.
+
 ## Активный checkpoint TB-BULDOZER-CLI-01
 [Прямой запуск](../../../tools/automation/grm-auto04/TB_BULDOZER_CLI.md): owner prefers command-line keys over config edits. Native standalone Buldozer x86 window/DX11 PASS, D: working dir + copied cfg + profiles, exact original cfg/opt/tv4p unchanged. Actual empty-scene screenshot; GRMAUTO04 connection/render NOT PROVEN. TB normally supplies a connection channel; do not guess -connect pipe, launch second viewer via P: defaults or silently edit shared settings. Preserve P: read-only, scope and Stage001 PARTIAL.
 
