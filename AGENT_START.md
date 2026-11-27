@@ -4,7 +4,9 @@
 
 ## ПРИОРИТЕТ №1 — Луна / MAP-005 (решение владельца 27.11.2026)
 
-**Свежий checkpoint TB-AUTO-04:** [нативная сборка и reopen GRMAUTO04](tools/automation/grm-auto04/TB_NATIVE_RESULT.md). Actual 4562 objects, 3 models, ASC/BMP/mask/road shape import, 8 PNG/26 RVMAT, saved/reopened PASS, 67-file archive verified. Previous MAP005 untouched. Native per-object/shape coordinates, Buldozer/PAA and game readiness NOT RUN. Stage001 PARTIAL. Не повторять прошедший импорт; следующий gate — native spatial readback and safe preview.
+**Свежий checkpoint TB-VISUAL-01:** [визуальный QC и PAA](tools/automation/grm-auto04/TB_VISUAL_RESULT.md). Actual 2D native screenshot, satellite 246016/246016 exact, overlap 0/15616; 8 native ImageToPAA conversions+reverse, DXT1 mask 34 mismatches, stock draftlco ARGB1555 0/262144 RGBA. Separate 34-file material candidate, not linked to TB or engine tested. 92-file ZIP verified. Buldozer launch blocked by current P: cfg/workdir; need scoped preview isolation authorization, no config/P: edits. Native per-object/vertex/height export not run. Stage001 PARTIAL.
+
+**Предыдущий checkpoint TB-AUTO-04:** [нативная сборка и reopen GRMAUTO04](tools/automation/grm-auto04/TB_NATIVE_RESULT.md). Actual 4562 objects, 3 models, ASC/BMP/mask/road shape import, 8 PNG/26 RVMAT, saved/reopened PASS, 67-file archive verified. Previous MAP005 untouched. Native per-object/shape coordinates, Buldozer/PAA and game readiness NOT RUN. Stage001 PARTIAL. Не повторять прошедший импорт; следующий gate — native spatial readback and safe preview.
 
 **Предыдущий checkpoint GRM-AUTO-04:** [объединённый TB import candidate](tools/automation/grm-auto04/README.md). 4562 retained placements, 2 native full roads/20 vertices, 4096 unchanged GM heights, corrected 11/11 repeat, canonical crop mismatch 0/57600, 15-file ZIP verified. Native TB import NOT RUN; previous saved MAP005 intact, editor minimized, need safe owner-confirmed unload/new own sandbox. Next actual import/save/reopen/readback. Stage001 PARTIAL.
 

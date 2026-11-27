@@ -4,6 +4,9 @@ description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asse
 ---
 # Zone80 GRM
 
+## Активный checkpoint TB-VISUAL-01
+[Native visual and texture QC](../../../tools/automation/grm-auto04/TB_VISUAL_RESULT.md): actual 2D screenshot, satellite 246016/246016 exact, overlap 0/15616. ImageToPAA eight forward+reverse conversions; default DXT1 mask 34 changed pixels, installed *_draftlco alternative exact 262144 RGBA base-mip pixels. Candidate 8 PAA/26 RVMAT separate, not linked to original project or engine proven. Buldozer current workingDir/cfg P:; do not launch unisolated or edit shared settings without scoped authorization. Native coordinate export/3D preview still needed. All STOP and GM-only gates remain.
+
 ## Активный checkpoint TB-AUTO-04
 [Нативная сборка GRMAUTO04](../../../tools/automation/grm-auto04/TB_NATIVE_RESULT.md): 4562/4562 placements, 3 templates, terrain/satellite/mask/shapes, Rebuild and PNG/RVMAT generation, save/unload/reopen PASS; 67/67 archive entries checked. Exact native poses/shape vertices, game roads, physical collisions, PAA/Buldozer remain unverified. Next native spatial QC and safe preview, not repeat GRM generation. All STOP and GM-only gates remain.
 
