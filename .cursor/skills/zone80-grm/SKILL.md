@@ -4,6 +4,9 @@ description: Audit and automate the pinned ArmaRealMap GRM CLI, project and asse
 ---
 # Zone80 GRM
 
+## Активный checkpoint TB-AUTO-04
+[Нативная сборка GRMAUTO04](../../../tools/automation/grm-auto04/TB_NATIVE_RESULT.md): 4562/4562 placements, 3 templates, terrain/satellite/mask/shapes, Rebuild and PNG/RVMAT generation, save/unload/reopen PASS; 67/67 archive entries checked. Exact native poses/shape vertices, game roads, physical collisions, PAA/Buldozer remain unverified. Next native spatial QC and safe preview, not repeat GRM generation. All STOP and GM-only gates remain.
+
 ## Активный checkpoint GRM-AUTO-04 (27.11.2026)
 [Объединённый импортный комплект](../../../tools/automation/grm-auto04/README.md): 1920m, 4562 retained IDs, 2 full native roads/20 vertices, 4096 unchanged GM heights, 11/11 corrected repeat, 15/15 ZIP entries verified. Canonical full canvas sampled at 4m pixel centers via native geometry, cropped views 0/57600 pairwise differences (old raw overlap 19); not independent raster equality or full IdMapRender. Native CSV large-easting precision flaw fixed by explicit double/F3 XY adapter (max 0.5mm file error; not TB import precision). TB-aligned mask separate +15m transform, previous two collision proxy holds remain excluded. Full native TB import NOT RUN; previous MAP005 intact, window minimized, need owner restore/confirm unload of saved sandbox. Next actual TB native assembly/readback, not further abstract generation. All STOP and GM-only gates remain.
 
