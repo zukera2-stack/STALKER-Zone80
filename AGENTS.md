@@ -1,12 +1,15 @@
 # Agent instructions: STALKER Zone80
 
-**Current handoff:** [RESUME_AFTER_CC05R](docs/automation/RESUME_AFTER_CC05R.md). Branch feat/cc05r-sector-review, measured code 7954bd57b9d7ca72404b1841204989f906686459. CC05R bounded Linux synthetic PASS / overall PARTIAL; CC06/CC06A DEFERRED by owner until real-map validation; next active MAP-003 GM26.2 coverage. Reuse prior components. Local MAP-003 and all STOP rules unchanged.
+## Mandatory execution priority — owner decision 2026-11-27
+Read AGENT_START.md, latest authorized [Issue #42 / MAP-005](https://github.com/zukera2-stack/STALKER-Zone80/issues/42#issuecomment-7203582618) and **[zone80-luna-autonomous v2.0](.cursor/skills/zone80-luna-autonomous/SKILL.md)** before planning or executing any Luna task. The [alwaysApply rule](.cursor/rules/zone80-autonomous.mdc) makes this workflow persistent within Cursor. Specialist skills follow it. Execute, independently verify, fix, continue; exhaust applicable permitted routes within budget and finish independent branches. Do not stop at an intermediate PASS or return a runnable next step as a report. No new permissions arise from the skill. Mandatory limits below and explicit owner scope prevail. MAP-005 permits bounded synthetic native GRM and test placement in an owned isolated editor project, not real placement without gates, WRP/PBO, P: writes, input emulation, full world or merge. Earlier MAP-003 and CC handoffs below are historical where conflicting. Stage001 PARTIAL.
+
+**Historical handoff (25.11):** [RESUME_AFTER_CC05R](docs/automation/RESUME_AFTER_CC05R.md). Branch feat/cc05r-sector-review, measured code 7954bd57b9d7ca72404b1841204989f906686459. CC05R bounded Linux synthetic PASS / overall PARTIAL; CC06/CC06A DEFERRED by owner until real-map validation; next active MAP-003 GM26.2 coverage. Reuse prior components. Local MAP-003 and all STOP rules unchanged.
 
 **First entrypoint: [AGENT_START.md](AGENT_START.md).** Read it before taking any task.
 
 Applies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read README, docs/MASTER_PLAN.md and docs/GO_NOGO.md before modifying code.
 
-## Current owner directive: map first (2026-11-24)
+## Historical owner directive: map first (2026-11-24)
 - Active EXECUTION task is **[MAP-003 / Issue #42](https://github.com/zukera2-stack/STALKER-Zone80/issues/42)** (Issue #35 is the MAP-001 umbrella): make a small **real** 1–2 km Pripyat geographic pilot (terrain and roads, plus a separate geospatial building-footprint catalog (no building placement or 3D models)), with one *isolated* Terrain Builder sandbox import only when safe.
 - **Newest owner rule (2026-11-24):** ChatGPT only supplies coordinates and correct geographic tiles; actual elevation acquisition and ASC/GeoTIFF export occur inside the owner's local **Global Mapper 26.2 Pro**. **No NEW Python/GDAL/GitHub Actions heightmap generation**; PR #43 is closed/superseded. Exact tile and 64×64×30 m UTM36 pilot: docs/map/MAP_003_GM26_TILES.md; this is NOT the 4096² world grid.
 - **Authoritative current navigation:** docs/PROJECT_CONTROL.md, docs/PROJECT_STATE.yaml, docs/REQUIREMENTS_MATRIX.md, docs/VERIFICATION_LEDGER.md, docs/DECISIONS/ADR-0002-owner-pivot-map-and-gm-only.md. Old draft docs and task files cannot override owner decision.
@@ -33,7 +36,7 @@ Applies to ChatGPT, Codex, Cursor/Luna and all repository automation. Read READM
 - Keep full-world constants in config; do not hardcode a projection before measured control-point tests.
 - Code and tests must run without requiring user-owned Arma tools where possible; platform-specific integration should skip with an explanation.
 
-Active work order: Issue #42 and docs/map/MAP_003_GM26_TILES.md. Epic: Issue #35. Historical foundation: docs/TASK_CURSOR_001.md. Project gate: docs/GO_NOGO.md.
+Active work order: Issue #42 / MAP-005 and the mandatory autonomous skill; MAP_003_GM26_TILES.md is a reference for the earlier real terrain grid. Epic: Issue #35. Historical foundation: docs/TASK_CURSOR_001.md. Project gate: docs/GO_NOGO.md.
 
 ## Current GRM checkpoint (2026-11-25)
 Read [MAP_003_CURRENT_CHECKPOINT](docs/map/MAP_003_CURRENT_CHECKPOINT.md) and [minimal dependencies](docs/integration/MINIMAL_DEPENDENCIES.md). Owner v02 Studio save is real evidence for six recovered surfaces, not game generation. v03 remains editor/review-only for production; native strict parser and bounded synthetic Linux generation measured through CC-05P. No real native map or runtime approval. Reuse prior audits; actual new checks only. No external mandatory mods, no ice/default or base world guesses. Existing Issue #42 and Draft PR #47; GM-only and STOP rules unchanged.

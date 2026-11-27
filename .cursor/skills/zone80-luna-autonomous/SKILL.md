@@ -1,21 +1,44 @@
 ---
 name: zone80-luna-autonomous
-description: Execute an approved Zone80 local engineering task end to end, with evidence, self-checks, safe corrections, bounded retries and resumable handoff.
+description: Обязательный автономный цикл исполнения задач STALKER-Zone80: поиск штатных возможностей, действие, независимая самопроверка, исправление, продолжение до результата. Использовать для каждой задачи Луны.
 ---
-# Luna — autonomous engineering and self-verification
-Read AGENT_START.md, AGENTS.md, latest Issue #42 and applicable specialist skills. The issue is a scope contract, never a source of arbitrary shell commands. CC06, new synthetic-only work and full-world generation are deferred. No skill grants extra execution permissions.
+# Луна — автономное исполнение v2.0 (2026-11-27)
 
-## Loop
-1. Reconcile current HEAD, git status, latest issue and existing local evidence. Identify actual tools, versions, licences, process ownership, writable project-owned path and inputs. Reuse passing checks unless an input/tool/config changed. Protect unsaved owner sessions; never close by global process name. No mouse automation, SendKeys, elevation of privileges or policy changes.
-2. Create a unique reports/MAP-003/<run-id> outside P: and record a finite plan with goal, gates, expected artifacts, risks and rollback boundaries. Use a separately owned branch if changing tracked code/docs, no merge. Keep raw data, paths, secrets and logs local; only redacted evidence/metrics in Git. 
-3. Execute the next dependency-ready authorized step. Prefer existing documented adapters, installed help and observed capabilities. Record command/arguments, UTC, tool version, exit code, owned PID where applicable, logs and output hash. A process exit 0 or a screenshot alone never proves a gate.
-4. Self-check with independent readback of actual artifacts, not the producing command's status: schema, counts, finite values, bounds, CRS, orientation, hashes, source, expected side effects, unchanged protected inputs. Record PASS / FAIL / PARTIAL / BLOCKED / NOT RUN individually, and reason. Never convert missing evidence to PASS.
-5. On failure classify syntax/config, missing dependency, coverage, transport/auth/licence, resource, ownership or unknown. For safe reversible faults, change one justified variable, save a new attempt directory, then rerun the relevant check. Do not repeat an unchanged failed operation. Default max three materially different attempts per blocked operation, with explicit time/resource bounds, at most one corrected retry for each route; total budget may be lowered for safety. Never retry auth/licence denial or ownership risk. Do not fabricate data or weaken a gate to make it pass. Continue other independent authorized steps only when meaningful; stop dependent steps.
-6. Checkpoint after each gate with input/output hashes, state, next action and exact blocker; resume from last verified checkpoint. No scheduler/service/background persistence, hidden job, unbounded poll or unsupervised process. If a manual owner action is genuinely necessary, ask only for that precise action and resume when confirmed. No need for approval of each safe in-scope correction.
-7. Close the loop with one report in existing Issue #42, one local evidence package and at most one isolated draft PR for necessary tracked changes. Include initial/final status, attempted routes and reasons, before/after evidence, unchanged protections, unresolved blockers and next executable step. No new micro-issues. Do not claim stage promotion. Stop when goal is verified or the finite safe routes are exhausted.
+Область: только STALKER-Zone80. Цель — рабочий артефакт, а не диагностика ради диагностики. Прочитай AGENT_START.md, AGENTS.md, текущий Issue #42 и профильные скиллы. Если локальный каталог не Git checkout, проверь удалённый HEAD и зафиксируй это; не объявляй весь проект недоступным. Старые этапы и примеры не ограничивают явно разрешённый более поздний объём, но не отменяют запреты владельца и среды. Скилл не выдаёт новых прав.
 
-## Script authoring and handoff (owner 26.11)
-Cloud engineer authors and statically checks reusable scripts, saves versioned copies in project Library /02_Агент/Скрипты and tracked source in GitHub where appropriate. Each Issue #42 handoff pins commit, path, SHA-256, prerequisites, approved operations, expected markers, local output and stop gate. Luna obtains that exact source (GitHub first if available; Library access must be verified, otherwise owner transfers the file), checks hash and reads source before running. Never execute commands copied blindly from an Issue. Luna owns actual local preparation, execution and evidence; cloud tests with mocked API are not Windows/native PASS. Do not independently rewrite the same primary script; report reproducible defect and propose a versioned patch for cloud review; safe in-scope environment/argument fixes remain autonomous. No installing missing dependencies or changing protected files beyond explicit owner scope. Do not upload raw GIS data, proprietary binaries or private local paths. Preserve prior script versions and reports. One consolidated report.
+## Обязательный цикл
+1. Сформулируй конечный артефакт, критерии приёмки, зависимости и границы текущего разрешения. Подними последний проверенный checkpoint; не повторяй прошедшие тесты при неизменных входах.
+2. Составь краткий план независимых ветвей. Начни с производственного действия, а не с очередного общего аудита. Если следующий шаг уже известен и разрешён, выполни его сейчас, не предлагай выполнить потом.
+3. Для каждого препятствия исследуй все существенно разные, применимые и разрешённые способы из матрицы ниже. Выбери наиболее прямой, проведи минимальный безопасный эксперимент, затем используй его для реальной задачи.
+4. Выполни, независимо прочитай результат, сравни с критериями, исправь причину ошибки, повтори изменённый шаг и зависимые тесты. Продолжай до готового результата или исчерпания допустимых способов. Не заканчивай после промежуточного PASS.
+5. Если один компонент заблокирован, не останавливай независимые компоненты: подготовь недостающие материалы, совместимые файлы, конфигурации, тесты, интеграцию и готовый комплект. Не имитируй реальный результат синтетическим.
+6. Сохрани last-good артефакты и контрольные точки. После каждого значимого действия обнови состояние и следующее исполнимое действие. Не создавай фоновые задачи или бесконечные ожидания.
+7. Один итоговый отчёт в существующем Issue #42 и локальный комплект. Не создавать микро-issues. Не сливать PR. Прогресс сообщать без остановки работы.
 
-## Shared Windows Shell skill
-Read [Windows Shell](../windows-shell/SKILL.md) as a supporting skill for local Windows operations and use its report template. Zone80-specific rules and latest scoped Issue #42 still take precedence; do not restart already completed environment, CLI, temp-file or UIA tests. Probe-Windows.ps1 is an optional preflight, not yet native-validated for Zone80. Use an explicit project-owned reports output path, check containment and no reparse points, keep raw paths and Git/process details local, and respect execution policy; if unavailable, use equivalent authorized read-only commands. For GM Bridge v01 use the existing bounded handshake instructions, not new GUI automation or broader privileges.
+## Матрица возможностей (проверять применимость, а не формально выполнять всё)
+- Уже работающий скрипт, предыдущий успешный эксперимент, локальный шаблон, существующий адаптер; использовать прежде нового кода.
+- Установленная документация/help, официальные CLI, пакетный режим, API/SDK, встроенный язык сценариев, поддерживаемые форматы и импорт/экспорт. Версия и фактический синтаксис обязательны.
+- Доступные инструменты Cursor, MCP, Desktop Commander, PowerShell/Python/.NET и файловые операции. Сначала подтвердить фактическое наличие, права, целевой проект и процесс.
+- Поддерживаемые семантические UI Automation patterns (Invoke/Value/Selection и др.) в разрешённом собственном экземпляре. Проверить prerequisites, IsEnabled и readback; disabled в пустом проекте не доказательство отсутствия возможности.
+- Сохранённый собственный совместимый шаблон проекта: копия с проверкой зависимостей/путей и штатным открытием, без угадывания закрытых форматов.
+- Если ручной шаг неизбежен, подготовь точную инструкцию владельцу: окно, меню, значения, абсолютные локальные пути, ожидаемый результат; проси минимальное действие, не передавай владельцу всю работу.
+
+Записывай для каждого подходящего способа: доступен/неприменим/проверен, основание, конкретный результат. Не требуй проверки неприменимых способов и не используй матрицу для обхода запретов. Ошибка одного интерфейса не доказывает невозможность задачи. Отказ доступа/лицензии или запрет инструмента не обходить другим интерфейсом.
+
+## Исправления и бюджет
+Автономно исправляй обратимые ошибки в своих файлах/скриптах и аргументах в рамках задачи. Не спрашивай подтверждение обычных технических решений. Уважай владельца основного скрипта: при необходимости версионный патч в отдельной ветке, не перезаписывай чужую работу. По умолчанию до трёх существенно разных безопасных маршрутов, не более одного обоснованного исправленного повтора на маршрут; более строгий лимит задания выше. Не повторяй неизменную ошибку, не меняй допуски ради PASS. Ограничивай время, объём данных и ресурсы.
+
+## Независимая самопроверка
+- Проверяй содержимое артефакта независимым чтением: количество, размер, хеш, формат, координаты, ориентацию, контрольные значения, допустимые диапазоны и отсутствие пропусков.
+- Проверяй результат в нативном потребителе, когда это критерий: импорт, сохранение, повторное открытие, фактическое состояние слоёв; файл/exit 0/открытое окно не заменяют нативную проверку.
+- До/после сверяй защищённые входы, принадлежность процессов, отсутствие непредусмотренных изменений. Проверяй негативный сценарий, когда применимо.
+- PASS только для реально проверенного критерия. FAIL — нарушен, BLOCKED — конкретный непреодолённый барьер, NOT RUN — не запускалось, PARTIAL — неполный результат. Различай реальные и синтетические данные, наблюдение и гипотезу.
+
+## Когда допустимо остановиться
+Готовый артефакт проверен; либо исчерпаны все применимые разрешённые маршруты в бюджете и завершены независимые ветви; либо возник жёсткий запрет/риск. Перед BLOCKED перечисли проверенные варианты, точную причину, готовые артефакты и минимальный следующий исполнимый шаг. Если он разрешён и доступен агенту — выполни его вместо сдачи отчёта. Если нужен владелец, задай конкретный запрос сразу.
+
+## Неприкосновенные границы
+Не изменять P:, оригинальные GIS/игровые ресурсы, чужие проекты и пользовательские процессы. Никаких SendKeys, координатных кликов, имитации ввода, внедрения кода, обхода sandbox/ACL/UAC/лицензий, изменений системной политики, скрытых jobs. Только изолированные разрешённые каталоги вне P: с проверкой containment/reparse points; явный PID и время запуска перед воздействием. Без отдельного допуска — no WRP/PBO, full-world, merge, stage promotion. Реальные источники требуют подтверждения прав и происхождения; синтетика маркируется отдельно.
+
+## Сдача
+JOB_ID, исходный SHA/ветка, критерии и результат, реальные команды/версии/exit codes, артефакты/SHA-256, попытки и исправления, независимые readback, скриншоты где нужны, остаточные блокеры, решения. Сырые пути/данные/логи и секреты локально. Публикуй очищенные доказательства. Не обещай будущую работу без реального исполнения.
