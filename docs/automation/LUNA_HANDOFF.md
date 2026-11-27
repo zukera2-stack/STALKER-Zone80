@@ -1,6 +1,8 @@
 # LUNA — unified MAP-003 automation assignment
 
-## ACTIVE — MAP-005 / autonomy v2.0 — 27.11.2026
+**Primary channel update — 27.11.2026:** Luna executes local work directly from ChatGPT via connected Desktop Commander Remote. Mandatory [plugin skill](../../.cursor/skills/zone80-desktop-commander/SKILL.md) and autonomy v2.1. Cursor/Codex are optional supporting channels, not a prerequisite. Use the actual authorized online device and available tools, track pending call IDs/processes, independently verify native results. No circumventing tool denials or expanding permissions.
+
+## ACTIVE — MAP-005 / autonomy v2.1 — 27.11.2026
 Read [mandatory Luna autonomy](../../.cursor/skills/zone80-luna-autonomous/SKILL.md), [alwaysApply](../../.cursor/rules/zone80-autonomous.mdc), [GM→GRM→TB](../../.cursor/skills/zone80-map003-gm-tb/SKILL.md) and [Arma 3 Tools](../../.cursor/skills/arma3-tools-zone80/SKILL.md). Current work order: [MAP-005](https://github.com/zukera2-stack/STALKER-Zone80/issues/42#issuecomment-7203582618) + [active execution clarification](https://github.com/zukera2-stack/STALKER-Zone80/issues/42#issuecomment-7214797457). G1/G2 synthetic/offline GM results accepted, no repetition absent changed inputs. Target: saved and reopened owned TB synthetic editor project; continue independent materials/GRM work if a specific import route is blocked. Owner reports synthetic handoff files and mask ready; native import/save/reopen NOT RUN. No new diagnostics-only cycle. All applicable permitted routes, actual actions, independent readback, safe fixes, one consolidated result. Older handoffs below are historical and do not supersede this priority. Existing safety and source gates unchanged, Stage001 PARTIAL, no P: writes, input emulation, WRP/PBO or merge.
 
 ## 26.11.2026 — Cloud ChatGPT ↔ local Codex/Luna: direct handoff (owner direction)

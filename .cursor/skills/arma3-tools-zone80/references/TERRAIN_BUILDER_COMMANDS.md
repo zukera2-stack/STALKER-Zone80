@@ -41,6 +41,8 @@ Use only a verified isolated project. Existing owner sessions are left alone. Pr
 
 ## Remote Desktop Commander on Windows
 
+Primary local execution channel for Luna since owner decision 2026-11-27. Read ../../zone80-desktop-commander/SKILL.md before using the connector. Cursor is optional. Verify actual device and tool availability; do not bypass client or device denials.
+
 - Use the connector to locate the authorized online device and run PowerShell, check processes and verify file hashes. If a command returns a pending call ID, poll its result before considering another launch.
 - Use the existing verified launcher for an authorized Terrain Builder run on `WinSta0\Default`. Check for an existing editor first and verify the new process by executable, PID and start time before targeting it with Windows UI Automation.
 - The available connector tools expose files, terminals and processes. Use Windows UI Automation separately to inspect controls. No built-in GUI input tools were exposed in the connector tested on 2026-11-27 (device agent 0.3.4).
