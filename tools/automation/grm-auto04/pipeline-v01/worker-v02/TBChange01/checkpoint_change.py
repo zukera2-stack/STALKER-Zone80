@@ -17,7 +17,7 @@ def filetree(root):
         for p in (root/d).rglob("*"):
             if p.is_file():out[p.relative_to(root).as_posix()]=sha(p)
     return out
-def main():
+def build():
     req(Path(__file__).resolve()==R/"checkpoint_change.py","fixed scope")
     req(not (ROOT/"stop.request").exists(),"stop requested")
     v.verify()
@@ -59,6 +59,10 @@ def main():
         "original_count":4562,"new_count":4563,"old_layer_bytes_unchanged":False,"old_layer_diff_bytes":85054,"old_placement_semantics_verified":True,"native_shape_geometry":"NOT_RUN","native_template_metadata":"NOT_RUN",
         "original_files_verified":len(old["source_before"]),"previous_copy_files_verified":len(old["files"]),
         "changed_files":changes,"added_files":added,"buldozer":"NOT_RUN","whole_pipeline":"PARTIAL"}
+    return result
+
+def main():
+    result=build()
     out=R/"change_checkpoint.json"
     if out.exists():
         req(g.load(out)==result,"checkpoint/artifact mismatch; no reimport")
