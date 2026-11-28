@@ -5,6 +5,8 @@ description: Управление Arma 3 Terrain Builder stable 1.32 и Buldozer
 
 # Terrain Builder без мыши — Zone80
 
+**Действующий регламент передачи (28.11.2026):** [AI_WORKSPACE / Google Drive](../../../docs/AI_WORKSPACE.md). ChatGPT ведёт разработку, анализ и доступные тесты, Cursor/Codex исполняет локально через PowerShell и разрешённые нативные API. GitHub — код и задания; Drive — разрешённые архивы и доказательства с уникальным именем, манифестом и SHA256. Library — историческая справка, Desktop Commander не использовать. Локальная sandbox и технические ограничения сохраняются.
+
 ## 1. Область применения и приоритет
 
 Применять при работе с Terrain Builder, импортом, экспортом, Save/Reopen, Mapframe и Buldozer. Это узкое дополнение к существующему skill arma3-tools-zone80, не новый конвейер и не новый контракт. Прочитать AGENT_START.md, AGENTS.md, активную Issue #42, ../zone80-luna-autonomous/SKILL.md, ../zone80-map003-gm-tb/SKILL.md и ../arma3-tools-zone80/SKILL.md. Справочник команд: ../arma3-tools-zone80/references/TERRAIN_BUILDER_COMMANDS.md. Приоритет у последнего решения владельца: локальный Cursor/Codex, **не Desktop Commander**, даже если старые инструкции предписывают обратное. Stage001 PARTIAL, текущий допуск TB-RECOVER-02. Не разрешает новые операции сам по себе.
@@ -53,7 +55,7 @@ DISCOVER → PRECONDITION → INTENT → INVOKE → READBACK → QC → CHECKPOI
 2. Expand, сразу получить свежий popup (лишняя задержка уничтожает временный элемент), выбрать ровно один подходящий Enabled пункт. Принимая UIA Invoke, считать его только попыткой. На toolbar уже наблюдался no-op.
 3. Для текстового поля проверить ValuePattern, отсутствие read-only, установить значение, перечитать; для выбора подтвердить IsSelected, для Toggle сверить состояние. Убедиться в правильном владельце диалога, пути и режиме импорта до OK. Не нажимать OK повторно вслепую.
 4. После Invoke дождаться наблюдаемого результата в пределах бюджета существующего autonomy skill: диалог/сообщение, изменение count, активный проект, файл или readback. Не использовать неподтверждённый повтор. При таймауте сначала заново прочитать состояние.
-5. Изменения только в проектном isolated sandbox, durable intent до мутации, хеши входов/last-good, собственный процесс. Логи и screenshots в локальный evidence bundle для передачи через Library; в GitHub код, отчёт, SHA и краткая сводка, не сырые файлы.
+5. Изменения только в проектном isolated sandbox, durable intent до мутации, хеши входов/last-good, собственный процесс. Логи и screenshots в локальный evidence bundle для передачи через Google Drive / AI_WORKSPACE/STALKER-Zone80/QA; в GitHub код, отчёт, SHA и краткая сводка, не сырые файлы.
 
 ## 5. Проверенные маршруты (история проекта)
 
