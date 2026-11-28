@@ -1,0 +1,33 @@
+# Pipeline v0.1 — Windows fixed fixture integration (28.11.2026)
+
+Issue #42, PR #52, base faf3a3f34cfe754c9804b47454d705ec6e630035. **PASS for the bounded GRMAUTO04 native export + CC03 ownership + prior native readback/cache gate; full pipeline PARTIAL.** Not a new general worker, not a Linux CC02/CC05Q/R port, no production approval.
+
+## Reuse and scope
+
+Existing CC02 cc01_base.py (canonical serialization/hash/check), CC03 sector_manager.py (ownership/plan/seam validation), CC05Q preflight.py (strict JSON/hash) were transferred unchanged; all three local Git blob IDs verified against base. The original Linux job/lock/process group code is platform-specific and was not executed or relaxed. Existing GRMAUTO04 corrected native DLL, retained placements, synthetic config and GM-origin input reused. Fixed direct dotnet child, no arbitrary argv, no new GIS generation. Windows adapter provides finite one-attempt execution, file flush and same-directory replace, msvcrt exclusive byte lock, stop marker, immutable snapshot, validated skip and unresolved-attempt refusal. On timeout leaves recorded ownership for reconciliation, no retry/force close. No tested Windows Job Object, descendant cleanup, active cancellation, hard resource/log limits, crash/power-loss recovery, general DAG scheduling or approval security claim. Host dotnet/python EXE pinned; full host runtime dependencies not independently pinned.
+
+## Reproduce in existing owner sandbox only
+
+The tested code is deliberately fixed to D:/Zone80/PipelineV01_01 and the existing D:/Zone80/GRMAUTO04 diagnostic fixture. Not a relocatable production command. Check owner scope and exact base. Stage the three unchanged helpers from tools/automation/cc02/cc01_base.py, cc03/sector_manager.py, cc05q/preflight.py beside pipeline_gate.py (no second copies in Git); test_guards.py optional. The inputs/compiled dependencies and snapshots are local; no asset or raw file publication. On a new owned sandbox at the exact tested path, use the installed Python 3.15 with -B: pipeline_gate.py init, then pipeline_gate.py run. Existing validated sandbox: run only; never reinitialize. A fresh changed input/fixture requires separate review and new approved attempt; this gate refuses a changed identity, does not implement incremental production yet. No GUI launch or editor modifications. Do not remove an actual unresolved marker without ownership reconciliation. test_guards.py creates only explicit test markers when absent.
+
+## Actual Windows result
+
+- First combined transfer via long PowerShell command failed ENAMETOOLONG before directory creation. Used native file-write calls; helper Git blobs 388e7e36fe4a4d3b62bbfc31c9b1d2aa4c10c5be, efacc0b25bbc438ed6f6bb90499e5a1eaf94f039, 8304fd46dae2d374bb64b17a528b9f631b910950 exactly match. No original changes.
+- init exit0, 123 snapshot files. Existing original corrected GRM DLL SHA256 21abfa0c2a5ce30affaf23bea2172202313770614f6371add923bcdb4d262cfa. Actual fresh native GRM child exit0, measured execution window 2.898291s, available RAM 18095591424 bytes at preflight. This reexports retained vegetation and generates canonical road/mask outputs, not fresh forest generation.
+- All 11 fresh files byte-equal to both historic corrected runs. Independent comparison to pinned earlier native TB text readback: 4562 unique model/E/N anchors, exact pitch/roll/scale/relative elevation, max modulo yaw delta 0.000019deg. Reused CC03 on diagnostic 8x8 grid of 240m cells/30m halo (not production 10.24km grid), 64 plan nodes, 9 nonempty, 4562 anchor IDs owned exactly once, zero metadata seam issues. No geometric seam acceptance. Plan SHA256 5dbf16092b82d41ecd5656ba42571c78a2f7797ac57cd512703aea6bb0b3c018.
+- Re-run verified cache SKIP, no extra attempt/current change. Temporarily appended a byte to own copied ASC, refused snapshot mismatch exit2, restored exact bytes. Temporarily appended a byte to own generated result.json, refused export mismatch exit2, restored exact bytes. Both preserve prior pointer and attempt count. Restore/cache PASS. Separate test_guards.py exit0: concurrent lock held, stop marker and explicitly synthetic unresolved marker each refused with exit2; cache resume PASS, same single native attempt. These are pre-launch refusals, not live cancellation/crash tests.
+- Final source/evidence and shared readonly cfg pins revalidated. Original TB project and archive unchanged. No new GM, TB import or Buldozer launch; earlier Buldozer images/pose evidence are VERIFIED_EXISTING only. Height 1mm FAIL_EXISTING (ASC 5mm), full materials PARTIAL, road shape vertex readback still open. No P: writes, WRP/PBO build, real data or merge.
+
+| Local artifact | SHA256 |
+|---|---|
+| pipeline_gate.py | c19ba81fcc1c64315ea0ffe70e366d4265d95e093ca9754193ad961c671c2a93 |
+| test_guards.py | 9ae656c162ffc0fb8c16a675873d0b81744aef5868782f6fd2b75bdca425c3ea |
+| snapshot.json | 7f466d019779d6ad13bd61bab9d4d87ca037dc18c2f2201ae3cde49c14663e9f |
+| current.json | 599cb1921dbafaa7e8d02b51838189e2031bb941e1666f2c30dd239e2dc48e68 |
+| report.json | a31b357202888a71b6735e543d2c43a6401e0a142aa64bb28edfe95bcd19543e |
+
+Code blobs read back exact: 2063d11468ec5ef876de2e77ecb737f606115a4b, a63f55cb8ac3a822f477045a4eaf428490df592c. No raw local snapshots in Git.
+
+## Next executable gate
+
+Bind fresh native output to the existing prepare_integrated.py handoff adapter, then existing guarded TB-AUTO native actions on a **separate owned copy**; make save/reopen, readback and screenshot steps executable from a single finite entrypoint. Resolve editor availability/ownership before changing settings; use supported semantics and verified stock x64 -noPause, no input emulation. Carry unresolved surface/road/spacing gates, do not claim new native proof by reusing old evidence. Integrate CC04 and existing ZONE80–ZPB contract in a separate synthetic test without inventing model states or relaxing MODEL_READY; compare cross-repo contract first. Keep CC06 deferred and Stage001 PARTIAL. No real data expansion or full-world queue.
