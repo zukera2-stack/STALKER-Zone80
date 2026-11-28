@@ -1,5 +1,7 @@
 # Terrain Builder — MAP-005 commands and compatibility
 
+**Действующий регламент передачи (28.11.2026):** [AI_WORKSPACE / Google Drive](../../../../docs/AI_WORKSPACE.md). ChatGPT ведёт разработку, анализ и доступные тесты, Cursor/Codex исполняет локально через PowerShell и разрешённые нативные API. GitHub — код и задания; Drive — разрешённые архивы и доказательства с уникальным именем, манифестом и SHA256. Library — историческая справка, Desktop Commander не использовать. Локальная sandbox и технические ограничения сохраняются.
+
 Checked 2026-11-27. Installed TerrainBuilder.exe reports FileVersion 1.32 and ProductVersion 1.32.0.153956. The 2026-11-19 Tools Dev-Branch changelog reports adding a command-line argument to open an existing project. The changelog does not specify a switch or confirm it for the installed executable. Treat the following PowerShell command as a candidate for a verified supporting build with an owned saved project, never as an import command.
 
 ```powershell
@@ -39,13 +41,6 @@ Use only a verified isolated project. Existing owner sessions are left alone. Pr
 
 
 
-## Remote Desktop Commander on Windows
+## Local execution on Windows (current owner policy)
 
-Primary local execution channel for Luna since owner decision 2026-11-27. Read ../../zone80-desktop-commander/SKILL.md before using the connector. Cursor is optional. Verify actual device and tool availability; do not bypass client or device denials.
-
-- Use the connector to locate the authorized online device and run PowerShell, check processes and verify file hashes. If a command returns a pending call ID, poll its result before considering another launch.
-- Use the existing verified launcher for an authorized Terrain Builder run on `WinSta0\Default`. Check for an existing editor first and verify the new process by executable, PID and start time before targeting it with Windows UI Automation.
-- The available connector tools expose files, terminals and processes. Use Windows UI Automation separately to inspect controls. No built-in GUI input tools were exposed in the connector tested on 2026-11-27 (device agent 0.3.4).
-- MAP-005 verified startup into an unnamed project. Latest owner report says Save and Save As were found but disabled in the empty project; Import terrain was enabled. Disabled is a state, not proof the operation is unsupported. In the owned instance, attempt the actual mapframe prerequisites through allowed semantic operations, verify state after every step, then save, import and reopen. If a necessary control is unavailable, test applicable supported routes and owned templates under the autonomous skill; if they are exhausted, immediately request the smallest exact manual action outside P: and continue independent layers. Record native save and reopen only after verifying the resulting project. Do not repeat unchanged UIA scans or use input emulation.
-
-Source: https://desktopcommander.app/help/getting-started/what-can-i-do
+Use local Cursor/Codex PowerShell and the verified semantic UIA route in [zone80-tb-mouseless](../../zone80-tb-mouseless/SKILL.md). Desktop Commander is retired. Verify editor ownership and full project identity, preserve isolated paths, do not emulate input or bypass denials. Save disabled is a state, not evidence of unsupported operation. Preserve native readback and transfer evidence via AI_WORKSPACE under the current policy.

@@ -1,5 +1,7 @@
 # Project reference library
 
+**Действующий регламент передачи (28.11.2026):** [AI_WORKSPACE / Google Drive](AI_WORKSPACE.md). ChatGPT ведёт разработку, анализ и доступные тесты, Cursor/Codex исполняет локально через PowerShell и разрешённые нативные API. GitHub — код и задания; Drive — разрешённые архивы и доказательства с уникальным именем, манифестом и SHA256. Library — историческая справка, Desktop Commander не использовать. Локальная sandbox и технические ограничения сохраняются.
+
 Two distinct locations serve different purposes:
 
 - **GitHub repository:** `zukera2-stack/STALKER-Zone80` is the canonical, version-controlled source for code, tasks, agent instructions, approved schemas and sanitized documentation.
@@ -18,7 +20,7 @@ Two distinct locations serve different purposes:
 1. Start [AGENT_START.md](../AGENT_START.md) and read [AGENTS.md](../AGENTS.md).
 2. Check [docs/BASELINE_FROM_PRIOR_REPORTS.md](BASELINE_FROM_PRIOR_REPORTS.md) rather than treating prior "OOM" as established.
 3. If access to personal Library is authorized, read `03_Отчёты/GRM_MEMORY_AUDIT.md` and `ENVIRONMENT_AUDIT.md`; do not assert local read if access is absent.
-4. Keep important new public, sanitized conclusions in GitHub, raw evidence in local ignored reports or private Library, and link to relevant issue/pr with SHA.
+4. Keep important new public, sanitized conclusions in GitHub, raw evidence in local ignored reports and authorized Google Drive QA transfers, and link to relevant issue/pr with SHA.
 
 ## Document authority
 
